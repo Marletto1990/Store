@@ -1,0 +1,25 @@
+index.html <- index.js
+Component.js
+manifest.json
+/modules/
+    /module1/
+    /module2/
+    ...
+    /mainmodule/
+        /view/
+            *.view.xml
+            ...
+        /controller/
+            *.controller.js
+            ...
+        /fragment/
+            *.fragment.xml
+            ...
+        /models/
+            *.json
+            ...
+        /i18n/
+            i18n.properties
+            ...
+        ...
+
