@@ -1,0 +1,114 @@
+{
+    "_version": "1.12.0",
+    "sap.app": {
+      "id": "app",
+      "type": "application",
+      "i18n": "modules/mainmodule/i18n/i18n.properties",
+      "title": "{{appTitle}}",
+      "description": "{{appDescription}}",
+      "applicationVersion": {
+        "version": "1.0.0"
+      }
+    },
+    "sap.ui": {
+      "technology": "UI5",
+      "deviceTypes": {
+          "desktop": true,
+          "tablet":  true,
+          "phone":   true
+      }
+    },
+    "sap.ui5": {
+
+        "rootView": {
+            "viewName": "mainpath.view.Main",
+            "type":  "XML",
+            "async": true,
+            "id":    "app"
+        },
+
+        "dependencies": {
+            "minUI5Version": "1.60",
+            "libs": {
+                "sap.m": {}
+            },
+            "contentDensities": {
+              "compact": true,
+              "cozy": true
+            }
+        },
+
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": { "bundleName": "mainpath.i18n.i18n" }
+            },
+            "goods": {
+              "type": "sap.ui.model.json.JSONModel",
+              "uri": "/modules/mainmodule/models/goods.json"
+            }
+        },
+
+        "routing": {
+
+          "config": {
+            "routerClass": "sap.m.routing.Router",
+            "viewType":    "XML",
+            "viewPath":    "app.modules.mainmodule.view",
+            "controlAggregation": "detailPages",
+            "controlId":   "app",
+            "async": true
+          },
+
+          "routes": [
+            {
+              "pattern": "",
+              "name":    "startPages",
+              "target":  ["defaultMaster", "defaultDetail"]
+            },
+            {
+              "pattern": "pizzalist",
+              "name":    "arrayPizza",
+              "target":  ["pizzaList", "defaultDetail"]
+            },
+            {
+              "pattern": "pizzalist/{pizzaURLname}",
+              "name":    "currentPizza",
+              "target":  ["pizzaList", "detailPizza"]
+            },
+            {
+              "pattern": "basket",
+              "name":    "basketPage",
+              "target":  ["defaultMaster", "defaultBasket"]
+            }
+          ],
+
+          "targets": {
+            "defaultMaster": {
+              "viewId":   "master",
+              "viewName": "Master",
+              "controlAggregation": "masterPages"
+            },
+            "pizzaList": {
+              "viewId":   "master2",
+              "viewName": "Master2",
+              "controlAggregation": "masterPages"
+            },
+            "defaultDetail": {
+              "viewId":   "detail",
+              "viewName": "Detail",
+              "controlAggregation": "detailPages"
+            },
+            "detailPizza": {
+              "viewId":   "detail2",
+              "viewName": "Detail2",
+              "controlAggregation": "detailPages"
+            },
+            "defaultBasket": {
+              "viewId":   "basket",
+              "viewName": "Basket"
+            }
+          }
+        }
+    }
+}
