@@ -12,8 +12,21 @@ sap.ui.define([
     var CController = Controller.extend("mainController", {
 
         onInit: function () {
-            alert("onInit")
-        }
+
+        },
+        onPressGoToCatalog: function(){
+            this.getSplitAppObj().toMaster(this.createId("catalog"));
+        },
+        onPressMasterBack : function() {
+			this.getSplitAppObj().backMaster();
+		},
+        getSplitAppObj : function() {
+			var result = this.byId("SplitAppDemo");
+			if (!result) {
+				Log.info("SplitApp object can't be found");
+			}
+			return result;
+		}
     });
 
 

@@ -5,10 +5,10 @@
 	xmlns="sap.m">
 	<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
 		<detailPages>
-			<Page id="detail" title="Detail 1" class="sapUiStdPage">
+			<Page id="detail" title="АКЦИЯ !" class="sapUiStdPage">
 				<content>
-					<Label text="Detail page 1" />
-					<Button text="Go to Detail page2" press="onPressNavToDetail" />
+					<Label text="Здесь будет размещен товар со скидкой" />
+					<Button text="Заказать!" type="Emphasized" press="onPressNavToDetail" />
 				</content>
 			</Page>
 			<Page id="detailDetail" title="Detail Detail" class="sapUiStdPage" showNavButton="true"
@@ -46,23 +46,26 @@
 			</Page>
 		</detailPages>
 		<masterPages>
-			<Page id="master" title="Master 1" icon="sap-icon://action" class="sapUiStdPage">
+			<Page id="master" title="Steel Store" icon="sap-icon://action" class="sapUiStdPage">
 				<content>
 					<List>
 						<items>
-							<StandardListItem title="To Master2" type="Navigation" press="onPressGoToMaster"/>
+							<StandardListItem title="Каталог товаров" type="Navigation" press="onPressGoToCatalog"/>
+							<StandardListItem title="Конструкции на заказ"  />
+							<StandardListItem title="Заказать звонок"  />
+							<StandardListItem title="Контакты" />
 						</items>
 					</List>
 				</content>
 			</Page>
-			<Page id="master2" title="Master 2" icon="sap-icon://action" class="sapUiStdPage" showNavButton="true"
+			<Page id="catalog" title="Выберите категорию" icon="sap-icon://action" class="sapUiStdPage" showNavButton="true"
 					navButtonPress="onPressMasterBack">
 				<content>
 					<List itemPress="onListItemPress">
 						<items>
-							<StandardListItem title="To Detail 1" type="Active" custom:to="detail"/>
-							<StandardListItem title="To Detail 2" type="Active" custom:to="detailDetail"/>
-							<StandardListItem title="To Detail 3" type="Active" custom:to="detail2"/>
+							<StandardListItem title="Защитные конструкции, отбойники" type="Active" custom:to="detail"/>
+							<StandardListItem title="Каркасные конструкции, навесы" type="Active" custom:to="detailDetail"/>
+							<StandardListItem title="Мебель из нержавеющей стали" type="Active" custom:to="detail2"/>
 						</items>
 					</List>
 				</content>
