@@ -11,24 +11,31 @@
 					<Button text="Заказать!" type="Emphasized" press="onPressNavToDetail" />
 				</content>
 			</Page>
-			<Page id="detailDetail" title="Detail Detail" class="sapUiStdPage" showNavButton="true"
+			<Page id="ProtectiveConstructions" title="Защитные конструкции, отбойники" class="sapUiStdPage" showNavButton="true"
 					navButtonText="Back" navButtonPress="onPressDetailBack">
 				<content>
 					<VBox class="sapUiSmallMargin">
 						<Label text="This is Detail Page2" />
-						<Text text="Here you could change the Split Application mode. After the mode change, resize the browser window to see the difference in the master form behaviour." />
-						<RadioButtonGroup columns="1" width="500px" class="sapUiMediumMarginBottom" select="onPressModeBtn">
-							<buttons>
-								<RadioButton id="RB1-1" text="show/hide" selected="true" custom:splitAppMode="ShowHideMode" />
-								<RadioButton id="RB1-2" text="stretch/compress" custom:splitAppMode="StretchCompressMode" />
-								<RadioButton id="RB1-3" text="hide" custom:splitAppMode="HideMode" />
-								<RadioButton id="RB1-4" text="popover" custom:splitAppMode="PopoverMode" />
-							</buttons>
-						</RadioButtonGroup>
 					</VBox>
 				</content>
 			</Page>
-			<Page id="detail2" title="Detail 3 Page" class="sapUiStdPage" showNavButton="true"
+			<Page id="FrameConstructions" title="Каркасные конструкции, навесы" class="sapUiStdPage" showNavButton="true"
+					navButtonText="Back" navButtonPress="onPressDetailBack">
+
+				<content>
+					<Label text="This is Detail Page3" />
+					<Input/>
+					<Label text="Label 2" />
+					<Input/>
+					<Label text="Label 3" />
+					<Input/>
+					<Label text="Label 4" />
+					<Input/>
+					<Label text="Label 5" />
+					<Input/>
+				</content>
+			</Page>
+			<Page id="StainlessSteelFurniture" title="Мебель из нержавеющей стали" class="sapUiStdPage" showNavButton="true"
 					navButtonText="Back" navButtonPress="onPressDetailBack">
 
 				<content>
@@ -51,21 +58,59 @@
 					<List>
 						<items>
 							<StandardListItem title="Каталог товаров" type="Navigation" press="onPressGoToCatalog"/>
-							<StandardListItem title="Конструкции на заказ"  />
-							<StandardListItem title="Заказать звонок"  />
-							<StandardListItem title="Контакты" />
+							<StandardListItem title="Конструкции на заказ" type="Active" press="onPressGoToCustomMade"/>
+							<StandardListItem title="Заказать звонок" type="Active" press="onPressGoToCallbackForm"/>
+							<StandardListItem title="Контакты" type="Active" press="onPressGoToContacts"/>
 						</items>
 					</List>
 				</content>
 			</Page>
-			<Page id="catalog" title="Выберите категорию" icon="sap-icon://action" class="sapUiStdPage" showNavButton="true"
+			<Page id="catalog" title="Уточните категорию" icon="sap-icon://action" class="sapUiStdPage" showNavButton="true"
 					navButtonPress="onPressMasterBack">
 				<content>
 					<List itemPress="onListItemPress">
 						<items>
-							<StandardListItem title="Защитные конструкции, отбойники" type="Active" custom:to="detail"/>
-							<StandardListItem title="Каркасные конструкции, навесы" type="Active" custom:to="detailDetail"/>
-							<StandardListItem title="Мебель из нержавеющей стали" type="Active" custom:to="detail2"/>
+							<StandardListItem title="Защитные конструкции" type="Navigation" press="goToProtectiveConstructions"/>
+							<StandardListItem title="Каркасные конструкции" type="Navigation" press="goToFrameConstructions"/>
+							<StandardListItem title="Мебель из нержавеющей стали" type="Navigation" press="goToStainlessSteelFurniture"/>
+						</items>
+					</List>
+				</content>
+			</Page>
+			<Page id="catalog_ProtConstructions" title="Уточните категорию" icon="sap-icon://action" class="sapUiStdPage" showNavButton="true"
+					navButtonPress="onPressMasterBack">
+				<content>
+					<List itemPress="onListItemPress">
+						<items>
+							<StandardListItem title="Отбойники из черного металла" type="Active" custom:to="goToProtConstr_1"/>
+							<StandardListItem title="Отбойники из нержавеющей стали" type="Active" custom:to="goToProtConstr_2"/>
+							<StandardListItem title="Демпферы" type="Active" custom:to="goToProtConstr_3"/>
+							<StandardListItem title="Защита стеллажей" type="Active" custom:to="goToProtConstr_4"/>
+							<StandardListItem title="Защита пожарных шкафов" type="Active" custom:to="goToProtConstr_5"/>
+						</items>
+					</List>
+				</content>
+			</Page>
+			<Page id="catalog_FrameConstructions" title="Уточните категорию" icon="sap-icon://action" class="sapUiStdPage" showNavButton="true"
+					navButtonPress="onPressMasterBack">
+				<content>
+					<List itemPress="onListItemPress">
+						<items>
+							<StandardListItem title="Навесы" type="Active" custom:to="goToFrameConstr_1"/>
+							<StandardListItem title="ПаркБоксы" type="Active" custom:to="goToFrameConstr_2"/>
+						</items>
+					</List>
+				</content>
+			</Page>
+			<Page id="catalog_StainlessSteelFurniture" title="Уточните категорию" icon="sap-icon://action" class="sapUiStdPage" showNavButton="true"
+					navButtonPress="onPressMasterBack">
+				<content>
+					<List itemPress="onListItemPress">
+						<items>
+							<StandardListItem title="Столы" type="Active" custom:to="goToSSFurniture_1"/>
+							<StandardListItem title="Моечные раковины" type="Active" custom:to="goToSSFurniture_2"/>
+							<StandardListItem title="Шкафы" type="Active" custom:to="goToSSFurniture_3"/>
+							<StandardListItem title="Стеллажи" type="Active" custom:to="goToSSFurniture_4"/>
 						</items>
 					</List>
 				</content>

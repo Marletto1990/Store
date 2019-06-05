@@ -19,6 +19,23 @@ sap.ui.define([
         },
         onPressMasterBack : function() {
 			this.getSplitAppObj().backMaster();
+        },
+        goToProtectiveConstructions : function(oEvent) {
+			this.getSplitAppObj().to(this.createId("catalog_ProtConstructions"));
+        },
+        goToFrameConstructions : function(oEvent) {
+			this.getSplitAppObj().to(this.createId("catalog_FrameConstructions"));
+        },
+        goToStainlessSteelFurniture : function(oEvent) {
+			this.getSplitAppObj().to(this.createId("catalog_StainlessSteelFurniture"));
+		},
+		onPressDetailBack : function() {
+			this.getSplitAppObj().backDetail();
+        },
+        onListItemPress : function(oEvent) {
+			var sToPageId = oEvent.getParameter("listItem").getCustomData()[0].getValue();
+
+			this.getSplitAppObj().toDetail(this.createId(sToPageId));
 		},
         getSplitAppObj : function() {
 			var result = this.byId("SplitAppDemo");
