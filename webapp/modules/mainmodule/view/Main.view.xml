@@ -1,17 +1,39 @@
 <mvc:View
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:f="sap.ui.layout.form" 
+	xmlns:layout="sap.ui.layout"
 	controllerName="mainpath.controller.mainController"
 	xmlns="sap.m">
 	<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
 		<detailPages>
 			<Page id="detail" title="АКЦИЯ !" class="sapUiStdPage">
 				<content>
-					<Label text="Здесь будет размещен товар со скидкой" />
-					<Button text="Заказать!" type="Emphasized" press="onPressNavToDetail" />
+					<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" >
+						<f:content>
+							<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+								<headerToolbar>
+									<Toolbar height="3rem">
+										<Title text="Скидка дня:"/>
+									</Toolbar>
+								</headerToolbar>
+								<content>
+									<layout:HorizontalLayout>
+										<Image src="/modules/mainmodule/images/tovar.png"/>
+										<Image src="/modules/mainmodule/images/tovar.png"/>
+										<Image src="/modules/mainmodule/images/tovar.png"/>
+										<Image src="/modules/mainmodule/images/tovar.png"/>
+									</layout:HorizontalLayout>
+									<Text text="Успейте купить нашу хрень со скидкой. Стоимость доставки не учтена." />
+									<Button text = "Shut up and take my money!"/>
+								</content>
+							</Panel>
+						</f:content>
+					</f:SimpleForm>
+
 				</content>
 			</Page>
-			<Page id="ProtectiveConstructions" title="Защитные конструкции, отбойники" class="sapUiStdPage" showNavButton="true"
+			<Page id="ProtectiveConstructions" title="Отбойники из черного металла" class="sapUiStdPage" showNavButton="true"
 					navButtonText="Back" navButtonPress="onPressDetailBack">
 				<content>
 					<VBox class="sapUiSmallMargin">
