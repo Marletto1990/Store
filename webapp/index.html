@@ -2,9 +2,48 @@
 <html>
 
 <head>
+    	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Магазин Железа</title>
+
+	<style>
+		.sapMText.bigtext{
+			font-size: 300%;
+		}
+	</style>
+
+	<!-- "https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" -->
+	<!-- theme default sap_belize -->
+	<script id="sap-ui-bootstrap"
+		src="/resources/sap-ui-core.js"
+		data-sap-ui-libs="sap.m"
+		data-sap-ui-theme="sap_belize" 
+		data-sap-ui-resourceroots='{
+			"app": "./",
+			"mainpath": "./modules/mainmodule/"
+		}'
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-async="true"
+		data-sap-ui-frameOptions="trusted"
+		data-sap-ui-oninit="module:sap/ui/core/ComponentSupport">
+	</script>
 </head>
 
 <body class="sapUiBody" id="content">
 </body>
-
+<script>
+		sap.ui.getCore().attachInit(function() {
+			sap.ui.require([
+				"sap/ui/core/ComponentContainer"
+			],
+			function (ComponentContainer){
+				new ComponentContainer ({
+					name : "app",
+					settings : {
+						id : "idComponentContainer"
+					}
+				}).placeAt("content");
+			})
+		});
+	</script>
 </html>

@@ -1,0 +1,43 @@
+{
+    "Categories": [{
+            "cat_name": "Защитные конструкции",
+            "cat_type": 1,
+            "cat_articles": [1001, 1002, 1003, 1004, 1005]
+        },
+        {
+            "cat_name": "Каркасные конструкции",
+            "cat_type": 2,
+            "cat_articles": [2001, 2002, 2003, 2004, 2005]
+        },
+        {
+            "cat_name": "Металлическая мебель",
+            "cat_type": 3,
+            "cat_articles": [3001, 3002, 3003, 3004, 3005]
+        }
+
+    ],
+    "Articles": [{
+            "article_num": 1001,
+            "article_name": "Отбойник из трубы угловой",
+            "article_price": 3690,
+            "article_length": 500,
+            "article_width": 300,
+            "article_height": 280,
+            "article_weight": 6,
+            "article_material": "Черный металлопрокат",
+            "article_image_path": "/modules/mainmodule/images/1001.jpg"
+        },
+        {
+            "article_num": 1002,
+            "article_name": "Защита для пожарного шкафа",
+            "article_price": 12540,
+            "article_length": 700,
+            "article_width": 330,
+            "article_height": 1380,
+            "article_weight": 44,
+            "article_material": "нержавеющая сталь",
+            "article_image_path": "/modules/mainmodule/images/1002.jpg"
+        }
+
+    ]
+}
