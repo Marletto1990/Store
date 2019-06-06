@@ -7,11 +7,20 @@
 	xmlns="sap.m">
 	<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
 		<detailPages>
-			<Page id="detail" title="АКЦИЯ !" class="sapUiStdPage">
+			<Page 
+				id="detail" 
+				title="АКЦИЯ !" 
+				class="sapUiStdPage">
 				<content>
-					<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" >
+					<f:SimpleForm 
+						id="SimpleFormChange354" 
+						editable="true" 
+						layout="ResponsiveGridLayout" >
 						<f:content>
-							<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+							<Panel 
+								width="auto" 
+								class="sapUiResponsiveMargin" 
+								accessibleRole="Region">
 								<headerToolbar>
 									<Toolbar height="5rem">
 										<Title text="Скидка дня:"/>
@@ -33,17 +42,26 @@
 
 				</content>
 			</Page>
-			<Page id="ProtectiveConstructions" title="Отбойники из черного металла" class="sapUiStdPage" showNavButton="true"
-					navButtonText="Back" navButtonPress="onPressDetailBack">
+			<Page 
+				id="ProtectiveConstructions" 
+				title="Отбойники из черного металла" 
+				class="sapUiStdPage" 
+				showNavButton="true"
+				navButtonText="Back" 
+				navButtonPress="onPressDetailBack">
 				<content>
 					<VBox class="sapUiSmallMargin">
 						<Label text="This is Detail Page2" />
 					</VBox>
 				</content>
 			</Page>
-			<Page id="FrameConstructions" title="Каркасные конструкции, навесы" class="sapUiStdPage" showNavButton="true"
-					navButtonText="Back" navButtonPress="onPressDetailBack">
-
+			<Page 
+				id="FrameConstructions" 
+				title="Каркасные конструкции, навесы" 
+				class="sapUiStdPage" 
+				showNavButton="true"
+				navButtonText="Back" 
+				navButtonPress="onPressDetailBack">
 				<content>
 					<Label text="This is Detail Page3" />
 					<Input/>
@@ -57,9 +75,13 @@
 					<Input/>
 				</content>
 			</Page>
-			<Page id="StainlessSteelFurniture" title="Мебель из нержавеющей стали" class="sapUiStdPage" showNavButton="true"
-					navButtonText="Back" navButtonPress="onPressDetailBack">
-
+			<Page 
+				id="StainlessSteelFurniture" 
+				title="Мебель из нержавеющей стали" 
+				class="sapUiStdPage" 
+				showNavButton="true"
+				navButtonText="Back" 
+				navButtonPress="onPressDetailBack">
 				<content>
 					<Label text="This is Detail Page3" />
 					<Input/>
@@ -75,7 +97,11 @@
 			</Page>
 		</detailPages>
 		<masterPages>
-			<Page id="master" title="Steel Store" icon="sap-icon://action" class="sapUiStdPage">
+			<Page 
+				id="master" 
+				title="Steel Store" 
+				icon="sap-icon://action" 
+				class="sapUiStdPage">
 				<content>
 					<List 
 						items = "{myModel>/Menu}">
@@ -90,56 +116,62 @@
 					</List>
 				</content>
 			</Page>
-			<Page id="catalog" title="Уточните категорию" icon="sap-icon://action" class="sapUiStdPage" showNavButton="true"
-					navButtonPress="onPressMasterBack">
+			<Page 
+				id="catalog" 
+				title="Уточните категорию" 
+				icon="sap-icon://action" 
+				class="sapUiStdPage" 
+				showNavButton="true"
+				navButtonPress="onPressMasterBack">
 				<content>
-					<List itemPress="onListItemPress">
+					<List
+						items = "{myModel>/Categories}" >
 						<items>
-							<StandardListItem title="Защитные конструкции" type="Navigation" press="goToProtectiveConstructions"/>
-							<StandardListItem title="Каркасные конструкции" type="Navigation" press="goToFrameConstructions"/>
-							<StandardListItem title="Мебель из нержавеющей стали" type="Navigation" press="goToStainlessSteelFurniture"/>
+							<StandardListItem 
+								title="{myModel>title}"
+								type="Navigation" 
+								press="onMenuItemPress2"/>
 						</items>
 					</List>
 				</content>
 			</Page>
-			<Page id="catalog_ProtConstructions" title="Уточните категорию" icon="sap-icon://action" class="sapUiStdPage" showNavButton="true"
-					navButtonPress="onPressMasterBack">
+			<Page 
+				id="typePage" 
+				title="Уточните категорию" 
+				icon="sap-icon://action" 
+				class="sapUiStdPage" 
+				showNavButton="true"
+				navButtonPress="onPressMasterBack">
 				<content>
-					<List itemPress="onListItemPress">
+					<List items = "{myModel>/Categories/0/type}" id="typeList">
 						<items>
-							<StandardListItem title="Отбойники из черного металла" type="Active" custom:to="goToProtConstr_1"/>
-							<StandardListItem title="Отбойники из нержавеющей стали" type="Active" custom:to="goToProtConstr_2"/>
-							<StandardListItem title="Демпферы" type="Active" custom:to="goToProtConstr_3"/>
-							<StandardListItem title="Защита стеллажей" type="Active" custom:to="goToProtConstr_4"/>
-							<StandardListItem title="Защита пожарных шкафов" type="Active" custom:to="goToProtConstr_5"/>
+							<StandardListItem 
+								title="{myModel>type_name}" 
+								type="Active" 
+								press="onTypeItemPress3"/>
 						</items>
 					</List>
 				</content>
 			</Page>
-			<Page id="catalog_FrameConstructions" title="Уточните категорию" icon="sap-icon://action" class="sapUiStdPage" showNavButton="true"
-					navButtonPress="onPressMasterBack">
+			<Page 
+				id="articles" 
+				title="Уточните категорию" 
+				icon="sap-icon://action" 
+				class="sapUiStdPage" 
+				showNavButton="true"
+				navButtonPress="onPressMasterBack">
 				<content>
-					<List itemPress="onListItemPress">
+					<List>
 						<items>
-							<StandardListItem title="Навесы" type="Active" custom:to="goToFrameConstr_1"/>
-							<StandardListItem title="ПаркБоксы" type="Active" custom:to="goToFrameConstr_2"/>
+							<StandardListItem 
+								title="{myModel>type_name}" 
+								type="Active" 
+								custom:to="onTypeItemPress"/>
 						</items>
 					</List>
 				</content>
 			</Page>
-			<Page id="catalog_StainlessSteelFurniture" title="Уточните категорию" icon="sap-icon://action" class="sapUiStdPage" showNavButton="true"
-					navButtonPress="onPressMasterBack">
-				<content>
-					<List itemPress="onListItemPress">
-						<items>
-							<StandardListItem title="Столы" type="Active" custom:to="goToSSFurniture_1"/>
-							<StandardListItem title="Моечные раковины" type="Active" custom:to="goToSSFurniture_2"/>
-							<StandardListItem title="Шкафы" type="Active" custom:to="goToSSFurniture_3"/>
-							<StandardListItem title="Стеллажи" type="Active" custom:to="goToSSFurniture_4"/>
-						</items>
-					</List>
-				</content>
-			</Page>
+
 		</masterPages>
 	</SplitApp>
 </mvc:View>

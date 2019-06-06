@@ -25,7 +25,10 @@
         }
     ],
     "Categories": [{
-            "cat_name": "Защитные конструкции",
+            "title": "Защитные конструкции",
+            "link": "typePage",
+            "child": "type",
+            "master_option": true,
             "cat_num": 1,
             "type": [{
                     "type_name": "Отбойники из черного металла",
@@ -56,7 +59,10 @@
             ]
         },
         {
-            "cat_name": "Каркасные конструкции",
+            "title": "Каркасные конструкции",
+            "link": "typePage",
+            "child": "type",
+            "master_option": true,
             "cat_num": 2,
             "type": [{
                     "type_name": "Навесы",
@@ -71,7 +77,10 @@
             ]
         },
         {
-            "cat_name": "Мебель из нержавеющей стали",
+            "title": "Мебель из нержавеющей стали",
+            "link": "typePage",
+            "child": "type",
+            "master_option": true,
             "cat_num": 3,
             "type": [{
                     "type_name": "Столы",
