@@ -1,23 +1,79 @@
 {
     "Categories": [{
-            "cat_name": "Защитные конструкции",
-            "cat_type": 1,
-            "cat_articles": [1001, 1002, 1003, 1004, 1005]
+        "cat_name": "Защитные конструкции",
+        "cat_num": 1,
+        "type": [{
+                "type_name": "Отбойники из черного металла",
+                "type_num": 11,
+                "articles": [1101, 1102, 1103, 1104, 1105]
+            },
+            {
+                "type_name": "Отбойники из нержавеющей стали",
+                "type_num": 12,
+                "articles": [1201, 1202, 1203, 1204, 1205]
+            },
+            {
+                "type_name": "Демпферы",
+                "type_num": 13,
+                "articles": [1301, 1302, 1303, 1304, 1305]
+            },
+            {
+                "type_name": "Защита стеллажей",
+                "type_num": 14,
+                "articles": [1401, 1402, 1403, 1404, 1405]
+            },
+            {
+                "type_name": "Защита пожарных ящиков",
+                "type_num": 15,
+                "articles": [1501, 1502, 1503, 1504, 1505]
+            }
+            
+        ]
+    },
+    {
+        "cat_name": "Каркасные конструкции",
+        "cat_num": 2,
+        "type": [{
+                "type_name": "Навесы",
+                "type_num": 21,
+                "articles": [2101, 2102, 2103, 2104, 2105]
+            },
+            {
+                "cat_name": "ПаркБоксы",
+                "cat_type": 22,
+                "cat_articles": [2201, 2202, 2203, 2204, 2205]
+            }
+        ]
+    },
+    {
+        "cat_name": "Мебель из нержавеющей стали",
+        "cat_num": 3,
+        "type": [{
+            "type_name": "Столы",
+            "type_num": 31,
+            "articles": [3101, 3102, 3103, 3104, 3105]
         },
         {
-            "cat_name": "Каркасные конструкции",
-            "cat_type": 2,
-            "cat_articles": [2001, 2002, 2003, 2004, 2005]
+            "type_name": "Моечные раковины",
+            "type_num": 32,
+            "articles": [3201, 3202, 3203, 3204, 3205]
         },
         {
-            "cat_name": "Металлическая мебель",
-            "cat_type": 3,
-            "cat_articles": [3001, 3002, 3003, 3004, 3005]
+            "type_name": "Шкафы",
+            "type_num": 33,
+            "articles": [3301, 3302, 3303, 3304, 3305]
+        },
+        {
+            "type_name": "Стеллажи",
+            "type_num": 34,
+            "articles": [3401, 3402, 3403, 3404, 3405]
         }
-
-    ],
+        ]
+    }],
     "Articles": [{
-            "article_num": 1001,
+            "article_num": 1101,
+            "cat_num": 1,
+            "type_num": 11,
             "article_name": "Отбойник из трубы угловой",
             "article_price": 3690,
             "article_length": 500,
@@ -25,10 +81,139 @@
             "article_height": 280,
             "article_weight": 6,
             "article_material": "Черный металлопрокат",
-            "article_image_path": "/modules/mainmodule/images/1001.jpg"
+            "article_image_path": "/modules/mainmodule/images/1101.jpg",
+            "description": "Тут будет описание товара 1101"
         },
         {
-            "article_num": 1002,
+            "article_num": 1102,
+            "cat_num": 1,
+            "type_num": 11,
+            "article_name": "Артикул 1102",
+            "article_price": 1690,
+            "article_length": 1500,
+            "article_width": 400,
+            "article_height": 280,
+            "article_weight": 16,
+            "article_material": "Черный металлопрокат",
+            "article_image_path": "/modules/mainmodule/images/1102.jpg",
+            "description": "Тут будет описание товара 1102"
+        },
+        {
+            "article_num": 1103,
+            "cat_num": 1,
+            "type_num": 11,
+            "article_name": "Артикул 1103",
+            "article_price": 1490,
+            "article_length": 1100,
+            "article_width": 500,
+            "article_height": 280,
+            "article_weight": 12,
+            "article_material": "Черный металлопрокат",
+            "article_image_path": "/modules/mainmodule/images/1103.jpg",
+            "description": "Тут будет описание товара 1103"
+        },
+        {
+            "article_num": 1104,
+            "cat_num": 1,
+            "type_num": 11,
+            "article_name": "Артикул 1104",
+            "article_price": 1290,
+            "article_length": 1200,
+            "article_width": 600,
+            "article_height": 280,
+            "article_weight": 15.4,
+            "article_material": "Черный металлопрокат",
+            "article_image_path": "/modules/mainmodule/images/1104.jpg",
+            "description": "Тут будет описание товара 1104"
+        },
+        {
+            "article_num": 1105,
+            "cat_num": 1,
+            "type_num": 11,
+            "article_name": "Артикул 1105",
+            "article_price": 4790,
+            "article_length": 3500,
+            "article_width": 700,
+            "article_height": 280,
+            "article_weight": 6,
+            "article_material": "Черный металлопрокат",
+            "article_image_path": "/modules/mainmodule/images/1105.jpg",
+            "description": "Тут будет описание товара 1105"
+        },
+        {
+            "article_num": 1201,
+            "cat_num": 1,
+            "type_num": 12,
+            "article_name": "Артикул 1201",
+            "article_price": 3690,
+            "article_length": 500,
+            "article_width": 300,
+            "article_height": 280,
+            "article_weight": 6,
+            "article_material": "Черный металлопрокат",
+            "article_image_path": "/modules/mainmodule/images/1201.jpg",
+            "description": "Тут будет описание товара 1201"
+        },
+        {
+            "article_num": 1202,
+            "cat_num": 1,
+            "type_num": 12,
+            "article_name": "Артикул 1202",
+            "article_price": 3690,
+            "article_length": 500,
+            "article_width": 300,
+            "article_height": 280,
+            "article_weight": 6,
+            "article_material": "Черный металлопрокат",
+            "article_image_path": "/modules/mainmodule/images/1202.jpg",
+            "description": "Тут будет описание товара 1202"
+        },
+        {
+            "article_num": 1203,
+            "cat_num": 1,
+            "type_num": 12,
+            "article_name": "Артикул 1203",
+            "article_price": 3690,
+            "article_length": 500,
+            "article_width": 300,
+            "article_height": 280,
+            "article_weight": 6,
+            "article_material": "Черный металлопрокат",
+            "article_image_path": "/modules/mainmodule/images/1203.jpg",
+            "description": "Тут будет описание товара 1203"
+        },
+        {
+            "article_num": 1204,
+            "cat_num": 1,
+            "type_num": 12,
+            "article_name": "Артикул 1204",
+            "article_price": 3690,
+            "article_length": 500,
+            "article_width": 300,
+            "article_height": 280,
+            "article_weight": 6,
+            "article_material": "Черный металлопрокат",
+            "article_image_path": "/modules/mainmodule/images/1204.jpg",
+            "description": "Тут будет описание товара 1204"
+        },
+        {
+            "article_num": 1205,
+            "cat_num": 1,
+            "type_num": 12,
+            "article_name": "Артикул 1205",
+            "article_price": 3690,
+            "article_length": 500,
+            "article_width": 300,
+            "article_height": 280,
+            "article_weight": 6,
+            "article_material": "Черный металлопрокат",
+            "article_image_path": "/modules/mainmodule/images/1205.jpg",
+            "description": "Тут будет описание товара 1205"
+        },
+        {
+            "article_num": 1501,
+            "cat_num": 1,
+            "type_num": 15,
             "article_name": "Защита для пожарного шкафа",
             "article_price": 12540,
             "article_length": 700,
@@ -36,8 +221,8 @@
             "article_height": 1380,
             "article_weight": 44,
             "article_material": "нержавеющая сталь",
-            "article_image_path": "/modules/mainmodule/images/1002.jpg"
+            "article_image_path": "/modules/mainmodule/images/1501.jpg",
+            "description": "Тут будет описание товара 1501"
         }
-
     ]
 }

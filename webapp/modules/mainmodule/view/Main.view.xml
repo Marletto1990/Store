@@ -2,7 +2,7 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 	xmlns:f="sap.ui.layout.form" 
-	xmlns:layout="sap.ui.layout"
+	xmlns:l="sap.ui.layout"
 	controllerName="mainpath.controller.mainController"
 	xmlns="sap.m">
 	<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
@@ -13,17 +13,17 @@
 						<f:content>
 							<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
 								<headerToolbar>
-									<Toolbar height="3rem">
+									<Toolbar height="5rem">
 										<Title text="Скидка дня:"/>
 									</Toolbar>
 								</headerToolbar>
 								<content>
-									<layout:HorizontalLayout>
-										<Image src="/modules/mainmodule/images/tovar.png"/>
-										<Image src="/modules/mainmodule/images/tovar.png"/>
-										<Image src="/modules/mainmodule/images/tovar.png"/>
-										<Image src="/modules/mainmodule/images/tovar.png"/>
-									</layout:HorizontalLayout>
+									<l:HorizontalLayout>
+										<Image src="/modules/mainmodule/images/T2.jpeg"/>
+										<Image src="/modules/mainmodule/images/T7.jpeg"/>
+										<Image src="/modules/mainmodule/images/T8.jpeg"/>
+										<Image src="/modules/mainmodule/images/T11.jpeg"/>
+									</l:HorizontalLayout>
 									<Text text="Успейте купить нашу хрень со скидкой. Стоимость доставки не учтена." />
 									<Button text = "Shut up and take my money!"/>
 								</content>

@@ -15,27 +15,27 @@ sap.ui.define([
 
         },
         onPressGoToCatalog: function(){
-            this.getSplitAppObj().toMaster(this.createId("catalog"));
+            this.byId("SplitAppDemo").toMaster(this.createId("catalog"));
         },
         onPressMasterBack : function() {
-			this.getSplitAppObj().backMaster();
+			this.byId("SplitAppDemo").backMaster();
         },
         goToProtectiveConstructions : function(oEvent) {
-			this.getSplitAppObj().to(this.createId("catalog_ProtConstructions"));
+			this.byId("SplitAppDemo").to(this.createId("catalog_ProtConstructions"));
         },
         goToFrameConstructions : function(oEvent) {
-			this.getSplitAppObj().to(this.createId("catalog_FrameConstructions"));
+			this.byId("SplitAppDemo").to(this.createId("catalog_FrameConstructions"));
         },
         goToStainlessSteelFurniture : function(oEvent) {
-			this.getSplitAppObj().to(this.createId("catalog_StainlessSteelFurniture"));
+			this.byId("SplitAppDemo").to(this.createId("catalog_StainlessSteelFurniture"));
 		},
 		onPressDetailBack : function() {
-			this.getSplitAppObj().backDetail();
+			this.byId("SplitAppDemo").backDetail();
         },
         onListItemPress : function(oEvent) {
 			var sToPageId = oEvent.getParameter("listItem").getCustomData()[0].getValue();
 
-			this.getSplitAppObj().toDetail(this.createId(sToPageId));
+			this.byId("SplitAppDemo").toDetail(this.createId(sToPageId));
 		},
         getSplitAppObj : function() {
 			var result = this.byId("SplitAppDemo");
