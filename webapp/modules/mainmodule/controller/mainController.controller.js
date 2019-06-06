@@ -35,32 +35,25 @@ sap.ui.define([
             this.navigateToMaster(oData);
         },
 
-            //создание второго уровня меню
+        //создание второго уровня меню
         onMenuItemPress2: function (oEvent) {
             var oData = oEvent.getSource().getBindingContext("myModel").getObject();
-            
             var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
             var sChild = oData.child;
             var oList_types = this.getView().byId("typeList");
            // oList_types.bindElement({path:sPath+"/"+sChild, model: "myModel"});
-           var oTemplate = oList.getBindingInfo("items").template;
+           var oTemplate = oList_types.getBindingInfo("items").template;
            oList_types.bindItems("myModel>"+sPath+"/"+sChild, oTemplate);
 
             this.navigateToMaster(oData);
         },
-        //создание второго уровня меню
+        //создание третьего уровня меню
         onMenuItemPress3: function (oEvent) {
             var oData = oEvent.getSource().getBindingContext("myModel").getObject();
-            
-            var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
-            var sChild = oData.child;
-            var oList_articles = this.getView().byId("typeList");
-            // oList__articles.bindElement({path:sPath+"/"+sChild, model: "myModel"});
-            var oTemplate = oList.getBindingInfo("items").template;
-            oList_articles.bindItems("myModel>"+sPath+"/"+sChild, oTemplate);
-
-            this.navigateToMaster(oData);
+            console.log(oData);
+            this.byId("SplitAppDemo").toMaster(this.createId("articles"));
         },
+
         navigateToMaster: function(oData){
             if (oData.link) {
                 if (oData.master_option) {

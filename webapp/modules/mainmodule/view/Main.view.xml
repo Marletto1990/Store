@@ -143,30 +143,30 @@
 				showNavButton="true"
 				navButtonPress="onPressMasterBack">
 				<content>
-					<List items = "{myModel>/Categories/0/type}" id="typeList">
+					<List items = "{myModel>/Categories}" id="typeList">
 						<items>
 							<StandardListItem 
 								title="{myModel>type_name}" 
-								type="Active" 
-								press="onTypeItemPress3"/>
+								type="Navigation" 
+								press="onMenuItemPress3"/>
 						</items>
 					</List>
 				</content>
 			</Page>
 			<Page 
 				id="articles" 
-				title="Уточните категорию" 
+				title="Выберите товар" 
 				icon="sap-icon://action" 
 				class="sapUiStdPage" 
 				showNavButton="true"
 				navButtonPress="onPressMasterBack">
 				<content>
-					<List>
+					<List items = "{myModel>/Articles}" id="articlesList">
 						<items>
 							<StandardListItem 
-								title="{myModel>type_name}" 
+								title="{myModel>article_num}" 
 								type="Active" 
-								custom:to="onTypeItemPress"/>
+								press="onTypeItemPress4"/>
 						</items>
 					</List>
 				</content>
