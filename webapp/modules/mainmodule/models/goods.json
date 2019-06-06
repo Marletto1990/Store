@@ -1,75 +1,101 @@
 {
-    "Categories": [{
-        "cat_name": "Защитные конструкции",
-        "cat_num": 1,
-        "type": [{
-                "type_name": "Отбойники из черного металла",
-                "type_num": 11,
-                "articles": [1101, 1102, 1103, 1104, 1105]
-            },
-            {
-                "type_name": "Отбойники из нержавеющей стали",
-                "type_num": 12,
-                "articles": [1201, 1202, 1203, 1204, 1205]
-            },
-            {
-                "type_name": "Демпферы",
-                "type_num": 13,
-                "articles": [1301, 1302, 1303, 1304, 1305]
-            },
-            {
-                "type_name": "Защита стеллажей",
-                "type_num": 14,
-                "articles": [1401, 1402, 1403, 1404, 1405]
-            },
-            {
-                "type_name": "Защита пожарных ящиков",
-                "type_num": 15,
-                "articles": [1501, 1502, 1503, 1504, 1505]
-            }
-            
-        ]
-    },
-    {
-        "cat_name": "Каркасные конструкции",
-        "cat_num": 2,
-        "type": [{
-                "type_name": "Навесы",
-                "type_num": 21,
-                "articles": [2101, 2102, 2103, 2104, 2105]
-            },
-            {
-                "cat_name": "ПаркБоксы",
-                "cat_type": 22,
-                "cat_articles": [2201, 2202, 2203, 2204, 2205]
-            }
-        ]
-    },
-    {
-        "cat_name": "Мебель из нержавеющей стали",
-        "cat_num": 3,
-        "type": [{
-            "type_name": "Столы",
-            "type_num": 31,
-            "articles": [3101, 3102, 3103, 3104, 3105]
+    "Menu": [{
+            "title": "Каталог товаров",
+            "link": "catalog",
+            "show_nav_button": true,
+            "master_option": true
         },
         {
-            "type_name": "Моечные раковины",
-            "type_num": 32,
-            "articles": [3201, 3202, 3203, 3204, 3205]
+            "title": "Конструкции на заказ",
+            "link": "",
+            "show_nav_button": false,
+            "master_option": false
         },
         {
-            "type_name": "Шкафы",
-            "type_num": 33,
-            "articles": [3301, 3302, 3303, 3304, 3305]
+            "title": "Заказать звонок",
+            "link": "",
+            "show_nav_button": false,
+            "master_option": false
         },
         {
-            "type_name": "Стеллажи",
-            "type_num": 34,
-            "articles": [3401, 3402, 3403, 3404, 3405]
+            "title": "Контакты",
+            "link": "",
+            "show_nav_button": false,
+            "master_option": false
         }
-        ]
-    }],
+    ],
+    "Categories": [{
+            "cat_name": "Защитные конструкции",
+            "cat_num": 1,
+            "type": [{
+                    "type_name": "Отбойники из черного металла",
+                    "type_num": 11,
+                    "articles": [1101, 1102, 1103, 1104, 1105]
+                },
+                {
+                    "type_name": "Отбойники из нержавеющей стали",
+                    "type_num": 12,
+                    "articles": [1201, 1202, 1203, 1204, 1205]
+                },
+                {
+                    "type_name": "Демпферы",
+                    "type_num": 13,
+                    "articles": [1301, 1302, 1303, 1304, 1305]
+                },
+                {
+                    "type_name": "Защита стеллажей",
+                    "type_num": 14,
+                    "articles": [1401, 1402, 1403, 1404, 1405]
+                },
+                {
+                    "type_name": "Защита пожарных ящиков",
+                    "type_num": 15,
+                    "articles": [1501, 1502, 1503, 1504, 1505]
+                }
+
+            ]
+        },
+        {
+            "cat_name": "Каркасные конструкции",
+            "cat_num": 2,
+            "type": [{
+                    "type_name": "Навесы",
+                    "type_num": 21,
+                    "articles": [2101, 2102, 2103, 2104, 2105]
+                },
+                {
+                    "cat_name": "ПаркБоксы",
+                    "cat_type": 22,
+                    "cat_articles": [2201, 2202, 2203, 2204, 2205]
+                }
+            ]
+        },
+        {
+            "cat_name": "Мебель из нержавеющей стали",
+            "cat_num": 3,
+            "type": [{
+                    "type_name": "Столы",
+                    "type_num": 31,
+                    "articles": [3101, 3102, 3103, 3104, 3105]
+                },
+                {
+                    "type_name": "Моечные раковины",
+                    "type_num": 32,
+                    "articles": [3201, 3202, 3203, 3204, 3205]
+                },
+                {
+                    "type_name": "Шкафы",
+                    "type_num": 33,
+                    "articles": [3301, 3302, 3303, 3304, 3305]
+                },
+                {
+                    "type_name": "Стеллажи",
+                    "type_num": 34,
+                    "articles": [3401, 3402, 3403, 3404, 3405]
+                }
+            ]
+        }
+    ],
     "Articles": [{
             "article_num": 1101,
             "cat_num": 1,

@@ -14,36 +14,42 @@ sap.ui.define([
         onInit: function () {
 
         },
-        onPressGoToCatalog: function(){
+        onPressGoToCatalog: function () {
             this.byId("SplitAppDemo").toMaster(this.createId("catalog"));
         },
-        onPressMasterBack : function() {
-			this.byId("SplitAppDemo").backMaster();
+        onPressMasterBack: function () {
+            this.byId("SplitAppDemo").backMaster();
         },
-        goToProtectiveConstructions : function(oEvent) {
-			this.byId("SplitAppDemo").to(this.createId("catalog_ProtConstructions"));
+        goToProtectiveConstructions: function (oEvent) {
+            this.byId("SplitAppDemo").to(this.createId("catalog_ProtConstructions"));
         },
-        goToFrameConstructions : function(oEvent) {
-			this.byId("SplitAppDemo").to(this.createId("catalog_FrameConstructions"));
+        goToFrameConstructions: function (oEvent) {
+            this.byId("SplitAppDemo").to(this.createId("catalog_FrameConstructions"));
         },
-        goToStainlessSteelFurniture : function(oEvent) {
-			this.byId("SplitAppDemo").to(this.createId("catalog_StainlessSteelFurniture"));
-		},
-		onPressDetailBack : function() {
-			this.byId("SplitAppDemo").backDetail();
+        goToStainlessSteelFurniture: function (oEvent) {
+            this.byId("SplitAppDemo").to(this.createId("catalog_StainlessSteelFurniture"));
         },
-        onListItemPress : function(oEvent) {
-			var sToPageId = oEvent.getParameter("listItem").getCustomData()[0].getValue();
+        onPressDetailBack: function () {
+            this.byId("SplitAppDemo").backDetail();
+        },
+        onListItemPress: function (oEvent) {
+            var sToPageId = oEvent.getParameter("listItem").getCustomData()[0].getValue();
 
-			this.byId("SplitAppDemo").toDetail(this.createId(sToPageId));
-		},
-        getSplitAppObj : function() {
-			var result = this.byId("SplitAppDemo");
-			if (!result) {
-				Log.info("SplitApp object can't be found");
-			}
-			return result;
-		}
+            this.byId("SplitAppDemo").toDetail(this.createId(sToPageId));
+        },
+        onMenuItemPress: function (oEvent) {
+            var oData = oEvent.getSource().getBindingContext("myModel").getObject();
+            if (oData.link) {
+                if (oData.master_option) {
+                    this.byId("SplitAppDemo").toMaster(this.createId(oData.link));
+                }
+            }
+
+
+        },
+        menuItemType: function(bType){
+            return bType ? "Navigation" : "Active";
+        }
     });
 
 

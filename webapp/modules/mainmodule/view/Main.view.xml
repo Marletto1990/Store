@@ -77,12 +77,15 @@
 		<masterPages>
 			<Page id="master" title="Steel Store" icon="sap-icon://action" class="sapUiStdPage">
 				<content>
-					<List>
+					<List 
+						items = "{myModel>/Menu}">
+
 						<items>
-							<StandardListItem title="Каталог товаров" type="Navigation" press="onPressGoToCatalog"/>
-							<StandardListItem title="Конструкции на заказ" type="Active" press="onPressGoToCustomMade"/>
-							<StandardListItem title="Заказать звонок" type="Active" press="onPressGoToCallbackForm"/>
-							<StandardListItem title="Контакты" type="Active" press="onPressGoToContacts"/>
+							<StandardListItem 
+							title="{myModel>title}" 
+							type="{path:'myModel>show_nav_button', 
+							formatter:'.menuItemType'}" 
+							press="onMenuItemPress"/>
 						</items>
 					</List>
 				</content>

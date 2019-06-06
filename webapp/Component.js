@@ -15,6 +15,9 @@ sap.ui.define([
 		init: function() {
 			// call the base component's init function
 			UIComponent.prototype.init.apply(this, arguments);
+			var oModel = new sap.ui.model.json.JSONModel();
+            oModel.loadData("modules/mainmodule/models/goods.json");
+            this.setModel(oModel,"myModel");
 		}
 
 	});
