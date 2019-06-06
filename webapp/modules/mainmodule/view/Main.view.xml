@@ -164,7 +164,7 @@
 					<List items = "{myModel>/Articles}" id="articlesList">
 						<items>
 							<StandardListItem 
-								title="{myModel>article_num}" 
+								title="{myModel>article_name}" 
 								type="Active" 
 								press="onTypeItemPress4"/>
 						</items>

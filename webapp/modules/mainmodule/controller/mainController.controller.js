@@ -5,7 +5,9 @@ sap.ui.define([
     'sap/ui/core/mvc/Controller',
     'sap/ui/model/Filter',
     'sap/ui/model/json/JSONModel',
-    'sap/base/Log'
+    'sap/base/Log',
+    "sap/ui/model/Filter",
+	"sap/ui/model/FilterOperator"
 ], function (jQuery, MessageToast, Fragment, Controller, Filter, JSONModel, Log) {
     "use strict";
 
@@ -50,8 +52,9 @@ sap.ui.define([
         //создание третьего уровня меню
         onMenuItemPress3: function (oEvent) {
             var oData = oEvent.getSource().getBindingContext("myModel").getObject();
-            console.log(oData);
+            //console.log(oData);
             this.byId("SplitAppDemo").toMaster(this.createId("articles"));
+            this.filterArticles(oEvent);
         },
 
         navigateToMaster: function(oData){
@@ -64,29 +67,19 @@ sap.ui.define([
         menuItemType: function(bType){
             return bType ? "Navigation" : "Active";
         },
-        //создание второго уровня меню
-        onMenu2ItemPress: function (oEvent) {
-            var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
-            console.log(sPath);
-            console.log(oEvent.getSource().getBindingContext("myModel").getObject());
+        //Фильтр для артикулов
+        filterArticles: function(oEvent){
+            var aFilter = [];
+            var typeNum = oEvent.getSource().getBindingContext("myModel").getProperty("type_num");
+            var allArticles = this.getView().getModel("myModel").getProperty("/Articles/");
+            allArticles.forEach(function(item) {
+                aFilter.push(item.article_num);
+            });
+            var currentArticles = aFilter.filter(number => Number((number/100).toFixed(0))===typeNum);
 
-            var oData = oEvent.getSource().getBindingContext("myModel").getObject();
-            if (oData.link) {
-                if (oData.master_option) {
-                    this.byId("SplitAppDemo").toMaster(this.createId(oData.link));
-                } else {alert ("нет линка!");}
-            } else {alert ("нет линка!");}
-        },
-        menuItemType: function(bType){
-            return bType ? "Navigation" : "Active";
-        },
-
-        //создание третьего уровня меню
-        onTypeItemPress: function (oEvent) {
-            let sPath = oEvent.getSource().getBindingContext("myModel").getPath();
-            console.log(sPath);
-            console.log(oEvent.getSource().getBindingContext("myModel").getObject());
+            return(currentArticles);
         }
+
     });
 
 
