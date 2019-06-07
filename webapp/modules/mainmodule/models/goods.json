@@ -84,23 +84,19 @@
             "cat_num": 3,
             "type": [{
                     "type_name": "Столы",
-                    "type_num": 31,
-                    "articles": [3101, 3102, 3103, 3104, 3105]
+                    "type_num": 31
                 },
                 {
                     "type_name": "Моечные раковины",
-                    "type_num": 32,
-                    "articles": [3201, 3202, 3203, 3204, 3205]
+                    "type_num": 32
                 },
                 {
                     "type_name": "Шкафы",
-                    "type_num": 33,
-                    "articles": [3301, 3302, 3303, 3304, 3305]
+                    "type_num": 33
                 },
                 {
                     "type_name": "Стеллажи",
-                    "type_num": 34,
-                    "articles": [3401, 3402, 3403, 3404, 3405]
+                    "type_num": 34
                 }
             ]
         }
@@ -185,7 +181,7 @@
             "article_width": 300,
             "article_height": 280,
             "article_weight": 6,
-            "article_material": "Черный металлопрокат",
+            "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1201.jpg",
             "description": "Тут будет описание товара 1201"
         },
@@ -199,7 +195,7 @@
             "article_width": 300,
             "article_height": 280,
             "article_weight": 6,
-            "article_material": "Черный металлопрокат",
+            "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1202.jpg",
             "description": "Тут будет описание товара 1202"
         },
@@ -213,7 +209,7 @@
             "article_width": 300,
             "article_height": 280,
             "article_weight": 6,
-            "article_material": "Черный металлопрокат",
+            "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1203.jpg",
             "description": "Тут будет описание товара 1203"
         },
@@ -227,7 +223,7 @@
             "article_width": 300,
             "article_height": 280,
             "article_weight": 6,
-            "article_material": "Черный металлопрокат",
+            "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1204.jpg",
             "description": "Тут будет описание товара 1204"
         },
@@ -241,7 +237,7 @@
             "article_width": 300,
             "article_height": 280,
             "article_weight": 6,
-            "article_material": "Черный металлопрокат",
+            "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1205.jpg",
             "description": "Тут будет описание товара 1205"
         },
@@ -395,7 +391,7 @@
             "article_width": 330,
             "article_height": 1380,
             "article_weight": 44,
-            "article_material": "нержавеющая сталь",
+            "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1501.jpg",
             "description": "Тут будет описание товара 1501"
         },
@@ -409,7 +405,7 @@
             "article_width": 330,
             "article_height": 1380,
             "article_weight": 44,
-            "article_material": "нержавеющая сталь",
+            "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1502.jpg",
             "description": "Тут будет описание товара 1502"
         },

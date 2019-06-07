@@ -9,37 +9,23 @@
 		<detailPages>
 			<Page 
 				id="detail" 
-				title="АКЦИЯ !" 
+				title="Лучшие цены во вселенной" 
 				class="sapUiStdPage">
 				<content>
-					<f:SimpleForm 
-						id="SimpleFormChange354" 
-						editable="true" 
-						layout="ResponsiveGridLayout" >
-						<f:content>
-							<Panel 
-								width="auto" 
-								class="sapUiResponsiveMargin" 
-								accessibleRole="Region">
-								<headerToolbar>
-									<Toolbar height="5rem">
-										<Title text="Скидка дня:"/>
-									</Toolbar>
-								</headerToolbar>
-								<content>
-									<l:HorizontalLayout>
-										<Image src="/modules/mainmodule/images/T2.jpeg"/>
-										<Image src="/modules/mainmodule/images/T7.jpeg"/>
-										<Image src="/modules/mainmodule/images/T8.jpeg"/>
-										<Image src="/modules/mainmodule/images/T11.jpeg"/>
-									</l:HorizontalLayout>
-									<Text text="Успейте купить нашу хрень со скидкой. Стоимость доставки не учтена." />
-									<Button text = "Shut up and take my money!"/>
-								</content>
-							</Panel>
-						</f:content>
-					</f:SimpleForm>
-
+					<Panel
+						id="container"
+						content = "{myModel>/Articles}">
+						<GenericTile 
+							class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+							header="{myModel>article_name}"
+							subheader="{myModel>article_material}" 
+							press="press">
+							<content 
+								footer = "Цена: {myModel>article_price} руб.">
+								<Image src = "{myModel>article_image_path}" class="imageClass"/>
+							</content>
+						</GenericTile>
+					</Panel>
 				</content>
 			</Page>
 			<Page 
@@ -51,7 +37,7 @@
 				navButtonPress="onPressDetailBack">
 				<content>
 					<VBox class="sapUiSmallMargin">
-						<Label text="This is Detail Page2" />
+						<Label text="Отбойники из черного металла" />
 					</VBox>
 				</content>
 			</Page>
@@ -166,7 +152,7 @@
 							<StandardListItem 
 								title="{myModel>article_name}" 
 								type="Active" 
-								press="onTypeItemPress4"/>
+								press="onArticlePress"/>
 						</items>
 					</List>
 				</content>

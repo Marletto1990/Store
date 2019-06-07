@@ -6,9 +6,8 @@ sap.ui.define([
     'sap/ui/model/Filter',
     'sap/ui/model/json/JSONModel',
     'sap/base/Log',
-    "sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator"
-], function (jQuery, MessageToast, Fragment, Controller, Filter, JSONModel, Log) {
+], function (jQuery, MessageToast, Fragment, Controller, Filter, JSONModel, Log, FilterOperator) {
     "use strict";
 
     var CController = Controller.extend("mainController", {
@@ -52,9 +51,8 @@ sap.ui.define([
         //создание третьего уровня меню
         onMenuItemPress3: function (oEvent) {
             var oData = oEvent.getSource().getBindingContext("myModel").getObject();
-            //console.log(oData);
             this.byId("SplitAppDemo").toMaster(this.createId("articles"));
-            this.filterArticles(oEvent);
+            this.filterArticles(oData.type_num)
         },
 
         navigateToMaster: function(oData){
@@ -67,8 +65,8 @@ sap.ui.define([
         menuItemType: function(bType){
             return bType ? "Navigation" : "Active";
         },
-        //Фильтр для артикулов
-        filterArticles: function(oEvent){
+        //Фильтр для артикулов вручную
+        /*filterArticles: function(oEvent){
             var aFilter = [];
             var typeNum = oEvent.getSource().getBindingContext("myModel").getProperty("type_num");
             var allArticles = this.getView().getModel("myModel").getProperty("/Articles/");
@@ -78,8 +76,20 @@ sap.ui.define([
             var currentArticles = aFilter.filter(number => Number((number/100).toFixed(0))===typeNum);
 
             return(currentArticles);
-        }
+        }*/
+        filterArticles: function (sId) {
 
+			// build filter array
+			var aFilter = [];
+			if (sId) {
+				aFilter.push(new Filter("type_num", FilterOperator.EQ, sId));
+			}
+
+			// filter binding
+			var oList = this.byId("articlesList");
+			var oBinding = oList.getBinding("items");
+			oBinding.filter(aFilter);
+		}
     });
 
 
