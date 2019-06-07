@@ -99,7 +99,29 @@
 				navButtonText="Back" 
 				navButtonPress="onPressDetailBack">
 				<content>
-					<Button id="artButton" text="Заказать {myModel>/Articles/0/article_name}"/>
+					<VBox				
+						class="sapUiTinyMarginBegin sapUiLargeMarginTop" 
+						alignItems="Center"
+						justifyContent="Center">
+						<Image
+							id="bigImage"
+							src="{myModel>/ArticleCurrent/article_image_path}"
+							height="16em"
+							width="">
+						</Image>					
+					</VBox>
+					<VBox
+						class="sapUiTinyMarginBegin sapUiLargeMarginTop" 
+						alignItems="Center"
+						justifyContent="Center">
+						<Text 
+							text="{myModel>/ArticleCurrent/description}"
+							class="sapUiTinyMarginBegin sapUiLargeMarginTop"/>
+						<Button 
+							id="artButton" 
+							text="Заказать {myModel>/ArticleCurrent/article_name}"
+							class="sapUiTinyMarginBegin sapUiLargeMarginTop"/>
+					</VBox>	
 				</content>
 			</Page>
 		</detailPages>

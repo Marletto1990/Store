@@ -89,15 +89,21 @@ sap.ui.define([
 			var oBinding = oList.getBinding("items");
 			oBinding.filter(aFilter);
         },
+
+        //Переход в подробный вид артикула
         onArticleItemPress: function(oEvent){
-            var article = oEvent.getSource().getBindingContext("myModel").getProperty("article_num");
-            var article2= this.byId("articlePage");
+            var oData = oEvent.getSource().getBindingContext("myModel").getObject();
             var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
-            article2.bindElement(sPath);
+            var bigImage = this.byId("bigImage");
+            bigImage.bindElement("myModel>"+sPath+"/article_image_path");
+            var bigImageName = oEvent.getSource().getBindingContext("myModel").getProperty("article_image_path");
+            //this.byId("bigImage");
+            this.byId("SplitAppDemo").toDetail(this.createId("articlePage"));//переход в подробный вид
 
-            this.byId("SplitAppDemo").toDetail(this.createId("articlePage"));
-
-            MessageToast.show("путь - " +sPath+" артикул - "+article);
+            console.log(oData);
+            console.log(sPath);
+            console.log(this.byId("bigImage").src);
+            //MessageToast.show("путь - " +sPath+"/article_image_path"+" артикул - "+article);
         }
     });
 

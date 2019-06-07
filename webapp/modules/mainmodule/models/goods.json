@@ -101,11 +101,25 @@
             ]
         }
     ],
+    "ArticleCurrent": {
+            "article_num": 1101,
+            "cat_num": 1,
+            "type_num": 11,
+            "article_name": "Отбойник из трубы 'Стандарт'",
+            "article_price": 3690,
+            "article_length": 500,
+            "article_width": 300,
+            "article_height": 280,
+            "article_weight": 6,
+            "article_material": "Черный металлопрокат",
+            "article_image_path": "/modules/mainmodule/images/a1101.jpg",
+            "description": "ВЫСОТА КОНСТРУКЦИИ: 200мм\nКРЕПЕЖНАЯ ПЛАСТИНА: 150*150 мм, толщина 5 мм\nВОЗМОЖНЫЕ ДЛИНЫ: любая под заказ\nВОЗМОЖНЫЕ ДИАМЕТРЫ ТРУБ: 76 мм, 102 мм\nКРЕПЛЕНИЕ: распорные анкеры\nМАТЕРИАЛ:  черный металлопрокат;\nПОВЕРХНОСТЬ: покраска механическим способом;"
+    },
     "Articles": [{
             "article_num": 1101,
             "cat_num": 1,
             "type_num": 11,
-            "article_name": "Отбойник из трубы угловой",
+            "article_name": "Отбойник из трубы 'Стандарт'",
             "article_price": 3690,
             "article_length": 500,
             "article_width": 300,
