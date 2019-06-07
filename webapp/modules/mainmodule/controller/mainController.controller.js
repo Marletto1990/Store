@@ -42,9 +42,8 @@ sap.ui.define([
             var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
             var sChild = oData.child;
             var oList_types = this.getView().byId("typeList");
-           // oList_types.bindElement({path:sPath+"/"+sChild, model: "myModel"});
-           var oTemplate = oList_types.getBindingInfo("items").template;
-           oList_types.bindItems("myModel>"+sPath+"/"+sChild, oTemplate);
+            var oTemplate = oList_types.getBindingInfo("items").template;
+            oList_types.bindItems("myModel>"+sPath+"/"+sChild, oTemplate);
 
             this.navigateToMaster(oData);
         },
@@ -60,7 +59,7 @@ sap.ui.define([
                 if (oData.master_option) {
                     this.byId("SplitAppDemo").toMaster(this.createId(oData.link));
                 }
-            } else {alert ("нет линка!");}
+            } else {MessageToast.show("нет линка!");}
         },
         menuItemType: function(bType){
             return bType ? "Navigation" : "Active";
@@ -89,7 +88,17 @@ sap.ui.define([
 			var oList = this.byId("articlesList");
 			var oBinding = oList.getBinding("items");
 			oBinding.filter(aFilter);
-		}
+        },
+        onArticleItemPress: function(oEvent){
+            var article = oEvent.getSource().getBindingContext("myModel").getProperty("article_num");
+            var article2= this.byId("articlePage");
+            var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
+            article2.bindElement(sPath);
+
+            this.byId("SplitAppDemo").toDetail(this.createId("articlePage"));
+
+            MessageToast.show("путь - " +sPath+" артикул - "+article);
+        }
     });
 
 

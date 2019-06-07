@@ -13,28 +13,38 @@
 				class="sapUiStdPage">
 				<content>
 					<Panel
-						id="container"
+						id="container_first_page"
 						content = "{myModel>/Articles}">
 						<GenericTile 
-							class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+							class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout imageClass" 
 							header="{myModel>article_name}"
 							subheader="{myModel>article_material}" 
-							press="press">
-							<content 
-								footer = "Цена: {myModel>article_price} руб.">
-								<Image src = "{myModel>article_image_path}" class="imageClass"/>
-							</content>
+							press="onArticleItemPress"
+							frameType="TwoByOne">
+								<TileContent footer="Цена: {myModel>article_price} руб." footerColor="Critical">
+									<HBox
+										alignItems="End"
+										justifyContent="End">
+										<Image
+											src="{myModel>article_image_path}"
+											height="6em"
+											width="6em">
+										</Image>
+										
+									</HBox>
+								</TileContent>
 						</GenericTile>
 					</Panel>
 				</content>
 			</Page>
 			<Page 
-				id="ProtectiveConstructions" 
+				id="protectiveConstructions" 
 				title="Отбойники из черного металла" 
 				class="sapUiStdPage" 
 				showNavButton="true"
 				navButtonText="Back" 
-				navButtonPress="onPressDetailBack">
+				navButtonPress="onPressDetailBack"
+				content = "{myModel>/Articles}">
 				<content>
 					<VBox class="sapUiSmallMargin">
 						<Label text="Отбойники из черного металла" />
@@ -79,6 +89,17 @@
 					<Input/>
 					<Label text="Label 5" />
 					<Input/>
+				</content>
+			</Page>
+			<Page 
+				id="articlePage" 
+				title="Страница товара" 
+				class="sapUiStdPage" 
+				showNavButton="true"
+				navButtonText="Back" 
+				navButtonPress="onPressDetailBack">
+				<content>
+					<Button id="artButton" text="Заказать {myModel>/Articles/0/article_name}"/>
 				</content>
 			</Page>
 		</detailPages>
