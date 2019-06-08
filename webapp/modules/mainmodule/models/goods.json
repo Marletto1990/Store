@@ -112,7 +112,8 @@
             "article_height": 280,
             "article_weight": 6,
             "article_material": "Черный металлопрокат",
-            "article_image_path": "/modules/mainmodule/images/a1101.jpg",
+            "article_image_path": "/modules/mainmodule/images/1101.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1101.jpg",
             "description": "ВЫСОТА КОНСТРУКЦИИ: 200мм\nКРЕПЕЖНАЯ ПЛАСТИНА: 150*150 мм, толщина 5 мм\nВОЗМОЖНЫЕ ДЛИНЫ: любая под заказ\nВОЗМОЖНЫЕ ДИАМЕТРЫ ТРУБ: 76 мм, 102 мм\nКРЕПЛЕНИЕ: распорные анкеры\nМАТЕРИАЛ:  черный металлопрокат;\nПОВЕРХНОСТЬ: покраска механическим способом;"
     },
     "Articles": [{
@@ -127,7 +128,8 @@
             "article_weight": 6,
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1101.jpg",
-            "description": "Тут будет описание товара 1101"
+            "article_big_image_path": "/modules/mainmodule/images/a1101.jpg",
+            "description": "ВЫСОТА КОНСТРУКЦИИ: 200мм\nКРЕПЕЖНАЯ ПЛАСТИНА: 150*150 мм, толщина 5 мм\nВОЗМОЖНЫЕ ДЛИНЫ: любая под заказ\nВОЗМОЖНЫЕ ДИАМЕТРЫ ТРУБ: 76 мм, 102 мм\nКРЕПЛЕНИЕ: распорные анкеры\nМАТЕРИАЛ:  черный металлопрокат;\nПОВЕРХНОСТЬ: покраска механическим способом;"
         },
         {
             "article_num": 1102,
@@ -141,6 +143,7 @@
             "article_weight": 16,
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1102.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1102.jpg",
             "description": "Тут будет описание товара 1102"
         },
         {
@@ -155,6 +158,7 @@
             "article_weight": 12,
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1103.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1103.jpg",
             "description": "Тут будет описание товара 1103"
         },
         {
@@ -169,6 +173,7 @@
             "article_weight": 15.4,
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1104.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1104.jpg",
             "description": "Тут будет описание товара 1104"
         },
         {
@@ -183,6 +188,7 @@
             "article_weight": 6,
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1105.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1105.jpg",
             "description": "Тут будет описание товара 1105"
         },
         {
@@ -197,6 +203,7 @@
             "article_weight": 6,
             "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1201.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1201.jpg",
             "description": "Тут будет описание товара 1201"
         },
         {
@@ -211,6 +218,7 @@
             "article_weight": 6,
             "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1202.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1202.jpg",
             "description": "Тут будет описание товара 1202"
         },
         {
@@ -225,6 +233,7 @@
             "article_weight": 6,
             "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1203.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1203.jpg",
             "description": "Тут будет описание товара 1203"
         },
         {
@@ -239,6 +248,7 @@
             "article_weight": 6,
             "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1204.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1204.jpg",
             "description": "Тут будет описание товара 1204"
         },
         {
@@ -253,6 +263,7 @@
             "article_weight": 6,
             "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1205.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1205.jpg",
             "description": "Тут будет описание товара 1205"
         },
         {
@@ -267,6 +278,7 @@
             "article_weight": 6,
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1301.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1301.jpg",
             "description": "Тут будет описание товара 1301"
         },
         {
@@ -281,6 +293,7 @@
             "article_weight": 6,
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1302.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1302.jpg",
             "description": "Тут будет описание товара 1302"
         },
         {
@@ -295,6 +308,7 @@
             "article_weight": 6,
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1303.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1303.jpg",
             "description": "Тут будет описание товара 1303"
         },
         {
@@ -309,6 +323,7 @@
             "article_weight": 6,
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1304.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1304.jpg",
             "description": "Тут будет описание товара 1304"
         },
         {
@@ -323,6 +338,7 @@
             "article_weight": 6,
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1305.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1305.jpg",
             "description": "Тут будет описание товара 1305"
         },
         {
@@ -337,6 +353,7 @@
             "article_weight": 6,
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1401.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1401.jpg",
             "description": "Тут будет описание товара 1401"
         },
         {
@@ -351,6 +368,7 @@
             "article_weight": 6,
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1402.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1402.jpg",
             "description": "Тут будет описание товара 1402"
         },
         {
@@ -365,6 +383,7 @@
             "article_weight": 6,
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1403.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1403.jpg",
             "description": "Тут будет описание товара 1403"
         },
         {
@@ -379,6 +398,7 @@
             "article_weight": 6,
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1404.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1404.jpg",
             "description": "Тут будет описание товара 1404"
         },
         {
@@ -393,6 +413,7 @@
             "article_weight": 6,
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1405.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1405.jpg",
             "description": "Тут будет описание товара 1405"
         },
         {
@@ -407,6 +428,7 @@
             "article_weight": 44,
             "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1501.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1501.jpg",
             "description": "Тут будет описание товара 1501"
         },
         {
@@ -421,6 +443,7 @@
             "article_weight": 44,
             "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1502.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1502.jpg",
             "description": "Тут будет описание товара 1502"
         },
         {
@@ -435,6 +458,7 @@
             "article_weight": 44,
             "article_material": "нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1503.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1503.jpg",
             "description": "Тут будет описание товара 1503"
         },
         {
@@ -449,6 +473,7 @@
             "article_weight": 44,
             "article_material": "нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1504.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1504.jpg",
             "description": "Тут будет описание товара 1504"
         },
         {
@@ -463,6 +488,7 @@
             "article_weight": 44,
             "article_material": "нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1505.jpg",
+            "article_big_image_path": "/modules/mainmodule/images/a1505.jpg",
             "description": "Тут будет описание товара 1505"
         }
     ]

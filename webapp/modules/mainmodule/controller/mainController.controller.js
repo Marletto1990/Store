@@ -53,7 +53,7 @@ sap.ui.define([
             this.byId("SplitAppDemo").toMaster(this.createId("articles"));
             this.filterArticles(oData.type_num)
         },
-
+        //переход из мастера в детальный вид артикула
         navigateToMaster: function(oData){
             if (oData.link) {
                 if (oData.master_option) {
@@ -94,15 +94,16 @@ sap.ui.define([
         onArticleItemPress: function(oEvent){
             var oData = oEvent.getSource().getBindingContext("myModel").getObject();
             var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
-            var bigImage = this.byId("bigImage");
-            bigImage.bindElement("myModel>"+sPath+"/article_image_path");
-            var bigImageName = oEvent.getSource().getBindingContext("myModel").getProperty("article_image_path");
-            //this.byId("bigImage");
+            oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/description", oData.description);
+            oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/article_big_image_path", oData.article_big_image_path);
+            oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/article_name", oData.article_name);
+            
+            
             this.byId("SplitAppDemo").toDetail(this.createId("articlePage"));//переход в подробный вид
 
             console.log(oData);
             console.log(sPath);
-            console.log(this.byId("bigImage").src);
+            console.log();
             //MessageToast.show("путь - " +sPath+"/article_image_path"+" артикул - "+article);
         }
     });

@@ -5,7 +5,12 @@
 	xmlns:l="sap.ui.layout"
 	controllerName="mainpath.controller.mainController"
 	xmlns="sap.m">
-	<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
+	<SplitApp 
+			id="SplitAppDemo" 
+			initialDetail="detail" 
+			initialMaster="master" 
+			orientationChange="onOrientationChange"
+			mode="PopoverMode">
 		<detailPages>
 			<Page 
 				id="detail" 
@@ -105,7 +110,7 @@
 						justifyContent="Center">
 						<Image
 							id="bigImage"
-							src="{myModel>/ArticleCurrent/article_image_path}"
+							src="{myModel>/ArticleCurrent/article_big_image_path}"
 							height="16em"
 							width="">
 						</Image>					
@@ -195,7 +200,7 @@
 							<StandardListItem 
 								title="{myModel>article_name}" 
 								type="Active" 
-								press="onArticlePress"/>
+								press="onArticleItemPress"/>
 						</items>
 					</List>
 				</content>
