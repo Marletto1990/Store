@@ -43,7 +43,7 @@
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": { "bundleName": "mainpath.i18n.i18n" }
             },
-            "goods": {
+            "myModel": {
               "type": "sap.ui.model.json.JSONModel",
               "uri": "/modules/mainmodule/models/goods.json"
             }
@@ -63,52 +63,104 @@
           "routes": [
             {
               "pattern": "",
-              "name":    "startPages",
-              "target":  ["defaultMaster", "defaultDetail"]
+              "name":    "start",
+              "target":  ["_mainmenu", "_news"]
             },
             {
-              "pattern": "pizzalist",
-              "name":    "arrayPizza",
-              "target":  ["pizzaList", "defaultDetail"]
+              "pattern": "catalog",
+              "name":    "categories",
+              "target":  ["_categoriesList", "_categories"]
             },
             {
-              "pattern": "pizzalist/{pizzaURLname}",
-              "name":    "currentPizza",
-              "target":  ["pizzaList", "detailPizza"]
+              "pattern": "catalog/{category}",
+              "name":    "types",
+              "target":  ["_typeList", "_types"]
             },
             {
-              "pattern": "basket",
-              "name":    "basketPage",
-              "target":  ["defaultMaster", "defaultBasket"]
+              "pattern": "catalog/{category}/{type}",
+              "name":    "artiles",
+              "target":  ["_typeList", "_articles"]
+            },
+            {
+              "pattern": "catalog/{category}/{type}/{article}",
+              "name":    "artile",
+              "target":  ["_typeList", "_article"]
+            },
+            {
+              "pattern": "to_order",
+              "name":    "to_order",
+              "target":  ["_mainmenu", "_toOrder"]
+            },
+            {
+              "pattern": "callback",
+              "name":    "callback",
+              "target":  ["_mainmenu", "_callback"]
+            },
+            {
+              "pattern": "contacts",
+              "name":    "contacts",
+              "target":  ["_mainmenu", "_contacts"]
             }
           ],
 
           "targets": {
-            "defaultMaster": {
-              "viewId":   "master",
-              "viewName": "Master",
+
+            "_mainmenu":{
+              "viewId":   "mainmenu",
+              "viewName": "Mainmenu",
               "controlAggregation": "masterPages"
             },
-            "pizzaList": {
-              "viewId":   "master2",
-              "viewName": "Master2",
-              "controlAggregation": "masterPages"
-            },
-            "defaultDetail": {
-              "viewId":   "detail",
-              "viewName": "Detail",
+            "_news":{
+              "viewId":   "news",
+              "viewName": "News",
               "controlAggregation": "detailPages"
             },
-            "detailPizza": {
-              "viewId":   "detail2",
-              "viewName": "Detail2",
-              "controlAggregation": "detailPages"
+            "_categoriesList": {
+              "viewId":   "categoriesList",
+              "viewName": "CategoriesList",
+              "controlAggregation": "masterPages"              
             },
-            "defaultBasket": {
-              "viewId":   "basket",
-              "viewName": "Basket"
+            "_categories": {
+              "viewId":   "categories",
+              "viewName": "Categories",
+              "controlAggregation": "masterPages"              
+            },
+            "_typeList": {
+              "viewId":   "typeList",
+              "viewName": "TypeList",
+              "controlAggregation": "masterPages"              
+            },
+            "_types": {
+              "viewId":   "types",
+              "viewName": "Types",
+              "controlAggregation": "masterPages"              
+            },
+            "_articles": {
+              "viewId":   "articles",
+              "viewName": "Articles",
+              "controlAggregation": "masterPages"              
+            },
+            "_article": {
+              "viewId":   "article",
+              "viewName": "Article",
+              "controlAggregation": "detailPages"              
+            },
+            "_toOrder": {
+              "viewId":   "toOrder",
+              "viewName": "ToOrder",
+              "controlAggregation": "detailPages"              
+            },
+            "_callback": {
+              "viewId":   "callback",
+              "viewName": "Callback",
+              "controlAggregation": "detailPages"              
+            },
+            "_contacts": {
+              "viewId":   "contacts",
+              "viewName": "Contacts",
+              "controlAggregation": "detailPages" 
             }
-          }
         }
     }
+}
 }
