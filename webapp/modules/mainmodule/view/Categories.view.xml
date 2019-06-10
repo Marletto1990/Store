@@ -3,7 +3,7 @@
 	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 	xmlns:f="sap.ui.layout.form" 
 	xmlns:l="sap.ui.layout"
-	controllerName="mainpath.controller.mainController"
+	controllerName="mainpath.controller.Categories"
 	xmlns="sap.m">
     <Page>
         <content></content>

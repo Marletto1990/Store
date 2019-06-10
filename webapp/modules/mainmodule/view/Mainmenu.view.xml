@@ -1,0 +1,27 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:f="sap.ui.layout.form" 
+	xmlns:l="sap.ui.layout"
+	controllerName="mainpath.controller.mainController"
+	xmlns="sap.m">
+			<Page 
+				id="master" 
+				title="Steel Store" 
+				icon="sap-icon://action" 
+				class="sapUiStdPage">
+				<content>
+					<List 
+						items = "{myModel>/Menu}">
+
+						<items>
+							<StandardListItem 
+							title="{myModel>title}" 
+							type="{path:'myModel>show_nav_button', 
+							formatter:'.menuItemType'}" 
+							press="onMenuItemPress"/>
+						</items>
+					</List>
+				</content>
+			</Page>
+</mvc:View>

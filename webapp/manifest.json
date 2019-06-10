@@ -56,7 +56,7 @@
             "viewType":    "XML",
             "viewPath":    "app.modules.mainmodule.view",
             "controlAggregation": "detailPages",
-            "controlId":   "app",
+            "controlId":   "SplitAppDemo",
             "async": true
           },
 
