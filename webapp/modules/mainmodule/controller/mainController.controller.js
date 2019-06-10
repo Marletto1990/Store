@@ -67,16 +67,16 @@ sap.ui.define([
             return bType ? "Navigation" : "Active";
         },
         //Фильтр для категорий (Второй уровень)(detail)
-        filterCategories: function (sId) {
+        filterCategories: function (sCatNum) {
 
             // build filter array
             var aFilter = [];
-            if (sId) {
-                aFilter.push(new Filter("cat_num", FilterOperator.EQ, sId));
+            if (sCatNum) {
+                aFilter.push(new Filter("cat_num", FilterOperator.EQ, sCatNum));
             }
 
             // filter binding
-            var oList = this.byId("container_first_page");
+            var oList = this.byId("articlesPage");
             var oBinding = oList.getBinding("content");
             oBinding.filter(aFilter);
         },       

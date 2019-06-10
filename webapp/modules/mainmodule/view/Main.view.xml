@@ -17,8 +17,8 @@
 				title="Лучшие цены во вселенной" 
 				class="sapUiStdPage">
 				<content>
-					<Panel
-						id="container_first_page"
+					<Panel 
+						id="articlesPage"
 						content = "{myModel>/Articles}">
 						<GenericTile 
 							class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout imageClass" 
@@ -55,7 +55,7 @@
 						<Label text="Отбойники из черного металла" />
 					</VBox>
 				</content>
-			</Page>
+			</Page> 
 			<Page 
 				id="FrameConstructions" 
 				title="Каркасные конструкции, навесы" 
