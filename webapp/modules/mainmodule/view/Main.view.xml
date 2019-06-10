@@ -159,7 +159,7 @@
 				navButtonPress="onPressMasterBack">
 				<content>
 					<List
-						items = "{myModel>/Categories}" >
+						items = "{myModel>/Categories}" id="catList">
 						<items>
 							<StandardListItem 
 								title="{myModel>title}"

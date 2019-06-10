@@ -6,7 +6,7 @@ sap.ui.define([
     'sap/ui/model/Filter',
     'sap/ui/model/json/JSONModel',
     'sap/base/Log',
-	"sap/ui/model/FilterOperator"
+    "sap/ui/model/FilterOperator"
 ], function (jQuery, MessageToast, Fragment, Controller, Filter, JSONModel, Log, FilterOperator) {
     "use strict";
 
@@ -43,63 +43,68 @@ sap.ui.define([
             var sChild = oData.child;
             var oList_types = this.getView().byId("typeList");
             var oTemplate = oList_types.getBindingInfo("items").template;
-            oList_types.bindItems("myModel>"+sPath+"/"+sChild, oTemplate);
-
+            oList_types.bindItems("myModel>" + sPath + "/" + sChild, oTemplate);
             this.navigateToMaster(oData);
+            this.filterCategories(oData.cat_num);
         },
         //создание третьего уровня меню
         onMenuItemPress3: function (oEvent) {
             var oData = oEvent.getSource().getBindingContext("myModel").getObject();
             this.byId("SplitAppDemo").toMaster(this.createId("articles"));
-            this.filterArticles(oData.type_num)
+            this.filterArticles(oData.type_num);
         },
         //переход из мастера в детальный вид артикула
-        navigateToMaster: function(oData){
+        navigateToMaster: function (oData) {
             if (oData.link) {
                 if (oData.master_option) {
                     this.byId("SplitAppDemo").toMaster(this.createId(oData.link));
                 }
-            } else {MessageToast.show("нет линка!");}
+            } else {
+                MessageToast.show("нет линка!");
+            }
         },
-        menuItemType: function(bType){
+        menuItemType: function (bType) {
             return bType ? "Navigation" : "Active";
         },
-        //Фильтр для артикулов вручную
-        /*filterArticles: function(oEvent){
-            var aFilter = [];
-            var typeNum = oEvent.getSource().getBindingContext("myModel").getProperty("type_num");
-            var allArticles = this.getView().getModel("myModel").getProperty("/Articles/");
-            allArticles.forEach(function(item) {
-                aFilter.push(item.article_num);
-            });
-            var currentArticles = aFilter.filter(number => Number((number/100).toFixed(0))===typeNum);
+        //Фильтр для категорий (Второй уровень)(detail)
+        filterCategories: function (sId) {
 
-            return(currentArticles);
-        }*/
+            // build filter array
+            var aFilter = [];
+            if (sId) {
+                aFilter.push(new Filter("cat_num", FilterOperator.EQ, sId));
+            }
+
+            // filter binding
+            var oList = this.byId("container_first_page");
+            var oBinding = oList.getBinding("content");
+            oBinding.filter(aFilter);
+        },       
+        //Фильтр для артикулов (master)
         filterArticles: function (sId) {
 
-			// build filter array
-			var aFilter = [];
-			if (sId) {
-				aFilter.push(new Filter("type_num", FilterOperator.EQ, sId));
-			}
+            // build filter array
+            var aFilter = [];
+            if (sId) {
+                aFilter.push(new Filter("type_num", FilterOperator.EQ, sId));
+            }
 
-			// filter binding
-			var oList = this.byId("articlesList");
-			var oBinding = oList.getBinding("items");
-			oBinding.filter(aFilter);
+            // filter binding
+            var oList = this.byId("articlesList");
+            var oBinding = oList.getBinding("items");
+            oBinding.filter(aFilter);
         },
 
         //Переход в подробный вид артикула
-        onArticleItemPress: function(oEvent){
+        onArticleItemPress: function (oEvent) {
             var oData = oEvent.getSource().getBindingContext("myModel").getObject();
             var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
             oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/description", oData.description);
             oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/article_big_image_path", oData.article_big_image_path);
             oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/article_name", oData.article_name);
-            
-            
-            this.byId("SplitAppDemo").toDetail(this.createId("articlePage"));//переход в подробный вид
+
+
+            this.byId("SplitAppDemo").toDetail(this.createId("articlePage")); //переход в подробный вид
 
             console.log(oData);
             console.log(sPath);
