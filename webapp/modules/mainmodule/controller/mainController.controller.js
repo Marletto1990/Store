@@ -20,20 +20,34 @@ sap.ui.define([
         },
         onPressMasterBack: function () {
             this.byId("SplitAppDemo").backMaster();
+            this.goBackDetail();
         },
         onPressDetailBack: function () {
             this.byId("SplitAppDemo").backDetail();
         },
+        goBackDetail: function () {
+            MessageToast.show('123123');
+            
+        },
         onListItemPress: function (oEvent) {
             var sToPageId = oEvent.getParameter("listItem").getCustomData()[0].getValue();
-
             this.byId("SplitAppDemo").toDetail(this.createId(sToPageId));
         },
-
+        //запись функции-фильтра для возврата на уровень для detail
+        remoteDetailwrite: function (oEvent,sFilter) {
+            oEvent.getSource().getModel("myModel").setProperty("/Remote/goDetailBackFunc", sFilter);
+            console.log(oEvent.getSource().getModel("myModel").getProperty("/Remote/goDetailBackFunc"));
+        },
         //создание первого уровня меню
         onMenuItemPress: function (oEvent) {
             var oData = oEvent.getSource().getBindingContext("myModel").getObject();
-            this.navigateToMaster(oData);
+            if(oData.link == "catalog"){           
+                 this.navigateToMaster(oData);
+                 this.byId("SplitAppDemo").toDetail(this.createId("detail"));
+                 this.remoteDetailwrite(oEvent,"qwe");
+                } else {
+            this.byId("SplitAppDemo").toDetail(this.createId(oData.link)); 
+             }
         },
 
         //создание второго уровня меню
@@ -51,7 +65,24 @@ sap.ui.define([
         onMenuItemPress3: function (oEvent) {
             var oData = oEvent.getSource().getBindingContext("myModel").getObject();
             this.byId("SplitAppDemo").toMaster(this.createId("articles"));
-            this.filterArticles(oData.type_num);
+            this.filterArticles(oData.type_num);//master
+            this.filterTypes(oData.type_num);//detail
+        },
+        //Переход в подробный вид артикула
+        onArticleItemPress: function (oEvent) {
+            var oData = oEvent.getSource().getBindingContext("myModel").getObject();
+            var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
+            oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/description", oData.description);
+            oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/article_big_image_path", oData.article_big_image_path);
+            oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/article_name", oData.article_name);
+
+
+            this.byId("SplitAppDemo").toDetail(this.createId("articlePage")); //переход в подробный вид
+
+            console.log(oData);
+            console.log(sPath);
+            console.log();
+            //MessageToast.show("путь - " +sPath+"/article_image_path"+" артикул - "+article);
         },
         //переход из мастера в детальный вид артикула
         navigateToMaster: function (oData) {
@@ -79,7 +110,21 @@ sap.ui.define([
             var oList = this.byId("articlesPage");
             var oBinding = oList.getBinding("content");
             oBinding.filter(aFilter);
-        },       
+        },   
+        //Фильтр для артикулов (detail)
+        filterTypes: function (sTypeNum) {
+
+            // build filter array
+            var aFilter = [];
+            if (sTypeNum) {
+                aFilter.push(new Filter("type_num", FilterOperator.EQ, sTypeNum));
+            }
+
+            // filter binding
+            var oList = this.byId("articlesPage");
+            var oBinding = oList.getBinding("content");
+            oBinding.filter(aFilter);
+        },     
         //Фильтр для артикулов (master)
         filterArticles: function (sId) {
 
@@ -93,23 +138,6 @@ sap.ui.define([
             var oList = this.byId("articlesList");
             var oBinding = oList.getBinding("items");
             oBinding.filter(aFilter);
-        },
-
-        //Переход в подробный вид артикула
-        onArticleItemPress: function (oEvent) {
-            var oData = oEvent.getSource().getBindingContext("myModel").getObject();
-            var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
-            oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/description", oData.description);
-            oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/article_big_image_path", oData.article_big_image_path);
-            oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/article_name", oData.article_name);
-
-
-            this.byId("SplitAppDemo").toDetail(this.createId("articlePage")); //переход в подробный вид
-
-            console.log(oData);
-            console.log(sPath);
-            console.log();
-            //MessageToast.show("путь - " +sPath+"/article_image_path"+" артикул - "+article);
         }
     });
 

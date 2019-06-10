@@ -1,4 +1,6 @@
-{
+{   "Remote":{
+            "goDetailBackFunc": ""
+            },
     "Menu": [{
             "title": "Каталог товаров",
             "link": "catalog",
@@ -7,19 +9,19 @@
         },
         {
             "title": "Конструкции на заказ",
-            "link": "",
+            "link": "sConsctToOrder",
             "show_nav_button": false,
             "master_option": false
         },
         {
             "title": "Заказать звонок",
-            "link": "",
+            "link": "sCallBack",
             "show_nav_button": false,
             "master_option": false
         },
         {
             "title": "Контакты",
-            "link": "",
+            "link": "sContacts",
             "show_nav_button": false,
             "master_option": false
         }
@@ -489,7 +491,7 @@
             "cat_num": 2,
             "type_num": 21,
             "article_name": "Навес из черного металла",
-            "article_price": 12540,
+            "article_price": "от 12500",
             "article_length": 700,
             "article_width": 330,
             "article_height": 1380,
@@ -504,7 +506,7 @@
             "cat_num": 2,
             "type_num": 22,
             "article_name": "Артикул 2201",
-            "article_price": 12540,
+            "article_price": "По запросу",
             "article_length": 700,
             "article_width": 330,
             "article_height": 1380,
@@ -519,7 +521,7 @@
             "cat_num": 3,
             "type_num": 31,
             "article_name": "Стол из нержавеющей стали",
-            "article_price": 12540,
+            "article_price": 22140,
             "article_length": 700,
             "article_width": 330,
             "article_height": 1380,

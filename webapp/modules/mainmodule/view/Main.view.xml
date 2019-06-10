@@ -7,11 +7,16 @@
 	xmlns="sap.m">
 	<SplitApp 
 			id="SplitAppDemo" 
-			initialDetail="detail" 
+			initialDetail="news" 
 			initialMaster="master" 
 			orientationChange="onOrientationChange"
 			mode="PopoverMode">
 		<detailPages>
+			<Page
+				id="news" 
+				title="Страница с акциями и новостями" 
+				class="sapUiStdPage">
+			</Page>
 			<Page 
 				id="detail" 
 				title="Лучшие цены во вселенной" 
@@ -43,22 +48,19 @@
 				</content>
 			</Page>
 			<Page 
-				id="protectiveConstructions" 
-				title="Отбойники из черного металла" 
+				id="sConsctToOrder" 
+				title="Конструкции на заказ" 
 				class="sapUiStdPage" 
 				showNavButton="true"
 				navButtonText="Back" 
-				navButtonPress="onPressDetailBack"
-				content = "{myModel>/Articles}">
+				navButtonPress="onPressDetailBack">
 				<content>
-					<VBox class="sapUiSmallMargin">
-						<Label text="Отбойники из черного металла" />
-					</VBox>
+					<Label text="Здесь будет форма для отправки текста и файлов"/>
 				</content>
 			</Page> 
 			<Page 
-				id="FrameConstructions" 
-				title="Каркасные конструкции, навесы" 
+				id="sCallBack" 
+				title="Форма обратной связи" 
 				class="sapUiStdPage" 
 				showNavButton="true"
 				navButtonText="Back" 
@@ -77,23 +79,14 @@
 				</content>
 			</Page>
 			<Page 
-				id="StainlessSteelFurniture" 
-				title="Мебель из нержавеющей стали" 
+				id="sContacts" 
+				title="Контакты" 
 				class="sapUiStdPage" 
 				showNavButton="true"
 				navButtonText="Back" 
 				navButtonPress="onPressDetailBack">
 				<content>
-					<Label text="This is Detail Page3" />
-					<Input/>
-					<Label text="Label 2" />
-					<Input/>
-					<Label text="Label 3" />
-					<Input/>
-					<Label text="Label 4" />
-					<Input/>
-					<Label text="Label 5" />
-					<Input/>
+					<Label text="Здесь будут контакты"/>
 				</content>
 			</Page>
 			<Page 
