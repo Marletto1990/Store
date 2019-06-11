@@ -5,7 +5,34 @@
 	xmlns:l="sap.ui.layout"
 	controllerName="mainpath.controller.Articles"
 	xmlns="sap.m">
-    <Page>
-        <content></content>
-    </Page>
+		<Page 
+			id="detail" 
+			title="Лучшие цены во вселенной" 
+			class="sapUiStdPage">
+			<content>
+				<Panel 
+					id="articlesPage"
+					content = "{myModel>/Articles}">
+					<GenericTile 
+						class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout imageClass" 
+						header="{myModel>article_name}"
+						subheader="{myModel>article_material}" 
+						press="onArticleItemPress"
+						frameType="TwoByOne">
+							<TileContent footer="Цена: {myModel>article_price} руб." footerColor="Critical">
+								<HBox
+									alignItems="End"
+									justifyContent="End">
+									<Image
+										src="{myModel>article_image_path}"
+										height="6em"
+										width="6em">
+									</Image>
+									
+								</HBox>
+							</TileContent>
+					</GenericTile>
+				</Panel>
+			</content>
+		</Page>
 </mvc:View>

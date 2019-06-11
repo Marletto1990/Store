@@ -3,9 +3,24 @@
 	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 	xmlns:f="sap.ui.layout.form" 
 	xmlns:l="sap.ui.layout"
-	controllerName="mainpath.controller.mainController"
+	controllerName="app/modules/mainmodule/controller/TypeList"
 	xmlns="sap.m">
-    <Page>
-        <content></content>
-    </Page>
+			<Page 
+				id="typePage" 
+				title="Уточните категорию" 
+				icon="sap-icon://action" 
+				class="sapUiStdPage" 
+				showNavButton="true"
+				navButtonPress="onNavBack">
+				<content>
+					<List items = "{myModel>/Categories/0/type}" id="typeList">
+						<items>
+							<StandardListItem 
+								title="{myModel>type_name}" 
+								type="Navigation" 
+								press="onMenuItemPress3"/>
+						</items>
+					</List>
+				</content>
+			</Page>
 </mvc:View>

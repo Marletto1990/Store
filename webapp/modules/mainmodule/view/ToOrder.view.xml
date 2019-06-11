@@ -3,9 +3,17 @@
 	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 	xmlns:f="sap.ui.layout.form" 
 	xmlns:l="sap.ui.layout"
-	controllerName="mainpath.controller.mainController"
+	controllerName="mainpath.controller.ToOrder"
 	xmlns="sap.m">
-    <Page>
-        <content></content>
-    </Page>
+	<Page 
+		id="sConsctToOrder" 
+		title="Конструкции на заказ" 
+		class="sapUiStdPage" 
+		showNavButton="false"
+		navButtonText="Back" 
+		navButtonPress="onPressDetailBack">
+		<content>
+			<Label text="Здесь будет форма для отправки текста и файлов"/>
+		</content>
+	</Page> 
 </mvc:View>

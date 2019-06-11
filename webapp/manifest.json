@@ -57,7 +57,11 @@
             "viewPath":    "app.modules.mainmodule.view",
             "controlAggregation": "detailPages",
             "controlId":   "SplitAppDemo",
-            "async": true
+            "async": true,
+            "transition": "slide",
+            "bypassed": {
+              "target": "notFound"
+           }
           },
 
           "routes": [
@@ -78,12 +82,12 @@
             },
             {
               "pattern": "catalog/{category}/{type}",
-              "name":    "artiles",
+              "name":    "articles",
               "target":  ["_typeList", "_articles"]
             },
             {
               "pattern": "catalog/{category}/{type}/{article}",
-              "name":    "artile",
+              "name":    "article",
               "target":  ["_typeList", "_article"]
             },
             {
@@ -103,8 +107,12 @@
             }
           ],
 
-          "targets": {
-
+          "targets": {           
+            "notFound": {
+               "viewId": "notFound",
+               "viewName": "NotFound",
+               "transition": "show"
+            },
             "_mainmenu":{
               "viewId":   "mainmenu",
               "viewName": "Mainmenu",
@@ -123,7 +131,7 @@
             "_categories": {
               "viewId":   "categories",
               "viewName": "Categories",
-              "controlAggregation": "masterPages"              
+              "controlAggregation": "detailPages"              
             },
             "_typeList": {
               "viewId":   "typeList",
@@ -133,12 +141,12 @@
             "_types": {
               "viewId":   "types",
               "viewName": "Types",
-              "controlAggregation": "masterPages"              
+              "controlAggregation": "detailPages"              
             },
             "_articles": {
               "viewId":   "articles",
               "viewName": "Articles",
-              "controlAggregation": "masterPages"              
+              "controlAggregation": "detailPages"              
             },
             "_article": {
               "viewId":   "article",

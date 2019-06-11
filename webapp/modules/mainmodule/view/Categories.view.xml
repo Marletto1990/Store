@@ -5,7 +5,7 @@
 	xmlns:l="sap.ui.layout"
 	controllerName="mainpath.controller.Categories"
 	xmlns="sap.m">
-    <Page>
-        <content></content>
-    </Page>
+	<Page> 
+		<Label text="Категории"/>
+	</Page>
 </mvc:View>

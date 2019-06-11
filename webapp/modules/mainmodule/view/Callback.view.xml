@@ -5,7 +5,24 @@
 	xmlns:l="sap.ui.layout"
 	controllerName="mainpath.controller.Callback"
 	xmlns="sap.m">
-    <Page>
-        <content></content>
-    </Page>
+	<Page 
+		id="sCallBack" 
+		title="Форма обратной связи" 
+		class="sapUiStdPage" 
+		showNavButton="false"
+		navButtonText="Back" 
+		navButtonPress="onPressDetailBack">
+		<content>
+			<Label text="This is Detail Page3" />
+			<Input/>
+			<Label text="Label 2" />
+			<Input/>
+			<Label text="Label 3" />
+			<Input/>
+			<Label text="Label 4" />
+			<Input/>
+			<Label text="Label 5" />
+			<Input/>
+		</content>
+	</Page>
 </mvc:View>

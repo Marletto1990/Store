@@ -5,7 +5,23 @@
 	xmlns:l="sap.ui.layout"
 	controllerName="mainpath.controller.CategoriesList"
 	xmlns="sap.m">
-    <Page>
-        <content></content>
-    </Page>
+	<Page 
+		id="catalog" 
+		title="Уточните категорию" 
+		icon="sap-icon://action" 
+		class="sapUiStdPage" 
+		showNavButton="true"
+		navButtonPress="onNavBack">
+		<content>
+			<List
+				items = "{myModel>/Categories}" id="categoryID">
+				<items>
+					<StandardListItem 
+						title="{myModel>title}"
+						type="Navigation" 
+						press="onCategoriesItemPress"/>
+				</items>
+			</List>
+		</content>
+	</Page>
 </mvc:View>

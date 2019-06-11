@@ -3,25 +3,25 @@
             },
     "Menu": [{
             "title": "Каталог товаров",
-            "link": "catalog",
+            "route": "categories",
             "show_nav_button": true,
             "master_option": true
         },
         {
             "title": "Конструкции на заказ",
-            "link": "sConsctToOrder",
+            "route": "to_order",
             "show_nav_button": false,
             "master_option": false
         },
         {
             "title": "Заказать звонок",
-            "link": "sCallBack",
+            "route": "callback",
             "show_nav_button": false,
             "master_option": false
         },
         {
             "title": "Контакты",
-            "link": "sContacts",
+            "route": "contacts",
             "show_nav_button": false,
             "master_option": false
         }
@@ -32,6 +32,7 @@
             "child": "type",
             "master_option": true,
             "cat_num": 1,
+            "cat_name": "DefensiveConstructions",
             "type": [{
                     "type_name": "Отбойники из черного металла",
                     "type_num": 11
@@ -61,6 +62,7 @@
             "child": "type",
             "master_option": true,
             "cat_num": 2,
+            "cat_name": "FrameConstructions",
             "type": [{
                     "type_name": "Навесы",
                     "type_num": 21
@@ -77,6 +79,7 @@
             "child": "type",
             "master_option": true,
             "cat_num": 3,
+            "cat_name": "StainlessSteelFurniture",
             "type": [{
                     "type_name": "Столы",
                     "type_num": 31

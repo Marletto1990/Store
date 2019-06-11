@@ -3,11 +3,13 @@
 	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 	xmlns:f="sap.ui.layout.form" 
 	xmlns:l="sap.ui.layout"
-	controllerName="mainpath.controller.News"
+	controllerName="app.modules.mainmodule.controller.News"
 	xmlns="sap.m">
-    <Page>
-        <content>
-            <Button text="News"></Button>
-        </content>
-    </Page>
+		<Page
+			id="news" 
+			title="Страница с акциями и новостями" 
+			class="sapUiStdPage">
+			<Button text="Get some news!" press = "onNewsButtonPress"/>
+			<Button text="Get some news!" press = "onNewsButtonPress2"/>
+		</Page>
 </mvc:View>
