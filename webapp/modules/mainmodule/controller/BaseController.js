@@ -24,7 +24,26 @@ sap.ui.define([
 				this.getRouter().navTo("start", {}, true /*no history*/);
 			}
 		},
-		_onBaseRouteMatched: function(oEvent){
+		_onBaseRouteMatched: function(oEvent, oParameters){
+			var sListId = oParameters.listId;
+
+			var sCategoryName = oEvent.getParameter("arguments")[param].category;
+			var sTypeName = oEvent.getParameter("arguments")[param].type;
+			var sArticleName = oEvent.getParameter("arguments")[param].article;
+
+			var oList = this.getView().byId(sListId);
+			var oTemplate = oList.getBindingInfo("items").template;
+			var sModel = oList.getBindingInfo("items").model;
+			var i = oList.getModel(sModel).getProperty("/Categories").findIndex( function (element){
+				return element.cat_name == sCategoryName; 
+			});
+			var sPath = sModel+">/Categories/" + i + "/type";
+
+
+
+			oList.bindAggregation("items", sPath, oTemplate);
+		},
+		/*_onBaseRouteMatched2: function(oEvent){
 			var sCategoryName = oEvent.getParameter("arguments").category;
 			var oList = this.getView().byId("typeList");
 			var oTemplate = oList.getBindingInfo("items").template;
@@ -34,7 +53,7 @@ sap.ui.define([
 			});
 			var sPath = sModel+">/Categories/" + i + "/type";
 			oList.bindAggregation("items", sPath, oTemplate);
-		}
+		}*/
 
 	});
 

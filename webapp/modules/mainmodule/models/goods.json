@@ -34,23 +34,28 @@
             "cat_num": 1,
             "cat_name": "DefensiveConstructions",
             "type": [{
-                    "type_name": "Отбойники из черного металла",
+                    "name": "BlackMetallGuardrail",
+                    "title": "Отбойники из черного металла",
                     "type_num": 11
                 },
                 {
-                    "type_name": "Отбойники из нержавеющей стали",
+                    "name": "StainlessSteelGuardrail",
+                    "title": "Отбойники из нержавеющей стали",
                     "type_num": 12
                 },
                 {
-                    "type_name": "Демпферы",
+                    "name": "Dempfers",
+                    "title": "Демпферы",                  
                     "type_num": 13
                 },
                 {
-                    "type_name": "Защита стеллажей",
+                    "name": "RackDefense",
+                    "title": "Защита стеллажей", 
                     "type_num": 14
                 },
                 {
-                    "type_name": "Защита пожарных ящиков",
+                    "name": "FireHydrantCabinetDefense",
+                    "title": "Защита пожарных шкафов",                    
                     "type_num": 15
                 }
 
@@ -64,11 +69,13 @@
             "cat_num": 2,
             "cat_name": "FrameConstructions",
             "type": [{
-                    "type_name": "Навесы",
+                    "name": "Canopy",
+                    "title": "Навесы", 
                     "type_num": 21
                 },
                 {
-                    "type_name": "ПаркБоксы",
+                    "name": "ParkingBoxes",
+                    "title": "ПаркБоксы", 
                     "type_num": 22
                 }
             ]
@@ -81,19 +88,23 @@
             "cat_num": 3,
             "cat_name": "StainlessSteelFurniture",
             "type": [{
-                    "type_name": "Столы",
+                    "name": "Tables",
+                    "title": "Столы",
                     "type_num": 31
                 },
                 {
-                    "type_name": "Моечные раковины",
+                    "name": "Sinks",
+                    "title": "Моечные раковины",
                     "type_num": 32
                 },
                 {
-                    "type_name": "Шкафы",
+                    "name": "Сabinets",
+                    "title": "Шкафы",
                     "type_num": 33
                 },
                 {
-                    "type_name": "Стеллажи",
+                    "name": "Shelving",
+                    "title": "Стеллажи",
                     "type_num": 34
                 }
             ]

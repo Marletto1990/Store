@@ -11,7 +11,7 @@
 		icon="sap-icon://action" 
 		class="sapUiStdPage" 
 		showNavButton="true"
-		navButtonPress="onNavBack">
+		navButtonPress="onCategoriesNavBack">
 		<content>
 			<List
 				items = "{myModel>/Categories}" id="categoryID">

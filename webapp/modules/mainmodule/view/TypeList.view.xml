@@ -11,14 +11,14 @@
 				icon="sap-icon://action" 
 				class="sapUiStdPage" 
 				showNavButton="true"
-				navButtonPress="onNavBack">
+				navButtonPress="onTypesNavBack">
 				<content>
 					<List items = "{myModel>/Categories/0/type}" id="typeList">
 						<items>
 							<StandardListItem 
-								title="{myModel>type_name}" 
+								title="{myModel>title}" 
 								type="Navigation" 
-								press="onMenuItemPress3"/>
+								press="onTypeListItemPress"/>
 						</items>
 					</List>
 				</content>
