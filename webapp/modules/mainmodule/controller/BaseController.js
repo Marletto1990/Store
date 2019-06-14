@@ -114,13 +114,19 @@ sap.ui.define([
 				"route": "start"
 			}];
 			var sTitle,sPath,sRout;
+			var lvl;
 
-			var oRemoteObject = { 
+			var oRemoteObjectPattern = { 
 				"title": sTitle,
 				"path": sPath,
 				"route": sRout
 			}
-			//if (oParams.category){aRemote.push(oRemoteObject)};
+			for (var i = 0; i< lvl; i++){
+				//sTitle =
+				//sPath = 
+				//sRoute =
+				aRemote.push(oRemoteObjectPattern);
+			}
 			var sCurrent = "";
 			//oModel.setProperty("/Remote_current", sCurrent;
 			oModel.setProperty("/Remote", aRemote);
