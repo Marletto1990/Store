@@ -36,11 +36,11 @@ sap.ui.define([
 			var oTemplate = oList.getBindingInfo(oParameters.aggregationName).template;
 			var sModel = oList.getBindingInfo(oParameters.aggregationName).model;
 
-			if (sTypeName){
+			if (sTypeName) {
 				var i = oList.getModel(sModel).getProperty("/Categories").findIndex(function (element) {
 					return element.cat_name == sCategoryName;
 				});
-				var j = oList.getModel(sModel).getProperty("/Categories"+ i + "/type").findIndex(function (element) {
+				var j = oList.getModel(sModel).getProperty("/Categories" + i + "/type").findIndex(function (element) {
 					return element.name == sTypeName;
 				});
 				var sPath = sModel + ">/Categories/" + i + "/type/" + j;
@@ -57,21 +57,24 @@ sap.ui.define([
 		},
 		_showFilterArticles: function (oEvent, oParameters) {
 			var sCategoryName = oParameters.category;
-			var sTypeName = oParameters.type;
-			var oList = this.getView().byId(oParameters.listId);
-			var sModel = oList.getBindingInfo(oParameters.aggregationName).model;
-			var oCtg = oList.getModel(sModel).getProperty("/Categories").find(function (element) {
-				return element.cat_name == sCategoryName;
-			});
-			var nCategoryID = oCtg.cat_num;
-			var oFilters = {
-				"cat_num": nCategoryID
-			}
-			if (sTypeName){
-				var oTp = oCtg.find(function (element) {
-					return element.name == sTypeName;
+			var oFilters = {};
+			if (sCategoryName) {
+				var sTypeName = oParameters.type;
+				var oList = this.getView().byId(oParameters.listId);
+				var sModel = oList.getBindingInfo(oParameters.aggregationName).model;
+				var oCtg = oList.getModel(sModel).getProperty("/Categories").find(function (element) {
+					return element.cat_name == sCategoryName;
 				});
-				oFilters.type_num = oTp.type_num;
+				var nCategoryID = oCtg.cat_num;
+				oFilters = {
+					"cat_num": nCategoryID
+				}
+				if (sTypeName) {
+					var oTp = oCtg.type.find(function (element) {
+						return element.name == sTypeName;
+					});
+					oFilters.type_num = oTp.type_num;
+				}
 			}
 			this.superFilter(oFilters);
 		},
@@ -81,7 +84,7 @@ sap.ui.define([
 			//var sCategoryName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
 			//var sTypeName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[1];
 
-			function setPath(a,b) {
+			function setPath(a, b) {
 				if (a) {
 					return a;
 				} else if (b) {
@@ -90,16 +93,16 @@ sap.ui.define([
 					return "Каталог";
 				}
 			}
-			this.getView().getModel("myModel").setProperty("/Remote/path", setPath(sTypeName ,sCategoryName));
-			
+			this.getView().getModel("myModel").setProperty("/Remote/path", setPath(sTypeName, sCategoryName));
+
 			//
 		},
-		superFilter: function(oFilters){
+		superFilter: function (oFilters) {
 			var aFilter = [];
-			for (var key in oFilters){
+			for (var key in oFilters) {
 				aFilter.push(new Filter(key, FilterOperator.EQ, oFilters[key]));
 			}
-			
+
 			// filter binding
 			var oList = this.getView().byId("articlesContainer");
 			var oBinding = oList.getBinding("content");

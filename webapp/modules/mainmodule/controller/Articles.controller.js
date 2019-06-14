@@ -16,6 +16,8 @@ sap.ui.define([
             //this.setArticlesHeaderPath();
             var oRouter = this.getRouter();
             oRouter.getRoute("types").attachMatched(this.onCategoryRoutMatched, this);
+            oRouter.getRoute("articles").attachMatched(this.onCategoryRoutMatched, this);
+            oRouter.getRoute("categories").attachMatched(this.onCategoryRoutMatched, this);
         },
         onCategoryRoutMatched: function (oEvent) {
 
@@ -38,12 +40,24 @@ sap.ui.define([
             console.log(oData);
             console.log(sPath);
 
-            var sCategoryName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
-            var sTypeName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[1];
+            //var sCategoryName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
+            //var sTypeName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[1];
+            
+            var oList = this.getView().byId("articlesContainer");
+            var oCtgName = oList.getModel("myModel").getProperty("/Categories").find(function (element) {
+                return element.cat_num == oData.cat_num;
+            });
+            var i= oList.getModel("myModel").getProperty("/Categories").findIndex(function (element) {
+                return element.cat_num == oData.cat_num;
+            });
+            var oTpName= oList.getModel("myModel").getProperty("/Categories/" + i + "/type").find(function (element) {
+                return element.type_num == oData.type_num;
+            });
             var sArticleName =  oData.article_num;
+            
             this.getRouter().navTo("article", {
-                category: sCategoryName,
-                type: sTypeName,
+                category: oCtgName.cat_name,
+                type: oTpName.name,
                 article: sArticleName
             });
 

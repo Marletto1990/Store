@@ -7,14 +7,14 @@
 	xmlns="sap.m">
 		<Page 
 			id="detail" 
-			title="{myModel>/Remote/current}" 
+			title="{myModel>/Remote_current/title}" 
 			class="sapUiStdPage">
 			<content>
 				<Breadcrumbs 	
-				currentLocationText="{myModel>/Remote_current/path}" 
+				currentLocationText="{myModel>/Remote_current/title}" 
 				class = "sapUiSmallMarginBegin sapUiSmallMarginTop"
 				links = "{myModel>/Remote}" >
-					<Link press="onPress" text="{myModel>path}"/>
+					<Link press="onPress" text="{myModel>title}"/>
 				</Breadcrumbs>
 				<Panel 
 					id="articlesContainer"

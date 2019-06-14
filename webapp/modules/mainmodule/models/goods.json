@@ -1,15 +1,19 @@
 {   "Remote":[{
-            "path": "Главная"
+            "title": "Главная",
+            "path": "Main"
         },
         {
-            "path": "Каталог"
+            "title": "Каталог",
+            "path": "Catalog"
         },
         {
-            "path": "Категория"
+            "title": "Категория",
+            "path": "Category"
         }
     ],
     "Remote_current":{
-            "path": "Тип"
+            "title": "Тип",
+            "path": "Type"
         },    
     "Menu": [{
             "title": "Каталог товаров",
