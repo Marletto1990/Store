@@ -14,7 +14,7 @@
 				currentLocationText="{myModel>/Remote_current/title}" 
 				class = "sapUiSmallMarginBegin sapUiSmallMarginTop"
 				links = "{myModel>/Remote}" >
-					<Link press="onPress" text="{myModel>title}"/>
+					<Link press="onBreadcrumbsPress" text="{myModel>title}"/>
 				</Breadcrumbs>
 				<Panel 
 					id="articlesContainer"

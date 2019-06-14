@@ -81,9 +81,6 @@ sap.ui.define([
 		setArticlesHeaderPath: function () {
 			var sCategoryName = this.getView().getModel("myModel").getProperty("/");
 			console.log(sCategoryName);
-			//var sCategoryName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
-			//var sTypeName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[1];
-
 			function setPath(a, b) {
 				if (a) {
 					return a;
@@ -108,46 +105,37 @@ sap.ui.define([
 			var oBinding = oList.getBinding("content");
 			oBinding.filter(aFilter);
 		},
-		filterCategories: function (sCatNum) {
-			// build filter array
-			var aFilter = [];
-			if (sCatNum) {
-				aFilter.push(new Filter("cat_num", FilterOperator.EQ, sCatNum));
-			}
+		//Navigation Panel
+		setBreadcrumbs: function(oModel, oParams){
+			debugger
+			var aRemote = [{
+				"title": "Главная",
+            	"path": "Main",
+				"route": "start"
+			}];
+			var sTitle,sPath,sRout;
 
-			// filter binding
-			var oList = this.getView("myModel").byId("articlesContainer");
-			var oBinding = oList.getBinding("content");
-			oBinding.filter(aFilter);
-			console.log("Filter works")
+			var oRemoteObject = { 
+				"title": sTitle,
+				"path": sPath,
+				"route": sRout
+			}
+			//if (oParams.category){aRemote.push(oRemoteObject)};
+			var sCurrent = "";
+			//oModel.setProperty("/Remote_current", sCurrent;
+			oModel.setProperty("/Remote", aRemote);
 		},
-		//Фильтр для артикулов (detail)
-		filterTypes: function (sTypeNum) {
+		onBreadcrumbsPress: function(oEvent){
+			var sRout = oEvent.getSource().getBindingContext("myModel").getObject().route;
+			var oCtgName;
+			var oTpName;
+			var sArticleName;
 
-			// build filter array
-			var aFilter = [];
-			if (sTypeNum) {
-				aFilter.push(new Filter("type_num", FilterOperator.EQ, sTypeNum));
-			}
-
-			// filter binding
-			var oList = this.byId("articlesPage");
-			var oBinding = oList.getBinding("content");
-			oBinding.filter(aFilter);
-		},
-		//Фильтр для артикулов (master)
-		filterArticles: function (sId) {
-
-			// build filter array
-			var aFilter = [];
-			if (sId) {
-				aFilter.push(new Filter("type_num", FilterOperator.EQ, sId));
-			}
-
-			// filter binding
-			var oList = this.byId("articlesList");
-			var oBinding = oList.getBinding("items");
-			oBinding.filter(aFilter);
+			this.getRouter().navTo(sRout, {
+                category: oCtgName.cat_name,
+                type: oTpName.name,
+                article: sArticleName
+            });
 		}
 	});
 

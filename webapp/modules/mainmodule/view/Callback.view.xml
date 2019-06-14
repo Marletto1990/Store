@@ -13,16 +13,18 @@
 		navButtonText="Back" 
 		navButtonPress="onPressDetailBack">
 		<content>
-			<Label text="This is Detail Page3" />
+			<Breadcrumbs 	
+				currentLocationText="{myModel>/Remote_current/title}" 
+				class = "sapUiSmallMarginBegin sapUiSmallMarginTop"
+				links = "{myModel>/Remote}">
+				<Link press="onBreadcrumbsPress" text="{myModel>title}"/>
+			</Breadcrumbs>
+			
+			<Label text="Как к Вам обращаться" />
 			<Input/>
-			<Label text="Label 2" />
+			<Label text="Телефон для связи" />
 			<Input/>
-			<Label text="Label 3" />
-			<Input/>
-			<Label text="Label 4" />
-			<Input/>
-			<Label text="Label 5" />
-			<Input/>
+			<Button text="Оставить заявку"/>
 		</content>
 	</Page>
 </mvc:View>

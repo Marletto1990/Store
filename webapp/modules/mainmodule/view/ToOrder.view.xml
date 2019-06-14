@@ -13,6 +13,12 @@
 		navButtonText="Back" 
 		navButtonPress="onPressDetailBack">
 		<content>
+			<Breadcrumbs 	
+				currentLocationText="{myModel>/Remote_current/title}" 
+				class = "sapUiSmallMarginBegin sapUiSmallMarginTop"
+				links = "{myModel>/Remote}" >
+				<Link press="onBreadcrumbsPress" text="{myModel>title}"/>
+			</Breadcrumbs>
 			<Label text="Здесь будет форма для отправки текста и файлов"/>
 		</content>
 	</Page> 

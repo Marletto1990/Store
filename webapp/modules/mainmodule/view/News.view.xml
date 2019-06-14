@@ -10,6 +10,13 @@
 			title="Страница с акциями и новостями" 
 			class="sapUiStdPage">
 			<Button text="Get some news!" press = "onNewsButtonPress"/>
-			<Button text="Get some news!" press = "onNewsButtonPress2"/>
+			<content>
+				<Breadcrumbs 	
+					currentLocationText="{myModel>/Remote_current/title}" 
+					class = "sapUiSmallMarginBegin sapUiSmallMarginTop"
+					links = "{myModel>/Remote}">
+					<Link press="onBreadcrumbsPress" text="{myModel>title}"/>
+				</Breadcrumbs>
+			</content>
 		</Page>
 </mvc:View>

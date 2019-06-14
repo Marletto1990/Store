@@ -20,7 +20,6 @@ sap.ui.define([
             oRouter.getRoute("categories").attachMatched(this.onCategoryRoutMatched, this);
         },
         onCategoryRoutMatched: function (oEvent) {
-
             var sCategory = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
             var sType = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[1];
             this._showFilterArticles(oEvent, {
@@ -37,12 +36,7 @@ sap.ui.define([
             oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/description", oData.description);
             oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/article_big_image_path", oData.article_big_image_path);
             oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/article_name", oData.article_name);
-            console.log(oData);
-            console.log(sPath);
 
-            //var sCategoryName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
-            //var sTypeName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[1];
-            
             var oList = this.getView().byId("articlesContainer");
             var oCtgName = oList.getModel("myModel").getProperty("/Categories").find(function (element) {
                 return element.cat_num == oData.cat_num;
