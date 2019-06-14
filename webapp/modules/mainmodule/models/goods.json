@@ -1,6 +1,16 @@
-{   "Remote":{
-            "goDetailBackFunc": ""
-            },
+{   "Remote":[{
+            "path": "Главная"
+        },
+        {
+            "path": "Каталог"
+        },
+        {
+            "path": "Категория"
+        }
+    ],
+    "Remote_current":{
+            "path": "Тип"
+        },    
     "Menu": [{
             "title": "Каталог товаров",
             "route": "categories",

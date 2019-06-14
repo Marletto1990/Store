@@ -15,8 +15,7 @@ sap.ui.define([
             },
             onMenuItemPress: function (oEvent) {
                 var oData = oEvent.getSource().getBindingContext("myModel").getObject();
-                this.getRouter().navTo(oData.route); 
-                
+                this.getRouter().navTo(oData.route);                 
             },
             menuItemType: function (bType) {
                 return bType ? "Navigation" : "Active";

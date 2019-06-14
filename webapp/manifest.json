@@ -73,12 +73,12 @@
             {
               "pattern": "catalog",
               "name":    "categories",
-              "target":  ["_categoriesList", "_categories"]
+              "target":  ["_categoriesList", "_articles"]
             },
             {
               "pattern": "catalog/{category}",
               "name":    "types",
-              "target":  ["_typeList", "_types"]
+              "target":  ["_typeList", "_articles"]
             },
             {
               "pattern": "catalog/{category}/{type}",

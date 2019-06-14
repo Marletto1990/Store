@@ -14,7 +14,7 @@
 		navButtonPress="onCategoriesNavBack">
 		<content>
 			<List
-				items = "{myModel>/Categories}" id="categoryID">
+				items = "{myModel>/Categories}" id="categoriesList">
 				<items>
 					<StandardListItem 
 						title="{myModel>title}"

@@ -7,17 +7,23 @@
 	xmlns="sap.m">
 		<Page 
 			id="detail" 
-			title="Лучшие цены во вселенной" 
+			title="{myModel>/Remote/current}" 
 			class="sapUiStdPage">
 			<content>
+				<Breadcrumbs 	
+				currentLocationText="{myModel>/Remote_current/path}" 
+				class = "sapUiSmallMarginBegin sapUiSmallMarginTop"
+				links = "{myModel>/Remote}" >
+					<Link press="onPress" text="{myModel>path}"/>
+				</Breadcrumbs>
 				<Panel 
-					id="articlesPage"
+					id="articlesContainer"
 					content = "{myModel>/Articles}">
 					<GenericTile 
 						class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout imageClass" 
 						header="{myModel>article_name}"
 						subheader="{myModel>article_material}" 
-						press="onArticleItemPress"
+						press="onArticlesItemPress"
 						frameType="TwoByOne">
 							<TileContent footer="Цена: {myModel>article_price} руб." footerColor="Critical">
 								<HBox

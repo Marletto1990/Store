@@ -11,8 +11,14 @@
 				class="sapUiStdPage" 
 				showNavButton="true"
 				navButtonText="Back" 
-				navButtonPress="onPressDetailBack">
+				navButtonPress="onArticleNavBack">
 				<content>
+				<Breadcrumbs 	
+					currentLocationText="{myModel>/Remote_current/path}" 
+					class = "sapUiSmallMarginBegin sapUiSmallMarginTop"
+					links = "{myModel>/Remote}" >
+					<Link press="onPress" text="{myModel>path}"/>
+				</Breadcrumbs>
 					<VBox				
 						class="sapUiTinyMarginBegin sapUiLargeMarginTop" 
 						alignItems="Center"
