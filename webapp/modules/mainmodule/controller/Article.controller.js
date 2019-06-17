@@ -13,8 +13,20 @@ sap.ui.define([
     return BaseController.extend('app.modules.mainmodule.controller.Articles', {
 
         onInit: function () {
-
+            var oRouter = this.getRouter();
+            oRouter.getRoute("article").attachMatched(this.callSetBreadcrumbs, this);
         },
+        callSetBreadcrumbs: function (oEvent) {
+            var oModel = this.getView().getModel("myModel");
+            var sCategory = oEvent.getParameter("arguments").category;
+            var sType = oEvent.getParameter("arguments").type;
+            this.setBreadcrumbs(oEvent, oModel, {
+                menuItem: "catalog",
+                category: sCategory,
+                type: sType,
+                article: "Fuck"
+            });
+        },    
         onArticleNavBack: function(){
             var sCategoryName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
             var sTypeName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[1];

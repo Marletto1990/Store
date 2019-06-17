@@ -7,7 +7,7 @@
 	xmlns="sap.m">
 			<Page 
 				id="articlePage" 
-				title="Страница товара" 
+				title="{myModel>/ArticleCurrent/article_name}" 
 				class="sapUiStdPage" 
 				showNavButton="true"
 				navButtonText="Back" 

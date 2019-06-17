@@ -1,21 +1,18 @@
-{   "Remote":[{
+{   "TechInfo":{
+            "menuitem": "catalog",
+            "category": "DefensiveConstructions",
+            "type": "BlackMetallGuardrail",
+            "article": 1101,
+            "lvl": 4
+        },
+    "Remote":[{
             "title": "Главная",
             "path": "Main",
             "route": "start"
-        },
-        {
-            "title": "Каталог",
-            "path": "Catalog",
-            "route": "categories"
-        },
-        {
-            "title": "Категория",
-            "path": "Category",
-            "route": "types"
         }
     ],
     "Remote_current":{
-            "title": "Тип",
+            "title": "",
             "path": "Type",
             "route": "articles"
         },    
@@ -77,56 +74,56 @@
                     "type_num": 15
                 }
 
-            ]
-        },
-        {
-            "title": "Каркасные конструкции",
-            "link": "typePage",
-            "child": "type",
-            "master_option": true,
-            "cat_num": 2,
-            "cat_name": "FrameConstructions",
-            "type": [{
-                    "name": "Canopy",
-                    "title": "Навесы", 
-                    "type_num": 21
+                    ]
                 },
                 {
-                    "name": "ParkingBoxes",
-                    "title": "ПаркБоксы", 
-                    "type_num": 22
+                    "title": "Каркасные конструкции",
+                    "link": "typePage",
+                    "child": "type",
+                    "master_option": true,
+                    "cat_num": 2,
+                    "cat_name": "FrameConstructions",
+                    "type": [{
+                            "name": "Canopy",
+                            "title": "Навесы", 
+                            "type_num": 21
+                        },
+                        {
+                            "name": "ParkingBoxes",
+                            "title": "ПаркБоксы", 
+                            "type_num": 22
+                        }
+                    ]
+                },
+                {
+                    "title": "Мебель из нержавеющей стали",
+                    "link": "typePage",
+                    "child": "type",
+                    "master_option": true,
+                    "cat_num": 3,
+                    "cat_name": "StainlessSteelFurniture",
+                    "type": [{
+                            "name": "Tables",
+                            "title": "Столы",
+                            "type_num": 31
+                        },
+                        {
+                            "name": "Sinks",
+                            "title": "Моечные раковины",
+                            "type_num": 32
+                        },
+                        {
+                            "name": "Сabinets",
+                            "title": "Шкафы",
+                            "type_num": 33
+                        },
+                        {
+                            "name": "Shelving",
+                            "title": "Стеллажи",
+                            "type_num": 34
+                        }
+                    ]
                 }
-            ]
-        },
-        {
-            "title": "Мебель из нержавеющей стали",
-            "link": "typePage",
-            "child": "type",
-            "master_option": true,
-            "cat_num": 3,
-            "cat_name": "StainlessSteelFurniture",
-            "type": [{
-                    "name": "Tables",
-                    "title": "Столы",
-                    "type_num": 31
-                },
-                {
-                    "name": "Sinks",
-                    "title": "Моечные раковины",
-                    "type_num": 32
-                },
-                {
-                    "name": "Сabinets",
-                    "title": "Шкафы",
-                    "type_num": 33
-                },
-                {
-                    "name": "Shelving",
-                    "title": "Стеллажи",
-                    "type_num": 34
-                }
-            ]
-        }
     ],
     "ArticleCurrent": {
             "article_num": 1101,

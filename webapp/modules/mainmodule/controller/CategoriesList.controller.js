@@ -12,15 +12,12 @@ sap.ui.define([
     return BaseController.extend("app.modules.mainmodule.controller.CategoriesList", {
         onInit: function () {
             var oRouter = this.getRouter();
-            oRouter.getRoute("categories").attachMatched(this.takePath, this);
+            oRouter.getRoute("categories").attachMatched(this.callSetBreadcrumbs, this);
         },
-        takePath: function(){
-            var oModel =this.getView().getModel("myModel");
-            var sCategory = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
-            var sType = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[1];
-            this.setBreadcrumbs(oModel, {
-                category : sCategory,
-                type : sType
+        callSetBreadcrumbs: function (oEvent) {
+            var oModel = this.getView().getModel("myModel");
+            this.setBreadcrumbs(oEvent, oModel, {
+                menuItem: "catalog"
             });
         },
         onCategoriesItemPress: function (oEvent) {
@@ -28,7 +25,7 @@ sap.ui.define([
             this.getRouter().navTo("types", {
                 category: oData.cat_name
             });
-            this.getView().getModel("myModel").setProperty("/Remote/current", oData.title);
+            this.getView().getModel("myModel").setProperty("/Remote_current/title", oData.title);
         },
         onCategoriesNavBack: function () {
             this.getRouter().navTo("start")

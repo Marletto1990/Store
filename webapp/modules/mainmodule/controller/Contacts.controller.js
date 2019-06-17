@@ -11,6 +11,8 @@ sap.ui.define([
         "use strict";
         return BaseController.extend("app.modules.mainmodule.controller.Contacts", {
             onInit: function () {
+                var oRouter = this.getRouter();
+                oRouter.getRoute("start").attachMatched(this.takePath, this);
             }
         });
     });

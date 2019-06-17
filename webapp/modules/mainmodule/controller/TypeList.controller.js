@@ -13,9 +13,10 @@ sap.ui.define([
         onInit: function () {
             var oRouter = this.getRouter();
             oRouter.getRoute("types").attachMatched(this.onTypeRoutMatched, this);
-            oRouter.getRoute("types").attachMatched(this.takePath, this);
+            oRouter.getRoute("types").attachMatched(this.callSetBreadcrumbs, this);
         },
         onTypeRoutMatched: function (oEvent) {
+            var oModel =this.getView().getModel("myModel");
             var sCategoryName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
             var sTypeName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[1];
             this._onBaseRouteMatched(oEvent, {
@@ -24,17 +25,16 @@ sap.ui.define([
                 type: sTypeName,
                 aggregationName: "items"
             });
-            console.log ("on Init onTypeRoutMatches");
         },
-        takePath: function(){
-            var oModel =this.getView().getModel("myModel");
-            var sCategory = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
-            var sType = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[1];
-            debugger
-            this.setBreadcrumbs(oModel, {
-                category : sCategory,
-                type : sType
+        callSetBreadcrumbs: function (oEvent) {
+            var oModel = this.getView().getModel("myModel");
+            var sCategory = oEvent.getParameter("arguments").category;
+
+            this.setBreadcrumbs(oEvent, oModel, {
+                menuItem: "catalog",
+                category: sCategory
             });
+
         },
         onTypesNavBack: function () {
             var sCategoryName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
@@ -49,9 +49,7 @@ sap.ui.define([
                 category: sCategoryName,
                 type: oTps.name
             });
-            console.log(sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0]);
-            console.log(oTps.name);
-
+            //this.getView().getModel("myModel").setProperty("/Remote_current/title", oTps.title);
         }
     });
 });

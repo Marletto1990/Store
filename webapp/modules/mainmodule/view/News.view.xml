@@ -9,7 +9,6 @@
 			id="news" 
 			title="Страница с акциями и новостями" 
 			class="sapUiStdPage">
-			<Button text="Get some news!" press = "onNewsButtonPress"/>
 			<content>
 				<Breadcrumbs 	
 					currentLocationText="{myModel>/Remote_current/title}" 
@@ -18,5 +17,6 @@
 					<Link press="onBreadcrumbsPress" text="{myModel>title}"/>
 				</Breadcrumbs>
 			</content>
+			<Button text="Test" press = "onNewsButtonPress"/>
 		</Page>
 </mvc:View>

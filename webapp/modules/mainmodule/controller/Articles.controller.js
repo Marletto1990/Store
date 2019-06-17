@@ -17,7 +17,19 @@ sap.ui.define([
             var oRouter = this.getRouter();
             oRouter.getRoute("types").attachMatched(this.onCategoryRoutMatched, this);
             oRouter.getRoute("articles").attachMatched(this.onCategoryRoutMatched, this);
+            oRouter.getRoute("articles").attachMatched(this.callSetBreadcrumbs, this);
             oRouter.getRoute("categories").attachMatched(this.onCategoryRoutMatched, this);
+
+        },
+        callSetBreadcrumbs: function (oEvent) {
+            var oModel = this.getView().getModel("myModel");
+            var sCategory = oEvent.getParameter("arguments").category;
+            var sType = oEvent.getParameter("arguments").type;
+            this.setBreadcrumbs(oEvent, oModel, {
+                menuItem: "catalog",
+                category: sCategory,
+                type: sType
+            });
         },
         onCategoryRoutMatched: function (oEvent) {
             var sCategory = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
@@ -54,10 +66,7 @@ sap.ui.define([
                 type: oTpName.name,
                 article: sArticleName
             });
-
-
-            //console.log(aArticleRemote);
-            //var aArticleRemote = this.getView().getModel("myModel").getProperty("/Remote")[2];
+            this.getView().getModel("myModel").setProperty("/Remote_current/title", oData.article_name);
                  
         }
     });

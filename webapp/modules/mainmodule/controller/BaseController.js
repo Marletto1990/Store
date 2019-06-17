@@ -35,7 +35,7 @@ sap.ui.define([
 			var oList = this.getView().byId(oParameters.listId);
 			var oTemplate = oList.getBindingInfo(oParameters.aggregationName).template;
 			var sModel = oList.getBindingInfo(oParameters.aggregationName).model;
-
+			//debugger
 			if (sTypeName) {
 				var i = oList.getModel(sModel).getProperty("/Categories").findIndex(function (element) {
 					return element.cat_name == sCategoryName;
@@ -45,6 +45,7 @@ sap.ui.define([
 				});
 				var sPath = sModel + ">/Categories/" + i + "/type/" + j;
 				oList.bindAggregation(oParameters.aggregationName, sPath, oTemplate);
+
 			} else {
 				var i = oList.getModel(sModel).getProperty("/Categories").findIndex(function (element) {
 					return element.cat_name == sCategoryName;
@@ -52,8 +53,6 @@ sap.ui.define([
 				var sPath = sModel + ">/Categories/" + i + "/type";
 				oList.bindAggregation(oParameters.aggregationName, sPath, oTemplate);
 			}
-
-
 		},
 		_showFilterArticles: function (oEvent, oParameters) {
 			var sCategoryName = oParameters.category;
@@ -81,6 +80,7 @@ sap.ui.define([
 		setArticlesHeaderPath: function () {
 			var sCategoryName = this.getView().getModel("myModel").getProperty("/");
 			console.log(sCategoryName);
+
 			function setPath(a, b) {
 				if (a) {
 					return a;
@@ -92,7 +92,6 @@ sap.ui.define([
 			}
 			this.getView().getModel("myModel").setProperty("/Remote/path", setPath(sTypeName, sCategoryName));
 
-			//
 		},
 		superFilter: function (oFilters) {
 			var aFilter = [];
@@ -105,43 +104,85 @@ sap.ui.define([
 			var oBinding = oList.getBinding("content");
 			oBinding.filter(aFilter);
 		},
+
 		//Navigation Panel
-		setBreadcrumbs: function(oModel, oParams){
-			debugger
+		setBreadcrumbs: function (oEvent, oModel, oParams) {
+			oModel.setProperty("/Remote_current/title", "");
+			oModel.setProperty("/Remote/title", {});
 			var aRemote = [{
 				"title": "Главная",
-            	"path": "Main",
+				"path": "Main",
 				"route": "start"
 			}];
-			var sTitle,sPath,sRout;
-			var lvl;
-
-			var oRemoteObjectPattern = { 
-				"title": sTitle,
-				"path": sPath,
-				"route": sRout
+			var aRemoteObject1 = {
+				"title": oParams.menuItem,
+				"path": "Catalog",
+				"route": "categories"
+			};
+			var aRemoteObject2 = {
+				"title": oParams.category,
+				"path": "Category",
+				"route": "types"
+			};
+			var aRemoteObject3 = {
+				"title": oParams.type,
+				"path": "Type",
+				"route": "articles"
+			};
+			//console.log(oEvent);
+			if ((oParams.menuItem != "catalog") && (!oParams.category) && (!oParams.type) && (!oParams.article)) {
+				oModel.setProperty("/Remote", {});
+				oModel.setProperty("/Remote_current/title", "Главная");
+				//console.log("!catalog");
+			} else if ((oParams.menuItem == "catalog") && (!oParams.category) && (!oParams.type) && (!oParams.article)) {
+				oModel.setProperty("/Remote", aRemote);
+				oModel.setProperty("/Remote_current/title", oParams.menuItem);
+				//console.log("catalog");
+			} else if ((oParams.menuItem == "catalog") && (oParams.category) && (!oParams.type) && (!oParams.article)) {
+				aRemote.push(aRemoteObject1);
+				oModel.setProperty("/Remote", aRemote);
+				oModel.setProperty("/Remote_current/title", oParams.category);
+				//console.log("catalog && category");
+			} else if ((oParams.menuItem == "catalog") && (oParams.category) && (oParams.type) && (!oParams.article)) {
+				aRemote.push(aRemoteObject1);
+				aRemote.push(aRemoteObject2);
+				oModel.setProperty("/Remote", aRemote);
+				oModel.setProperty("/Remote_current/title", oParams.type);
+				//console.log("catalog && category && type");
+			} else if ((oParams.menuItem == "catalog") && (oParams.category) && (oParams.type) && (oParams.article)) {
+				aRemote.push(aRemoteObject1);
+				aRemote.push(aRemoteObject2);
+				aRemote.push(aRemoteObject3);
+				oModel.setProperty("/Remote", aRemote);
+				//console.log("catalog && category && type && article");
+				oModel.setProperty("/Remote_current/title", oParams.article);
+				
 			}
-			for (var i = 0; i< lvl; i++){
-				//sTitle =
-				//sPath = 
-				//sRoute =
-				aRemote.push(oRemoteObjectPattern);
-			}
-			var sCurrent = "";
-			//oModel.setProperty("/Remote_current", sCurrent;
-			oModel.setProperty("/Remote", aRemote);
 		},
-		onBreadcrumbsPress: function(oEvent){
+		onBreadcrumbsPress: function (oEvent) {
 			var sRout = oEvent.getSource().getBindingContext("myModel").getObject().route;
 			var oCtgName;
 			var oTpName;
 			var sArticleName;
 
-			this.getRouter().navTo(sRout, {
-                category: oCtgName.cat_name,
-                type: oTpName.name,
-                article: sArticleName
-            });
+			if (sArticleName) {
+				this.getRouter().navTo(sRout, {
+					category: oCtgName.cat_name,
+					type: oTpName.name,
+					article: sArticleName
+				});
+			} else if (oTpName) {
+				this.getRouter().navTo(sRout, {
+					category: oCtgName.cat_name,
+					type: oTpName.name
+				});
+			} else if (oCtgName) {
+				this.getRouter().navTo(sRout, {
+					category: oCtgName.cat_name
+				});
+			} else {
+				this.getRouter().navTo(sRout)
+			}
 		}
 	});
 
