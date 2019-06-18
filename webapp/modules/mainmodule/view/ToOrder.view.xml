@@ -15,7 +15,7 @@
 		<content>
 			<Breadcrumbs 	
 				currentLocationText="{myModel>/Remote_current/title}" 
-				class = "sapUiSmallMarginBegin sapUiSmallMarginTop"
+				class = "sapUiSmallMarginBegin sapUiSmallMarginTop  BreadCrumbs"
 				links = "{myModel>/Remote}" >
 				<Link press="onBreadcrumbsPress" text="{myModel>title}"/>
 			</Breadcrumbs>

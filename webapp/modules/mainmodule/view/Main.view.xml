@@ -8,6 +8,8 @@
 	<SplitApp 
 			id="SplitAppDemo"  
 			orientationChange="onOrientationChange"
-			mode="PopoverMode">
+			mode="PopoverMode"
+			defaultTransitionNameDetail = "fade"
+			defaultTransitionNameMaster = "fade">
 	</SplitApp>
 </mvc:View>

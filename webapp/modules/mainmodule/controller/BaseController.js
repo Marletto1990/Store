@@ -107,83 +107,82 @@ sap.ui.define([
 
 		//Navigation Panel
 		setBreadcrumbs: function (oEvent, oModel, oParams) {
-			oModel.setProperty("/Remote_current/title", "");
-			oModel.setProperty("/Remote/title", {});
-			var aRemote = [{
-				"title": "Главная",
-				"path": "Main",
-				"route": "start"
-			}];
-			var aRemoteObject1 = {
-				"title": oParams.menuItem,
-				"path": "Catalog",
-				"route": "categories"
-			};
-			var aRemoteObject2 = {
-				"title": oParams.category,
-				"path": "Category",
-				"route": "types"
-			};
-			var aRemoteObject3 = {
-				"title": oParams.type,
-				"path": "Type",
-				"route": "articles"
-			};
-			//console.log(oEvent);
-			if ((oParams.menuItem != "catalog") && (!oParams.category) && (!oParams.type) && (!oParams.article)) {
-				oModel.setProperty("/Remote", {});
-				oModel.setProperty("/Remote_current/title", "Главная");
-				//console.log("!catalog");
-			} else if ((oParams.menuItem == "catalog") && (!oParams.category) && (!oParams.type) && (!oParams.article)) {
-				oModel.setProperty("/Remote", aRemote);
-				oModel.setProperty("/Remote_current/title", oParams.menuItem);
-				//console.log("catalog");
-			} else if ((oParams.menuItem == "catalog") && (oParams.category) && (!oParams.type) && (!oParams.article)) {
-				aRemote.push(aRemoteObject1);
-				oModel.setProperty("/Remote", aRemote);
-				oModel.setProperty("/Remote_current/title", oParams.category);
-				//console.log("catalog && category");
-			} else if ((oParams.menuItem == "catalog") && (oParams.category) && (oParams.type) && (!oParams.article)) {
-				aRemote.push(aRemoteObject1);
-				aRemote.push(aRemoteObject2);
-				oModel.setProperty("/Remote", aRemote);
-				oModel.setProperty("/Remote_current/title", oParams.type);
-				//console.log("catalog && category && type");
-			} else if ((oParams.menuItem == "catalog") && (oParams.category) && (oParams.type) && (oParams.article)) {
-				aRemote.push(aRemoteObject1);
-				aRemote.push(aRemoteObject2);
-				aRemote.push(aRemoteObject3);
-				oModel.setProperty("/Remote", aRemote);
-				//console.log("catalog && category && type && article");
-				oModel.setProperty("/Remote_current/title", oParams.article);
-				
-			}
+			setTimeout(function () {
+				oModel.setProperty("/Remote_current/title", "");
+				oModel.setProperty("/Remote/title", {});
+				var aRemote = [{
+					"title": "Главная",
+					"path": "Main",
+					"route": "start"
+				}];
+				var aRemoteObject1 = {
+					"title": oParams.menuItem,
+					"path": "Catalog",
+					"route": "categories"
+				};
+				var aRemoteObject2 = {
+					"title": oParams.category,
+					"path": "Category",
+					"route": "types"
+				};
+				var aRemoteObject3 = {
+					"title": oParams.type,
+					"path": "Type",
+					"route": "articles"
+				};
+				if ((oParams.menuItem != "catalog") && (!oParams.category) && (!oParams.type) && (!oParams.article)) {
+					oModel.setProperty("/Remote", {});
+					oModel.setProperty("/Remote_current/title", "Главная");
+				} else if ((oParams.menuItem == "catalog") && (!oParams.category) && (!oParams.type) && (!oParams.article)) {
+					oModel.setProperty("/Remote", aRemote);
+					oModel.setProperty("/Remote_current/title", oParams.menuItem);
+				} else if ((oParams.menuItem == "catalog") && (oParams.category) && (!oParams.type) && (!oParams.article)) {
+					aRemote.push(aRemoteObject1);
+					oModel.setProperty("/Remote", aRemote);
+					oModel.setProperty("/Remote_current/title", oParams.category);
+				} else if ((oParams.menuItem == "catalog") && (oParams.category) && (oParams.type) && (!oParams.article)) {
+					aRemote.push(aRemoteObject1);
+					aRemote.push(aRemoteObject2);
+					oModel.setProperty("/Remote", aRemote);
+					oModel.setProperty("/Remote_current/title", oParams.type);
+				} else if ((oParams.menuItem == "catalog") && (oParams.category) && (oParams.type) && (oParams.article)) {
+					aRemote.push(aRemoteObject1);
+					aRemote.push(aRemoteObject2);
+					aRemote.push(aRemoteObject3);
+					oModel.setProperty("/Remote", aRemote);
+					oModel.setProperty("/Remote_current/title", oParams.article);
+
+				}
+
+			}.bind(this), 0);
+
 		},
 		onBreadcrumbsPress: function (oEvent) {
 			var sRout = oEvent.getSource().getBindingContext("myModel").getObject().route;
-			var oCtgName;
-			var oTpName;
+			var oCtgName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
+			var oTpName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[1];
 			var sArticleName;
-
 			if (sArticleName) {
 				this.getRouter().navTo(sRout, {
-					category: oCtgName.cat_name,
-					type: oTpName.name,
+					category: oCtgName,
+					type: oTpName,
 					article: sArticleName
 				});
 			} else if (oTpName) {
 				this.getRouter().navTo(sRout, {
-					category: oCtgName.cat_name,
-					type: oTpName.name
+					category: oCtgName,
+					type: oTpName
 				});
 			} else if (oCtgName) {
 				this.getRouter().navTo(sRout, {
-					category: oCtgName.cat_name
+					category: oCtgName
 				});
 			} else {
 				this.getRouter().navTo(sRout)
 			}
-		}
+		},
+        hideBreadcrumbs(){
+        }
 	});
 
 });

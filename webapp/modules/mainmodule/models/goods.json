@@ -1,10 +1,7 @@
-{   "TechInfo":{
-            "menuitem": "catalog",
-            "category": "DefensiveConstructions",
-            "type": "BlackMetallGuardrail",
-            "article": 1101,
-            "lvl": 4
-        },
+{   
+    "TechInfo":[{
+        "br_visible": false
+    }],
     "Remote":[{
             "title": "Главная",
             "path": "Main",

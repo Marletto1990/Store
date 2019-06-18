@@ -24,7 +24,7 @@ sap.ui.define([
                 menuItem: "catalog",
                 category: sCategory,
                 type: sType,
-                article: "Fuck"
+                article: oEvent.getParameter("arguments").article
             });
         },    
         onArticleNavBack: function(){
@@ -34,8 +34,7 @@ sap.ui.define([
                 category: sCategoryName,
                 type: sTypeName
             });
-            console.log(sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0]);
-            console.log();
+            //console.log(sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0]);
 
         }
     });

@@ -23,7 +23,7 @@ sap.ui.define([
         onMenuItemPress: function (oEvent) {
             var oData = oEvent.getSource().getBindingContext("myModel").getObject();
             this.getRouter().navTo(oData.route);
-            this.getView().getModel("myModel").setProperty("/Remote_current/title", oData.title);
+            //this.getView().getModel("myModel").setProperty("/Remote_current/title", oData.title);
         },
         menuItemType: function (bType) {
             return bType ? "Navigation" : "Active";

@@ -1,0 +1,9 @@
+.BreadCrumbs{
+    transition: opacity 0.3s;
+}
+.hidden{
+    opacity: 0;
+}
+.detailView{
+    transition: opacity 0.3s;
+}

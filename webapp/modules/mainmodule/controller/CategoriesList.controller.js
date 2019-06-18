@@ -25,7 +25,7 @@ sap.ui.define([
             this.getRouter().navTo("types", {
                 category: oData.cat_name
             });
-            this.getView().getModel("myModel").setProperty("/Remote_current/title", oData.title);
+            //this.getView().getModel("myModel").setProperty("/Remote_current/title", oData.title);
         },
         onCategoriesNavBack: function () {
             this.getRouter().navTo("start")
