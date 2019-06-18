@@ -1,0 +1,48 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:f="sap.ui.layout.form" 
+	xmlns:l="sap.ui.layout"
+	controllerName="mainpath.controller.Article"
+	xmlns="sap.m">
+			<Page 
+				id="articlePage" 
+				title="{myModel>/ArticleCurrent/article_name}" 
+				class="sapUiStdPage" 
+				showNavButton="true"
+				navButtonText="Back" 
+				navButtonPress="onArticleNavBack">
+				<content>
+				<Breadcrumbs 	
+					currentLocationText="{myModel>/Remote_current/title}" 
+					class = "sapUiSmallMarginBegin sapUiSmallMarginTop  BreadCrumbs"
+					links = "{myModel>/Remote}" 
+					id = "theBreadcrumbs">
+					<Link press="onBreadcrumbsPress" text="{myModel>title}"/>
+				</Breadcrumbs>
+					<VBox				
+						class="sapUiTinyMarginBegin sapUiLargeMarginTop" 
+						alignItems="Center"
+						justifyContent="Center">
+						<Image
+							id="bigImage"
+							src="{myModel>/ArticleCurrent/article_big_image_path}"
+							height="16em"
+							width="">
+						</Image>					
+					</VBox>
+					<VBox
+						class="sapUiTinyMarginBegin sapUiLargeMarginTop" 
+						alignItems="Center"
+						justifyContent="Center">
+						<Text 
+							text="{myModel>/ArticleCurrent/description}"
+							class="sapUiTinyMarginBegin sapUiLargeMarginTop"/>
+						<Button 
+							id="artButton" 
+							text="Заказать {myModel>/ArticleCurrent/article_name}"
+							class="sapUiTinyMarginBegin sapUiLargeMarginTop"/>
+					</VBox>	
+				</content>
+			</Page>
+</mvc:View>

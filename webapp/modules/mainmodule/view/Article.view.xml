@@ -1,48 +1,83 @@
-<mvc:View
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
-	xmlns:f="sap.ui.layout.form" 
-	xmlns:l="sap.ui.layout"
-	controllerName="mainpath.controller.Article"
-	xmlns="sap.m">
-			<Page 
-				id="articlePage" 
-				title="{myModel>/ArticleCurrent/article_name}" 
-				class="sapUiStdPage" 
-				showNavButton="true"
-				navButtonText="Back" 
-				navButtonPress="onArticleNavBack">
-				<content>
-				<Breadcrumbs 	
-					currentLocationText="{myModel>/Remote_current/title}" 
-					class = "sapUiSmallMarginBegin sapUiSmallMarginTop  BreadCrumbs"
-					links = "{myModel>/Remote}" 
-					id = "theBreadcrumbs">
-					<Link press="onBreadcrumbsPress" text="{myModel>title}"/>
-				</Breadcrumbs>
-					<VBox				
-						class="sapUiTinyMarginBegin sapUiLargeMarginTop" 
-						alignItems="Center"
-						justifyContent="Center">
-						<Image
-							id="bigImage"
-							src="{myModel>/ArticleCurrent/article_big_image_path}"
-							height="16em"
-							width="">
-						</Image>					
-					</VBox>
-					<VBox
-						class="sapUiTinyMarginBegin sapUiLargeMarginTop" 
-						alignItems="Center"
-						justifyContent="Center">
-						<Text 
-							text="{myModel>/ArticleCurrent/description}"
-							class="sapUiTinyMarginBegin sapUiLargeMarginTop"/>
-						<Button 
-							id="artButton" 
-							text="Заказать {myModel>/ArticleCurrent/article_name}"
-							class="sapUiTinyMarginBegin sapUiLargeMarginTop"/>
-					</VBox>	
-				</content>
-			</Page>
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+		   xmlns="sap.uxap"
+		   xmlns:layout="sap.ui.layout"
+		   xmlns:m="sap.m"
+	        controllerName="mainpath.controller.Article"
+		   height="100%">
+
+        <ObjectPageLayout id="articlePage" enableLazyLoading="false" showTitleInHeaderContent="false">
+            <headerTitle>        
+                <ObjectPageHeader 
+                              objectImageURI="{myModel>/ArticleCurrent/article_image_path}"
+							  objectTitle="{myModel>/ArticleCurrent/article_name}"
+							  objectImageShape="Circle"
+							  objectImageAlt="Изделие"
+							  objectSubtitle="{myModel>/ArticleCurrent/article_material}">
+                <actions>
+					<ObjectPageHeaderActionButton icon="sap-icon://pull-down" text="show section" type="Emphasized" tooltip="pull-down"/>
+					<ObjectPageHeaderActionButton icon="sap-icon://show" text="show state" tooltip="show"/>
+					<ObjectPageHeaderActionButton text="Toggle Footer" hideIcon="true" hideText="false" press="toggleFooter"/>
+				</actions>
+                <breadcrumbs>
+					<m:Breadcrumbs 
+                    links = "{myModel>/Remote}"
+                    id="breadcrumbsId" 
+                    currentLocationText="{myModel>/Remote_current/title}" >
+						<m:Link press="onBreadcrumbsPress" text="{myModel>title}"/>
+					</m:Breadcrumbs>
+				</breadcrumbs>
+                </ObjectPageHeader>
+		    </headerTitle>
+            <headerContent>
+
+                <layout:HorizontalLayout>
+                    <m:Image src="{myModel>/ArticleCurrent/article_image_path}" height="6em"/>
+                </layout:HorizontalLayout>
+
+                <layout:VerticalLayout>
+                    <m:Label text="Стоимость одного экземпляра"/>
+                    <m:VBox height="63px">
+                        <m:Label text="Achieved goals"/>
+                        <m:ProgressIndicator
+                                percentValue="30"
+                                displayValue="30%"
+                                showValue="true"
+                                state="None"/>
+                    </m:VBox>
+                </layout:VerticalLayout>
+
+		    </headerContent>
+            <sections>
+                <ObjectPageSection title="2014 Goals Plan">
+                    <subSections>
+                        <ObjectPageSubSection title=" ">
+                        </ObjectPageSubSection>
+                    </subSections>
+                </ObjectPageSection>
+
+                <ObjectPageSection title="Personal">
+                    <subSections>
+                        <ObjectPageSubSection title="Connect">
+                        </ObjectPageSubSection>
+
+                        <ObjectPageSubSection id="paymentSubSection" title="Payment information">
+                        </ObjectPageSubSection>
+                    </subSections>
+                </ObjectPageSection>
+
+			    <ObjectPageSection title="Employment">
+                    <subSections>
+                        <ObjectPageSubSection title="Job information">
+                            <m:Text text = "Test"/>
+                        </ObjectPageSubSection>
+                        <ObjectPageSubSection title="Employee Details" mode="Collapsed">
+                            <m:Text text = "Test"/>
+                        </ObjectPageSubSection>
+                        <ObjectPageSubSection title="Job Relationship" mode="Collapsed">
+                            <m:Text text = "Test"/>
+                        </ObjectPageSubSection>
+                    </subSections>
+			    </ObjectPageSection>
+		    </sections>
+        </ObjectPageLayout>
 </mvc:View>
