@@ -13,10 +13,10 @@ sap.ui.define([
         onInit: function () {
             var oRouter = this.getRouter();
             oRouter.getRoute("types").attachMatched(this.onTypeRoutMatched, this);
-            oRouter.getRoute("types").attachMatched(this.callSetBreadcrumbs, this);
+            //oRouter.getRoute("types").attachMatched(this.callSetBreadcrumbs, this);
         },
         onTypeRoutMatched: function (oEvent) {
-            var oModel =this.getView().getModel("myModel");
+            var oModel = this.getView().getModel("myModel");
             var sCategoryName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
             var sTypeName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[1];
             this._onBaseRouteMatched(oEvent, {

@@ -11,8 +11,6 @@ sap.ui.define([
     "use strict";
     return BaseController.extend("app.modules.mainmodule.controller.CategoriesList", {
         onInit: function () {
-            var oRouter = this.getRouter();
-            oRouter.getRoute("categories").attachMatched(this.callSetBreadcrumbs, this);
         },
         callSetBreadcrumbs: function (oEvent) {
             var oModel = this.getView().getModel("myModel");

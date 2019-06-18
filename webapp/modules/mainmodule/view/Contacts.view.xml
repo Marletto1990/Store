@@ -13,13 +13,6 @@
 		navButtonText="Back" 
 		navButtonPress="onPressDetailBack">
 		<content>
-			<Breadcrumbs 	
-			currentLocationText="{myModel>/Remote_current/title}" 
-			class = "sapUiSmallMarginBegin sapUiSmallMarginTop  BreadCrumbs"
-			id = "theBreadcrumbs"
-			links = "{myModel>/Remote}" >
-				<Link press="onBreadcrumbsPress" text="{myModel>title}"/>
-			</Breadcrumbs>
 			<Label text="Контакты"/>
 		</content>
 	</Page>

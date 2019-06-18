@@ -10,13 +10,6 @@
 			title="Страница с акциями и новостями" 
 			class="sapUiStdPage">
 			<content>
-				<Breadcrumbs 	
-					currentLocationText="{myModel>/Remote_current/title}" 
-					class = "sapUiSmallMarginBegin sapUiSmallMarginTop BreadCrumbs"
-					links = "{myModel>/Remote}"
-					id = "theBreadcrumbs">
-					<Link press="onBreadcrumbsPress" text="{myModel>title}"/>
-				</Breadcrumbs>
 			</content>
 			<Button text="Test" press = "onNewsButtonPress"/>
 		</Page>
