@@ -12,6 +12,10 @@
 		class="sapUiStdPage" 
 		showNavButton="true"
 		navButtonPress="onCategoriesNavBack">
+		<headerContent>
+		</headerContent>
+		<subHeader>
+		</subHeader>
 		<content>
 			<List
 				items = "{myModel>/Categories}" id="categoriesList">
@@ -23,5 +27,10 @@
 				</items>
 			</List>
 		</content>
+		<footer>
+			<OverflowToolbar>
+				<Text text="Footer"/>
+			</OverflowToolbar>
+		</footer>
 	</Page>
 </mvc:View>

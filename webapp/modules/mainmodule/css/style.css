@@ -7,3 +7,12 @@
 .detailView{
     transition: opacity 0.3s;
 }
+.bigText{
+    font-size: 2em !important;
+    color: orangered !important;
+}
+.whiteBackground{
+    background-color: white !important;
+    opacity: 1 !important;
+    width: 25%;
+}

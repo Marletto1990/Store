@@ -2,79 +2,107 @@
 		   xmlns="sap.uxap"
 		   xmlns:layout="sap.ui.layout"
 		   xmlns:m="sap.m"
+            xmlns:personal="sap.uxap.sample.SharedBlocks.personal"
 	        controllerName="mainpath.controller.Article"
 		   height="100%">
 
-        <ObjectPageLayout id="articlePage" enableLazyLoading="false" showTitleInHeaderContent="false">
+        <ObjectPageLayout 
+                id="articlePage" 
+                enableLazyLoading="false" 
+                showTitleInHeaderContent="true"
+                subSectionLayout="TitleOnTop">
             <headerTitle>        
                 <ObjectPageHeader 
-                              objectImageURI="{myModel>/ArticleCurrent/article_image_path}"
-							  objectTitle="{myModel>/ArticleCurrent/article_name}"
-							  objectImageShape="Circle"
-							  objectImageAlt="Изделие"
-							  objectSubtitle="{myModel>/ArticleCurrent/article_material}">
-                <actions>
-					<ObjectPageHeaderActionButton icon="sap-icon://pull-down" text="show section" type="Emphasized" tooltip="pull-down"/>
-					<ObjectPageHeaderActionButton icon="sap-icon://show" text="show state" tooltip="show"/>
-					<ObjectPageHeaderActionButton text="Toggle Footer" hideIcon="true" hideText="false" press="toggleFooter"/>
-				</actions>
-                <breadcrumbs>
-					<m:Breadcrumbs 
-                    links = "{myModel>/Remote}"
-                    id="breadcrumbsId" 
-                    currentLocationText="{myModel>/Remote_current/title}" >
-						<m:Link press="onBreadcrumbsPress" text="{myModel>title}"/>
-					</m:Breadcrumbs>
-				</breadcrumbs>
+                        objectImageURI="{myModel>/ArticleCurrent/article_image_path}"
+                        objectTitle="{myModel>/ArticleCurrent/article_name}"
+                        
+                        objectImageAlt="Изделие"
+                        isObjectTitleAlwaysVisible="false">
+
+                        <actions>
+                            <ObjectPageHeaderActionButton icon="sap-icon://cart" text="Добавить в заявку" type="Emphasized" tooltip="pull-down" hideText="false"/>
+                            <ObjectPageHeaderActionButton icon="sap-icon://show" text="Перейти к оформлению" tooltip="show" hideText="false"/>
+                            <ObjectPageHeaderActionButton text="Toggle Footer" hideIcon="true" hideText="false" press="toggleFooter"/>
+                        </actions>
+
+                        <breadcrumbs>
+                            <m:Breadcrumbs 
+                            links = "{myModel>/Remote}"
+                            id="breadcrumbsId" 
+                            currentLocationText="{myModel>/Remote_current/title}" >
+                                <m:Link press="onBreadcrumbsPress" text="{myModel>title}"/>
+                            </m:Breadcrumbs>
+                        </breadcrumbs>
+
                 </ObjectPageHeader>
 		    </headerTitle>
             <headerContent>
 
-                <layout:HorizontalLayout>
-                    <m:Image src="{myModel>/ArticleCurrent/article_image_path}" height="6em"/>
+                <layout:HorizontalLayout>   
+                    <layout:VerticalLayout>
+                        <m:VBox height="63px" class="sapUiSmallMargin">
+                            <m:Label text="цена"/>
+                            <m:Label text="{myModel>/ArticleCurrent/article_price} руб."/>
+                        </m:VBox>
+                    </layout:VerticalLayout>
+                    <layout:VerticalLayout>
+                        <m:VBox height="63px" class="sapUiSmallMargin">
+                            <m:Label text="Оценка заказчиков"/>
+                            <m:RatingIndicator 
+                                    id="RI_default" 
+                                    maxValue="5" 
+                                    class="sapUiSmallMarginBottom" 
+                                    value="4" 
+                                    tooltip="Rating Tooltip" 
+                                    displayOnly= "true"/>
+                        </m:VBox>
+                    </layout:VerticalLayout>
                 </layout:HorizontalLayout>
-
-                <layout:VerticalLayout>
-                    <m:Label text="Стоимость одного экземпляра"/>
-                    <m:VBox height="63px">
-                        <m:Label text="Achieved goals"/>
-                        <m:ProgressIndicator
-                                percentValue="30"
-                                displayValue="30%"
-                                showValue="true"
-                                state="None"/>
-                    </m:VBox>
-                </layout:VerticalLayout>
-
 		    </headerContent>
             <sections>
-                <ObjectPageSection title="2014 Goals Plan">
+
+			    <ObjectPageSection title="Характеристики">
                     <subSections>
-                        <ObjectPageSubSection title=" ">
+                        <ObjectPageSubSection blocks="{myModel>/ArticleCurrent/description2}">
+                            <m:VBox>
+                                <m:Label text="{myModel>property}"/>
+                                <m:Text text="{myModel>value}"/>
+                            </m:VBox>
                         </ObjectPageSubSection>
                     </subSections>
-                </ObjectPageSection>
-
-                <ObjectPageSection title="Personal">
                     <subSections>
-                        <ObjectPageSubSection title="Connect">
-                        </ObjectPageSubSection>
-
-                        <ObjectPageSubSection id="paymentSubSection" title="Payment information">
+                        <ObjectPageSubSection>
+                            <m:VBox>
+                                <m:Label text="A little bit of Lorem ipsum things" class="sapUiSmallMarginBottom"/>
+                                <m:Text text="{myModel>/ArticleCurrent/loremIpsum1}"/>
+                            </m:VBox>
                         </ObjectPageSubSection>
                     </subSections>
-                </ObjectPageSection>
-
-			    <ObjectPageSection title="Employment">
                     <subSections>
-                        <ObjectPageSubSection title="Job information">
-                            <m:Text text = "Test"/>
+                        <ObjectPageSubSection>
+                            <m:VBox>
+                                <m:Label text="And more of Lorem ipsum" class="sapUiSmallMarginBottom"/>
+                                <m:Text text="{myModel>/ArticleCurrent/loremIpsum2}"/>
+                            </m:VBox>
                         </ObjectPageSubSection>
-                        <ObjectPageSubSection title="Employee Details" mode="Collapsed">
-                            <m:Text text = "Test"/>
-                        </ObjectPageSubSection>
-                        <ObjectPageSubSection title="Job Relationship" mode="Collapsed">
-                            <m:Text text = "Test"/>
+                    </subSections>
+			    </ObjectPageSection>
+			    
+                <ObjectPageSection title="Фотографии">
+                    <subSections>
+                        <ObjectPageSubSection title="Фотографии">
+                            <m:Carousel class="sapUiContentPadding" loop="true">
+                                <m:pages>
+                                    <m:Image src="{myModel>/ArticleCurrent/article_big_image_path}" alt="Example picture of speakers"/>
+
+                                    <m:Image src="{myModel>/ArticleCurrent/article_big_image_path}" alt="Example picture of USB flash drive"/>
+
+                                    <m:Image src="{myModel>/ArticleCurrent/article_big_image_path}" alt="Example picture of spotlight"/>
+
+                                    <m:Image src="{myModel>/ArticleCurrent/article_big_image_path}" alt="Example picture of screw"/>
+
+                                </m:pages>
+	                        </m:Carousel>
                         </ObjectPageSubSection>
                     </subSections>
 			    </ObjectPageSection>

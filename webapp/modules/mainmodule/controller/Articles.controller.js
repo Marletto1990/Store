@@ -55,6 +55,7 @@ sap.ui.define([
             var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
             oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/description", oData.description);
             oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/article_big_image_path", oData.article_big_image_path);
+            oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/article_image_path", oData.article_image_path);
             oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent/article_name", oData.article_name);
 
             var oList = this.getView().byId("articlesContainer");
