@@ -9,7 +9,8 @@
 			id="SplitAppDemo"  
 			orientationChange="onOrientationChange"
 			mode="PopoverMode"
-			defaultTransitionNameDetail = "fade"
-			defaultTransitionNameMaster = "fade">
+			defaultTransitionNameDetail = "show"
+			defaultTransitionNameMaster = "show"
+			homeIcon = "sap-icon://home">
 	</SplitApp>
 </mvc:View>

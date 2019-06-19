@@ -8,8 +8,7 @@
     transition: opacity 0.3s;
 }
 .bigText{
-    font-size: 2em !important;
-    color: orangered !important;
+    font-size: 1em !important;
 }
 .whiteBackground{
     background-color: white !important;

@@ -10,6 +10,28 @@
 			title="Страница с акциями и новостями" 
 			class="sapUiStdPage">
 			<content>
+				<Panel 
+					id="articlesContainer"
+					content = "{myModel>/RandomArticles}">
+					<GenericTile 
+						class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout imageClass" 
+						header="{myModel>article_name}"
+						subheader="{myModel>article_material}" 
+						press="onArticlesItemPress"
+						frameType="TwoByOne">
+							<TileContent footer="Цена: {myModel>article_price} руб." footerColor="Critical">
+								<HBox
+									alignItems="End"
+									justifyContent="End">
+									<Image
+										src="{myModel>article_image_path}"
+										height="6em"
+										width="6em">
+									</Image>
+								</HBox>
+							</TileContent>
+					</GenericTile>
+				</Panel>
 			</content>
 			<Button text="Test" press = "onNewsButtonPress"/>
 		</Page>

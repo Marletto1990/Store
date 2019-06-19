@@ -116,57 +116,68 @@
             "_mainmenu":{
               "viewId":   "mainmenu",
               "viewName": "Mainmenu",
-              "controlAggregation": "masterPages"
+              "controlAggregation": "masterPages",
+              "transition": "show"
             },
             "_news":{
               "viewId":   "news",
               "viewName": "News",
-              "controlAggregation": "detailPages"
+              "controlAggregation": "detailPages",
+              "transition": "show"
             },
             "_categoriesList": {
               "viewId":   "categoriesList",
               "viewName": "CategoriesList",
-              "controlAggregation": "masterPages"              
+              "controlAggregation": "masterPages",
+              "transition": "show"              
             },
             "_categories": {
               "viewId":   "categories",
               "viewName": "Categories",
-              "controlAggregation": "detailPages"              
+              "controlAggregation": "detailPages",
+              "transition": "show"              
             },
             "_typeList": {
               "viewId":   "typeList",
               "viewName": "TypeList",
-              "controlAggregation": "masterPages"              
+              "controlAggregation": "masterPages",
+              "transition": "show"              
             },
             "_types": {
               "viewId":   "types",
               "viewName": "Types",
-              "controlAggregation": "detailPages"              
+              "controlAggregation": "detailPages",
+              "transition": "show"              
             },
             "_articles": {
               "viewId":   "articles",
               "viewName": "Articles",
-              "controlAggregation": "detailPages"              
+              "controlAggregation": "detailPages",
+              "transition": "show"              
             },
             "_article": {
               "viewId":   "article",
               "viewName": "Article",
-              "controlAggregation": "detailPages"              
+              "controlAggregation": "detailPages",
+              "transition": "slide"              
             },
             "_toOrder": {
               "viewId":   "toOrder",
               "viewName": "ToOrder",
-              "controlAggregation": "detailPages"              
+              "controlAggregation": "detailPages",
+              "transition": "show"              
             },
             "_callback": {
               "viewId":   "callback",
               "viewName": "Callback",
-              "controlAggregation": "detailPages"              
+              "controlAggregation": "detailPages",
+              "transition": "show"              
             },
             "_contacts": {
               "viewId":   "contacts",
               "viewName": "Contacts",
-              "controlAggregation": "detailPages" 
+              "controlAggregation": "detailPages",
+              "transition": "show" 
             }
         }
     }

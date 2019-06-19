@@ -15,14 +15,27 @@
                 <ObjectPageHeader 
                         objectImageURI="{myModel>/ArticleCurrent/article_image_path}"
                         objectTitle="{myModel>/ArticleCurrent/article_name}"
-                        
                         objectImageAlt="Изделие"
                         isObjectTitleAlwaysVisible="false">
 
                         <actions>
-                            <ObjectPageHeaderActionButton icon="sap-icon://cart" text="Добавить в заявку" type="Emphasized" tooltip="pull-down" hideText="false"/>
-                            <ObjectPageHeaderActionButton icon="sap-icon://show" text="Перейти к оформлению" tooltip="show" hideText="false"/>
-                            <ObjectPageHeaderActionButton text="Toggle Footer" hideIcon="true" hideText="false" press="toggleFooter"/>
+                            <ObjectPageHeaderActionButton 
+                                icon="sap-icon://cart" 
+                                text="Добавить в заявку" 
+                                type="Emphasized" 
+                                tooltip="pull-down" 
+                                hideText="false"
+                                press="press"/>
+                            <ObjectPageHeaderActionButton 
+                                icon="sap-icon://show" 
+                                text="Перейти к оформлению" 
+                                tooltip="show" 
+                                hideText="false"/>
+                            <ObjectPageHeaderActionButton 
+                                text="Toggle Footer" 
+                                hideIcon="true" 
+                                hideText="false" 
+                                press="toggleFooter"/>
                         </actions>
 
                         <breadcrumbs>
@@ -41,13 +54,13 @@
                 <layout:HorizontalLayout>   
                     <layout:VerticalLayout>
                         <m:VBox height="63px" class="sapUiSmallMargin">
-                            <m:Label text="цена"/>
-                            <m:Label text="{myModel>/ArticleCurrent/article_price} руб."/>
+                            <m:Label text="Цена"  class="bigText"/>
+                            <m:Label text="{myModel>/ArticleCurrent/article_price} руб." class="bigText"/>
                         </m:VBox>
                     </layout:VerticalLayout>
                     <layout:VerticalLayout>
                         <m:VBox height="63px" class="sapUiSmallMargin">
-                            <m:Label text="Оценка заказчиков"/>
+                            <m:Label text="Оценка заказчиков" class="bigText"/>
                             <m:RatingIndicator 
                                     id="RI_default" 
                                     maxValue="5" 

@@ -24,7 +24,10 @@
 				</content>
 				<footer>
 					<OverflowToolbar>
-						<Text text="Footer"/>
+						<Button icon="sap-icon://home" width="20%" press="goToStart"/>
+						<Button icon="sap-icon://cart" width="20%" type="Accept"/>
+						<Button icon="sap-icon://customize" width="20%"/>
+						<Button icon="sap-icon://customer" width="20%"/>
 					</OverflowToolbar>
 				</footer>
 			</Page>

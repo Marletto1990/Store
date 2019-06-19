@@ -15,7 +15,9 @@ sap.ui.define([
 		getRouter: function () {
 			return UIComponent.getRouterFor(this);
 		},
-
+		goToStart: function(){
+			this.getRouter().navTo("start");
+		},
 		onNavBack: function () {
 			var oHistory, sPreviousHash;
 
