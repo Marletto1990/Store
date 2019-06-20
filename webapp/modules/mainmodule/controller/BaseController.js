@@ -205,7 +205,23 @@ sap.ui.define([
 			} else {
 				this.getRouter().navTo(sRout)
 			}
-		}
+		},
+        formatter_isCartNotEmpty_class: function(oCart) {
+			debugger
+			return oCart ? "blink" : "notblink";
+        },
+        formatter_isCartNotEmpty_type: function(oCart) {
+			return oCart ? "Accept" : "Default" ;
+		},
+		handleResponsivePopoverPress: function (oEvent) {
+			if (!this._oPopover) {
+				this._oPopover = sap.ui.xmlfragment("mainpath.fragment.cart", this);
+				//this._oPopover.bindElement("/Cart");
+				this.getView().addDependent(this._oPopover);
+			}
+
+			this._oPopover.openBy(oEvent.getSource());
+		},
 	});
 
 });

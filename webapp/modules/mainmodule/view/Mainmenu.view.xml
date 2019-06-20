@@ -25,7 +25,11 @@
 				<footer>
 					<OverflowToolbar>
 						<Button icon="sap-icon://home" width="20%" blocked="true"/>
-						<Button icon="sap-icon://cart" width="20%"/>
+						<Button 
+							icon="sap-icon://cart" 
+							width="20%" 
+							type="{path:'myModel>/Cart/0', formatter:'.formatter_isCartNotEmpty_type'}"
+							class="{path:'myModel>/Cart/0', formatter:'.formatter_isCartNotEmpty_class'}"/>
 						<Button icon="sap-icon://customize" width="20%"/>
 						<Button icon="sap-icon://customer" width="20%"/>
 					</OverflowToolbar>

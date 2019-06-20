@@ -25,6 +25,7 @@ sap.ui.define([
                 type: sTypeName,
                 aggregationName: "items"
             });
+            //this.isCartNotEmpty();
         },
         callSetBreadcrumbs: function (oEvent) {
             var oModel = this.getView().getModel("myModel");

@@ -20,12 +20,13 @@
 
                         <actions>
                             <ObjectPageHeaderActionButton 
+                                id="cartAddButton"
                                 icon="sap-icon://cart" 
                                 text="Добавить в заявку" 
                                 type="Emphasized" 
                                 tooltip="pull-down" 
                                 hideText="false"
-                                press="press"/>
+                                press="addToCart"/>
                             <ObjectPageHeaderActionButton 
                                 icon="sap-icon://show" 
                                 text="Перейти к оформлению" 

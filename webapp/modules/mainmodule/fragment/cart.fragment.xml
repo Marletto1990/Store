@@ -1,0 +1,21 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ResponsivePopover
+		class="sapUiPopupWithPadding"
+		placement="Top" 
+        content="{myModel>/Cart}">
+		<beginButton>
+			<Button text="Очистить" press="handleCloseButton" />
+		</beginButton>
+		<endButton>
+			<Button text="Перейти к оформлению заказа" press="handleCloseButton" />
+		</endButton>
+		<content>
+            <HBox justifyContent="SpaceAround">
+                <Image src="{myModel>article_image_path}" width="6em" densityAware="false" />
+                <Label text="{myModel>article_name}"/>
+            </HBox>
+		</content>
+	</ResponsivePopover>
+</core:FragmentDefinition>

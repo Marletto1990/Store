@@ -1,8 +1,5 @@
-{   
+{   "Cart":[],
     "RandomArticles":[],
-    "TechInfo":[{
-        "br_visible": false
-    }],
     "Remote":[{
             "title": "Главная",
             "path": "Main",
