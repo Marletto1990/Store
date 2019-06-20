@@ -176,7 +176,35 @@
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1101.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1101.jpg",
-            "description": "ВЫСОТА КОНСТРУКЦИИ: 200мм\nКРЕПЕЖНАЯ ПЛАСТИНА: 150*150 мм, толщина 5 мм\nВОЗМОЖНЫЕ ДЛИНЫ: любая под заказ\nВОЗМОЖНЫЕ ДИАМЕТРЫ ТРУБ: 76 мм, 102 мм\nКРЕПЛЕНИЕ: распорные анкеры\nМАТЕРИАЛ:  черный металлопрокат;\nПОВЕРХНОСТЬ: покраска механическим способом;"
+            "description": "ВЫСОТА КОНСТРУКЦИИ: 200мм\nКРЕПЕЖНАЯ ПЛАСТИНА: 150*150 мм, толщина 5 мм\nВОЗМОЖНЫЕ ДЛИНЫ: любая под заказ\nВОЗМОЖНЫЕ ДИАМЕТРЫ ТРУБ: 76 мм, 102 мм\nКРЕПЛЕНИЕ: распорные анкеры\nМАТЕРИАЛ:  черный металлопрокат;\nПОВЕРХНОСТЬ: покраска механическим способом;",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1102,
@@ -191,7 +219,35 @@
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1102.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1102.jpg",
-            "description": "ВЫСОТА КОНСТРУКЦИИ: 200мм\nБЕТОНИРОВАНИЕ: на 300 мм в основание\nФЛАНЕЦ: 150*150 мм, толщина 5 мм\nВОЗМОЖНЫЕ ДЛИНЫ: 1000/1200/1500/2000/2500/3000 мм.\nВОЗМОЖНЫЕ ДИАМЕТРЫ ТРУБ: 76 мм, 102 мм\nКРЕПЛЕНИЕ: спец.раствор\nМАТЕРИАЛ:  черный металлопрокат;\nПОВЕРХНОСТЬ: покраска механическим способом;"
+            "description": "ВЫСОТА КОНСТРУКЦИИ: 200мм\nБЕТОНИРОВАНИЕ: на 300 мм в основание\nФЛАНЕЦ: 150*150 мм, толщина 5 мм\nВОЗМОЖНЫЕ ДЛИНЫ: 1000/1200/1500/2000/2500/3000 мм.\nВОЗМОЖНЫЕ ДИАМЕТРЫ ТРУБ: 76 мм, 102 мм\nКРЕПЛЕНИЕ: спец.раствор\nМАТЕРИАЛ:  черный металлопрокат;\nПОВЕРХНОСТЬ: покраска механическим способом;",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1103,
@@ -206,7 +262,35 @@
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1103.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1103.jpg",
-            "description": "ВЫСОТА КОНСТРУКЦИИ: 200мм\nКРЕПЕЖНАЯ ПЛАСТИНА: 150*150 мм, толщина 5 мм\nВОЗМОЖНЫЕ ДЛИНЫ: 1000/1200/1500/2000/2500/3000 мм. (или другая под заказ)\nВОЗМОЖНЫЕ ДИАМЕТРЫ ТРУБ: 57/ 76/ 102 мм (толщина трубы 3 мм)\nКРЕПЛЕНИЕ: распорные анкеры (не входят в комплект)\nМАТЕРИАЛ:  черный металлопрокат;\nПОВЕРХНОСТЬ: покраска механическим способом;"
+            "description": "ВЫСОТА КОНСТРУКЦИИ: 200мм\nКРЕПЕЖНАЯ ПЛАСТИНА: 150*150 мм, толщина 5 мм\nВОЗМОЖНЫЕ ДЛИНЫ: 1000/1200/1500/2000/2500/3000 мм. (или другая под заказ)\nВОЗМОЖНЫЕ ДИАМЕТРЫ ТРУБ: 57/ 76/ 102 мм (толщина трубы 3 мм)\nКРЕПЛЕНИЕ: распорные анкеры (не входят в комплект)\nМАТЕРИАЛ:  черный металлопрокат;\nПОВЕРХНОСТЬ: покраска механическим способом;",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1104,
@@ -221,7 +305,35 @@
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1104.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1104.jpg",
-            "description": "ВЫСОТА КОНСТРУКЦИИ: 200мм\nКРЕПЕЖНАЯ ПЛАСТИНА: 150*150 мм, толщина 5 мм\nВОЗМОЖНЫЕ ДЛИНЫ: 1000/1200/1500/2000/2500/3000 мм.\nВОЗМОЖНЫЕ ДИАМЕТРЫ ТРУБ: 57/ 76/ 102 мм. (толщина трубы 3 мм)\nКРЕПЛЕНИЕ: распорные анкеры (не входят в комплект)\nМАТЕРИАЛ:  черный металлопрокат;\nПОВЕРХНОСТЬ: покраска механическим способом;\n \nПолностью Сварная конструкция.\nПри длине 2500 мм и 3000 мм - добавляется 1 дополнительная опора посередине отбойника."
+            "description": "ВЫСОТА КОНСТРУКЦИИ: 200мм\nКРЕПЕЖНАЯ ПЛАСТИНА: 150*150 мм, толщина 5 мм\nВОЗМОЖНЫЕ ДЛИНЫ: 1000/1200/1500/2000/2500/3000 мм.\nВОЗМОЖНЫЕ ДИАМЕТРЫ ТРУБ: 57/ 76/ 102 мм. (толщина трубы 3 мм)\nКРЕПЛЕНИЕ: распорные анкеры (не входят в комплект)\nМАТЕРИАЛ:  черный металлопрокат;\nПОВЕРХНОСТЬ: покраска механическим способом;\n \nПолностью Сварная конструкция.\nПри длине 2500 мм и 3000 мм - добавляется 1 дополнительная опора посередине отбойника.",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1105,
@@ -236,7 +348,35 @@
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1105.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1105.jpg",
-            "description": "ВЫСОТА КОНСТРУКЦИИ: 200мм\nФЛАНЕЦ: 150*150 мм, толщина 5 мм\nВОЗМОЖНЫЕ ДЛИНЫ: 1000/1200/1500/2000/2500/3000 мм.\nВОЗМОЖНЫЕ ДИАМЕТРЫ ТРУБ: 50х50; 60х60 мм, 80х80 мм,  100х100 мм\nКРЕПЛЕНИЕ: Распорные анкера\nМАТЕРИАЛ:  черный металлопрокат;\nПОВЕРХНОСТЬ: покраска механическим способом;\n \nПолностью Сварная конструкция.\nПри длине 2500 мм и 3000 мм - добавляется 1 дополнительная опора посередине отбойника."
+            "description": "ВЫСОТА КОНСТРУКЦИИ: 200мм\nФЛАНЕЦ: 150*150 мм, толщина 5 мм\nВОЗМОЖНЫЕ ДЛИНЫ: 1000/1200/1500/2000/2500/3000 мм.\nВОЗМОЖНЫЕ ДИАМЕТРЫ ТРУБ: 50х50; 60х60 мм, 80х80 мм,  100х100 мм\nКРЕПЛЕНИЕ: Распорные анкера\nМАТЕРИАЛ:  черный металлопрокат;\nПОВЕРХНОСТЬ: покраска механическим способом;\n \nПолностью Сварная конструкция.\nПри длине 2500 мм и 3000 мм - добавляется 1 дополнительная опора посередине отбойника.",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1201,
@@ -251,7 +391,35 @@
             "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1201.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1201.jpg",
-            "description": "ВЫСОТА КОНСТРУКЦИИ: 500/ 750/ 1000/ 1200 мм.\nФЛАНЕЦ: 200*200 мм, толщина 10 мм\nВОЗМОЖНЫЕ ДИАМЕТРЫ ТРУБ: 102; 127 мм (толщина трубы 4 мм)\nКРЕПЛЕНИЕ: распорные анкеры (не входят в комплект)\nМАТЕРИАЛ:  черный металлопрокат;\nПОВЕРХНОСТЬ: Однотонная покраска механическим способом;\nПолосатая (сигнальная) окраска - по запросу!\n\nПолностью Сварная конструкция.\nДля защиты машин, стеллажей, зданий, погрузочных рамп и т.д.\nДля предохранения рабочих зон, транспортных путей и т.д.\n\nДругие варианты изделия (Полосатая сигнальная окраска - под заказ)"
+            "description": "ВЫСОТА КОНСТРУКЦИИ: 500/ 750/ 1000/ 1200 мм.\nФЛАНЕЦ: 200*200 мм, толщина 10 мм\nВОЗМОЖНЫЕ ДИАМЕТРЫ ТРУБ: 102; 127 мм (толщина трубы 4 мм)\nКРЕПЛЕНИЕ: распорные анкеры (не входят в комплект)\nМАТЕРИАЛ:  черный металлопрокат;\nПОВЕРХНОСТЬ: Однотонная покраска механическим способом;\nПолосатая (сигнальная) окраска - по запросу!\n\nПолностью Сварная конструкция.\nДля защиты машин, стеллажей, зданий, погрузочных рамп и т.д.\nДля предохранения рабочих зон, транспортных путей и т.д.\n\nДругие варианты изделия (Полосатая сигнальная окраска - под заказ)",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1202,
@@ -266,7 +434,35 @@
             "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1202.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1202.jpg",
-            "description": "СТОЙКА:\nШвеллер П10, высотой 240 мм\nКрепёжная пластина 150*200*5 мм\nПроставка для крепления Швеллера к стойке.\n\nШВЕЛЛЕР:\nВысота швеллера 180 мм, Ширина полки швеллера 40 мм\n\nКРЕПЛЕНИЕ:\n'Стойка-Швеллер': мебельный болт М10;\n'Стойка-Пол': 4 распорных анкера на стойку (не включено в стоимость)\n\nОБЩАЯ ИНФОРМАЦИЯ:\nМатериал - черный металлопрокат;\nПокрытие - Механическая окраска;\nСборно-разборная конструкция;\nРасстояние от швеллера до пола 60 мм;\nЭлементы швеллера - сварные;"
+            "description": "СТОЙКА:\nШвеллер П10, высотой 240 мм\nКрепёжная пластина 150*200*5 мм\nПроставка для крепления Швеллера к стойке.\n\nШВЕЛЛЕР:\nВысота швеллера 180 мм, Ширина полки швеллера 40 мм\n\nКРЕПЛЕНИЕ:\n'Стойка-Швеллер': мебельный болт М10;\n'Стойка-Пол': 4 распорных анкера на стойку (не включено в стоимость)\n\nОБЩАЯ ИНФОРМАЦИЯ:\nМатериал - черный металлопрокат;\nПокрытие - Механическая окраска;\nСборно-разборная конструкция;\nРасстояние от швеллера до пола 60 мм;\nЭлементы швеллера - сварные;",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1203,
@@ -281,7 +477,35 @@
             "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1203.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1203.jpg",
-            "description": "Тут будет описание товара 1203"
+            "description": "Тут будет описание товара 1203",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1204,
@@ -296,7 +520,35 @@
             "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1204.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1204.jpg",
-            "description": "Тут будет описание товара 1204"
+            "description": "Тут будет описание товара 1204",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1205,
@@ -311,7 +563,35 @@
             "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1205.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1205.jpg",
-            "description": "Тут будет описание товара 1205"
+            "description": "Тут будет описание товара 1205",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1301,
@@ -326,7 +606,35 @@
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1301.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1301.jpg",
-            "description": "Тут будет описание товара 1301"
+            "description": "Тут будет описание товара 1301",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1302,
@@ -341,7 +649,35 @@
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1302.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1302.jpg",
-            "description": "Тут будет описание товара 1302"
+            "description": "Тут будет описание товара 1302",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1303,
@@ -356,7 +692,35 @@
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1303.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1303.jpg",
-            "description": "Тут будет описание товара 1303"
+            "description": "Тут будет описание товара 1303",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1304,
@@ -371,7 +735,35 @@
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1304.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1304.jpg",
-            "description": "Тут будет описание товара 1304"
+            "description": "Тут будет описание товара 1304",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1305,
@@ -386,7 +778,35 @@
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1305.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1305.jpg",
-            "description": "Тут будет описание товара 1305"
+            "description": "Тут будет описание товара 1305",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1401,
@@ -401,7 +821,35 @@
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1401.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1401.jpg",
-            "description": "Тут будет описание товара 1401"
+            "description": "Тут будет описание товара 1401",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1402,
@@ -416,7 +864,35 @@
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1402.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1402.jpg",
-            "description": "Тут будет описание товара 1402"
+            "description": "Тут будет описание товара 1402",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1403,
@@ -431,7 +907,35 @@
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1403.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1403.jpg",
-            "description": "Тут будет описание товара 1403"
+            "description": "Тут будет описание товара 1403",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1404,
@@ -446,7 +950,35 @@
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1404.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1404.jpg",
-            "description": "Тут будет описание товара 1404"
+            "description": "Тут будет описание товара 1404",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1405,
@@ -461,7 +993,35 @@
             "article_material": "Черный металлопрокат",
             "article_image_path": "/modules/mainmodule/images/1405.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1405.jpg",
-            "description": "Тут будет описание товара 1405"
+            "description": "Тут будет описание товара 1405",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1501,
@@ -476,7 +1036,35 @@
             "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1501.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1501.jpg",
-            "description": "Тут будет описание товара 1501"
+            "description": "Тут будет описание товара 1501",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1502,
@@ -491,7 +1079,35 @@
             "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1502.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1502.jpg",
-            "description": "Тут будет описание товара 1502"
+            "description": "Тут будет описание товара 1502",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1503,
@@ -506,7 +1122,35 @@
             "article_material": "нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1503.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1503.jpg",
-            "description": "Тут будет описание товара 1503"
+            "description": "Тут будет описание товара 1503",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1504,
@@ -521,7 +1165,35 @@
             "article_material": "нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1504.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1504.jpg",
-            "description": "Тут будет описание товара 1504"
+            "description": "Тут будет описание товара 1504",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 1505,
@@ -536,7 +1208,35 @@
             "article_material": "нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/1505.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a1505.jpg",
-            "description": "Тут будет описание товара 1505"
+            "description": "Тут будет описание товара 1505",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 2101,
@@ -551,7 +1251,35 @@
             "article_material": "Черный металл, оцинкованный лист",
             "article_image_path": "/modules/mainmodule/images/2101.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a2101.jpg",
-            "description": "Металлоконструкции устанавливают при входе в административные здания и жилые дома.\n\nКозырьки-навесы монтируют:\n\nНад входом в загородный дом;\nНад крыльцом для безопасности и комфорта;\nВ качестве автопарковки, для защиты машин от солнечного света и осадков;\nНа территории складов и производственных территорий для обустройства места для хранения продукции и материалов;\nНад бассейнами и колодцами для снижения загрязнения листвой и пылью."
+            "description": "Металлоконструкции устанавливают при входе в административные здания и жилые дома.\n\nКозырьки-навесы монтируют:\n\nНад входом в загородный дом;\nНад крыльцом для безопасности и комфорта;\nВ качестве автопарковки, для защиты машин от солнечного света и осадков;\nНа территории складов и производственных территорий для обустройства места для хранения продукции и материалов;\nНад бассейнами и колодцами для снижения загрязнения листвой и пылью.",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 2201,
@@ -566,7 +1294,35 @@
             "article_material": "Черный металл, поликарбонат, пластик Simona",
             "article_image_path": "/modules/mainmodule/images/2201.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a2201.jpg",
-            "description": "Компания «Steel Store» специализируется на проектировании и установке парк боксов для тележек по\nприемлемым ценам в Москве. У нас вы можете заказать домики и накопители для тележек.\n\nПарк-боксы относятся к вспомогательному торговому оборудованию, предназначенному для хранения\n покупательских тележек в условиях парковки. Благодаря использованию конструкций парковочная площадь\n организуется максимально эргономично. Конструкции специально разработаны для установки в гипермаркетах\n и супермаркетах. Такие системы монтируют непосредственно перед входом в магазин, на автостоянке.\n Применение изделий позволяет рационально использовать пространство в торговой зоне и значительно\n продлевает срок эксплуатации покупательских тележек.\n\nПреимущества парк-боксов от компании Steel Store\n\nПо желанию заказчиков наши парковочные боксы могут быть укомплектованы дополнительным\n оборудованием: стопперами и упорами для ограничения передвижения тележек, разделительными\n отбойниками из нержавейки для упрощения перемещения и эргономичного штабелирования тележек. Также\n мы производим нижние ограничители, таблички информации, планки со специальным отводом для крепежа\n цепочки от покупательской тележки.\n\nДля обеспечения успешных продаж большую роль играет правильно организованное пространство.\n Посетители магазина непременно оценят удобство пользования парковочными боксами для тележек. В таких\n конструкциях тележки размещаются наиболее компактно и защищены от снега и дождя. Компания Steel Store\n изготавливает парк-боксы разных размеров, форм и цветовых решений. У нас вы можете заказать конструкции,\n выполненные с учетом фирменного стиля вашей фирмы. Также мы производим парковочные боксы для размещения\n велосипедов."
+            "description": "Компания «Steel Store» специализируется на проектировании и установке парк боксов для тележек по\nприемлемым ценам в Москве. У нас вы можете заказать домики и накопители для тележек.\n\nПарк-боксы относятся к вспомогательному торговому оборудованию, предназначенному для хранения\n покупательских тележек в условиях парковки. Благодаря использованию конструкций парковочная площадь\n организуется максимально эргономично. Конструкции специально разработаны для установки в гипермаркетах\n и супермаркетах. Такие системы монтируют непосредственно перед входом в магазин, на автостоянке.\n Применение изделий позволяет рационально использовать пространство в торговой зоне и значительно\n продлевает срок эксплуатации покупательских тележек.\n\nПреимущества парк-боксов от компании Steel Store\n\nПо желанию заказчиков наши парковочные боксы могут быть укомплектованы дополнительным\n оборудованием: стопперами и упорами для ограничения передвижения тележек, разделительными\n отбойниками из нержавейки для упрощения перемещения и эргономичного штабелирования тележек. Также\n мы производим нижние ограничители, таблички информации, планки со специальным отводом для крепежа\n цепочки от покупательской тележки.\n\nДля обеспечения успешных продаж большую роль играет правильно организованное пространство.\n Посетители магазина непременно оценят удобство пользования парковочными боксами для тележек. В таких\n конструкциях тележки размещаются наиболее компактно и защищены от снега и дождя. Компания Steel Store\n изготавливает парк-боксы разных размеров, форм и цветовых решений. У нас вы можете заказать конструкции,\n выполненные с учетом фирменного стиля вашей фирмы. Также мы производим парковочные боксы для размещения\n велосипедов.",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         },
         {
             "article_num": 3101,
@@ -581,7 +1337,35 @@
             "article_material": "Нержавеющая сталь",
             "article_image_path": "/modules/mainmodule/images/3101.jpg",
             "article_big_image_path": "/modules/mainmodule/images/a3101.jpg",
-            "description": "Компания «Steel Store» специализируется на проектировании и установке парк боксов для тележек по\nприемлемым ценам в Москве. У нас вы можете заказать домики и накопители для тележек.\n\nПарк-боксы относятся к вспомогательному торговому оборудованию, предназначенному для хранения\n покупательских тележек в условиях парковки. Благодаря использованию конструкций парковочная площадь\n организуется максимально эргономично. Конструкции специально разработаны для установки в гипермаркетах\n и супермаркетах. Такие системы монтируют непосредственно перед входом в магазин, на автостоянке.\n Применение изделий позволяет рационально использовать пространство в торговой зоне и значительно\n продлевает срок эксплуатации покупательских тележек.\n\nПреимущества парк-боксов от компании Steel Store\n\nПо желанию заказчиков наши парковочные боксы могут быть укомплектованы дополнительным\n оборудованием: стопперами и упорами для ограничения передвижения тележек, разделительными\n отбойниками из нержавейки для упрощения перемещения и эргономичного штабелирования тележек. Также\n мы производим нижние ограничители, таблички информации, планки со специальным отводом для крепежа\n цепочки от покупательской тележки.\n\nДля обеспечения успешных продаж большую роль играет правильно организованное пространство.\n Посетители магазина непременно оценят удобство пользования парковочными боксами для тележек. В таких\n конструкциях тележки размещаются наиболее компактно и защищены от снега и дождя. Компания Steel Store\n изготавливает парк-боксы разных размеров, форм и цветовых решений. У нас вы можете заказать конструкции,\n выполненные с учетом фирменного стиля вашей фирмы. Также мы производим парковочные боксы для размещения\n велосипедов."
+            "description": "Компания «Steel Store» специализируется на проектировании и установке парк боксов для тележек по\nприемлемым ценам в Москве. У нас вы можете заказать домики и накопители для тележек.\n\nПарк-боксы относятся к вспомогательному торговому оборудованию, предназначенному для хранения\n покупательских тележек в условиях парковки. Благодаря использованию конструкций парковочная площадь\n организуется максимально эргономично. Конструкции специально разработаны для установки в гипермаркетах\n и супермаркетах. Такие системы монтируют непосредственно перед входом в магазин, на автостоянке.\n Применение изделий позволяет рационально использовать пространство в торговой зоне и значительно\n продлевает срок эксплуатации покупательских тележек.\n\nПреимущества парк-боксов от компании Steel Store\n\nПо желанию заказчиков наши парковочные боксы могут быть укомплектованы дополнительным\n оборудованием: стопперами и упорами для ограничения передвижения тележек, разделительными\n отбойниками из нержавейки для упрощения перемещения и эргономичного штабелирования тележек. Также\n мы производим нижние ограничители, таблички информации, планки со специальным отводом для крепежа\n цепочки от покупательской тележки.\n\nДля обеспечения успешных продаж большую роль играет правильно организованное пространство.\n Посетители магазина непременно оценят удобство пользования парковочными боксами для тележек. В таких\n конструкциях тележки размещаются наиболее компактно и защищены от снега и дождя. Компания Steel Store\n изготавливает парк-боксы разных размеров, форм и цветовых решений. У нас вы можете заказать конструкции,\n выполненные с учетом фирменного стиля вашей фирмы. Также мы производим парковочные боксы для размещения\n велосипедов.",
+            "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
         }
     ]
 }

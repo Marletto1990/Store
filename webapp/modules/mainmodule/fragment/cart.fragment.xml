@@ -1,7 +1,9 @@
 <core:FragmentDefinition
 	xmlns="sap.m"
-	xmlns:core="sap.ui.core">
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout">
 	<ResponsivePopover
+		title="Выбранные артикулы"
 		class="sapUiPopupWithPadding"
 		placement="Top" 
         content="{myModel>/Cart}">
@@ -12,10 +14,16 @@
 			<Button text="Перейти к оформлению заказа" press="handleCloseButton" />
 		</endButton>
 		<content>
-            <HBox justifyContent="SpaceAround">
-                <Image src="{myModel>article_image_path}" width="6em" densityAware="false" />
-                <Label text="{myModel>article_name}"/>
-            </HBox>
+			<List>
+				<items>
+					<StandardListItem 
+						title="{myModel>article_name}"
+						icon="{myModel>article_image_path}"
+						type="Navigation" 
+						press="onCartItemPress"/>
+				</items>
+			</List>
+
 		</content>
 	</ResponsivePopover>
 </core:FragmentDefinition>

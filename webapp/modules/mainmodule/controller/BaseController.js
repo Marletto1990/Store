@@ -206,9 +206,8 @@ sap.ui.define([
 				this.getRouter().navTo(sRout)
 			}
 		},
-        formatter_isCartNotEmpty_class: function(oCart) {
-			debugger
-			return oCart ? "blink" : "notblink";
+        formatter_isCartNotEmpty_blocked: function(oCart) {
+			return oCart ? false : true;
         },
         formatter_isCartNotEmpty_type: function(oCart) {
 			return oCart ? "Accept" : "Default" ;
@@ -222,6 +221,9 @@ sap.ui.define([
 
 			this._oPopover.openBy(oEvent.getSource());
 		},
+		onCartItemPress(){
+			
+		}
 	});
 
 });
