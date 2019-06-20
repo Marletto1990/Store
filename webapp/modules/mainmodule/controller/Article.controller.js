@@ -41,6 +41,7 @@ sap.ui.define([
             var oProduct = this.getView().getModel("myModel").getProperty("/ArticleCurrent");
             var oCart = this.getView().getModel("myModel").getProperty("/Cart");
             oCart.push(oProduct);
+            console.log(oProduct);
             this.getView().getModel("myModel").setProperty("/Cart", oCart);
         }
     });
