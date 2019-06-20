@@ -1,3 +1,6 @@
+.salesText{
+    text-decoration: line-through;
+}
 .BreadCrumbs{
     transition: opacity 0.3s;
 }

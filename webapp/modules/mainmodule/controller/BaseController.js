@@ -221,8 +221,29 @@ sap.ui.define([
 
 			this._oPopover.openBy(oEvent.getSource());
 		},
-		onCartItemPress(){
-			
+		onCartItemPress(oEvent){
+			var artName = oEvent.getSource().getProperty("title");
+			var oData = this.getView().getModel("myModel").getProperty("/Articles");
+			var oCategory = this.getView().getModel("myModel").getProperty("/Categories");
+			var target = oData.find(function(element){
+				return element.title == artName;
+			})
+			var sCategoryName = oCategory.find(function(element){
+				return element.cat_num == target.cat_num
+			})
+			var i = oCategory.findIndex(function(element){
+				return element.cat_num == target.cat_num
+			})
+			//var sTypeName = 
+			console.log(artName);
+			console.log(i);
+		},
+		deleteFromCart(oEvent){
+			var itemForDelete = oEvent.getSource();
+			console.log(itemForDelete);
+		},
+		clearCart() {
+        	this.getView().getModel("myModel").setProperty("/Cart",[]);
 		}
 	});
 

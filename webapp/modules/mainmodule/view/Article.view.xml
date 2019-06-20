@@ -27,16 +27,6 @@
                                 tooltip="pull-down" 
                                 hideText="false"
                                 press="addOrRemoveToCart"/>
-                            <ObjectPageHeaderActionButton 
-                                icon="sap-icon://show" 
-                                text="Перейти к оформлению" 
-                                tooltip="show" 
-                                hideText="false"/>
-                            <ObjectPageHeaderActionButton 
-                                text="Toggle Footer" 
-                                hideIcon="true" 
-                                hideText="false" 
-                                press="toggleFooter"/>
                         </actions>
 
                         <breadcrumbs>
