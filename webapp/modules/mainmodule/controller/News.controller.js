@@ -17,6 +17,26 @@ sap.ui.define([
         },
         onNewsButtonPress: function(){
             this.getRouter().getTargets().display("notFound");
+        },
+        onNewsItemPress: function(oEvent){
+            var oData = oEvent.getSource().getBindingContext("myModel").getObject();  
+            var oList = this.getView().byId("articlesContainer");
+            var oCtgName = oList.getModel("myModel").getProperty("/Categories").find(function (element) {
+                return element.cat_num == oData.cat_num;
+            });
+            var i = oList.getModel("myModel").getProperty("/Categories").findIndex(function (element) {
+                return element.cat_num == oData.cat_num;
+            });
+            var oTpName = oList.getModel("myModel").getProperty("/Categories/" + i + "/type").find(function (element) {
+                return element.type_num == oData.type_num;
+            });
+            var sArticleName = oData.article_num;
+
+            this.getRouter().navTo("article", {
+                category: oCtgName.cat_name,
+                type: oTpName.name,
+                article: sArticleName
+            });
         }
 	});
 });

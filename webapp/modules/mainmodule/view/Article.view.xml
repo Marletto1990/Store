@@ -14,8 +14,8 @@
             <headerTitle>        
                 <ObjectPageHeader 
                         id="OPHeader"
-                        objectImageURI="{myModel>/ArticleCurrent/article_image_path}"
-                        objectTitle="{myModel>/ArticleCurrent/article_name}"
+                        objectImageURI="{myModel>article_image_path}"
+                        objectTitle="{myModel>article_name}"
                         objectImageAlt="Изделие"
                         isObjectTitleAlwaysVisible="false">
 
@@ -59,7 +59,7 @@
                     <layout:VerticalLayout>
                         <m:VBox height="63px" class="sapUiSmallMargin">
                             <m:Label text="Цена"  class="bigText"/>
-                            <m:Label text="{myModel>/ArticleCurrent/article_price} руб." class="bigText"/>
+                            <m:Label text="{myModel>article_price} руб." class="bigText"/>
                         </m:VBox>
                     </layout:VerticalLayout>
                     <layout:VerticalLayout>
@@ -80,7 +80,7 @@
 
 			    <ObjectPageSection title="Характеристики">
                     <subSections>
-                        <ObjectPageSubSection blocks="{myModel>/ArticleCurrent/description2}">
+                        <ObjectPageSubSection blocks="{myModel>description2}">
                             <m:VBox>
                                 <m:Label text="{myModel>property}"/>
                                 <m:Text text="{myModel>value}"/>
@@ -91,7 +91,7 @@
                         <ObjectPageSubSection>
                             <m:VBox>
                                 <m:Label text="A little bit of Lorem ipsum things" class="sapUiSmallMarginBottom"/>
-                                <m:Text text="{myModel>/ArticleCurrent/loremIpsum1}"/>
+                                <m:Text text="{myModel>loremIpsum1}"/>
                             </m:VBox>
                         </ObjectPageSubSection>
                     </subSections>
@@ -99,7 +99,7 @@
                         <ObjectPageSubSection>
                             <m:VBox>
                                 <m:Label text="And more of Lorem ipsum" class="sapUiSmallMarginBottom"/>
-                                <m:Text text="{myModel>/ArticleCurrent/loremIpsum2}"/>
+                                <m:Text text="{myModel>loremIpsum2}"/>
                             </m:VBox>
                         </ObjectPageSubSection>
                     </subSections>
@@ -110,13 +110,13 @@
                         <ObjectPageSubSection title="Фотографии">
                             <m:Carousel class="sapUiContentPadding" loop="true">
                                 <m:pages>
-                                    <m:Image src="{myModel>/ArticleCurrent/article_big_image_path}" alt="Example picture of speakers"/>
+                                    <m:Image src="{myModel>article_big_image_path}" alt="Example picture of speakers"/>
 
-                                    <m:Image src="{myModel>/ArticleCurrent/article_big_image_path}" alt="Example picture of USB flash drive"/>
+                                    <m:Image src="{myModel>article_big_image_path}" alt="Example picture of USB flash drive"/>
 
-                                    <m:Image src="{myModel>/ArticleCurrent/article_big_image_path}" alt="Example picture of spotlight"/>
+                                    <m:Image src="{myModel>article_big_image_path}" alt="Example picture of spotlight"/>
 
-                                    <m:Image src="{myModel>/ArticleCurrent/article_big_image_path}" alt="Example picture of screw"/>
+                                    <m:Image src="{myModel>article_big_image_path}" alt="Example picture of screw"/>
 
                                 </m:pages>
 	                        </m:Carousel>

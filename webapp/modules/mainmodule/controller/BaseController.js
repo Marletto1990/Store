@@ -10,7 +10,6 @@ sap.ui.define([
 
 	return Controller.extend("app.modules.mainmodule.controller.BaseController", {
 		onAfterRendering: function () {
-			//this.setArticlesHeaderPath();
 		},
 		getRouter: function () {
 			return UIComponent.getRouterFor(this);
@@ -37,7 +36,6 @@ sap.ui.define([
 			var oList = this.getView().byId(oParameters.listId);
 			var oTemplate = oList.getBindingInfo(oParameters.aggregationName).template;
 			var sModel = oList.getBindingInfo(oParameters.aggregationName).model;
-			//debugger
 			if (sTypeName) {
 				var i = oList.getModel(sModel).getProperty("/Categories").findIndex(function (element) {
 					return element.cat_name == sCategoryName;
@@ -261,6 +259,9 @@ sap.ui.define([
 			var aCart = this.getView().getModel("myModel").getProperty("/Cart");
 			aCart.splice(+itemForDelete, 1);
 			this.getView().getModel("myModel").setProperty("/Cart", aCart);
+
+			var oEventBus = sap.ui.getCore().getEventBus();
+			oEventBus.publish("checkCartMatches");  // <----
 			
 		},
 		clearCart() {

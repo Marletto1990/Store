@@ -52,10 +52,7 @@ sap.ui.define([
         //Переход в подробный вид артикула
         onArticlesItemPress: function (oEvent) {
             var oData = oEvent.getSource().getBindingContext("myModel").getObject();
-            var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
-            oEvent.getSource().getModel("myModel").setProperty("/ArticleCurrent", oData);
-
-
+            var sPath = oEvent.getSource().getBindingContext("myModel").getPath();  
             var oList = this.getView().byId("articlesContainer");
             var oCtgName = oList.getModel("myModel").getProperty("/Categories").find(function (element) {
                 return element.cat_num == oData.cat_num;

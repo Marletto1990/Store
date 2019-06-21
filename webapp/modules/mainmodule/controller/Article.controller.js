@@ -14,8 +14,22 @@ sap.ui.define([
 
         onInit: function () {
             var oRouter = this.getRouter();
+            oRouter.getRoute("article").attachMatched(this.createThisArticle, this);
             oRouter.getRoute("article").attachMatched(this.callSetBreadcrumbs, this);
             oRouter.getRoute("article").attachMatched(this.checkCartMatches, this);
+            
+            var oEventBus = sap.ui.getCore().getEventBus();
+            oEventBus.subscribe("checkCartMatches", this.checkCartMatches, this);  // <----
+        },
+        createThisArticle: function(){
+            var aArticles = this.getView().getModel("myModel").getProperty("/Articles");
+            var sArticleName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[2];
+            var n = aArticles.findIndex(function(element){
+                return element.article_num == sArticleName;
+            })
+            var oModel = this.getView().getModel("myModel");
+            this.getView().getModel("myModel").setProperty("/ArticlePath", n);
+            this.getView().setBindingContext( new sap.ui.model.Context(oModel, "/Articles/"+n),"myModel");
         },
         callSetBreadcrumbs: function (oEvent) {
             var oModel = this.getView().getModel("myModel");
@@ -35,56 +49,41 @@ sap.ui.define([
                 category: sCategoryName,
                 type: sTypeName
             });
-            //console.log(sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0]);
-
         },
         addOrRemoveToCart: function (oEvent) {
-            var oProduct = this.getView().getModel("myModel").getProperty("/ArticleCurrent");
+            var n = this.getView().getModel("myModel").getProperty("/ArticlePath");
             var aCart = this.getView().getModel("myModel").getProperty("/Cart");
+            var aArticles = this.getView().getModel("myModel").getProperty("/Articles");
             var match = aCart.find(function (element) {
-                return element.article_num == oProduct.article_num
+                return element.article_num == aArticles[n].article_num
             })
 
             if (!match) {
-                aCart.push(oProduct);
+                aCart.push(aArticles[n]);
                 this.getView().getModel("myModel").setProperty("/Cart", aCart);
-                //this.byId("cartAddButton").setProperty("text", "Удалить из заявки");
-                //this.byId("cartAddButton").setProperty("icon", "sap-icon://cart-2");
-                //this.byId("cartAddButton").setProperty("type", "Reject");
                 this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonAddVisible", false);
                 this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonDeleteVisible", true);
             } else {
                 var matchOut = aCart.filter(function (element) {
-                    return element.article_num != oProduct.article_num;
+                    return element.article_num != aArticles[n].article_num;
                 })
                 this.getView().getModel("myModel").setProperty("/Cart", matchOut);
-                console.log(this.getView().getModel("myModel").getProperty("/Cart"));
-                //this.byId("cartAddButton").setProperty("text", "Добавить в заявку");
-                //this.byId("cartAddButton").setProperty("icon", "sap-icon://cart-3");
-                //this.byId("cartAddButton").setProperty("type", "Emphasized");
                 this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonAddVisible", true);
                 this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonDeleteVisible", false);
             }
         },
         checkCartMatches() {
-            var oProduct = this.getView().getModel("myModel").getProperty("/ArticleCurrent");
+            var n = this.getView().getModel("myModel").getProperty("/ArticlePath");
+            var aArticles = this.getView().getModel("myModel").getProperty("/Articles");
             var aCart = this.getView().getModel("myModel").getProperty("/Cart");
             var match = aCart.find(function (element) {
-                return element.article_num == oProduct.article_num
+                return element.article_num == aArticles[n].article_num
             })
 
             if (!match) {
-                console.log("Нет в корзине");
-                //this.byId("cartAddButton").setProperty("text", "Добавить в заявку");
-                //this.byId("cartAddButton").setProperty("icon", "sap-icon://cart-3");
-                //this.byId("cartAddButton").setProperty("type", "Emphasized");
                 this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonAddVisible", true);
                 this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonDeleteVisible", false);
             } else {
-                console.log("Уже в корзине");
-                //this.byId("cartAddButton").setProperty("text", "Удалить из заявки");
-                //this.byId("cartAddButton").setProperty("icon", "sap-icon://cart-2");
-                //this.byId("cartAddButton").setProperty("type", "Reject");
                 this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonAddVisible", false);
                 this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonDeleteVisible", true);
             }

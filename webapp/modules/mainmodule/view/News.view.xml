@@ -11,13 +11,13 @@
 			class="sapUiStdPage">
 			<content>
 				<Panel 
-					id="articlesContainer"
+					id="articlesContainer2"
 					content = "{myModel>/RandomArticles}">
 					<GenericTile 
 						class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout imageClass" 
 						header="{myModel>article_name}"
 						subheader="{myModel>article_material}" 
-						press="onArticlesItemPress"
+						press="onNewsItemPress"
 						frameType="TwoByOne">
 							<TileContent footer="Цена: {myModel>article_price} руб." footerColor="Critical">
 								<HBox
