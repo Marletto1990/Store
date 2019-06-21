@@ -15,7 +15,7 @@ sap.ui.define([
 		getRouter: function () {
 			return UIComponent.getRouterFor(this);
 		},
-		goToStart: function(){
+		goToStart: function () {
 			this.getRouter().navTo("start");
 		},
 		onNavBack: function () {
@@ -151,8 +151,9 @@ sap.ui.define([
 						return element.cat_name == oParams.category;
 					});
 					var i = oModel.getProperty("/Categories").findIndex(function (element) {
-						return element.cat_name == oParams.category;})
-					var oType = oModel.getProperty("/Categories/"+i+"/type").find(function (element) {
+						return element.cat_name == oParams.category;
+					})
+					var oType = oModel.getProperty("/Categories/" + i + "/type").find(function (element) {
 						return element.name == oParams.type;
 					});
 					aRemoteObject2.title = oCategory.title;
@@ -165,8 +166,9 @@ sap.ui.define([
 						return element.cat_name == oParams.category;
 					});
 					var i = oModel.getProperty("/Categories").findIndex(function (element) {
-						return element.cat_name == oParams.category;})
-					var oType = oModel.getProperty("/Categories/"+i+"/type").find(function (element) {
+						return element.cat_name == oParams.category;
+					})
+					var oType = oModel.getProperty("/Categories/" + i + "/type").find(function (element) {
 						return element.name == oParams.type;
 					});
 					aRemoteObject2.title = oCategory.title;
@@ -175,7 +177,7 @@ sap.ui.define([
 					aRemote.push(aRemoteObject2);
 					aRemote.push(aRemoteObject3);
 					oModel.setProperty("/Remote", aRemote);
-					oModel.setProperty("/Remote_current/title", "Артикул "+oParams.article);
+					oModel.setProperty("/Remote_current/title", "Артикул " + oParams.article);
 
 				}
 
@@ -206,11 +208,17 @@ sap.ui.define([
 				this.getRouter().navTo(sRout)
 			}
 		},
-        formatter_isCartNotEmpty_blocked: function(oCart) {
+		formatter_isCartNotEmpty_blocked: function (oCart) {
 			return oCart ? false : true;
-        },
-        formatter_isCartNotEmpty_type: function(oCart) {
-			return oCart ? "Accept" : "Default" ;
+		},
+		formatter_isCartNotEmpty_type: function (oCart) {
+			return oCart ? "Accept" : "Default";
+		},
+		formatter_is_visible_addButton: function (Path) {
+			return Path.isButtonAddVisible ? true : false;
+		},
+		formatter_is_visible_deleteButton: function (Path) {
+			return Path.isButtonDeleteVisible ? true : false;
 		},
 		handleResponsivePopoverPress: function (oEvent) {
 			if (!this._oPopover) {
@@ -218,43 +226,47 @@ sap.ui.define([
 				//this._oPopover.bindElement("/Cart");
 				this.getView().addDependent(this._oPopover);
 			}
-
 			this._oPopover.openBy(oEvent.getSource());
 		},
-		onCartItemPress(oEvent){
+		onCartItemPress(oEvent) {
 			var artName = oEvent.getSource().getProperty("title");
 			var oData = this.getView().getModel("myModel").getProperty("/Articles");
 			var aCategory = this.getView().getModel("myModel").getProperty("/Categories");
-			var target = oData.find(function(element){
+			var target = oData.find(function (element) {
 				return element.article_name == artName;
 			})
-			var sCategory = aCategory.find(function(element){
+			var sCategory = aCategory.find(function (element) {
 				return element.cat_num == target.cat_num
 			})
-			var i = aCategory.findIndex(function(element){
+			var i = aCategory.findIndex(function (element) {
 				return element.cat_num == target.cat_num
 			})
-			var aType = this.getView().getModel("myModel").getProperty("/Categories/"+i+"/type");
-			var sType = aType.find(function(element){
+			var aType = this.getView().getModel("myModel").getProperty("/Categories/" + i + "/type");
+			var sType = aType.find(function (element) {
 				return element.type_num = target.type_num
 			})
 
-			this.getRouter().navTo("article",{
+			this.getRouter().navTo("article", {
 				menuItem: "catalog",
 				category: sCategory.cat_name,
 				type: sType.name,
 				article: target.article_num
 			})
+			this.getView().getModel("myModel").setProperty("/ArticleCurrent", target);
 
-			console.log(artName);
-			console.log(i);
+
 		},
-		deleteFromCart(oEvent){
-			var itemForDelete = oEvent.getSource();
-			console.log(itemForDelete);
+		deleteFromCart(oEvent) {
+			var itemForDelete = oEvent.getSource().getBindingContext("myModel").getPath().split("").reverse()[0];
+			var aCart = this.getView().getModel("myModel").getProperty("/Cart");
+			aCart.splice(+itemForDelete, 1);
+			this.getView().getModel("myModel").setProperty("/Cart", aCart);
+			
 		},
 		clearCart() {
-        	this.getView().getModel("myModel").setProperty("/Cart",[]);
+			this.getView().getModel("myModel").setProperty("/Cart", []);
+			this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonAddVisible", true);
+			this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonDeleteVisible", false);
 		}
 	});
 

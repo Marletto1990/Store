@@ -13,6 +13,7 @@
                 subSectionLayout="TitleOnTop">
             <headerTitle>        
                 <ObjectPageHeader 
+                        id="OPHeader"
                         objectImageURI="{myModel>/ArticleCurrent/article_image_path}"
                         objectTitle="{myModel>/ArticleCurrent/article_name}"
                         objectImageAlt="Изделие"
@@ -24,9 +25,21 @@
                                 icon="sap-icon://cart-3" 
                                 text="Добавить в заявку" 
                                 type="Emphasized" 
-                                tooltip="pull-down" 
+                                tooltip="Добавить артикул в заявку" 
                                 hideText="false"
-                                press="addOrRemoveToCart"/>
+                                press="addOrRemoveToCart"
+                                visible= "{myModel>/ArticleViewInfo/isButtonAddVisible}"/>
+                        </actions>
+                        <actions>
+                            <ObjectPageHeaderActionButton 
+                                id="cartDeleteButton"
+                                icon="sap-icon://cart-2" 
+                                text="Удалить из заявки" 
+                                type="Reject" 
+                                tooltip="Удалить артикул из заявки" 
+                                hideText="false"
+                                press="addOrRemoveToCart"
+                                visible= "{myModel>/ArticleViewInfo/isButtonDeleteVisible}"/>
                         </actions>
 
                         <breadcrumbs>

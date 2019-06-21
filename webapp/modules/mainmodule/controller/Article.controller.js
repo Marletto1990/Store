@@ -48,18 +48,22 @@ sap.ui.define([
             if (!match) {
                 aCart.push(oProduct);
                 this.getView().getModel("myModel").setProperty("/Cart", aCart);
-                this.byId("cartAddButton").setProperty("text", "Удалить из заявки");
-                this.byId("cartAddButton").setProperty("icon", "sap-icon://cart-2");
-                this.byId("cartAddButton").setProperty("type", "Reject");
+                //this.byId("cartAddButton").setProperty("text", "Удалить из заявки");
+                //this.byId("cartAddButton").setProperty("icon", "sap-icon://cart-2");
+                //this.byId("cartAddButton").setProperty("type", "Reject");
+                this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonAddVisible", false);
+                this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonDeleteVisible", true);
             } else {
                 var matchOut = aCart.filter(function (element) {
                     return element.article_num != oProduct.article_num;
                 })
                 this.getView().getModel("myModel").setProperty("/Cart", matchOut);
                 console.log(this.getView().getModel("myModel").getProperty("/Cart"));
-                this.byId("cartAddButton").setProperty("text", "Добавить в заявку");
-                this.byId("cartAddButton").setProperty("icon", "sap-icon://cart-3");
-                this.byId("cartAddButton").setProperty("type", "Emphasized");
+                //this.byId("cartAddButton").setProperty("text", "Добавить в заявку");
+                //this.byId("cartAddButton").setProperty("icon", "sap-icon://cart-3");
+                //this.byId("cartAddButton").setProperty("type", "Emphasized");
+                this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonAddVisible", true);
+                this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonDeleteVisible", false);
             }
         },
         checkCartMatches() {
@@ -71,14 +75,18 @@ sap.ui.define([
 
             if (!match) {
                 console.log("Нет в корзине");
-                this.byId("cartAddButton").setProperty("text", "Добавить в заявку");
-                this.byId("cartAddButton").setProperty("icon", "sap-icon://cart-3");
-                this.byId("cartAddButton").setProperty("type", "Emphasized");
+                //this.byId("cartAddButton").setProperty("text", "Добавить в заявку");
+                //this.byId("cartAddButton").setProperty("icon", "sap-icon://cart-3");
+                //this.byId("cartAddButton").setProperty("type", "Emphasized");
+                this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonAddVisible", true);
+                this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonDeleteVisible", false);
             } else {
                 console.log("Уже в корзине");
-                this.byId("cartAddButton").setProperty("text", "Удалить из заявки");
-                this.byId("cartAddButton").setProperty("icon", "sap-icon://cart-2");
-                this.byId("cartAddButton").setProperty("type", "Reject");
+                //this.byId("cartAddButton").setProperty("text", "Удалить из заявки");
+                //this.byId("cartAddButton").setProperty("icon", "sap-icon://cart-2");
+                //this.byId("cartAddButton").setProperty("type", "Reject");
+                this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonAddVisible", false);
+                this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonDeleteVisible", true);
             }
         }
     });

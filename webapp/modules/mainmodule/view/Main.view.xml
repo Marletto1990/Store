@@ -8,7 +8,7 @@
 	<SplitApp 
 			id="SplitAppDemo"  
 			orientationChange="onOrientationChange"
-			mode="PopoverMode"
+			mode="ShowHideMode"
 			defaultTransitionNameDetail = "show"
 			defaultTransitionNameMaster = "show"
 			homeIcon = "sap-icon://home">

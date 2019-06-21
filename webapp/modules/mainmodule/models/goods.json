@@ -1,4 +1,8 @@
-{   "Cart":[],
+{   "ArticleViewInfo":{
+        "isButtonAddVisible": true,
+        "isButtonDeleteVisible": false
+    },
+    "Cart":[],
     "RandomArticles":[],
     "Remote":[{
             "title": "Главная",
