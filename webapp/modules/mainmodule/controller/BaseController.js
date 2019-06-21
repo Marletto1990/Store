@@ -224,17 +224,28 @@ sap.ui.define([
 		onCartItemPress(oEvent){
 			var artName = oEvent.getSource().getProperty("title");
 			var oData = this.getView().getModel("myModel").getProperty("/Articles");
-			var oCategory = this.getView().getModel("myModel").getProperty("/Categories");
+			var aCategory = this.getView().getModel("myModel").getProperty("/Categories");
 			var target = oData.find(function(element){
-				return element.title == artName;
+				return element.article_name == artName;
 			})
-			var sCategoryName = oCategory.find(function(element){
+			var sCategory = aCategory.find(function(element){
 				return element.cat_num == target.cat_num
 			})
-			var i = oCategory.findIndex(function(element){
+			var i = aCategory.findIndex(function(element){
 				return element.cat_num == target.cat_num
 			})
-			//var sTypeName = 
+			var aType = this.getView().getModel("myModel").getProperty("/Categories/"+i+"/type");
+			var sType = aType.find(function(element){
+				return element.type_num = target.type_num
+			})
+
+			this.getRouter().navTo("article",{
+				menuItem: "catalog",
+				category: sCategory.cat_name,
+				type: sType.name,
+				article: target.article_num
+			})
+
 			console.log(artName);
 			console.log(i);
 		},
