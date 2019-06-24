@@ -1,6 +1,7 @@
-{   "ArticleViewInfo":{
-        "isButtonAddVisible": true,
-        "isButtonDeleteVisible": false
+{
+    "ArticleViewInfo":{
+    "isButtonAddVisible": true,
+    "isButtonDeleteVisible": false
     },
     "Cart":[],
     "RandomArticles":[],
@@ -41,13 +42,14 @@
         }
     ],
     "ArticlePath":"Articles/1",
+    
     "Categories": [{
             "title": "Защитные конструкции",
             "link": "typePage",
             "child": "type",
             "master_option": true,
             "cat_num": 1,
-            "cat_name": "DefensiveConstructions",
+            "name": "DefensiveConstructions",
             "type": [{
                     "name": "BlackMetallGuardrail",
                     "title": "Отбойники из черного металла",
@@ -82,7 +84,7 @@
                     "child": "type",
                     "master_option": true,
                     "cat_num": 2,
-                    "cat_name": "FrameConstructions",
+                    "name": "FrameConstructions",
                     "type": [{
                             "name": "Canopy",
                             "title": "Навесы", 
@@ -101,7 +103,7 @@
                     "child": "type",
                     "master_option": true,
                     "cat_num": 3,
-                    "cat_name": "StainlessSteelFurniture",
+                    "name": "StainlessSteelFurniture",
                     "type": [{
                             "name": "Tables",
                             "title": "Столы",

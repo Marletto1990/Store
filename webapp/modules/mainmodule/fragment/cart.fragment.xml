@@ -11,7 +11,7 @@
 			<Button text="Очистить" press="clearCart" />
 		</beginButton>
 		<endButton>
-			<Button text="Перейти к оформлению заказа" press="handleCloseButton" />
+			<Button text="Перейти к оформлению заказа" press="toOrderRequest" />
 		</endButton>
 		<content>
 			<List	

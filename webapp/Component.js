@@ -20,6 +20,9 @@ sap.ui.define([
             oModel.loadData("modules/mainmodule/models/goods.json");
 			this.setModel(oModel,"myModel");*/
 			var oModel = this.getModel("myModel");
+
+
+
 			oModel.dataLoaded().then( function(oData){
 				var oLoadedModel = this.getModel("myModel");
 				var aArticles = oLoadedModel.getProperty("/Articles");

@@ -73,7 +73,7 @@
             {
               "pattern": "catalog",
               "name":    "categories",
-              "target":  ["_categoriesList", "_articles"]
+              "target":  ["_typeList", "_articles"]
             },
             {
               "pattern": "catalog/{category}",
@@ -104,6 +104,11 @@
               "pattern": "contacts",
               "name":    "contacts",
               "target":  ["_mainmenu", "_contacts"]
+            },
+            {
+              "pattern": "order_request",
+              "name":    "order_request",
+              "target":  ["_orderRequestMaster", "_orderRequestDetail"]
             }
           ],
 
@@ -178,6 +183,18 @@
               "viewName": "Contacts",
               "controlAggregation": "detailPages",
               "transition": "show" 
+            },
+            "_orderRequestMaster": {
+              "viewId":   "orderRequestMaster",
+              "viewName": "OrderRequestMaster",
+              "controlAggregation": "masterPages",
+              "transition": "show" 
+            },
+            "_orderRequestDetail": {
+              "viewId":   "orderRequestDetail",
+              "viewName": "OrderRequestDetail",
+              "controlAggregation": "detailPages",
+              "transition": "slide" 
             }
         }
     }

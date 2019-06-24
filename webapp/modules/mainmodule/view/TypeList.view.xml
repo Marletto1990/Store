@@ -13,7 +13,7 @@
 				showNavButton="true"
 				navButtonPress="onTypesNavBack">
 				<content>
-					<List items = "{myModel>/Categories/0/type}" id="typeList">
+					<List items = "{myModel>/Categories}" id="typeList">
 						<items>
 							<StandardListItem 
 								title="{myModel>title}" 

@@ -1,0 +1,52 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:f="sap.ui.layout.form" 
+	xmlns:l="sap.ui.layout"
+	controllerName="app.modules.mainmodule.controller.OrderRequestDetail"
+	xmlns="sap.m">
+			<Page 
+				id="orderRequestDetail" 
+				title="Steel Store" 
+				icon="sap-icon://action" 
+				class="sapUiStdPage">
+				<content>
+					<Table items="{myModel>/Cart}">
+						<columns>
+							<Column
+								width="12em">
+								<Label text="Позиция" />
+							</Column>
+							<Column
+								width="12em">
+								<Label text="Количество" />
+							</Column>
+							<Column
+								width="12em">
+								<Label text="Цена" />
+							</Column>
+							<Column
+								width="12em">
+								<Label text="Стоимость" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Label text="{myModel>article_name}"/>
+								</cells>
+								<cells>
+									<input/>
+								</cells>
+								<cells>
+									<Label text="{myModel>article_price}"/>
+								</cells>
+								<cells>
+									<Label text="{myModel>article_price}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+</mvc:View>

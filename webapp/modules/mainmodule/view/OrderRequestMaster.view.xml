@@ -1,0 +1,15 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:f="sap.ui.layout.form" 
+	xmlns:l="sap.ui.layout"
+	controllerName="app.modules.mainmodule.controller.OrderRequestMaster"
+	xmlns="sap.m">
+			<Page 
+				id="orderRequestMaster" 
+				title="Steel Store" 
+				icon="sap-icon://action" 
+				class="sapUiStdPage"
+                visible="true">
+			</Page>
+</mvc:View>

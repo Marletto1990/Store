@@ -12,14 +12,21 @@ sap.ui.define([
     return BaseController.extend("app.modules.mainmodule.controller.TypeList", {
         onInit: function () {
             var oRouter = this.getRouter();
+            oRouter.getRoute("categories").attachMatched(this.onTypeRoutMatched, this);
             oRouter.getRoute("types").attachMatched(this.onTypeRoutMatched, this);
             //oRouter.getRoute("types").attachMatched(this.callSetBreadcrumbs, this);
         },
         onTypeRoutMatched: function (oEvent) {
-            var oModel = this.getView().getModel("myModel");
             var sCategoryName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
+            if (!sCategoryName) {
+            }
             var sTypeName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[1];
+            var bCatalog = false;
+            if (!sCategoryName && !sTypeName) {
+                bCatalog = true;
+            }
             this._onBaseRouteMatched(oEvent, {
+                catalog: bCatalog,
                 listId: "typeList",
                 category: sCategoryName,
                 type: sTypeName,
@@ -39,17 +46,29 @@ sap.ui.define([
         },
         onTypesNavBack: function () {
             var sCategoryName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
-            this.getRouter().navTo("categories", {
-                category: sCategoryName
-            });
+            if (sCategoryName) {
+                this.getRouter().navTo("categories", {
+                    category: sCategoryName,
+                });
+            } else {
+                this.getRouter().navTo("start")
+            }
+
         },
         onTypeListItemPress: function (oEvent) {
-            var oTps = oEvent.getSource().getBindingContext("myModel").getObject();
+            var directory = oEvent.getSource().getBindingContext("myModel").getObject();
             var sCategoryName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
-            this.getRouter().navTo("articles", {
-                category: sCategoryName,
-                type: oTps.name
-            });
+            if(!sCategoryName){
+                this.getRouter().navTo("types", {
+                    category: directory.name,
+                });
+            } else {
+                this.getRouter().navTo("articles", {
+                    category: sCategoryName,
+                    type: directory.name
+                });
+            }
+
             //this.getView().getModel("myModel").setProperty("/Remote_current/title", oTps.title);
         }
     });

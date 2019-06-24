@@ -66,7 +66,7 @@ sap.ui.define([
             var sArticleName = oData.article_num;
 
             this.getRouter().navTo("article", {
-                category: oCtgName.cat_name,
+                category: oCtgName.name,
                 type: oTpName.name,
                 article: sArticleName
             });

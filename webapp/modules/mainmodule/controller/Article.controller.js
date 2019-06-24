@@ -19,7 +19,7 @@ sap.ui.define([
             oRouter.getRoute("article").attachMatched(this.checkCartMatches, this);
             
             var oEventBus = sap.ui.getCore().getEventBus();
-            oEventBus.subscribe("checkCartMatches", this.checkCartMatches, this);  // <----
+            oEventBus.subscribe("checkCartMatches", this.checkCartMatches, this);  // ---->
         },
         createThisArticle: function(){
             var aArticles = this.getView().getModel("myModel").getProperty("/Articles");
