@@ -11,7 +11,7 @@
 			class="sapUiStdPage">
 			<content>
 				<Panel 
-					id="articlesContainer2"
+					id="articlesContainerNews"
 					content = "{myModel>/RandomArticles}">
 					<GenericTile 
 						class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout imageClass" 

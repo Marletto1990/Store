@@ -31,8 +31,12 @@
 							width="22%" 
 							type="{path:'myModel>/Cart/0', formatter:'.formatter_isCartNotEmpty_type'}"
 							blocked="{path:'myModel>/Cart/0', formatter:'.formatter_isCartNotEmpty_blocked'}"
-							press="handleResponsivePopoverPress"/>
-						<Button icon="sap-icon://customize" width="22%"/>
+							press="toCartPopover"/>
+						<Button 
+							id="options"
+							icon="sap-icon://customize"
+							width="22%"
+							press="toOptionsPopover"/>
 						<Button icon="sap-icon://customer" width="22%"  />
 					</OverflowToolbar>
 				</footer>

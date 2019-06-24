@@ -1,0 +1,35 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout">
+	<ResponsivePopover
+		title="Настройки"
+		class="sapUiPopupWithPadding"
+		placement="Top" 
+        content="{myModel>/Options}">
+		<beginButton>
+			<Button text="Сохранить"/>
+		</beginButton>
+		<endButton>
+			<Button text="Отменить и выйти"/>
+		</endButton>
+		<content>
+			<List	
+				mode="Delete"
+				delete="deleteFromCart">
+				<items>
+					<StandardListItem 
+						title="{myModel>article_name}"
+						icon="{myModel>article_image_path}"
+						type="Navigation" 
+						press="onCartItemPress">
+						<layoutData>
+
+						</layoutData>
+					</StandardListItem>	
+				</items>
+			</List>
+
+		</content>
+	</ResponsivePopover>
+</core:FragmentDefinition>

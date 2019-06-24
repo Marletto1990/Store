@@ -218,7 +218,7 @@ sap.ui.define([
 		formatter_is_visible_deleteButton: function (Path) {
 			return Path.isButtonDeleteVisible ? true : false;
 		},
-		handleResponsivePopoverPress: function (oEvent) {
+		toCartPopover: function (oEvent) {
 			if (!this._oPopover) {
 				this._oPopover = sap.ui.xmlfragment("mainpath.fragment.cart", this);
 				//this._oPopover.bindElement("/Cart");
@@ -268,6 +268,14 @@ sap.ui.define([
 			this.getView().getModel("myModel").setProperty("/Cart", []);
 			this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonAddVisible", true);
 			this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonDeleteVisible", false);
+		},
+		toOptionsPopover: function (oEvent) {
+			if (!this._oPopover2) {
+				this._oPopover2 = sap.ui.xmlfragment("mainpath.fragment.options", this);
+				//this._oPopover.bindElement("/Cart");
+				this.getView().addDependent(this._oPopover2);
+			}
+			this._oPopover2.openBy(oEvent.getSource());
 		}
 	});
 

@@ -20,7 +20,7 @@ sap.ui.define([
         },
         onNewsItemPress: function(oEvent){
             var oData = oEvent.getSource().getBindingContext("myModel").getObject();  
-            var oList = this.getView().byId("articlesContainer");
+            var oList = this.getView().byId("articlesContainerNews");
             var oCtgName = oList.getModel("myModel").getProperty("/Categories").find(function (element) {
                 return element.cat_num == oData.cat_num;
             });

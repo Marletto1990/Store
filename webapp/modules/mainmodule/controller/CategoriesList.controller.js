@@ -12,12 +12,6 @@ sap.ui.define([
     return BaseController.extend("app.modules.mainmodule.controller.CategoriesList", {
         onInit: function () {
         },
-        callSetBreadcrumbs: function (oEvent) {
-            var oModel = this.getView().getModel("myModel");
-            this.setBreadcrumbs(oEvent, oModel, {
-                menuItem: "catalog"
-            });
-        },
         onCategoriesItemPress: function (oEvent) {
             var oData = oEvent.getSource().getBindingContext("myModel").getObject();
             this.getRouter().navTo("types", {
