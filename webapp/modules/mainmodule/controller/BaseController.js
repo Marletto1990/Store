@@ -104,7 +104,6 @@ sap.ui.define([
 			var oBinding = oList.getBinding("content");
 			oBinding.filter(aFilter);
 		},
-
 		//Navigation Panel
 		setBreadcrumbs: function (oEvent, oModel, oParams) {
 			setTimeout(function () {
