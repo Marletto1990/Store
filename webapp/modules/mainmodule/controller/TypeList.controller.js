@@ -68,8 +68,6 @@ sap.ui.define([
                     type: directory.name
                 });
             }
-
-            //this.getView().getModel("myModel").setProperty("/Remote_current/title", oTps.title);
         }
     });
 });

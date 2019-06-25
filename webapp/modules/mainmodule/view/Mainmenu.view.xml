@@ -31,7 +31,7 @@
 							type="{path:'myModel>/Cart/0', formatter:'.formatter_isCartNotEmpty_type'}"
 							class="{path:'myModel>/Cart/0', formatter:'.formatter_isCartNotEmpty_class'}"
 							blocked="{path:'myModel>/Cart/0', formatter:'.formatter_isCartNotEmpty_blocked'}"
-							press="handleResponsivePopoverPress"/>
+							press="toCartPopover"/>
 						<Button 
 							id="options"
 							icon="sap-icon://customize"

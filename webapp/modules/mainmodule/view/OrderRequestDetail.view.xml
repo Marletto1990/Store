@@ -48,7 +48,7 @@
 										<l:GridData span="XL2 L3 M4 S4" />
 									</layoutData>
 								</Input>
-								<Label text="ИНН и ОГРН для выставления счета (для юр.лиц)" />
+								<Label text="ИНН и ОГРН (для юр.лиц)" />
 								<Input value="0">
 									<layoutData>
 										<l:GridData span="XL2 L3 M4 S4" />
@@ -65,8 +65,8 @@
 								</Select>
 
 								<core:Title text="Доставка и  монтаж" icon="sap-icon://inventory"/>
-
-								<RadioButtonGroup columns="3" width="100%" class="sapUiMediumMarginBottom" valueState="Warning">
+							
+								<RadioButtonGroup columns="3" width="100%" class="sapUiMediumMarginTop" valueState="Warning">
 									<buttons>
 										<RadioButton id="RB1-1" text="Прямая доставка"/>
 										<RadioButton id="RB1-2" text="Доставка транспортной компанией"/>
@@ -74,7 +74,7 @@
 									</buttons>
 								</RadioButtonGroup>
 								
-								<RadioButtonGroup columns="3" width="100%" class="sapUiMediumMarginBottom" valueState="Warning">
+								<RadioButtonGroup columns="3" width="100%" class="sapUiMediumMarginTop" valueState="Warning">
 									<buttons>
 										<RadioButton id="RB1-5" text="Монтаж нужен, в любое время!"/>
 										<RadioButton id="RB1-6" text="Монтаж нужен, ночь / выходные"/>
@@ -134,8 +134,8 @@
 												width = "5em"
 												value="{myModel>quantity}"
 												type="Number"/>	
-											<Button text="-" press = "decr_quantity"/>	
-											<Button text="+" press = "incr_quantity"/>	
+											<Button icon="sap-icon://less" press = "decr_quantity"/>	
+											<Button icon="sap-icon://add" press = "incr_quantity"/>	
 										</HBox>	
 									</cells>
 									<cells>
