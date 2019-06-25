@@ -4,6 +4,7 @@
 	xmlns:f="sap.ui.layout.form" 
 	xmlns:l="sap.ui.layout"
 	controllerName="app.modules.mainmodule.controller.OrderRequestDetail"
+	xmlns:core="sap.ui.core"
 	xmlns="sap.m">
 			<Page 
 				id="orderRequestDetail" 
@@ -11,42 +12,152 @@
 				icon="sap-icon://action" 
 				class="sapUiStdPage">
 				<content>
-					<Table items="{myModel>/Cart}">
-						<columns>
-							<Column
-								width="12em">
-								<Label text="Позиция" />
-							</Column>
-							<Column
-								width="12em">
-								<Label text="Количество" />
-							</Column>
-							<Column
-								width="12em">
-								<Label text="Цена" />
-							</Column>
-							<Column
-								width="12em">
-								<Label text="Стоимость" />
-							</Column>
-						</columns>
-						<items>
-							<ColumnListItem>
-								<cells>
-									<Label text="{myModel>article_name}"/>
-								</cells>
-								<cells>
-									<input/>
-								</cells>
-								<cells>
-									<Label text="{myModel>article_price}"/>
-								</cells>
-								<cells>
-									<Label text="{myModel>article_price}"/>
-								</cells>
-							</ColumnListItem>
-						</items>
-					</Table>
+					<VBox class="sapUiSmallMargin">
+					
+						<f:SimpleForm id="SimpleFormChange480_12120"
+							editable="true"
+							layout="ResponsiveGridLayout"
+							title="Данные заказчика"
+							labelSpanXL="4"
+							labelSpanL="4"
+							labelSpanM="12"
+							labelSpanS="12"
+							adjustLabelSpan="false"
+							emptySpanXL="0"
+							emptySpanL="0"
+							emptySpanM="0"
+							emptySpanS="0"
+							columnsXL="2"
+							columnsL="2"
+							columnsM="1"
+							singleContainerFullSize="false" >
+							<f:content>
+								<core:Title 
+									text="Информация об объекте" 
+									icon="sap-icon://meeting-room"
+									emphasized="true" />
+								<Label text="Контактное лицо" />
+								<Input value="" />
+								<Label text="Телефон контактного лица" />
+								<Input value="" />
+								<Label text="Улица и номер дома / строения" />
+								<Input value="">
+								</Input>
+								<Input value="">
+									<layoutData>
+										<l:GridData span="XL2 L3 M4 S4" />
+									</layoutData>
+								</Input>
+								<Label text="ИНН и ОГРН для выставления счета (для юр.лиц)" />
+								<Input value="0">
+									<layoutData>
+										<l:GridData span="XL2 L3 M4 S4" />
+									</layoutData>
+								</Input>
+								<Input value="0" />
+								<Label text="Город" />
+								<Select id="country" selectedKey="0">
+									<items>
+										<core:Item text="England" key="England"/>
+										<core:Item text="Germany" key="Germany"/>
+										<core:Item text="USA" key="USA"/>
+									</items>
+								</Select>
+
+								<core:Title text="Доставка и  монтаж" icon="sap-icon://inventory"/>
+
+								<RadioButtonGroup columns="3" width="100%" class="sapUiMediumMarginBottom" valueState="Warning">
+									<buttons>
+										<RadioButton id="RB1-1" text="Прямая доставка"/>
+										<RadioButton id="RB1-2" text="Доставка транспортной компанией"/>
+										<RadioButton id="RB1-3" text="Заберем сами"/>
+									</buttons>
+								</RadioButtonGroup>
+								
+								<RadioButtonGroup columns="3" width="100%" class="sapUiMediumMarginBottom" valueState="Warning">
+									<buttons>
+										<RadioButton id="RB1-5" text="Монтаж нужен, в любое время!"/>
+										<RadioButton id="RB1-6" text="Монтаж нужен, ночь / выходные"/>
+										<RadioButton id="RB1-7" text="Смонтируем сами"/>
+									</buttons>
+								</RadioButtonGroup>
+							</f:content>
+						</f:SimpleForm>
+					</VBox>
+					<VBox class="sapUiSmallMargin">
+						<Table 
+							items="{myModel>/Cart}"
+							alternateRowColors="true"
+							headerText="Редактирование заявки">
+							<columns 
+								hAlign ="End">
+								<Column
+									width="12em">
+									<Label text="Позиция" />
+								</Column>
+								<Column
+									width="12em">
+									<Label text="Количество" />
+								</Column>
+								<Column
+									width="12em">
+									<Label text="Материал" />
+								</Column>
+								<Column
+									width="12em">
+									<Label text="Цена" />
+								</Column>
+								<Column
+									width="12em">
+									<Label text="Стоимость" />
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem vAlign="Middle">
+									<cells>
+										<HBox 
+											alignContent="Stretch"
+											alignItems="Center">
+											<Label text="{myModel>article_name}" />
+											<Image 
+												src="{myModel>article_image_path}"
+												height="6em"
+												class="sapUiMediumMarginBegin">
+											</Image>
+											
+										</HBox>
+									</cells>
+									<cells>
+										<HBox>
+											<Input 
+												class = "sapUiSmallMarginEnd" 
+												width = "5em"
+												value="{myModel>quantity}"
+												type="Number"/>	
+											<Button text="-" press = "decr_quantity"/>	
+											<Button text="+" press = "incr_quantity"/>	
+										</HBox>	
+									</cells>
+									<cells>
+										<Select 
+											items="{myModel>/Material}"
+											selectedKey="{myModel>countedPrice}"
+											forceSelection="true">
+											<core:Item   
+												key="{myModel>q}"
+												text="{myModel>name}" />
+										</Select>
+									</cells>
+									<cells>
+										<Label text="{= Math.round(${myModel>article_price} * ${myModel>countedPrice},0)}"/>
+									</cells>
+									<cells>
+										<Label text="{= Math.round(${myModel>article_price} * ${myModel>countedPrice} * ${myModel>quantity},0)}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</VBox> 
 				</content>
 			</Page>
 </mvc:View>

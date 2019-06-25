@@ -12,8 +12,8 @@ sap.ui.define([
 
     return BaseController.extend('app.modules.mainmodule.controller.News', {
 		onInit: function () {
-            var oRouter = this.getRouter();
-            oRouter.getRoute("start").attachMatched(this.showRandomArticles, this);
+            //var oRouter = this.getRouter();
+            //oRouter.getRoute("start").attachMatched(this.showRandomArticles, this);
         },
         onNewsButtonPress: function(){
             this.getRouter().getTargets().display("notFound");

@@ -9,8 +9,7 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("app.modules.mainmodule.controller.BaseController", {
-		onAfterRendering: function () {
-		},
+		onAfterRendering: function () {},
 		getRouter: function () {
 			return UIComponent.getRouterFor(this);
 		},
@@ -46,7 +45,7 @@ sap.ui.define([
 				var sPath = sModel + ">/Categories/" + i + "/type/" + j;
 				oList.bindAggregation(oParameters.aggregationName, sPath, oTemplate);
 
-			} else if (sCategoryName){
+			} else if (sCategoryName) {
 				var i = oList.getModel(sModel).getProperty("/Categories").findIndex(function (element) {
 					return element.name == sCategoryName;
 				});
@@ -228,7 +227,7 @@ sap.ui.define([
 			}
 			this._oPopover.openBy(oEvent.getSource());
 		},
-		onCartItemPress: function(oEvent) {
+		onCartItemPress: function (oEvent) {
 			var artName = oEvent.getSource().getProperty("title");
 			var oData = this.getView().getModel("myModel").getProperty("/Articles");
 			var aCategory = this.getView().getModel("myModel").getProperty("/Categories");
@@ -256,17 +255,17 @@ sap.ui.define([
 
 
 		},
-		deleteFromCart: function(oEvent) {
+		deleteFromCart: function (oEvent) {
 			var itemForDelete = oEvent.getSource().getBindingContext("myModel").getPath().split("").reverse()[0];
 			var aCart = this.getView().getModel("myModel").getProperty("/Cart");
 			aCart.splice(+itemForDelete, 1);
 			this.getView().getModel("myModel").setProperty("/Cart", aCart);
 
 			var oEventBus = sap.ui.getCore().getEventBus();
-			oEventBus.publish("checkCartMatches");  // <----
-			
+			oEventBus.publish("checkCartMatches"); // <----
+
 		},
-		clearCart: function() {
+		clearCart: function () {
 			this.getView().getModel("myModel").setProperty("/Cart", []);
 			this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonAddVisible", true);
 			this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonDeleteVisible", false);
@@ -279,8 +278,32 @@ sap.ui.define([
 			}
 			this._oPopover2.openBy(oEvent.getSource());
 		},
-		toOrderRequest: function(){
+		toOrderRequest: function () {
 			this.getRouter().navTo("order_request");
+		},
+		formatter_count_cost: function (price, quantity, material) {
+			if (price && quantity && material) {
+				return price * quantity * material;
+			}
+			return "Ошибка";
+		},
+		formatter_count_price: function (price, material) {
+			if (price && quantity && material) {
+				return price * material;
+			}
+			return "Ошибка";
+		},
+		incr_quantity: function (oEvent) {
+			var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
+			var nQ = this.getView().getModel("myModel").getProperty(sPath + "/quantity");
+			this.getView().getModel("myModel").setProperty(sPath + "/quantity", +Math.round(nQ,0) + 1);
+		},
+		decr_quantity: function (oEvent) {
+			var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
+			var nQ = this.getView().getModel("myModel").getProperty(sPath + "/quantity");
+			if (+Math.round(nQ,0) - 1 >= 0) {
+				this.getView().getModel("myModel").setProperty(sPath + "/quantity", +Math.round(nQ,0) - 1);
+			}
 		}
 	});
 
