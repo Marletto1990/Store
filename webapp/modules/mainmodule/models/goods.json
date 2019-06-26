@@ -19,7 +19,51 @@
     "isButtonAddVisible": true,
     "isButtonDeleteVisible": false
     },
-    "Cart":[],
+    "Cart":[{
+        "quantity": 1,
+        "countedPrice": 3690,
+        "article_num": 1101,
+        "cat_num": 1,
+        "type_num": 11,
+        "article_name": "Отбойник из трубы 'Стандарт'",
+        "article_price": 3690,
+        "article_length": 500,
+        "article_width": 300,
+        "article_height": 280,
+        "article_weight": 6,
+        "article_material": "Черный металлопрокат",
+        "article_image_path": "/modules/mainmodule/images/1101.jpg",
+        "article_big_image_path": "/modules/mainmodule/images/a1101.jpg",
+        "description": "ВЫСОТА КОНСТРУКЦИИ: 200мм\nКРЕПЕЖНАЯ ПЛАСТИНА: 150*150 мм, толщина 5 мм\nВОЗМОЖНЫЕ ДЛИНЫ: любая под заказ\nВОЗМОЖНЫЕ ДИАМЕТРЫ ТРУБ: 76 мм, 102 мм\nКРЕПЛЕНИЕ: распорные анкеры\nМАТЕРИАЛ:  черный металлопрокат;\nПОВЕРХНОСТЬ: покраска механическим способом;",
+        "description2":[{
+                "property": "Высота конструкции:",  
+                "value":"200 мм"
+            },{
+                "property": "Крепежная пластина:",  
+                "value":"150*150 мм"
+            },{
+                "property": "Толщина пластины:",  
+                "value":"3-5мм"
+            },{
+                "property": "Возможные длины:",  
+                "value":"любая под заказ"
+            },{
+                "property": "Возможные диаметры труб:",  
+                "value":"76 мм, 102 мм"
+            },{
+                "property": "Крепление:",  
+                "value":"распорные анкеры"
+            },{
+                "property": "Материал:",  
+                "value":"черный металлопрокат"
+            },{
+                "property": "Поверхность:",  
+                "value":"покраска (механическая / порошковая)"
+            }
+        ],
+        "loremIpsum1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu mauris et diam tincidunt sodales id efficitur turpis. Pellentesque auctor enim sit amet ultricies sagittis. Nunc vel mollis nisi. Fusce auctor tristique augue. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ornare, neque at imperdiet sagittis, nulla augue lobortis ligula, eu ullamcorper libero ante et nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "loremIpsum2": "Vivamus a lorem eget enim pulvinar congue. Nulla vitae purus interdum, molestie ligula nec, vestibulum sapien. Mauris augue metus, lacinia et sagittis sit amet, ornare vitae neque. Pellentesque quis commodo tortor. Praesent in vulputate massa, non elementum quam. Nullam quis fringilla dolor. Donec tempor velit id nisl convallis, sit amet auctor urna eleifend. Quisque ut lectus diam. In ut egestas lorem. Nullam quis dolor ut libero pretium commodo a in nisl. Nullam eget tempus ipsum, sed accumsan ante. Donec nec odio vel sem sagittis fringilla. Cras ut mauris purus. Proin ac commodo neque."
+}],
     "RandomArticles":[],
     "Remote":[{
             "title": "Главная",

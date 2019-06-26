@@ -5,7 +5,8 @@
 	xmlns:l="sap.ui.layout"
 	controllerName="app.modules.mainmodule.controller.OrderRequestDetail"
 	xmlns:core="sap.ui.core"
-	xmlns="sap.m">
+	xmlns="sap.m"
+	xmlns:qInput = "app.modules.mainmodule.control">
 			<Page 
 				id="orderRequestDetail" 
 				title="Steel Store" 
@@ -91,41 +92,51 @@
 							headerText="Редактирование заявки">
 							<columns 
 								hAlign ="End">
-								<Column
-									width="12em">
+								<Column width="6em">
+									<Label text = "Кастомный инпут"/>
+								</Column>
+								<Column 
+									width="4em">
 									<Label text="Позиция" />
 								</Column>
 								<Column
-									width="12em">
+									width="10em">
+								</Column>
+								<Column
+									width="8em">
 									<Label text="Количество" />
 								</Column>
 								<Column
-									width="12em">
+									width="8em">
 									<Label text="Материал" />
 								</Column>
 								<Column
-									width="12em">
+									width="8em">
 									<Label text="Цена" />
 								</Column>
 								<Column
-									width="12em">
+									width="8em">
 									<Label text="Стоимость" />
 								</Column>
 							</columns>
 							<items>
 								<ColumnListItem vAlign="Middle">
 									<cells>
+										<qInput:QuantityInput value="{myModel>quantity}"/>
+									</cells>
+									<cells>
 										<HBox 
 											alignContent="Stretch"
 											alignItems="Center">
-											<Label text="{myModel>article_name}" />
 											<Image 
-												src="{myModel>article_image_path}"
-												height="6em"
-												class="sapUiMediumMarginBegin">
+													src="{myModel>article_image_path}"
+													height="6em"
+													class="sapUiMediumMarginBegin">
 											</Image>
-											
 										</HBox>
+									</cells>
+									<cells>
+										<Label text="{myModel>article_name}" class="sapUiSmallMarginBegin"/>
 									</cells>
 									<cells>
 										<HBox>

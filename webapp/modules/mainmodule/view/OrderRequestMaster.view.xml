@@ -9,7 +9,6 @@
 				id="orderRequestMaster" 
 				title="Steel Store" 
 				icon="sap-icon://action" 
-				class="sapUiStdPage"
-                visible="true">
+				class="sapUiStdPage">
 			</Page>
 </mvc:View>
