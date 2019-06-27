@@ -78,9 +78,9 @@ sap.ui.define([
 
         },
         onSearch: function (event) {
-			var item = event.getParameter("suggestionItem");
+            var item = event.getParameter("suggestionItem");
 			if (item) {
-				sap.m.MessageToast.show("search for: " + item.getText());
+				sap.m.MessageToast.show("Выбран артикул " + item.getDescription());
 			}
 		},
 

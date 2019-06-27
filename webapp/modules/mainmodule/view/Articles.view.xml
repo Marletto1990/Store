@@ -23,7 +23,7 @@
 					<GenericTile 
 						class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout imageClass" 
 						header="{myModel>article_name}"
-						subheader="{myModel>article_material}" 
+						subheader="Артикул {myModel>article_num}" 
 						press="onArticlesItemPress"
 						frameType="TwoByOne">
 							<TileContent footer="Цена: {myModel>article_price} руб." footerColor="Critical">
@@ -41,8 +41,7 @@
 					</GenericTile>
 				</Panel>
 			</content>
-			<footer>
-				
+			<footer>		
 				<Toolbar>
 					<ToolbarSpacer width = "2em"/>
 						<SearchField 
@@ -50,6 +49,8 @@
 						enableSuggestions="true" 
 						search="onSearch" 
 						suggest="onSuggest"
+						maxLength="25"
+						showRefreshButton="false"
 						suggestionItems="{
 							path: 'myModel>/Articles',
 							sorter: { path: 'myModel>article_num' }

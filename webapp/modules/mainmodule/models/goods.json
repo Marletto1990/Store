@@ -20,6 +20,7 @@
     "isButtonDeleteVisible": false
     },
     "Cart":[{
+        "stock":5,
         "quantity": 1,
         "countedPrice": 3690,
         "article_num": 1101,
@@ -188,6 +189,7 @@
                 }
     ],
     "ArticleCurrent": {
+            "stock": 1,
             "quantity": 1,
             "countedPrice": 3690,
             "article_num": 1101,
@@ -234,11 +236,12 @@
     },
     "Articles": [{
             "article_num": 1101,
+            "stock": 136,
             "quantity": 1,
             "countedPrice": 3190,
             "cat_num": 1,
             "type_num": 11,
-            "article_name": "Отбойник из трубы 'Стандарт' - Ф",
+            "article_name": "Отбойник'Стандарт' фланцевый",
             "article_price": 3190,
             "article_length": 500,
             "article_width": 300,
@@ -279,11 +282,12 @@
         },
         {
             "article_num": 1102,
+            "stock": 12,
             "quantity": 1,
             "countedPrice": 1690,
             "cat_num": 1,
             "type_num": 11,
-            "article_name": "Отбойник из трубы 'Стандарт' - Б",
+            "article_name": "Отбойник 'Стандарт' забуриваемый",
             "article_price": 1690,
             "article_length": 1500,
             "article_width": 400,
@@ -324,6 +328,7 @@
         },
         {
             "article_num": 1103,
+            "stock": 52,
             "quantity": 1,
             "countedPrice": 1490,
             "cat_num": 1,
@@ -369,6 +374,7 @@
         },
         {
             "article_num": 1104,
+            "stock": 0,
             "quantity": 1,
             "countedPrice": 2290,
             "cat_num": 1,
@@ -414,6 +420,7 @@
         },
         {
             "article_num": 1105,
+            "stock": 16,
             "quantity": 1,
             "countedPrice": 4790,
             "cat_num": 1,
@@ -459,11 +466,12 @@
         },
         {
             "article_num": 1201,
+            "stock": 36,
             "quantity": 1,
             "countedPrice": 1850,
             "cat_num": 1,
             "type_num": 12,
-            "article_name": "Стойка-Столб",
+            "article_name": "Стойка Столб",
             "article_price": 1850,
             "article_length": 500,
             "article_width": 300,
@@ -504,6 +512,7 @@
         },
         {
             "article_num": 1202,
+            "stock": 6,
             "quantity": 1,
             "countedPrice": 3690,
             "cat_num": 1,
@@ -549,6 +558,7 @@
         },
         {
             "article_num": 1203,
+            "stock": 9,
             "quantity": 1,
             "countedPrice": 2690,
             "cat_num": 1,
@@ -594,6 +604,7 @@
         },
         {
             "article_num": 1204,
+            "stock": 16,
             "quantity": 1,
             "countedPrice": 5430,
             "cat_num": 1,
@@ -639,6 +650,7 @@
         },
         {
             "article_num": 1205,
+            "stock": 16,
             "quantity": 1,
             "countedPrice": 3690,
             "cat_num": 1,
@@ -684,6 +696,7 @@
         },
         {
             "article_num": 1301,
+            "stock": 10,
             "quantity": 1,
             "countedPrice": 4390,
             "cat_num": 1,
@@ -729,6 +742,7 @@
         },
         {
             "article_num": 1302,
+            "stock": 1,
             "quantity": 1,
             "countedPrice": 9620,
             "cat_num": 1,
@@ -774,6 +788,7 @@
         },
         {
             "article_num": 1303,
+            "stock": 16,
             "quantity": 1,
             "countedPrice": 13490,
             "cat_num": 1,
@@ -819,6 +834,7 @@
         },
         {
             "article_num": 1304,
+            "stock": 0,
             "quantity": 1,
             "countedPrice": 1690,
             "cat_num": 1,
@@ -864,6 +880,7 @@
         },
         {
             "article_num": 1305,
+            "stock": 16,
             "quantity": 1,
             "countedPrice": 890,
             "cat_num": 1,
@@ -909,6 +926,7 @@
         },
         {
             "article_num": 1401,
+            "stock": 0,
             "quantity": 1,
             "countedPrice": 7800,
             "cat_num": 1,
@@ -954,6 +972,7 @@
         },
         {
             "article_num": 1402,
+            "stock": 0,
             "quantity": 1,
             "countedPrice": 1100,
             "cat_num": 1,
@@ -999,6 +1018,7 @@
         },
         {
             "article_num": 1403,
+            "stock": 0,
             "quantity": 1,
             "countedPrice": 1690,
             "cat_num": 1,
@@ -1044,6 +1064,7 @@
         },
         {
             "article_num": 1404,
+            "stock": 0,
             "quantity": 1,
             "countedPrice": 790,
             "cat_num": 1,
@@ -1089,6 +1110,7 @@
         },
         {
             "article_num": 1405,
+            "stock": 0,
             "quantity": 1,
             "countedPrice": 6500,
             "cat_num": 1,
@@ -1134,6 +1156,7 @@
         },
         {
             "article_num": 1501,
+            "stock": 20,
             "quantity": 1,
             "countedPrice": 12540,
             "cat_num": 1,
@@ -1179,6 +1202,7 @@
         },
         {
             "article_num": 1502,
+            "stock": 0,
             "quantity": 1,
             "countedPrice": 12540,
             "cat_num": 1,
@@ -1224,6 +1248,7 @@
         },
         {
             "article_num": 1503,
+            "stock": 0,
             "quantity": 1,
             "countedPrice": 10000,
             "cat_num": 1,
@@ -1269,6 +1294,7 @@
         },
         {
             "article_num": 1504,
+            "stock": 0,
             "quantity": 1,
             "countedPrice": 2540,
             "cat_num": 1,
@@ -1314,6 +1340,7 @@
         },
         {
             "article_num": 1505,
+            "stock": 0,
             "quantity": 1,
             "countedPrice": 5540,
             "cat_num": 1,
@@ -1359,6 +1386,7 @@
         },
         {
             "article_num": 2101,
+            "stock": 0,
             "quantity": 1,
             "countedPrice": 5540,
             "cat_num": 2,
@@ -1404,6 +1432,7 @@
         },
         {
             "article_num": 2201,
+            "stock": 0,
             "quantity": 1,
             "countedPrice": 5540,
             "cat_num": 2,
@@ -1449,6 +1478,7 @@
         },
         {
             "article_num": 3101,
+            "stock": 0,
             "quantity": 1,
             "countedPrice": 22140,
             "cat_num": 3,

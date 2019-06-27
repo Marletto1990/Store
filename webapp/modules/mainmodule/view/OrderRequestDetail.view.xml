@@ -6,6 +6,7 @@
 	controllerName="app.modules.mainmodule.controller.OrderRequestDetail"
 	xmlns:core="sap.ui.core"
 	xmlns="sap.m"
+	xmlns:tnt="sap.tnt"
 	xmlns:qInput = "app.modules.mainmodule.control">
 			<Page 
 				id="orderRequestDetail" 
@@ -40,21 +41,21 @@
 								<Label text="Контактное лицо" />
 								<Input value="" />
 								<Label text="Телефон контактного лица" />
-								<Input value="" />
+								<MaskInput mask="9-999-999-99-99" placeholderSymbol="X" placeholder="пример: 8-900-555-00-00"/>
 								<Label text="Улица и номер дома / строения" />
 								<Input value="">
 								</Input>
 								<Input value="">
 									<layoutData>
-										<l:GridData span="XL2 L3 M4 S4" />
+										<l:GridData span="XL3 L3 M4 S4" />
 									</layoutData>
 								</Input>
 								<Label text="ИНН и ОГРН (для юр.лиц)" />
-								<Input value="0">
+								<MaskInput mask="999999999999">
 									<layoutData>
-										<l:GridData span="XL2 L3 M4 S4" />
+										<l:GridData span="XL3 L3 M4 S4" />
 									</layoutData>
-								</Input>
+								</MaskInput>
 								<Input value="0" />
 								<Label text="Город" />
 								<Select id="country" selectedKey="0">
@@ -96,43 +97,15 @@
 									<content>
 										<Title text="Редактирование заявки" level="H2"/>
 										<ToolbarSpacer />
-										<ComboBox id="idSortTable"
-											placeholder="Отсортировать..."
-											change="onPopinLayoutChanged">
-											<items>
-												<core:Item  text="Вес"
-													key="Weigth"/>
-												<core:Item  text="Цена"
-													key="Price"/>
-												<core:Item  text="Артикул"
-													key="Article"/>
-											</items>
-										</ComboBox>
-										<MultiComboBox id="idSticky"
-											placeholder="Показать столбцы"
-											selectionFinish="onSelectionFinish"
-											width="15%">
-											<layoutData>
-												<ToolbarLayoutData minWidth="4rem"/>
-											</layoutData>
-											<items>
-												<core:Item  text="Позиция"
-													key="ColumnHeaders"/>
-												<core:Item  text="Количество"
-													key="HeaderToolbar"/>
-												<core:Item  text="Материал"
-													key="Material"/>
-												<core:Item  text="Цена"
-													key="InfoToolbar"/>	
-												<core:Item  text="Стоимость"
-													key="InfoToolbar"/>
-											</items>
-										</MultiComboBox>
+
+										<MessageStrip
+											class="sapUiSmallMargin"
+											type="Success"
+											text="Общая сумма 136 180 рублей"/>
 										<Button id="Fire"
 											text="Отправить заявку"
 											press="onFire"
 											type="Accept"/>
-
 									</content>
 								</OverflowToolbar>
 							</headerToolbar>
@@ -148,14 +121,14 @@
 									<Label text = "Кастомный инпут"/>
 								</Column> -->
 								<Column 
-									width="4em">
+									width="3em">
 									<Label text="Позиция" />
 								</Column>
 								<Column
-									width="10em">
+									width="8em">
 								</Column>
 								<Column
-									width="8em">
+									width="7em">
 									<Label text="Количество" />
 								</Column>
 								<Column
@@ -169,6 +142,10 @@
 								<Column
 									width="4em">
 									<Label text="Стоимость" />
+								</Column>
+								<Column
+									width="4em">
+									<Label text="Наличие" />
 								</Column>
 							</columns>
 							<items>
@@ -216,6 +193,9 @@
 									</cells>
 									<cells>
 										<Label text="{=Math.round(${myModel>article_price} * ${myModel>countedPrice} * parseInt(${myModel>quantity},10),0)}"/>
+									</cells>
+									<cells>
+										<tnt:InfoLabel colorScheme="8" text="на складе {myModel>stock} шт"/>
 									</cells>
 								</ColumnListItem>
 							</items>

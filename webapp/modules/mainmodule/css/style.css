@@ -1,3 +1,16 @@
+.saleImage1{
+    position: relative;
+    left:50px;
+}
+.saleImage2{
+    position: relative;
+    left:-20px;
+}
+.HBoxSale{
+    position: relative;
+    left:-50px;
+    bottom:10px;
+}
 .salesText{
     text-decoration: line-through;
 }

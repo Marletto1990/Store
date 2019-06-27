@@ -19,14 +19,23 @@
 						subheader="{myModel>article_material}" 
 						press="onNewsItemPress"
 						frameType="TwoByOne">
-							<TileContent footer="Цена: {myModel>article_price} руб." footerColor="Critical">
+							<TileContent footer="Цена: {=Math.round(${myModel>article_price}*0.8,0)} руб." footerColor="Error">
 								<HBox
-									alignItems="End"
+									alignItems="Center"
 									justifyContent="End">
 									<Image
 										src="{myModel>article_image_path}"
 										height="6em"
-										width="6em">
+										width="6em"
+										
+										class="saleImage1">
+									</Image>
+									<Image
+										src="/modules/mainmodule/images/sale.png"
+										height="4em"
+										width="8em"
+										mode="Background"
+										class="saleImage2">
 									</Image>
 								</HBox>
 							</TileContent>
