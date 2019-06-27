@@ -21,7 +21,7 @@ sap.ui.define([
             oRouter.getRoute("categories").attachMatched(this.callSetBreadcrumbs, this);
             oRouter.getRoute("types").attachMatched(this.callSetBreadcrumbs, this);
             oRouter.getRoute("articles").attachMatched(this.callSetBreadcrumbs, this);
-
+            this.oSF = this.getView().byId("searchField");
         },
         callSetBreadcrumbs: function (oEvent) {
 
@@ -90,11 +90,11 @@ sap.ui.define([
 			if (value) {
 				filters = [
 					new sap.ui.model.Filter([
-						new sap.ui.model.Filter("ProductId", function(sText) {
+						new sap.ui.model.Filter("article_name", function(sText) {
 							return (sText || "").toUpperCase().indexOf(value.toUpperCase()) > -1;
 						}),
-						new sap.ui.model.Filter("Name", function(sDes) {
-							return (sDes || "").toUpperCase().indexOf(value.toUpperCase()) > -1;
+						new sap.ui.model.Filter("article_num", function(sDes) {
+							return (String(sDes) || "").toUpperCase().indexOf(value.toUpperCase()) > -1;
 						})
 					], false)
 				];

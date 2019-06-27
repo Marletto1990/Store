@@ -45,18 +45,23 @@
 				
 				<Toolbar>
 					<ToolbarSpacer width = "2em"/>
-					<SearchField 
+						<SearchField 
+						id="searchField"
 						enableSuggestions="true" 
-						search="onFilterProducts" 
+						search="onSearch" 
 						suggest="onSuggest"
 						suggestionItems="{
-							path: 'myModel>/Product',
-							sorter: { path: 'BRAND_NO' }
+							path: 'myModel>/Articles',
+							sorter: { path: 'myModel>article_num' }
 						}">
 						<suggestionItems>
-							<SuggestionItem text="{Name}" description="{path:'Price'} {path:'CurrencyCode'}" key="{ProductId}"/>
+							<SuggestionItem 
+								text="{article_name}" 
+								description="{ path:'myModel>article_num'} { path:'myModel>article_name'}"
+								key="{myModel>article_num}"/>
 						</suggestionItems>
 					</SearchField>
+					<ToolbarSpacer width = "2em"/>
 				</Toolbar>
 			</footer>
 		</Page>
