@@ -24,6 +24,10 @@ sap.ui.define([
 
         },
         callSetBreadcrumbs: function (oEvent) {
+
+            var oEventBus = sap.ui.getCore().getEventBus();
+            oEventBus.publish("showMaster"); 
+
             this.byId("theBreadcrumbs").addStyleClass("hidden");
             var oModel = this.getView().getModel("myModel");
             var sCategory = oEvent.getParameter("arguments").category;
@@ -72,6 +76,32 @@ sap.ui.define([
             });
             //this.getView().getModel("myModel").setProperty("/Remote_current/title", oData.article_name);
 
-        }
+        },
+        onSearch: function (event) {
+			var item = event.getParameter("suggestionItem");
+			if (item) {
+				sap.m.MessageToast.show("search for: " + item.getText());
+			}
+		},
+
+		onSuggest: function (event) {
+			var value = event.getParameter("suggestValue");
+			var filters = [];
+			if (value) {
+				filters = [
+					new sap.ui.model.Filter([
+						new sap.ui.model.Filter("ProductId", function(sText) {
+							return (sText || "").toUpperCase().indexOf(value.toUpperCase()) > -1;
+						}),
+						new sap.ui.model.Filter("Name", function(sDes) {
+							return (sDes || "").toUpperCase().indexOf(value.toUpperCase()) > -1;
+						})
+					], false)
+				];
+			}
+
+			this.oSF.getBinding("suggestionItems").filter(filters);
+			this.oSF.suggest();
+		}
     });
 });

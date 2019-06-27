@@ -12,9 +12,9 @@
 				title="Steel Store" 
 				icon="sap-icon://action" 
 				class="sapUiStdPage">
-				<content>
+				<content>				
 					<VBox class="sapUiSmallMargin">
-					
+						
 						<f:SimpleForm id="SimpleFormChange480_12120"
 							editable="true"
 							layout="ResponsiveGridLayout"
@@ -59,9 +59,9 @@
 								<Label text="Город" />
 								<Select id="country" selectedKey="0">
 									<items>
-										<core:Item text="England" key="England"/>
-										<core:Item text="Germany" key="Germany"/>
-										<core:Item text="USA" key="USA"/>
+										<core:Item text="Москва" key="Moscow"/>
+										<core:Item text="Санкт-Петербург" key="Saint-Petersburg"/>
+										<core:Item text="Нижний Новгород" key="Nizhny Novgorod"/>
 									</items>
 								</Select>
 
@@ -90,11 +90,63 @@
 							items="{myModel>/Cart}"
 							alternateRowColors="true"
 							headerText="Редактирование заявки">
+
+							<headerToolbar>
+								<OverflowToolbar>
+									<content>
+										<Title text="Редактирование заявки" level="H2"/>
+										<ToolbarSpacer />
+										<ComboBox id="idSortTable"
+											placeholder="Отсортировать..."
+											change="onPopinLayoutChanged">
+											<items>
+												<core:Item  text="Вес"
+													key="Weigth"/>
+												<core:Item  text="Цена"
+													key="Price"/>
+												<core:Item  text="Артикул"
+													key="Article"/>
+											</items>
+										</ComboBox>
+										<MultiComboBox id="idSticky"
+											placeholder="Показать столбцы"
+											selectionFinish="onSelectionFinish"
+											width="15%">
+											<layoutData>
+												<ToolbarLayoutData minWidth="4rem"/>
+											</layoutData>
+											<items>
+												<core:Item  text="Позиция"
+													key="ColumnHeaders"/>
+												<core:Item  text="Количество"
+													key="HeaderToolbar"/>
+												<core:Item  text="Материал"
+													key="Material"/>
+												<core:Item  text="Цена"
+													key="InfoToolbar"/>	
+												<core:Item  text="Стоимость"
+													key="InfoToolbar"/>
+											</items>
+										</MultiComboBox>
+										<Button id="Fire"
+											text="Отправить заявку"
+											press="onFire"
+											type="Accept"/>
+
+									</content>
+								</OverflowToolbar>
+							</headerToolbar>
+							<infoToolbar>
+								<Toolbar active="false">
+									<Label text="Укажите количество и материал изделий"/>
+								</Toolbar>
+							</infoToolbar>
+
 							<columns 
 								hAlign ="End">
-								<Column width="6em">
+								<!-- <Column width="6em">
 									<Label text = "Кастомный инпут"/>
-								</Column>
+								</Column> -->
 								<Column 
 									width="4em">
 									<Label text="Позиция" />
@@ -111,19 +163,19 @@
 									<Label text="Материал" />
 								</Column>
 								<Column
-									width="8em">
+									width="4em">
 									<Label text="Цена" />
 								</Column>
 								<Column
-									width="8em">
+									width="4em">
 									<Label text="Стоимость" />
 								</Column>
 							</columns>
 							<items>
 								<ColumnListItem vAlign="Middle">
-									<cells>
+									<!-- <cells>
 										<qInput:QuantityInput value="{myModel>quantity}"/>
-									</cells>
+									</cells> -->
 									<cells>
 										<HBox 
 											alignContent="Stretch"
@@ -163,7 +215,7 @@
 										<Label text="{= Math.round(${myModel>article_price} * ${myModel>countedPrice},0)}"/>
 									</cells>
 									<cells>
-										<Label text="{= Math.round(${myModel>article_price} * ${myModel>countedPrice} * ${myModel>quantity},0)}"/>
+										<Label text="{=Math.round(${myModel>article_price} * ${myModel>countedPrice} * parseInt(${myModel>quantity},10),0)}"/>
 									</cells>
 								</ColumnListItem>
 							</items>

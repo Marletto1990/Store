@@ -12,6 +12,8 @@ sap.ui.define([
 
     return BaseController.extend('app.modules.mainmodule.controller.News', {
 		onInit: function () {
+            var oRouter = this.getRouter();
+            oRouter.getRoute("start").attachMatched(this.MakeAmericaGreatAgain, this);
         },
         onNewsButtonPress: function(){
             this.getRouter().getTargets().display("notFound");
@@ -35,6 +37,11 @@ sap.ui.define([
                 type: oTpName.name,
                 article: sArticleName
             });
-        }
+        },
+        MakeAmericaGreatAgain: function(){
+            var oEventBus = sap.ui.getCore().getEventBus();
+            oEventBus.publish("showMaster");            
+        }           
+
 	});
 });

@@ -51,16 +51,16 @@ sap.ui.define([
                 items: [
                     new Input({
                         value: that.getValue(),
-                        liveChange: that._onInputChange.bind(that)
+                        liveChange: this._onInputChange.bind(this)
                     }), new Button({
                         text: "",
                         icon: "sap-icon://less",
-                        press: that._onButtonMinusPress
+                        press: this._onButtonMinusPress
                     }).addStyleClass("sapUiSmallMarginBegin"),
                     new Button({
                         text: "",
                         icon: "sap-icon://add",
-                        press: that._onButtonPlusPress
+                        press: this._onButtonPlusPress
                     })
                 ]
 

@@ -22,6 +22,11 @@ sap.ui.define([
             oEventBus.subscribe("checkCartMatches", this.checkCartMatches, this);  // ---->
         },
         createThisArticle: function(){
+
+            var oEventBus = sap.ui.getCore().getEventBus();
+            oEventBus.publish("showMaster"); 
+
+
             var aArticles = this.getView().getModel("myModel").getProperty("/Articles");
             var sArticleName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[2];
             var n = aArticles.findIndex(function(element){

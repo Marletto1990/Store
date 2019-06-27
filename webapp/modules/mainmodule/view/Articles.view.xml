@@ -42,9 +42,22 @@
 				</Panel>
 			</content>
 			<footer>
-				<OverflowToolbar>
-					<Text text="Footer"/>
-				</OverflowToolbar>
+				
+				<Toolbar>
+					<ToolbarSpacer width = "2em"/>
+					<SearchField 
+						enableSuggestions="true" 
+						search="onFilterProducts" 
+						suggest="onSuggest"
+						suggestionItems="{
+							path: 'myModel>/Product',
+							sorter: { path: 'BRAND_NO' }
+						}">
+						<suggestionItems>
+							<SuggestionItem text="{Name}" description="{path:'Price'} {path:'CurrencyCode'}" key="{ProductId}"/>
+						</suggestionItems>
+					</SearchField>
+				</Toolbar>
 			</footer>
 		</Page>
 </mvc:View>
