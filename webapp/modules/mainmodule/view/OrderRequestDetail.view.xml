@@ -90,7 +90,7 @@
 						<Table 
 							items="{myModel>/Cart}"
 							alternateRowColors="true"
-							headerText="Редактирование заявки">
+							headerText="Выбранные артикулы">
 
 							<headerToolbar>
 								<OverflowToolbar>
@@ -121,7 +121,7 @@
 									<Label text = "Кастомный инпут"/>
 								</Column> -->
 								<Column 
-									width="3em">
+									width="4em">
 									<Label text="Позиция" />
 								</Column>
 								<Column
@@ -136,15 +136,15 @@
 									<Label text="Материал" />
 								</Column>
 								<Column
-									width="4em">
+									width="3em">
 									<Label text="Цена" />
 								</Column>
 								<Column
-									width="4em">
+									width="3em">
 									<Label text="Стоимость" />
 								</Column>
 								<Column
-									width="4em">
+									width="5em">
 									<Label text="Наличие" />
 								</Column>
 							</columns>

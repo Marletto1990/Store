@@ -11,6 +11,11 @@ sap.ui.define([
     "use strict";
     return BaseController.extend("app.modules.mainmodule.controller.Main", {
         onInit: function () {
+
+            var oStore = jQuery.sap.storage(jQuery.sap.storage.Type.local);
+            var oDate = oStore.get("SteelStore order");
+            this.getView().getModel("myModel").setProperty("/Cart", oDate);
+
             var oEventBus = sap.ui.getCore().getEventBus();
             oEventBus.subscribe("hideMaster", this.hideMaster, this);
             oEventBus.subscribe("showMaster", this.showMaster, this);

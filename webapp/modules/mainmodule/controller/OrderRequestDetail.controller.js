@@ -30,14 +30,16 @@ sap.ui.define([
 					onClose: function(oAction) { 
 						if (oAction=="YES"){
 							
-							//var oStore = jQuery.sap.storage(jQuery.sap.storage.Type.local);
-							//var oCart = this.getView().getModel("myModel").getProperty("/Cart");
-							//oStore.put("id", oCart);
+							var oStore = jQuery.sap.storage(jQuery.sap.storage.Type.local);
 
+							var oCart = this.getView().getModel("myModel").getProperty("/Cart");
+
+							oStore.put("SteelStore order", oCart);
+							debugger
 							MessageToast.show("Заявка отправлена. Мы свяжемся с Вами в ближайшее время");
 
 						} else { console.log("Отмена")}
-					 }
+					 }.bind(this)
 				}
 			);
 		},

@@ -62,6 +62,7 @@
 								key="{myModel>article_num}"/>
 						</suggestionItems>
 					</SearchField>
+					<Button icon ="sap-icon://sort" press="toSortingPopover"/>
 					<ToolbarSpacer width = "2em"/>
 				</Toolbar>
 			</footer>

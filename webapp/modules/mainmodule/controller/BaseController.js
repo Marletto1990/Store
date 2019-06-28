@@ -278,6 +278,14 @@ sap.ui.define([
 			}
 			this._oPopover2.openBy(oEvent.getSource());
 		},
+		toSortingPopover: function (oEvent) {
+			if (!this._oPopover3) {
+				this._oPopover3 = sap.ui.xmlfragment("mainpath.fragment.sorting", this);
+				//this._oPopover.bindElement("/Cart");
+				this.getView().addDependent(this._oPopover2);
+			}
+			this._oPopover3.openBy(oEvent.getSource());
+		},
 		toOrderRequest: function () {
 			this.getRouter().navTo("order_request");
 		},
@@ -316,7 +324,7 @@ sap.ui.define([
 				var nQMaterial = this.getView().getModel("myModel").getProperty("/Cart/"+i+"/qMaterial");
 
 				this.getView().getModel("myModel").setProperty("/Cart/"+i+"/countedPrice", Math.round(nItemPrice*nQMaterial,0));
-				console.log(item.countedPrice);
+				//console.log(item.countedPrice);
 				if(operation == "plus"){
 					nCartDataCost = nCartDataCost + item.countedPrice;
 					summ.push(Math.round(nItemPrice*nQMaterial,0));
