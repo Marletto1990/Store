@@ -297,14 +297,40 @@ sap.ui.define([
 			var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
 			var nQ = this.getView().getModel("myModel").getProperty(sPath + "/quantity");
 			this.getView().getModel("myModel").setProperty(sPath + "/quantity", +Math.round(nQ,0) + 1);
+			this.countCartCost_and_CartItemCountedCost( "plus" );
 		},
 		decr_quantity: function (oEvent) {
 			var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
 			var nQ = this.getView().getModel("myModel").getProperty(sPath + "/quantity");
 			if (+Math.round(nQ,0) - 1 >= 0) {
 				this.getView().getModel("myModel").setProperty(sPath + "/quantity", +Math.round(nQ,0) - 1);
+				this.countCartCost_and_CartItemCountedCost( "minus" );
 			}
-		}
+		},
+		countCartCost_and_CartItemCountedCost: function( operation ){
+			var oCart = this.getView().getModel("myModel").getProperty("/Cart");
+			var nCartDataCost = this.getView().getModel("myModel").getProperty("/CartData/cost");
+			var summ =[];
+			oCart.forEach( function(item, i, arr){
+				var nItemPrice = this.getView().getModel("myModel").getProperty("/Cart/"+i+"/article_price");
+				var nQMaterial = this.getView().getModel("myModel").getProperty("/Cart/"+i+"/qMaterial");
+
+				this.getView().getModel("myModel").setProperty("/Cart/"+i+"/countedPrice", Math.round(nItemPrice*nQMaterial,0));
+				console.log(item.countedPrice);
+				if(operation == "plus"){
+					nCartDataCost = nCartDataCost + item.countedPrice;
+					summ.push(Math.round(nItemPrice*nQMaterial,0));
+				} else if(operation == "minus"){
+					 nCartDataCost = nCartDataCost - item.countedPrice;
+					 summ.push(Math.round(-nItemPrice*nQMaterial,0));
+				} 
+				this.getView().getModel("myModel").setProperty("/CartData/cost", nCartDataCost);
+					
+			}.bind(this))
+			
+			
+		},
+		
 	});
 
 });

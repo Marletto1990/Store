@@ -19,7 +19,7 @@
 						<f:SimpleForm id="SimpleFormChange480_12120"
 							editable="true"
 							layout="ResponsiveGridLayout"
-							title="Данные заказчика"
+							title="Новая заявка"
 							labelSpanXL="4"
 							labelSpanL="4"
 							labelSpanM="12"
@@ -101,7 +101,7 @@
 										<MessageStrip
 											class="sapUiSmallMargin"
 											type="Success"
-											text="Общая сумма 136 180 рублей"/>
+											text="Общая сумма по заявке {myModel>/CartData/cost} рублей"/>
 										<Button id="Fire"
 											text="Отправить заявку"
 											press="onFire"
@@ -189,10 +189,10 @@
 										</Select>
 									</cells>
 									<cells>
-										<Label text="{= Math.round(${myModel>article_price} * ${myModel>countedPrice},0)}"/>
+										<Label text="{= Math.round(${myModel>article_price} * ${myModel>qMaterial},0)}"/>
 									</cells>
 									<cells>
-										<Label text="{=Math.round(${myModel>article_price} * ${myModel>countedPrice} * parseInt(${myModel>quantity},10),0)}"/>
+										<Label text="{=Math.round(${myModel>article_price} * ${myModel>qMaterial} * parseInt(${myModel>quantity},10),0)}"/>
 									</cells>
 									<cells>
 										<tnt:InfoLabel colorScheme="8" text="на складе {myModel>stock} шт"/>

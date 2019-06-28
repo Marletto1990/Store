@@ -7,6 +7,21 @@ sap.ui.define([
 	"use strict";
 	return BaseController.extend("app.modules.mainmodule.controller.OrderRequestDetail", {
 		onInit: function () {
+			var oRouter = this.getRouter();
+			oRouter.getRoute("order_request").attachMatched(this.callCount, this);
+		},
+		callCount: function(){
+			var oCart = this.getView().getModel("myModel").getProperty("/Cart");
+			var nCartDataCost = 0;
+			oCart.forEach( function(item, i, arr){
+				var nItemPrice = this.getView().getModel("myModel").getProperty("/Cart/"+i+"/article_price");
+				var nQMaterial = this.getView().getModel("myModel").getProperty("/Cart/"+i+"/qMaterial");
+
+				this.getView().getModel("myModel").setProperty("/Cart/"+i+"/countedPrice", Math.round(nItemPrice*nQMaterial,0));
+					nCartDataCost = nCartDataCost + item.countedPrice;					
+			}.bind(this))
+
+			this.getView().getModel("myModel").setProperty("/CartData/cost", nCartDataCost);
 		},
 		onFire: function(oEvent) {
 			MessageBox.confirm(

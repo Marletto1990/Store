@@ -68,6 +68,7 @@ sap.ui.define([
                 this.getView().getModel("myModel").setProperty("/Cart", aCart);
                 this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonAddVisible", false);
                 this.getView().getModel("myModel").setProperty("/ArticleViewInfo/isButtonDeleteVisible", true);
+
             } else {
                 var matchOut = aCart.filter(function (element) {
                     return element.article_num != aArticles[n].article_num;
