@@ -181,7 +181,7 @@
 									<cells>
 										<Select 
 											items="{myModel>/Material}"
-											selectedKey="{myModel>countedPrice}"
+											selectedKey="{myModel>qMaterial}"
 											forceSelection="true">
 											<core:Item   
 												key="{myModel>q}"

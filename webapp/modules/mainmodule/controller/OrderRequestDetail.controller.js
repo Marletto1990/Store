@@ -13,11 +13,14 @@ sap.ui.define([
 		callCount: function(){
 			var oCart = this.getView().getModel("myModel").getProperty("/Cart");
 			var nCartDataCost = 0;
+
+			
 			oCart.forEach( function(item, i, arr){
 				var nItemPrice = this.getView().getModel("myModel").getProperty("/Cart/"+i+"/article_price");
 				var nQMaterial = this.getView().getModel("myModel").getProperty("/Cart/"+i+"/qMaterial");
+				var nQuantity = this.getView().getModel("myModel").getProperty("/Cart/"+i+"/quantity");
 
-				this.getView().getModel("myModel").setProperty("/Cart/"+i+"/countedPrice", Math.round(nItemPrice*nQMaterial,0));
+				this.getView().getModel("myModel").setProperty("/Cart/"+i+"/countedPrice", Math.round(nItemPrice*nQMaterial*nQuantity,0));
 					nCartDataCost = nCartDataCost + item.countedPrice;					
 			}.bind(this))
 

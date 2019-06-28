@@ -14,6 +14,7 @@ sap.ui.define([
             var oRouter = this.getRouter();
             oRouter.getRoute("categories").attachMatched(this.onTypeRoutMatched, this);
             oRouter.getRoute("types").attachMatched(this.onTypeRoutMatched, this);
+            oRouter.getRoute("articles").attachMatched(this.onTypeRoutMatched, this);
             //oRouter.getRoute("types").attachMatched(this.callSetBreadcrumbs, this);
         },
         onTypeRoutMatched: function (oEvent) {

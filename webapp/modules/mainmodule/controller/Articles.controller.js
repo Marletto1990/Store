@@ -45,7 +45,9 @@ sap.ui.define([
         },
         onCategoryRoutMatched: function (oEvent) {
             var sCategory = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
+            //Здесь при обновлении ошибка, не удается получить sType
             var sType = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[1];
+
             this._showFilterArticles(oEvent, {
                 listId: "articlesContainer",
                 category: sCategory,

@@ -304,40 +304,46 @@ sap.ui.define([
 		incr_quantity: function (oEvent) {
 			var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
 			var nQ = this.getView().getModel("myModel").getProperty(sPath + "/quantity");
+
+			var sPath = oEvent.getSource().getParent().getBindingContext("myModel").getPath();
+
+
 			this.getView().getModel("myModel").setProperty(sPath + "/quantity", +Math.round(nQ,0) + 1);
-			this.countCartCost_and_CartItemCountedCost( "plus" );
+			this.countCartCost( "plus", sPath );
 		},
 		decr_quantity: function (oEvent) {
 			var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
 			var nQ = this.getView().getModel("myModel").getProperty(sPath + "/quantity");
+
+			var sPath = oEvent.getSource().getParent().getBindingContext("myModel").getPath();
+
+
 			if (+Math.round(nQ,0) - 1 >= 0) {
 				this.getView().getModel("myModel").setProperty(sPath + "/quantity", +Math.round(nQ,0) - 1);
-				this.countCartCost_and_CartItemCountedCost( "minus" );
+				this.countCartCost("minus", sPath);
 			}
 		},
-		countCartCost_and_CartItemCountedCost: function( operation ){
-			var oCart = this.getView().getModel("myModel").getProperty("/Cart");
-			var nCartDataCost = this.getView().getModel("myModel").getProperty("/CartData/cost");
-			var summ =[];
-			oCart.forEach( function(item, i, arr){
-				var nItemPrice = this.getView().getModel("myModel").getProperty("/Cart/"+i+"/article_price");
-				var nQMaterial = this.getView().getModel("myModel").getProperty("/Cart/"+i+"/qMaterial");
+		countCartCost: function( operation, sPath ){
+			var nItemPrice = this.getView().getModel("myModel").getProperty(sPath+"/article_price");
+			var nQMaterial = this.getView().getModel("myModel").getProperty(sPath+"/qMaterial");
+			var nQuantity = this.getView().getModel("myModel").getProperty(sPath+"/quantity");
 
-				this.getView().getModel("myModel").setProperty("/Cart/"+i+"/countedPrice", Math.round(nItemPrice*nQMaterial,0));
-				//console.log(item.countedPrice);
-				if(operation == "plus"){
-					nCartDataCost = nCartDataCost + item.countedPrice;
-					summ.push(Math.round(nItemPrice*nQMaterial,0));
-				} else if(operation == "minus"){
-					 nCartDataCost = nCartDataCost - item.countedPrice;
-					 summ.push(Math.round(-nItemPrice*nQMaterial,0));
-				} 
-				this.getView().getModel("myModel").setProperty("/CartData/cost", nCartDataCost);
-					
-			}.bind(this))
-			
-			
-		},
+			this.getView().getModel("myModel").setProperty(sPath+"/countedPrice", Math.round(nItemPrice*nQMaterial,0));
+			this.getView().getModel("myModel").setProperty(sPath+"/cost", Math.round(nItemPrice*nQMaterial*nQuantity,0));
+
+			var oCartDataCost = Number(this.getView().getModel("myModel").getProperty("/CartData/cost"));
+			var aCart = this.getView().getModel("myModel").getProperty("/Cart");
+
+			if(operation =="minus"){
+				oCartDataCost = oCartDataCost-(this.getView().getModel("myModel").getProperty(sPath+"/countedPrice"));
+			this.getView().getModel("myModel").setProperty("/CartData/cost",oCartDataCost);
+			} else {
+				oCartDataCost = oCartDataCost+(this.getView().getModel("myModel").getProperty(sPath+"/countedPrice"));
+			this.getView().getModel("myModel").setProperty("/CartData/cost",oCartDataCost);
+
+			}
+		
+		}
 		
 	});
 
