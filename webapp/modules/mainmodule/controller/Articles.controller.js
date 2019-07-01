@@ -58,7 +58,6 @@ sap.ui.define([
         //Переход в подробный вид артикула
         onArticlesItemPress: function (oEvent) {
             var oData = oEvent.getSource().getBindingContext("myModel").getObject();
-            var sPath = oEvent.getSource().getBindingContext("myModel").getPath();  
             var oList = this.getView().byId("articlesContainer");
             var oCtgName = oList.getModel("myModel").getProperty("/Categories").find(function (element) {
                 return element.cat_num == oData.cat_num;
@@ -76,14 +75,34 @@ sap.ui.define([
                 type: oTpName.name,
                 article: sArticleName
             });
-            //this.getView().getModel("myModel").setProperty("/Remote_current/title", oData.article_name);
-
         },
-        onSearch: function (event) {
-            var item = event.getParameter("suggestionItem");
-			if (item) {
-				sap.m.MessageToast.show("Выбран артикул " + item.getDescription());
-			}
+        onSearch: function (oEvent) {
+            // var item = oEvent.getParameter("suggestionItem");
+			// if (item) {
+			// 	sap.m.MessageToast.show("Выбран артикул " + item.getDescription());
+            // }
+            var sArticle = oEvent.getParameter("suggestionItem").getKey();
+            var oData = this.getView().getModel("myModel").getProperty("/Articles");
+            var oTarget = oData.find(function(element){
+                return element.article_num == sArticle;
+            });
+            var oCategories = this.getView().getModel("myModel").getProperty("/Categories");
+            var oCtgName = oCategories.find(function (element) {
+                return element.cat_num == oTarget.cat_num;
+            });
+            var i = oCategories.findIndex(function (element) {
+                return element.cat_num == oTarget.cat_num;
+            });
+            var oTpName = this.getView().getModel("myModel").getProperty("/Categories/" + i + "/type").find(function (element) {
+                return element.type_num == oTarget.type_num;
+            });
+            var sArticleName = oTarget.article_num;
+
+            this.getRouter().navTo("article", {
+                category: oCtgName.name,
+                type: oTpName.name,
+                article: sArticleName
+            });
 		},
 
 		onSuggest: function (event) {

@@ -19,7 +19,7 @@
 						<f:SimpleForm id="SimpleFormChange480_12120"
 							editable="true"
 							layout="ResponsiveGridLayout"
-							title="Новая заявка"
+							title="{myModel>/Requisition/0/req}"
 							labelSpanXL="4"
 							labelSpanL="4"
 							labelSpanM="12"
@@ -39,26 +39,30 @@
 									icon="sap-icon://meeting-room"
 									emphasized="true" />
 								<Label text="Контактное лицо" />
-								<Input value="" />
+								<Input value="{myModel>/Requisition/0/name}" />
 								<Label text="Телефон контактного лица" />
-								<MaskInput mask="9-999-999-99-99" placeholderSymbol="X" placeholder="пример: 8-900-555-00-00"/>
+								<MaskInput 
+									mask="9-999-999-99-99" 
+									placeholderSymbol="_" 
+									placeholder="пример: 8-900-555-00-00" 
+									value="{myModel>/Requisition/0/phoneNumber}"/>
 								<Label text="Улица и номер дома / строения" />
-								<Input value="">
+								<Input value="{myModel>/Requisition/0/street}">
 								</Input>
-								<Input value="">
+								<Input value="{myModel>/Requisition/0/structure}">
 									<layoutData>
 										<l:GridData span="XL3 L3 M4 S4" />
 									</layoutData>
 								</Input>
 								<Label text="ИНН и ОГРН (для юр.лиц)" />
-								<MaskInput mask="999999999999">
+								<MaskInput mask="999999999999" value="{myModel>/Requisition/0/INN}">
 									<layoutData>
 										<l:GridData span="XL3 L3 M4 S4" />
 									</layoutData>
 								</MaskInput>
-								<Input value="0" />
+								<Input value="" />
 								<Label text="Город" />
-								<Select id="country" selectedKey="0">
+								<Select id="city" selectedKey="{myModel>/Requisition/0/city}">
 									<items>
 										<core:Item text="Москва" key="Moscow"/>
 										<core:Item text="Санкт-Петербург" key="Saint-Petersburg"/>
@@ -173,16 +177,19 @@
 												class = "sapUiSmallMarginEnd" 
 												width = "5em"
 												value="{myModel>quantity}"
-												type="Number"/>	
+												type="Number"
+												valueLiveUpdate="true"
+												liveChange="changeInputQuantity"/>	
 											<Button icon="sap-icon://less" press = "decr_quantity"/>	
 											<Button icon="sap-icon://add" press = "incr_quantity"/>	
 										</HBox>	
 									</cells>
 									<cells>
 										<Select 
-											items="{myModel>/Material}"
+											items="{path:'myModel>/Material', templateShareable:false}"
 											selectedKey="{myModel>qMaterial}"
-											forceSelection="true">
+											forceSelection="true"
+											change = "changeMaterial">
 											<core:Item   
 												key="{myModel>q}"
 												text="{myModel>name}" />
@@ -195,7 +202,7 @@
 										<Label text="{=Math.round(${myModel>article_price} * ${myModel>qMaterial} * parseInt(${myModel>quantity},10),0)}"/>
 									</cells>
 									<cells>
-										<tnt:InfoLabel colorScheme="8" text="на складе {myModel>stock} шт"/>
+										<tnt:InfoLabel colorScheme="{path:'myModel>stock', formatter:'.formatter_color'}" text="{path:'myModel>stock', formatter:'.formatter_quantity'}"/>
 									</cells>
 								</ColumnListItem>
 							</items>

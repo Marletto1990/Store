@@ -33,12 +33,15 @@ sap.ui.define([
 					onClose: function(oAction) { 
 						if (oAction=="YES"){
 							
+							var reqGen = Math.floor(Math.random()*1000);
+							this.getView().getModel("myModel").setProperty("/Requisition/0/req", ("Заявка №"+reqGen));
+							
 							var oStore = jQuery.sap.storage(jQuery.sap.storage.Type.local);
-
-							var oCart = this.getView().getModel("myModel").getProperty("/Cart");
-
-							oStore.put("SteelStore order", oCart);
-							debugger
+							var oReq = {};
+							oReq.Cart = this.getView().getModel("myModel").getProperty("/Cart");
+							oReq.Requisition = this.getView().getModel("myModel").getProperty("/Requisition");	
+							oStore.put("SteelStore order", oReq);
+							
 							MessageToast.show("Заявка отправлена. Мы свяжемся с Вами в ближайшее время");
 
 						} else { console.log("Отмена")}
@@ -46,5 +49,11 @@ sap.ui.define([
 				}
 			);
 		},
+		changeMaterial: function(){
+			this.callCount();
+		},
+		changeInputQuantity: function(oEvent){
+			this.callCount();
+		}
 	});
 });

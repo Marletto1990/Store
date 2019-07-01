@@ -1,4 +1,14 @@
-{   "Material":[{
+{   "Requisition":[{
+            "req": "Новая заявка",
+            "name": "",
+            "phoneNumber":"",
+            "street":"",
+            "structure":"",
+            "INN":"",
+            "OGRN":"",
+            "city":"Saint-Petersburg"
+    }],
+    "Material":[{
             "name":"Черный металл сталь 3",
             "q": 1
         },{
@@ -27,7 +37,7 @@
         "article_num": 1101,
         "cat_num": 1,
         "type_num": 11,
-        "article_name": "Отбойник из трубы 'Стандарт'",
+        "article_name": "Отбойник из трубы СТАНДАРТ",
         "article_price": 3690,
         "article_length": 500,
         "cost": 3690,
@@ -202,7 +212,7 @@
             "article_num": 1101,
             "cat_num": 1,
             "type_num": 11,
-            "article_name": "Отбойник из трубы 'Стандарт'",
+            "article_name": "Отбойник из трубы СТАНДАРТ",
             "article_price": 3690,
             "article_length": 500,
             "cost": 300,
@@ -249,7 +259,7 @@
             "countedPrice": 3190,
             "cat_num": 1,
             "type_num": 11,
-            "article_name": "Отбойник'Стандарт' фланцевый",
+            "article_name": "Отбойник СТАНДАРТ фланцевый",
             "article_price": 3190,
             "article_length": 500,
             "cost": 300,
@@ -296,7 +306,7 @@
             "countedPrice": 1690,
             "cat_num": 1,
             "type_num": 11,
-            "article_name": "Отбойник 'Стандарт' забуриваемый",
+            "article_name": "Отбойник СТАНДАРТ забуриваемый",
             "article_price": 1690,
             "article_length": 1500,
             "cost": 400,

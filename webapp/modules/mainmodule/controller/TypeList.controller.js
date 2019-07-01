@@ -33,7 +33,6 @@ sap.ui.define([
                 type: sTypeName,
                 aggregationName: "items"
             });
-            //this.isCartNotEmpty();
         },
         callSetBreadcrumbs: function (oEvent) {
             var oModel = this.getView().getModel("myModel");
@@ -59,6 +58,22 @@ sap.ui.define([
         onTypeListItemPress: function (oEvent) {
             var directory = oEvent.getSource().getBindingContext("myModel").getObject();
             var sCategoryName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
+            var ourPlace = this.getRouter()
+            if(!sCategoryName){
+                this.getRouter().navTo("types", {
+                    category: directory.name,
+                });
+            } else if(sCategoryName&&directory){
+                this.getRouter().navTo("articles", {
+                    category: sCategoryName,
+                    type: directory.name
+                });
+            } else {}
+        },
+        onTypeListItemPress2: function (oEvent) {
+            var directory = oEvent.getSource().getBindingContext("myModel").getObject();
+            var sCategoryName = sap.ui.core.UIComponent.getRouterFor(this)._oRouter._prevRoutes[0].params[0];
+             
             if(!sCategoryName){
                 this.getRouter().navTo("types", {
                     category: directory.name,

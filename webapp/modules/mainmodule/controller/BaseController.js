@@ -39,7 +39,7 @@ sap.ui.define([
 				var i = oList.getModel(sModel).getProperty("/Categories").findIndex(function (element) {
 					return element.name == sCategoryName;
 				});
-				var j = oList.getModel(sModel).getProperty("/Categories" + i + "/type").findIndex(function (element) {
+				var j = oList.getModel(sModel).getProperty("/Categories/" + i + "/type").findIndex(function (element) {
 					return element.name == sTypeName;
 				});
 				var sPath = sModel + ">/Categories/" + i + "/type/" + j;
@@ -343,7 +343,17 @@ sap.ui.define([
 
 			}
 		
-		}
+		},
+		formatter_quantity: function(stock){
+			if (stock != 0){
+				return "На складе " + stock + " шт"
+			} else { return "Под заказ"}
+		},
+		formatter_color: function(stock){
+			if (stock != 0){
+				return 7;
+			} else { return 1;} 
+		} 
 		
 	});
 

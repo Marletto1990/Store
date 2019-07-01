@@ -15,7 +15,11 @@ sap.ui.define([
             var oStore = jQuery.sap.storage(jQuery.sap.storage.Type.local);
             var oDate = oStore.get("SteelStore order");
 
-            if(oDate){this.getView().getModel("myModel").setProperty("/Cart", oDate);}
+
+            if(oDate){
+                this.getView().getModel("myModel").setProperty("/Cart", oDate.Cart);
+                this.getView().getModel("myModel").setProperty("/Requisition", oDate.Requisition);
+            }
 
             var oEventBus = sap.ui.getCore().getEventBus();
             oEventBus.subscribe("hideMaster", this.hideMaster, this);
