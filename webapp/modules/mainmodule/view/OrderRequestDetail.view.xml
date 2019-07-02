@@ -72,19 +72,27 @@
 
 								<core:Title text="Доставка и  монтаж" icon="sap-icon://inventory"/>
 							
-								<RadioButtonGroup columns="3" width="100%" class="sapUiMediumMarginTop" valueState="Warning">
+								<RadioButtonGroup 
+									columns="3" 
+									width="100%" 
+									class="sapUiMediumMarginTop" 
+									selectedIndex="{myModel>/Requisition/0/radioButtonGroup1}">
 									<buttons>
-										<RadioButton id="RB1-1" text="Прямая доставка"/>
-										<RadioButton id="RB1-2" text="Доставка транспортной компанией"/>
-										<RadioButton id="RB1-3" text="Заберем сами"/>
+										<RadioButton id="RB1-1" text="Прямая доставка" selected=""/>
+										<RadioButton id="RB1-2" text="Доставка транспортной компанией" selected=""/>
+										<RadioButton id="RB1-3" text="Заберем сами" selected=""/>
 									</buttons>
 								</RadioButtonGroup>
 								
-								<RadioButtonGroup columns="3" width="100%" class="sapUiMediumMarginTop" valueState="Warning">
+								<RadioButtonGroup 
+									columns="3" 
+									width="100%" 
+									class="sapUiMediumMarginTop" 
+									selectedIndex="{myModel>/Requisition/0/radioButtonGroup2}">
 									<buttons>
-										<RadioButton id="RB1-5" text="Монтаж нужен, в любое время!"/>
-										<RadioButton id="RB1-6" text="Монтаж нужен, ночь / выходные"/>
-										<RadioButton id="RB1-7" text="Смонтируем сами"/>
+										<RadioButton id="RB1-4" text="Монтаж нужен, в любое время!" selected=""/>
+										<RadioButton id="RB1-5" text="Монтаж нужен, ночь / выходные" selected=""/>
+										<RadioButton id="RB1-6" text="Смонтируем сами" selected=""/>
 									</buttons>
 								</RadioButtonGroup>
 							</f:content>

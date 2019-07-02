@@ -34,7 +34,8 @@ sap.ui.define([
 						if (oAction=="YES"){
 							
 							var reqGen = Math.floor(Math.random()*1000);
-							this.getView().getModel("myModel").setProperty("/Requisition/0/req", ("Заявка №"+reqGen));
+							var sReqNumber = this.getView().getModel("myModel").getProperty("/Requisition/0/req");
+							if (sReqNumber =="Новая заявка"){this.getView().getModel("myModel").setProperty("/Requisition/0/req", ("Заявка №"+reqGen));}
 							
 							var oStore = jQuery.sap.storage(jQuery.sap.storage.Type.local);
 							var oReq = {};

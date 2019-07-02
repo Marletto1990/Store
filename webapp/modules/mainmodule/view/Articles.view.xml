@@ -11,10 +11,10 @@
 			class="sapUiStdPage detailView">
 			<content>
 				<Breadcrumbs 	
-				currentLocationText="{myModel>/Remote_current/title}" 
-				class = "sapUiSmallMarginBegin sapUiSmallMarginTop  BreadCrumbs"
-				links = "{myModel>/Remote}" 
-				id = "theBreadcrumbs">
+					currentLocationText="{myModel>/Remote_current/title}" 
+					class = "sapUiSmallMarginBegin sapUiSmallMarginTop  BreadCrumbs"
+					links = "{myModel>/Remote}" 
+					id = "theBreadcrumbs">
 					<Link press="onBreadcrumbsPress" text="{myModel>title}"/>
 				</Breadcrumbs>
 				<Panel 
@@ -53,7 +53,7 @@
 						showRefreshButton="false"
 						suggestionItems="{
 							path: 'myModel>/Articles',
-							sorter: { path: 'myModel>article_num' }
+							sorter: { path: 'article_num' }
 						}">
 						<suggestionItems>
 							<SuggestionItem 
@@ -63,6 +63,7 @@
 						</suggestionItems>
 					</SearchField>
 					<Button icon ="sap-icon://sort" press="toSortingPopover"/>
+					
 					<ToolbarSpacer width = "2em"/>
 				</Toolbar>
 			</footer>

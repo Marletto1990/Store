@@ -32,6 +32,7 @@ sap.ui.define([
 			var bCatalog = oParameters.catalog;
 			var sCategoryName = oParameters.category;
 			var sTypeName = oParameters.type;
+			
 			var oList = this.getView().byId(oParameters.listId);
 			var oTemplate = oList.getBindingInfo(oParameters.aggregationName).template;
 			var sModel = oList.getBindingInfo(oParameters.aggregationName).model;
@@ -42,7 +43,8 @@ sap.ui.define([
 				var j = oList.getModel(sModel).getProperty("/Categories/" + i + "/type").findIndex(function (element) {
 					return element.name == sTypeName;
 				});
-				var sPath = sModel + ">/Categories/" + i + "/type/" + j;
+				var sPath = sModel + ">/Categories/" + i + "/type"; 
+				//here
 				oList.bindAggregation(oParameters.aggregationName, sPath, oTemplate);
 
 			} else if (sCategoryName) {
@@ -78,6 +80,7 @@ sap.ui.define([
 				}
 			}
 			this.superFilter(oFilters);
+			console.log(oFilters);
 		},
 		setArticlesHeaderPath: function () {
 			var sCategoryName = this.getView().getModel("myModel").getProperty("/");
@@ -105,6 +108,7 @@ sap.ui.define([
 			var oList = this.getView().byId("articlesContainer");
 			var oBinding = oList.getBinding("content");
 			oBinding.filter(aFilter);
+			console.log(oBinding);
 		},
 		//Navigation Panel
 		setBreadcrumbs: function (oEvent, oModel, oParams) {
@@ -353,7 +357,7 @@ sap.ui.define([
 			if (stock != 0){
 				return 7;
 			} else { return 1;} 
-		} 
+		}
 		
 	});
 

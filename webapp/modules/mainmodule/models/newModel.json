@@ -1,8 +1,4 @@
-{   "Sorting":{
-        "sortingKind":1,
-        "sortingType":1
-    },
-    "Requisition":[{
+{   "Requisition":[{
             "req": "Новая заявка",
             "name": "",
             "phoneNumber":"",
@@ -10,10 +6,7 @@
             "structure":"",
             "INN":"",
             "OGRN":"",
-            "city":"Saint-Petersburg",
-            "radioButtonGroup1":1,
-            "radioButtonGroup2":2
-            
+            "city":"Saint-Petersburg"
     }],
     "Material":[{
             "name":"Черный металл сталь 3",
@@ -100,29 +93,26 @@
             "path": "Type",
             "route": "articles"
         },    
-    "Menu": [{
+    "Menu": [
+        {
             "title": "Каталог товаров",
             "route": "categories",
             "show_nav_button": true,
-            "master_option": true
         },
         {
             "title": "Конструкции на заказ",
             "route": "to_order",
-            "show_nav_button": false,
-            "master_option": false
+            "show_nav_button": false
         },
         {
             "title": "Заказать звонок",
             "route": "callback",
-            "show_nav_button": false,
-            "master_option": false
+            "show_nav_button": false
         },
         {
             "title": "Контакты",
             "route": "contacts",
-            "show_nav_button": false,
-            "master_option": false
+            "show_nav_button": false
         }
     ],
     "ArticlePath":"Articles/1",
