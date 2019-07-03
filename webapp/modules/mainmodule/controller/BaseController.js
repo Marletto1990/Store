@@ -32,7 +32,7 @@ sap.ui.define([
 			var bCatalog = oParameters.catalog;
 			var sCategoryName = oParameters.category;
 			var sTypeName = oParameters.type;
-			
+
 			var oList = this.getView().byId(oParameters.listId);
 			var oTemplate = oList.getBindingInfo(oParameters.aggregationName).template;
 			var sModel = oList.getBindingInfo(oParameters.aggregationName).model;
@@ -43,7 +43,7 @@ sap.ui.define([
 				var j = oList.getModel(sModel).getProperty("/Categories/" + i + "/type").findIndex(function (element) {
 					return element.name == sTypeName;
 				});
-				var sPath = sModel + ">/Categories/" + i + "/type"; 
+				var sPath = sModel + ">/Categories/" + i + "/type";
 				//here
 				oList.bindAggregation(oParameters.aggregationName, sPath, oTemplate);
 
@@ -80,7 +80,6 @@ sap.ui.define([
 				}
 			}
 			this.superFilter(oFilters);
-			console.log(oFilters);
 		},
 		setArticlesHeaderPath: function () {
 			var sCategoryName = this.getView().getModel("myModel").getProperty("/");
@@ -103,12 +102,12 @@ sap.ui.define([
 			for (var key in oFilters) {
 				aFilter.push(new Filter(key, FilterOperator.EQ, oFilters[key]));
 			}
-
+			var oStore = jQuery.sap.storage(jQuery.sap.storage.Type.session);
+			oStore.put("aFilterSorting", aFilter);
 			// filter binding
 			var oList = this.getView().byId("articlesContainer");
 			var oBinding = oList.getBinding("content");
 			oBinding.filter(aFilter);
-			console.log(oBinding);
 		},
 		//Navigation Panel
 		setBreadcrumbs: function (oEvent, oModel, oParams) {
@@ -312,8 +311,8 @@ sap.ui.define([
 			var sPath = oEvent.getSource().getParent().getBindingContext("myModel").getPath();
 
 
-			this.getView().getModel("myModel").setProperty(sPath + "/quantity", +Math.round(nQ,0) + 1);
-			this.countCartCost( "plus", sPath );
+			this.getView().getModel("myModel").setProperty(sPath + "/quantity", +Math.round(nQ, 0) + 1);
+			this.countCartCost("plus", sPath);
 		},
 		decr_quantity: function (oEvent) {
 			var sPath = oEvent.getSource().getBindingContext("myModel").getPath();
@@ -322,43 +321,134 @@ sap.ui.define([
 			var sPath = oEvent.getSource().getParent().getBindingContext("myModel").getPath();
 
 
-			if (+Math.round(nQ,0) - 1 >= 0) {
-				this.getView().getModel("myModel").setProperty(sPath + "/quantity", +Math.round(nQ,0) - 1);
+			if (+Math.round(nQ, 0) - 1 >= 0) {
+				this.getView().getModel("myModel").setProperty(sPath + "/quantity", +Math.round(nQ, 0) - 1);
 				this.countCartCost("minus", sPath);
 			}
 		},
-		countCartCost: function( operation, sPath ){
-			var nItemPrice = this.getView().getModel("myModel").getProperty(sPath+"/article_price");
-			var nQMaterial = this.getView().getModel("myModel").getProperty(sPath+"/qMaterial");
-			var nQuantity = this.getView().getModel("myModel").getProperty(sPath+"/quantity");
+		countCartCost: function (operation, sPath) {
+			var nItemPrice = this.getView().getModel("myModel").getProperty(sPath + "/article_price");
+			var nQMaterial = this.getView().getModel("myModel").getProperty(sPath + "/qMaterial");
+			var nQuantity = this.getView().getModel("myModel").getProperty(sPath + "/quantity");
 
-			this.getView().getModel("myModel").setProperty(sPath+"/countedPrice", Math.round(nItemPrice*nQMaterial,0));
-			this.getView().getModel("myModel").setProperty(sPath+"/cost", Math.round(nItemPrice*nQMaterial*nQuantity,0));
+			this.getView().getModel("myModel").setProperty(sPath + "/countedPrice", Math.round(nItemPrice * nQMaterial, 0));
+			this.getView().getModel("myModel").setProperty(sPath + "/cost", Math.round(nItemPrice * nQMaterial * nQuantity, 0));
 
 			var oCartDataCost = Number(this.getView().getModel("myModel").getProperty("/CartData/cost"));
 			var aCart = this.getView().getModel("myModel").getProperty("/Cart");
 
-			if(operation =="minus"){
-				oCartDataCost = oCartDataCost-(this.getView().getModel("myModel").getProperty(sPath+"/countedPrice"));
-			this.getView().getModel("myModel").setProperty("/CartData/cost",oCartDataCost);
+			if (operation == "minus") {
+				oCartDataCost = oCartDataCost - (this.getView().getModel("myModel").getProperty(sPath + "/countedPrice"));
+				this.getView().getModel("myModel").setProperty("/CartData/cost", oCartDataCost);
 			} else {
-				oCartDataCost = oCartDataCost+(this.getView().getModel("myModel").getProperty(sPath+"/countedPrice"));
-			this.getView().getModel("myModel").setProperty("/CartData/cost",oCartDataCost);
+				oCartDataCost = oCartDataCost + (this.getView().getModel("myModel").getProperty(sPath + "/countedPrice"));
+				this.getView().getModel("myModel").setProperty("/CartData/cost", oCartDataCost);
 
 			}
-		
+
 		},
-		formatter_quantity: function(stock){
-			if (stock != 0){
+		formatter_quantity: function (stock) {
+			if (stock != 0) {
 				return "На складе " + stock + " шт"
-			} else { return "Под заказ"}
+			} else {
+				return "Под заказ"
+			}
 		},
-		formatter_color: function(stock){
-			if (stock != 0){
+		formatter_color: function (stock) {
+			if (stock != 0) {
 				return 7;
-			} else { return 1;} 
+			} else {
+				return 1;
+			}
+		},
+		formatter_money: function (num) {
+			return parseFloat(num).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1 ").replace('.', ',');
+		},
+		changeSortingKind: function (oEvent) {
+			var sorter = oEvent.getSource().getProperty("selectedIndex");
+			var kind;
+			if (sorter == 0) {
+				kind = "ascending";
+			} else if (sorter == 1) {
+				kind = "descending";
+			}
+
+			this.getView().getModel("myModel").setProperty("/Sorting/kind", kind);
+			this.sorting();
+		},
+		changeSortingType: function (oEvent) {
+			var sorter = oEvent.getSource().getProperty("selectedIndex");
+			var type;
+			if (sorter == 0) {
+				type = "article";
+			} else if (sorter == 1) {
+				type = "name";
+			} else if (sorter == 2) {
+				type = "price";
+			}
+
+			this.getView().getModel("myModel").setProperty("/Sorting/type", type);
+			this.sorting();
+		},
+		sorting: function () {
+			var Articles = this.getView().getModel("myModel").getProperty("/Articles");
+			var kind = this.getView().getModel("myModel").getProperty("/Sorting/kind");
+			var type = this.getView().getModel("myModel").getProperty("/Sorting/type");
+
+			if (kind == "ascending") {
+				switch (type) {
+					case "article":
+						Articles.sort(function (a, b) {
+							return a.article_num - b.article_num
+						});
+						break;
+					case "name":
+						Articles.sort(function (a, b) {
+							var nameA = a.article_name.toLowerCase(),
+								nameB = b.article_name.toLowerCase()
+							if (nameA < nameB)
+								return -1
+							if (nameA > nameB)
+								return 1
+							return 0
+						});
+						break;
+					case "price":
+						Articles.sort(function (a, b) {
+							return a.article_price - b.article_price
+						});
+						break;
+				}
+				this.getView().getModel("myModel").setProperty("/Articles", Articles);
+			} else {
+				switch (type) {
+					case "article":
+						Articles.sort(function (a, b) {
+							return b.article_num - a.article_num
+						});
+						break;
+					case "name":
+						Articles.sort(function (a, b) {
+							var nameA = a.article_name.toLowerCase(),
+								nameB = b.article_name.toLowerCase()
+							if (nameA < nameB)
+								return 1
+							if (nameA > nameB)
+								return -1
+							return 0
+						});
+						break;
+					case "price":
+						Articles.sort(function (a, b) {
+							return b.article_price - a.article_price
+						});
+						break;
+				}
+				this.getView().getModel("myModel").setProperty("/Articles", Articles);
+			}
+
 		}
-		
+
 	});
 
 });

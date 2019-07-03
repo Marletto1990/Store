@@ -23,5 +23,8 @@
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-openui5": "^0.13.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }

@@ -113,7 +113,7 @@
 										<MessageStrip
 											class="sapUiSmallMargin"
 											type="Success"
-											text="Общая сумма по заявке {myModel>/CartData/cost} рублей"/>
+											text="Общая сумма по заявке {path: 'myModel>/CartData/cost', formatter:'.formatter_money'} рублей"/>
 										<Button id="Fire"
 											text="Отправить заявку"
 											press="onFire"
@@ -124,6 +124,9 @@
 							<infoToolbar>
 								<Toolbar active="false">
 									<Label text="Укажите количество и материал изделий"/>
+									<ToolbarSpacer />
+									<ToolbarSpacer />
+									<Label text="Внимание! Все цены являются ориентировочными! Точную цену вы можете узнать у менеджера"/>
 								</Toolbar>
 							</infoToolbar>
 
@@ -204,10 +207,10 @@
 										</Select>
 									</cells>
 									<cells>
-										<Label text="{= Math.round(${myModel>article_price} * ${myModel>qMaterial},0)}"/>
+										<Label text="{path:'myModel>countedPrice', formatter:'.formatter_money'}"/>
 									</cells>
 									<cells>
-										<Label text="{=Math.round(${myModel>article_price} * ${myModel>qMaterial} * parseInt(${myModel>quantity},10),0)}"/>
+										<Label text="{path:'myModel>cost', formatter:'.formatter_money'}"/>
 									</cells>
 									<cells>
 										<tnt:InfoLabel colorScheme="{path:'myModel>stock', formatter:'.formatter_color'}" text="{path:'myModel>stock', formatter:'.formatter_quantity'}"/>

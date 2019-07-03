@@ -15,11 +15,16 @@
             </endButton>
             <content>
                 <VBox>
-                    <RadioButtonGroup selectedIndex="{myModel>/Sorting/sortingKind}">
+                    <RadioButtonGroup 
+                        selectedIndex="{myModel>/Sorting/sortingKind}"
+                        select="changeSortingKind">
                         <RadioButton text="По возрастанию"/>
                         <RadioButton text="По убыванию"/>
                     </RadioButtonGroup>
-                    <RadioButtonGroup class="sapUiSmallMarginTop" selectedIndex="{myModel>/Sorting/sortingType}">
+                    <RadioButtonGroup 
+                        class="sapUiSmallMarginTop" 
+                        selectedIndex="{myModel>/Sorting/sortingType}"
+                        select="changeSortingType">
                         <RadioButton text="По артикулу"/>
                         <RadioButton text="По названию"/>
                         <RadioButton text="По цене"/>

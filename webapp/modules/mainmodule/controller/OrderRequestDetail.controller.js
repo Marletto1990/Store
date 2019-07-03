@@ -20,7 +20,8 @@ sap.ui.define([
 				var nQMaterial = this.getView().getModel("myModel").getProperty("/Cart/"+i+"/qMaterial");
 				var nQuantity = this.getView().getModel("myModel").getProperty("/Cart/"+i+"/quantity");
 
-				this.getView().getModel("myModel").setProperty("/Cart/"+i+"/countedPrice", Math.round(nItemPrice*nQMaterial*nQuantity,0));
+				this.getView().getModel("myModel").setProperty("/Cart/"+i+"/countedPrice", Math.round(nItemPrice*nQMaterial,0));
+				this.getView().getModel("myModel").setProperty("/Cart/"+i+"/cost", Math.round(nItemPrice*nQMaterial*nQuantity,0));
 					nCartDataCost = nCartDataCost + item.countedPrice;					
 			}.bind(this))
 
