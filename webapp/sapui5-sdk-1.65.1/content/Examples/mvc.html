@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <title>test</title>
+
+    <script id='sap-ui-bootstrap' type='text/javascript'
+    src='../../resources/sap-ui-core.js'
+    data-sap-ui-theme='sap_goldreflection'
+    data-sap-ui-libs='sap.ui.commons'></script>
+
+    <script>
+
+        /*** DEFINE RE-USE COMPONENTS - NORMALLY DONE IN SEPARATE FILES ***/
+
+
+        // Define a new Controller type as a real class
+        // this is the more complex and formal way of defining a controller that the usualone with sap.ui.controller(...)
+        // but it has the benefit of having a class on its own and being able to formally declare the public API
+
+        jQuery.sap.declare({modName:"sap.hcm.AddressController", type:"controller"}); // declaring a special type of module
+
+        sap.hcm.AddressController = function () { // the constructor
+            sap.ui.core.mvc.Controller.apply(this, arguments);
+        };
+        sap.hcm.AddressController.prototype = jQuery.sap.newObject(sap.ui.core.mvc.Controller.prototype); // chain the prototypes
+
+        // to avoid the above we could in the future offer it behind a simple call to:
+        // sap.ui.defineController("sap.hcm.Address");
+
+        sap.hcm.AddressController.prototype.onInit = function() {
+            // modify control tree - this is the regular lifecycle hook
+        };
+
+        // implement an event handler in the Controller
+        sap.hcm.AddressController.prototype.doSomething = function() {
+            alert("Hello World!");
+        };
+
+        // define a new (simple) View type
+        // ...alternatively this can be done in an XML file without JavaScript!
+        sap.ui.jsview("my.own.view", {
+
+            // define the (default) controller type for this View
+            getControllerName: function() {
+                return "sap.hcm.AddressController";
+            },
+
+            // defines the UI of this View
+            createContent: function(oController) {
+                // button text is bound to Model, "press" action is bound to Controller's event handler
+                return new sap.ui.commons.Button({text:'{actionName}',press:oController.doSomething});
+            }
+        });
+
+
+
+
+        /*** THIS IS THE "APPLICATION" CODE ***/
+
+        // create some dummy JSON data
+        var data = {
+            actionName: "Say Hello"
+        };
+
+        // instantiate the View
+        var myView = sap.ui.jsview("my.own.view");
+
+        // create a Model and assign it to the View
+        var oModel = new sap.ui.model.json.JSONModel();
+        oModel.setData(data);
+        myView.setModel(oModel);
+
+        // put the View onto the screen
+        myView.placeAt('content');
+
+
+    </script>
+
+    </head>
+    <body class='sapUiBody'>
+        <div id='content'></div>
+        <div id='content'></div>
+</body>
+</html>

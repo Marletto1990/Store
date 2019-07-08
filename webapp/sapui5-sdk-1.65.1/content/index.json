@@ -1,0 +1,25 @@
+{ "text":"", "links":[
+    { "text":"Controls", "links":[
+        { "text":"Complex", "links":[
+            { "text":"BusinessCard", "ref":"test-resources/sap/suite/ui/commons/demokit/BusinessCard.html", "controls":"sap.suite.ui.commons.BusinessCard"},
+            { "text":"CSPTest_Container", "ref":"test-resources/sap/viz/CSPTest_Container.html", "ico": false, "controls":"sap.viz.ui5.VizContainer"},
+            { "text":"Inbox", "ref":"test-resources/sap/uiext/inbox/demokit/Inbox.html", "controls":"sap.uiext.inbox.Inbox"},
+            { "text":"NoteTaker", "ref":"test-resources/sap/suite/ui/commons/demokit/NoteTaker.html", "controls":"sap.suite.ui.commons.NoteTaker"},
+            { "text":"SplitButton", "ref":"test-resources/sap/suite/ui/commons/demokit/SplitButton.html", "controls":"sap.suite.ui.commons.SplitButton"},
+            { "text":"ThingCollection", "ref":"test-resources/sap/suite/ui/commons/demokit/ThingCollection.html", "controls":"sap.suite.ui.commons.ThingCollection"},
+            { "text":"ThreePanelThingInspector", "ref":"test-resources/sap/suite/ui/commons/demokit/ThreePanelThingInspector.html", "ico":"images/ctrls/tpthingviewer-icon.png", "controls":"sap.suite.ui.commons.ThreePanelThingInspector"},
+            { "text":"ThreePanelThingViewer", "ref":"test-resources/sap/suite/ui/commons/demokit/ThreePanelThingViewer.html", "ico":"images/ctrls/tpthingviewer-icon.png", "controls":"sap.suite.ui.commons.ThreePanelThingViewer"},
+            { "text":"VIZCharts", "ref":"test-resources/sap/viz/demokit/VIZCharts.html", "controls":"sap.viz.ui5.Bar,sap.viz.ui5.Donut,sap.viz.ui5.Line"},
+            { "text":"VIZContainer", "ref":"test-resources/sap/viz/demokit/VIZContainer.html", "controls":"sap.viz.ui5.VizContainer"},
+            { "text":"VerticalNavigationBar", "ref":"test-resources/sap/suite/ui/commons/demokit/VerticalNavigationBar.html", "ico":"images/ctrls/vertnavbar-icon.png", "controls":"sap.suite.ui.commons.VerticalNavigationBar"},
+            { "text":"ViewRepeater", "ref":"test-resources/sap/suite/ui/commons/demokit/ViewRepeater.html", "ico":"images/ctrls/rowrepeater-icon.png", "controls":"sap.suite.ui.commons.ViewRepeater"}
+          ]},
+        { "text":"ValueHolders", "links":[
+            { "text":"DateRangeScroller", "ref":"test-resources/sap/suite/ui/commons/demokit/DateRangeScroller.html", "ico":"images/ctrls/date_range_scroller.png", "controls":"sap.suite.ui.commons.DateRangeScroller"},
+            { "text":"DateRangeSlider", "ref":"test-resources/sap/suite/ui/commons/demokit/DateRangeSlider.html", "ico":"images/ctrls/date_range_slider.png", "controls":"sap.suite.ui.commons.DateRangeSlider"},
+            { "text":"FeedItemHeader", "ref":"test-resources/sap/suite/ui/commons/demokit/FeedItemHeader.html", "ico":"images/ctrls/feed_item_header-icon.png", "controls":"sap.suite.ui.commons.FeedItemHeader"},
+            { "text":"FeedTile", "ref":"test-resources/sap/suite/ui/commons/demokit/FeedTile.html", "ico":"images/ctrls/feed_tile-icon.png", "controls":"sap.suite.ui.commons.FeedTile"},
+            { "text":"LaunchTile", "ref":"test-resources/sap/suite/ui/commons/demokit/LaunchTile.html", "ico":"images/ctrls/launch_tile-icon.png", "controls":"sap.suite.ui.commons.LaunchTile"}
+          ]}
+      ]}
+  ]}

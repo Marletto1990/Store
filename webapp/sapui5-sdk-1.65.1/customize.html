@@ -1,0 +1,76 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+		<title>SAPUI5 SDK - Demo Kit</title>
+		<link rel="stylesheet" type="text/css" href="theme/default.css"></link>
+		<style>
+			html, body{
+				height: 100%;
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+
+			.sapUiTv {
+				color: #363636;
+			}
+
+			.list {
+				word-wrap:break-word;
+			}
+
+			.size {
+				padding-left: 1.2em;
+				font-style: italic;
+			}
+		</style>
+		<script 
+			id="sap-ui-bootstrap"
+			src="resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-preload="async"
+			data-sap-ui-libs="sap.ui.commons, sap.ui.ux3, sap.ui.demokit"
+			data-sap-ui-bindingSyntax="complex" >
+		</script>
+		<script>
+			sap.ui.getCore().attachInit(function() {
+
+				var sDatasetId = jQuery.sap.getUriParameters().get("data");
+				if ( sDatasetId ) {
+					jQuery.ajax({
+						url: "optimize-module-set?data=" + sDatasetId,
+						dataType : "json",
+						success : function(oData, sStatus, xhr) {
+							jQuery("#modules").text(oData.modules.join(','));
+							jQuery("#modules-size").text("("+oData.modules.join(',').length+")");
+							jQuery("#minset").text(oData.minset.join(','));
+							jQuery("#minset-size").text("("+oData.minset.join(',').length+")");
+							jQuery("#url").text(oData.url);
+							jQuery("#url-size").text("("+oData.url.length+")");
+						},
+						error : function(xhr,status,error) {
+							jQuery("#result").text(String(status));
+						}
+					});
+				} else {
+					new sap.ui.commons.TextView({
+						text:"No Data"
+					}).placeAt("result");
+				}
+
+			});
+		</script>
+	</head>
+
+	<body class="sapUiDemokitBody sapUiBody" role="application">
+		<h1>Customize Module Set</h1>
+		<h2>Modules</h2>
+		<div><span id="modules" class="list"></span><span id="modules-size" class="size"></span></div>
+		<h2>Minimized Moduleset</h2>
+		<div><span id="minset" class="list"></span><span id="minset-size" class="size"></span></div>
+		<h2>URL</h2>
+		<div><span id="url" class="list"></span><span id="url-size" class="size"></span></div>
+	</body>
+</html>

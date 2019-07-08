@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <title>test</title>
+
+    <script id='sap-ui-bootstrap' type='text/javascript'
+        src='../../resources/sap-ui-core.js'
+        data-sap-ui-theme='sap_goldreflection'
+        data-sap-ui-libs='sap.ui.commons,sap.ui.ux3,sap.ui.table'></script>
+
+	<script type="text/javascript">
+		var mdData = {
+	    		clients:[
+		    		        {firstName:"Donald", lastName:"Duck", id: "1", fraud : true},
+		    		        {firstName:"Lucky", lastName:"Luke", id: "2", fraud : false},
+		    		        {firstName:"Micky", lastName:"Mouse", id: "3", fraud : true},
+		    		        {firstName:"Black", lastName:"Spider", id: "4", fraud : true},
+		    		        {firstName:"Judge", lastName:"Dredd", id: "5", fraud : false},
+		    		        {firstName:"Captain", lastName:"Comic", id: "6", fraud : true},
+		    		        {firstName:"Flash", lastName:"Gordon", id: "7" , fraud : false},
+		    		     ],
+		    	orders:[
+		    	        	{orderNo: "1", clientId: "1", items: "PC,Netbook", price: "1000$"},
+		    	        	{orderNo: "2", clientId: "2", items: "Javascript book", price: "30$"},
+		    	        	{orderNo: "3", clientId: "3", items: "Mouse", price: "10$"},
+		    	        	{orderNo: "4", clientId: "4", items: "Soundcard", price: "80$"},
+		    	        	{orderNo: "5", clientId: "5", items: "Notebook", price: "800$"},
+		    	        	{orderNo: "6", clientId: "6", items: "TFT 24", price: "300$"},
+		    	        	{orderNo: "7", clientId: "7", items: "Headset", price: "30$"},
+		    	        	{orderNo: "8", clientId: "7", items: "Keyboard, Mouse", price: "40$"},
+		    	        	{orderNo: "9", clientId: "1", items: "CD Device", price: "50$"},
+		    	        	{orderNo: "10", clientId: "2", items: "USB Stick 8GB", price: "20$"},
+		    	        	{orderNo: "11", clientId: "7", items: "Server PC", price: "2000$"},
+		    	        	{orderNo: "12", clientId: "7", items: "CPU Quad Core", price: "400$"},
+		    	        	{orderNo: "13", clientId: "1", items: "USB Stick 8GB", price: "20$"},
+		    	        	{orderNo: "14", clientId: "4", items: "Server PC", price: "2000$"},
+		    	        	{orderNo: "15", clientId: "7", items: "CPU Quad Core", price: "400$"},
+		    	        	{orderNo: "16", clientId: "3", items: "USB Stick 8GB", price: "20$"},
+		    	        	{orderNo: "17", clientId: "3", items: "Server PC", price: "2000$"},
+		    	        	{orderNo: "18", clientId: "3", items: "CPU Quad Core", price: "400$"}		    	        	
+		    	],
+		    	addresses:[
+    	        	{clientId: "1", street: "Blvd", postalcode: 226, city:"Munich"},
+    	        	{clientId: "6",street: "Avenue 44", postalcode: 32246, city:"Cologne"},
+    	        	{clientId: "2",street: "Main street 666", postalcode: 83346, city:"Berlin"},
+    	        	{clientId: "4",street: "Highway 3", postalcode: 2464, city:"Hamburg"},
+    	        	{clientId: "7",street: "Plaza 4", postalcode: 22547, city:"Heidelberg"},
+    	        	{clientId: "3",street: "Road 7", postalcode: 22326, city:"Karlsruhe"},
+    	        	{clientId: "5",street: "Street xy", postalcode: 22228, city:"Heilbronn"}
+    			]
+		};
+		var oModel = new sap.ui.model.json.JSONModel();
+		oModel.setData(mdData);
+		sap.ui.getCore().setModel(oModel);
+
+		// clients table
+		var oTable = new sap.ui.table.DataTable({
+			title : "Clients",
+			width : "100%",
+			visibleRowCount : 5,
+			selectionMode : sap.ui.table.SelectionMode.Single,
+			editable : false
+		});
+		
+		oTable.addColumn(new sap.ui.table.Column({
+			label: new sap.ui.commons.Label({text: "Client ID"}),
+			template: new sap.ui.commons.TextField({value:"{id}"})
+		}));
+		oTable.addColumn(new sap.ui.table.Column({
+			label: new sap.ui.commons.Label({text: "First Name"}),
+			template: new sap.ui.commons.TextField({value:"{firstName}"})
+		}));
+		oTable.addColumn(new sap.ui.table.Column({
+			label: new sap.ui.commons.Label({text: "Last Name"}),
+			template: new sap.ui.commons.TextField({value:"{lastName}"})
+		}));
+
+		
+		oTable.bindRows("/clients");
+		oTable.placeAt("master");
+					
+		// address details
+		var oAddressDetails = new sap.ui.commons.layout.MatrixLayout();
+		oAddressDetails.setLayoutFixed(false);
+		
+		oAddressDetails.createRow(
+				new sap.ui.commons.Label({text:"Client ID", width:"100px"}),
+				new sap.ui.commons.TextField({editable:false, width:"200px", value : "{clientId}"})
+			);
+		
+		oAddressDetails.createRow(
+				new sap.ui.commons.Label({text:"Street", width:"100px"}),
+				new sap.ui.commons.TextField({editable:false, width:"200px", value : "{street}"})
+			);
+		
+		oAddressDetails.createRow(
+				new sap.ui.commons.Label({text:"Postal code", width:"100px"}),
+				new sap.ui.commons.TextField({editable:false, width:"50px", value : "{postalcode}"})
+			);
+		
+		oAddressDetails.createRow(
+				new sap.ui.commons.Label({text:"City", width:"100px"}),
+				new sap.ui.commons.TextField({editable:false, width:"150px", value : "{city}"})
+			);
+		
+		var oCheck = new sap.ui.commons.CheckBox({editable:false});
+		oCheck.bindChecked("fraud");
+		oAddressDetails.createRow(
+				new sap.ui.commons.Label({text:"Fraud:", width:"100px"}),
+				oCheck
+			);
+		
+		oAddressDetails.placeAt("detail1");
+		
+		// orders table
+		var oTable2 = new sap.ui.table.DataTable({
+			title : "Orders",
+			width : "100%",
+			visibleRowCount : 5,
+			selectionMode : sap.ui.table.SelectionMode.Single,
+			editable : false
+		});
+		
+		oTable2.addColumn(new sap.ui.table.Column({
+			label: new sap.ui.commons.Label({text: "Client ID"}),
+			template: new sap.ui.commons.TextField({value:"{clientId}"})
+		}));
+		
+		oTable2.addColumn(new sap.ui.table.Column({
+			label: new sap.ui.commons.Label({text: "Order Number"}),
+			template: new sap.ui.commons.TextField({value:"{orderNo}"})
+		}));
+		
+		oTable2.addColumn(new sap.ui.table.Column({
+			label: new sap.ui.commons.Label({text: "Items"}),
+			template: new sap.ui.commons.TextField({value:"{items}"})
+		}));
+		
+		oTable2.addColumn(new sap.ui.table.Column({
+			label: new sap.ui.commons.Label({text: "Price"}),
+			template: new sap.ui.commons.TextField({value:"{price}"})
+		}));
+		oTable2.bindRows("/orders");
+		oTable2.placeAt("detail2");
+		
+		oTable.attachRowSelect(function(oEvent){
+			// get the binding context of the first selected row
+			var selectedRowContext = oEvent.getParameter("rowContext");
+			var selectedClientId = oModel.getProperty("id", selectedRowContext);
+				
+			// bind correct address
+			var aAddresses = oModel.getProperty("/addresses");
+			jQuery.each(aAddresses, function(index, oAddress){
+				if (oAddress.clientId == selectedClientId){
+					oAddressDetails.bindContext("/addresses/" + index);	
+					return false;
+				}
+			});
+				
+			// filter orders
+			var listBinding = oTable2.getBinding();
+			var oFilter = new sap.ui.model.Filter("clientId", sap.ui.model.FilterOperator.EQ, selectedClientId);
+			listBinding.filter([oFilter]);
+				
+			// set binding context for checkbox correctly
+			// checkbox has currently the binding context of oOrderDetails because of parent child inheritance
+			oCheck.setBindingContext(selectedRowContext);
+		});
+		
+		
+	</script>
+
+</head>
+
+<body class="sapUiBody">
+
+	<div id="master"></div>
+	<p></p>
+	<div id="detail1"></div>
+	<p></p>
+
+	<div id="detail2"></div>
+	
+</body>
+</html></html>

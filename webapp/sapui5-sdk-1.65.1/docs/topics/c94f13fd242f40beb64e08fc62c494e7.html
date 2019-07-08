@@ -1,0 +1,238 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us" dir="ltr">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sharing Eclipse Projects with the SAPUI5 ABAP Repository</title>
+      <link rel="icon" href="themes/sap-default/img/favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" href="themes/sap-default/img/favicon.ico">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="abstract" content="Before retrieving or submitting any content from or to the SAPUI5 ABAP repository, you have to share a project in Eclipse with a single SAPUI5 repository (represented by a BSP application) with the SAPUI5 repository team provider.">
+      
+      <meta name="description" content="Before retrieving or submitting any content from or to the SAPUI5 ABAP repository, you have to share a project in Eclipse with a single SAPUI5 repository (represented by a BSP application) with the SAPUI5 repository team provider.">
+      
+      <meta name="content category" content="development">
+      <script type="text/javascript">var d4p = {"relativePath":'',"dev":false,"debug":false,"draft":false,"nextTopicHref":"46d0d54889be48d7abba0fa061c65835.html","previousTopicHref":"4003aa6565a4484d9929ae5e32dd75a2.html"}</script>
+      <link rel="stylesheet" type="text/css" media="screen, projection" href="themes/sap-default/css/style.css">
+      <script type="text/javascript">
+      
+        d4p.cssGridPath = d4p.dev ? 'html5-themes/modules/960-Responsive-Grid/css/' : 'themes/dita-d4p-classic/css/';
+        var ADAPT_CONFIG = {
+          // Where is your CSS?
+          path: d4p.relativePath + d4p.cssGridPath,
+
+          // false = Only run once, when page first loads.
+          // true = Change on window resize and page tilt.
+          dynamic: true,
+
+          // Optional callback... myCallback(i, width)
+          callback: doc_resize,
+
+          // First range entry is the minimum.
+          // Last range entry is the maximum.
+          // Separate ranges by "to" keyword.
+          range: [
+             // small (size-0)
+            '0px    to 760px  =',
+             // medium (size-1, size-2)
+            '760px  to 980px  = ',
+            '980px  to 1270px = ',
+             // large (size-3, size-5)
+            '1270px to 1600px = ',
+            '1600px to 1940px = ',
+             // extra large (size-6)
+            '1940px to 2540px = ',
+            '2540px           = '
+          ]
+        };
+
+        function doc_resize(i, width)
+        {
+          d4p.setBodyClassfunction(i, width);
+        }
+
+
+        
+      </script>
+      <script type="text/javascript" src="toc-info.js"></script>
+      <script type="text/javascript" src="themes/sap-default/js/script.js"></script>
+      
+      		<!--[if lt IE 9]>
+      			<script>
+      			  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+      			    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+      			    "progress,section,time,video").split(',');
+      			  for (var i = 0; i < e.length; i++) {
+      			    document.createElement(e[i]);
+      			  }
+      			</script>
+      		<![endif]-->
+      
+      <script>
+      function addLoadEvent(func) {
+      var oldonload = window.onload;
+      if (typeof window.onload != 'function') {
+      window.onload = func;
+      } else {
+      window.onload = function() {
+      if (oldonload) {
+      oldonload();
+      }
+      func();
+      }
+      }
+      }
+      
+      addLoadEvent(function() { prettyPrint();
+      if ($('#local-navigation').length) {
+      $('#local-navigation').navigation();
+      }
+      
+      
+      });
+      
+      </script>
+      <script type="text/javascript" src="js/prettify.js"> </script>
+      <script id="search-processing" type="text/javascript" src="js/search-processing.js"> </script>
+      
+      
+      <script>function handleAreaClick(oArea) {window.parent.location.href = oArea.href;}</script><link type="text/css" rel="stylesheet" href="css/overrides.css"></head>
+   <body class="en-us sap-default centered navigation-default enumeration-disabled" style="font-family: &apos;72&apos;, Arial, Helvetica, sans-serif;">
+      <div id="d4h5-main-container" class="container_12" role="application">
+         <ul id="page-links" class="hidden">
+            <li><a id="skip-to-content" href="#d4h5-main-content">Skip to content</a></li>
+            <li><a id="skip-to-localnav" href="#local-navigation">Skip to navigation</a></li>
+            <li><a id="skip-to-footer" href="#footer-container">Skip to footer</a></li>
+         </ul>
+         
+         
+         <div id="d4h5-section-container" class="grid_12" style="padding-top: 0;">
+            
+            
+            
+            <div id="d4h5-main-content" class="grid_8 alpha omega" style="margin: 0 0.5em;">
+               <section>
+                  <div id="content-toolbar" class="toolbar hide-for-small"></div>
+                  <div class="page topic  - topic-topic " id="loioc94f13fd242f40beb64e08fc62c494e7">
+                     
+                     <h1 class="title topictitle1" hidden>Sharing Eclipse Projects with the <span class="ph pname">SAPUI5</span> ABAP Repository
+                     </h1>
+                     
+                     <div class="body">
+                        <p class="shortdesc" hidden>Before retrieving or submitting any content from or to the <span class="ph pname">SAPUI5</span> ABAP repository, you have to
+                           		share a project in Eclipse with a single <span class="ph pname">SAPUI5</span> repository (represented by a
+                           		BSP application) with the <span class="ph pname">SAPUI5</span>
+                           		repository team provider.
+                        </p>
+                        
+                        		
+                        <ol class="ol" id="loioc94f13fd242f40beb64e08fc62c494e7__ol_qlq_xz1_bt">
+                           			
+                           <li class="li"> In Eclipse, go to the <span class="ph uicontrol">Project Explorer</span> view and select your
+                              				project.
+                           </li>
+                           
+                           			
+                           <li class="li"> In the context menu of the selected project, choose <span class="ph menucascade"><img src="themes/sap-default/img/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"><span class="ph uicontrol">Team</span>&#xA0;<img src="themes/sap-default/img/navstep.gif" alt="Next navigation step" title="Next navigation step">&#xA0;<span class="ph uicontrol">Share Project&#x2026;</span><img src="themes/sap-default/img/navend.gif" alt="End of the navigation path" title="End of the navigation path"></span>. 
+                           </li>
+                           
+                           			
+                           <li class="li"> Select <span class="ph uicontrol">SAPUI5 ABAP Repository</span> as the repository type and
+                              				choose <span class="ph uicontrol">Next</span>.
+                           </li>
+                           
+                           			
+                           <li class="li"> To define the connection to the ABAP system, choose <span class="ph uicontrol">Browse&#x2026;</span>
+                              				and <span class="ph uicontrol">Next</span>. You can only select system connections that are
+                              				configured in the SAP GUI launchpad.
+                           </li>
+                           
+                           			
+                           <li class="li"> Enter the required information for client, user, password, and language. Choose
+                              					<span class="ph uicontrol">Next</span>.
+                              <aside class="note note insertion"><span class="title">Note</span> 
+                                 					
+                                 <p class="p">Choosing the correct logon language is important. When creating a new
+                                    						repository, this becomes the original language of the repository. For
+                                    						submitting files to the repository, you have to be logged on in the original
+                                    						language, otherwise an error occurs.
+                                 </p>
+                                 
+                                 				
+                              </aside>
+                              
+                           </li>
+                           
+                           			
+                           <li class="li">The Eclipse project can either be shared with an existing BSP application or with a
+                              				new BSP application.
+                              <ol class="ol" type="a" id="loioc94f13fd242f40beb64e08fc62c494e7__ol_s4y_31b_bt">
+                                 					
+                                 <li class="li">For sharing with an existing single <span class="ph pname">SAPUI5</span> repository,
+                                    						select <span class="ph uicontrol">Select a BSP Application</span> and an existing BSP
+                                    						application from the list.
+                                 </li>
+                                 
+                                 					
+                                 <li class="li">For sharing with a new single <span class="ph pname">SAPUI5</span> repository,
+                                    						select <span class="ph uicontrol">Create a New BSP Application</span> and enter name,
+                                    						description, and package (manually or browse for the package).
+                                 </li>
+                                 
+                                 				
+                              </ol>
+                              
+                           </li>
+                           
+                           			
+                           <li class="li">Choose <span class="ph uicontrol">Next</span>. 
+                              <aside class="note note insertion"><span class="title">Note</span> If the new BSP application belongs to a
+                                 					transportable ABAP package, choose a transport request or create a new one
+                                 					before finishing the wizard. Since transport requests are not automatically
+                                 					released, explicitly release them after transporting them using transaction
+                                 						<samp class="ph codeph">SE09</samp>.
+                              </aside>
+                              
+                           </li>
+                           
+                           			
+                           <li class="li">Choose <span class="ph uicontrol">Finish</span>.
+                           </li>
+                           
+                           		
+                        </ol>
+                        
+                        		
+                        <p class="p">The selected Eclipse project is now connected to a single <span class="ph pname">SAPUI5</span> repository. A description
+                           			containing the ABAP system, client, user, language, and <span class="ph pname">SAPUI5</span> repository name is
+                           			displayed next to the project name.
+                        </p>
+                        
+                        	
+                     </div>
+                     
+                  </div>
+                  
+               </section>
+               <div class="clear"></div>
+               
+            </div>
+            <div class="clearfix"></div>
+         </div>
+      </div>
+      <div class="clearfix"></div>
+      <div id="footer-container" class="grid_12">
+         <footer>
+            	
+            <div id="custom-footerSpacer"></div>
+            	
+            
+         </footer>
+         
+         
+      </div>
+   </body>
+</html>

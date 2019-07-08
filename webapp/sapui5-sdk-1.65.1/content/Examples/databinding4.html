@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <title>test</title>
+
+    <script id='sap-ui-bootstrap' type='text/javascript'
+        src='../../resources/sap-ui-core.js'
+        data-sap-ui-theme='sap_goldreflection'
+        data-sap-ui-libs='sap.ui.commons,sap.ui.ux3'></script>
+
+	
+<script>
+
+	var testdata = {
+    		clients:[
+	                   { firstName:"Donald", lastName:"Duck", 
+	                      items: [ {name: "iPhone"}, {name:"iPad"} ]
+	                   },
+	                   { firstName:"Lucky", lastName:"Luke",
+	                     items: [ {name: "MP3 Player"}, {name:"USB Stick"}, {name:"DVD"} ]
+	                   },
+	                   { firstName:"Micky", lastName:"Mouse",
+	                     items: [ ]
+	                   },
+	                   { firstName:"Black", lastName:"Spider",
+	                     items: [ {name: "Bread"}, {name:"Butter"}, {name:"Water"}, {name:"Milk"}]
+	                   },
+	                   { firstName:"Judge", lastName:"Dredd",
+						 items: [ {name: "Mouse"}, {name:"Keyboard"}, {name:"Headset"}]
+	                   },
+	                   { firstName:"Captain", lastName:"Comic",
+	                     items: [ {name: "Golfballs"}, {name:"Driver"}, {name:"Putter"}]
+	                   },
+	                   { firstName:"Flash", lastName:"Gordon",
+	 					 items: [ {name: "Workstation"}]
+	                   }
+		    		],
+        };
+
+        var oModel = new sap.ui.model.json.JSONModel();
+        oModel.setData(testdata);
+		sap.ui.getCore().setModel(oModel);
+                    
+        var oLabel = new sap.ui.commons.Label("myLabel");
+        oLabel.bindProperty("text", "firstName");                    
+
+        var oLB = new sap.ui.commons.ListBox("myLb", {height:"100px"});
+        var oItemTemplate = new sap.ui.core.ListItem();	                          
+        oItemTemplate.bindProperty("text", "name");
+        oLB.bindAggregation("items", "items", oItemTemplate);
+                    
+         var oButton = new sap.ui.commons.Button("myButton", {
+              text: "bind",
+              press: function(event){
+                    var path = "/clients/" + Math.floor(Math.random()*7);  
+                  oLabel.bindContext(path);  
+                  oLB.bindContext(path);
+              }
+         });      
+         var oButton2 = new sap.ui.commons.Button("myButton2", {
+             text: "unbind",
+             press: function(event){
+                 oLabel.unbindContext(); 
+                 oLB.unbindContext();
+             }
+        });
+                
+	oButton.placeAt("button");
+	oButton2.placeAt("button");
+        oLabel.placeAt("label");
+        oLB.placeAt("listBox");                    
+                    
+        //oLabel.unbindContext();    
+</script>
+
+</head>
+<body class='sapUiBody'>
+    <div id='button'></div>
+    <div id='label'></div>
+        <div id='listBox'></div>
+</body>
+</html>

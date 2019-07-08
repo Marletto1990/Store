@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="sap.collaboration" xmlns:n3="sap.suite.ui.microchart" xmlns:n4="sap.ui.layout" xmlns:n10="sap.chart" xmlns:n13="sap.collaboration" xmlns:n0="sap.ui.core" xmlns:n1="sap.ui.unified" xmlns:n7="sap.ui.fl" xmlns:n8="sap.ui.table" xmlns:n12="sap.suite.ui.commons" xmlns:n2="sap.m" xmlns:n5="sap.ui.commons" xmlns:n11="sap.ui.comp" xmlns:n6="sap.ui.ux3" xmlns:n9="sap.viz">
+<xsd:import namespace="sap.suite.ui.microchart"/>
+<xsd:import namespace="sap.ui.layout"/>
+<xsd:import namespace="sap.chart"/>
+<xsd:import namespace="sap.ui.core"/>
+<xsd:import namespace="sap.ui.unified"/>
+<xsd:import namespace="sap.ui.fl"/>
+<xsd:import namespace="sap.ui.table"/>
+<xsd:import namespace="sap.suite.ui.commons"/>
+<xsd:import namespace="sap.m"/>
+<xsd:import namespace="sap.ui.commons"/>
+<xsd:import namespace="sap.ui.comp"/>
+<xsd:import namespace="sap.ui.ux3"/>
+<xsd:import namespace="sap.viz"/>
+<xsd:simpleType name="_AppTypeType">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="split">
+<xsd:annotation>
+<xsd:documentation>Fiori Split App</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="widget">
+<xsd:annotation>
+<xsd:documentation>SAP Jam Feed Widget Wrapper</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="_DisplayFeedTypeType">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="BusinessRecordFeed">
+<xsd:annotation>
+<xsd:documentation>The main feed for the Business Record Feed</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="GroupFeedsWhereBusinessRecordIsLinked">
+<xsd:annotation>
+<xsd:documentation>Group feeds where the business record is primary or featured</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="_FeedTypeType">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="follows">
+<xsd:annotation>
+<xsd:documentation>Follows feed type</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="company">
+<xsd:annotation>
+<xsd:documentation>Company feed type</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="group">
+<xsd:annotation>
+<xsd:documentation>Group feed type</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="objectGroup">
+<xsd:annotation>
+<xsd:documentation>Object group feed type</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="object">
+<xsd:annotation>
+<xsd:documentation>Oject feed type</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="GroupIds">
+<xsd:annotation>
+<xsd:documentation>The mode type that accepts an array of group IDs. Users will be able to select these groups from a selector. The list will have the groups' names.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="BusinessObjectGroups">
+<xsd:annotation>
+<xsd:documentation>The mode type that accepts the OData details of a business object. Users will be able to select groups where the business object is featured or primary.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="UserGroups">
+<xsd:annotation>
+<xsd:documentation>Users of this mode type will be able to select from groups where they are members. This mode is used by the feed component. In the feed component, the list of groups displayed in the pop up will be the current user's personal groups.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:schema>

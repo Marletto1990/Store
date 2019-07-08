@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+
+    <name>GrowingTileContainer</name>
+
+    <documentation>A Tile container for the Overview tile with growing capabilities</documentation>
+    <deprecation since="1.24.3">This control is not required anymore as per central UX requirements.
+        This control will not be supported anymore.
+    </deprecation>
+
+    <baseType>sap.m/ScrollContainer</baseType>
+    <properties>
+        <property group="Misc" name="growing" type="sap.ui.core/boolean" defaultValue="false">
+            <documentation>growing enablement</documentation>
+        </property>
+        <property group="Misc" name="growingThreshold" type="sap.ui.core/int" defaultValue="20">
+            <documentation>growing Threshold</documentation>
+        </property>
+        <property group="Misc" name="growingScrollToLoad" type="sap.ui.core/boolean" defaultValue="false">
+            <documentation>load when scrolling</documentation>
+        </property>
+    </properties>
+</control>

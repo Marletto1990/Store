@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="sap.zen.dsh" xmlns:n1="sap.ui.unified" xmlns:n6="sap.zen.commons" xmlns:n4="sap.m" xmlns:n7="sap.zen.crosstab" xmlns:n5="sap.viz" xmlns:n2="sap.ui.table" xmlns:n0="sap.ui.core" xmlns:n3="sap.ui.layout" xmlns:n8="sap.zen.dsh">
+<xsd:import namespace="sap.ui.unified"/>
+<xsd:import namespace="sap.zen.commons"/>
+<xsd:import namespace="sap.m"/>
+<xsd:import namespace="sap.zen.crosstab"/>
+<xsd:import namespace="sap.viz"/>
+<xsd:import namespace="sap.ui.table"/>
+<xsd:import namespace="sap.ui.core"/>
+<xsd:import namespace="sap.ui.layout"/>
+<xsd:element name="AnalyticGrid" type="n8:_AnalyticGridType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>Control for embedding a Design Studio Analytic Grid in an S/4 HANA Fiori application</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Dsh" type="n8:_DshType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>Control for embedding a Design Studio application full-screen in an S/4 HANA Fiori application</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<!--type definition for UIElement 'sap.zen.dsh.AnalyticGrid'-->
+<xsd:complexType name="_AnalyticGridType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:attribute name="width" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>Desired width of the AnalyticGrid control</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="height" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>Desired width of the AnalyticGrid control</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="selection" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>A SelectionVariant specifying the initial selection state used by the AnalyticGrid. Depending on the specific query and selection variant state, this will result in setting one or more variables' values and setting one or more filters on the datasource.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="queryName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Name of the Query to bind the AnalyticGrid to.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="systemAlias" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Target System alias for data connectivity</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="state" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>A string representing the current state of the analytic grid, including data selection and navigation state.  Intended to be used for saving and recreating inner application state in navigation scenarios, for example.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="stateChange" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Event is triggered when the state of the AnalyticGrid is changed.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="selectionChange" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Event is triggered when the selection is changed.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.zen.dsh.Dsh'-->
+<xsd:complexType name="_DshType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:attribute name="dshAppName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Name of the Design Studio application to be opened.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="repoPath" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Path to application specified by dshAppName</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="width" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>Desired width of the Design Studio Control</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="height" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>Desired height of the Design Studio Control</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="deployment" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="protocol" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="client" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="language" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="semanticMappings" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="appComponent" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="deferCreation" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="systemAlias" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+</xsd:schema>

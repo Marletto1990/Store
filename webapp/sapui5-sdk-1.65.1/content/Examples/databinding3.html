@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <title>test</title>
+
+    <script id='sap-ui-bootstrap' type='text/javascript'
+        src='../../resources/sap-ui-core.js'
+        data-sap-ui-theme='sap_goldreflection'
+        data-sap-ui-libs='sap.ui.commons,sap.ui.ux3'></script>
+
+<script>
+
+	var testdata = {
+    		clients:[
+		    		        {firstName:"Donald", lastName:"Duck"},
+		    		        {firstName:"Lucky", lastName:"Luke"},
+		    		        {firstName:"Micky", lastName:"Mouse"},
+		    		        {firstName:"Black", lastName:"Spider"},
+		    		        {firstName:"Judge", lastName:"Dredd"},
+		    		        {firstName:"Captain", lastName:"Comic"},
+		    		        {firstName:"Flash", lastName:"Gordon"},
+		    		     ],
+        };
+
+        var oModel = new sap.ui.model.json.JSONModel();
+        oModel.setData(testdata);
+	sap.ui.getCore().setModel(oModel);
+                    
+        var oLabel = new sap.ui.commons.Label("myLabel");
+        oLabel.bindProperty("text", "firstName");                    
+                    
+         var oButton = new sap.ui.commons.Button("myButton", {
+              text: "bind",
+              press: function(event){
+                  oLabel.bindContext("/clients/" + Math.floor(Math.random()*7));                                           
+              }
+         });
+         var oButton2 = new sap.ui.commons.Button("myButton2", {
+              text: "unbind",
+              press: function(event){
+                  oLabel.unbindContext();                                           
+              }
+         });
+
+	oButton.placeAt("button");
+        oButton2.placeAt("button");
+        oLabel.placeAt("label");
+</script>
+
+</head>
+<body class='sapUiBody'>
+    <div id='button'></div>
+    <div id='label'></div>
+</body>
+</html>

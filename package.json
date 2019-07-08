@@ -25,6 +25,7 @@
     "grunt-openui5": "^0.13.0"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.5.1"
   }
 }

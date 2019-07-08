@@ -1,0 +1,217 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us" dir="ltr">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Declarative API for Initial Components</title>
+      <link rel="icon" href="themes/sap-default/img/favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" href="themes/sap-default/img/favicon.ico">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="abstract" content="The declarative API enables you to define the initially started component directly in the HTML markup.">
+      
+      <meta name="description" content="The declarative API enables you to define the initially started component directly in the HTML markup.">
+      
+      <meta name="content category" content="development">
+      <script type="text/javascript">var d4p = {"relativePath":'',"dev":false,"debug":false,"draft":false,"nextTopicHref":"562803c6f55c49608d01a453cc0590ab.html","previousTopicHref":"346599f0890d4dfaaa11c6b4ffa96312.html"}</script>
+      <link rel="stylesheet" type="text/css" media="screen, projection" href="themes/sap-default/css/style.css">
+      <script type="text/javascript">
+      
+        d4p.cssGridPath = d4p.dev ? 'html5-themes/modules/960-Responsive-Grid/css/' : 'themes/dita-d4p-classic/css/';
+        var ADAPT_CONFIG = {
+          // Where is your CSS?
+          path: d4p.relativePath + d4p.cssGridPath,
+
+          // false = Only run once, when page first loads.
+          // true = Change on window resize and page tilt.
+          dynamic: true,
+
+          // Optional callback... myCallback(i, width)
+          callback: doc_resize,
+
+          // First range entry is the minimum.
+          // Last range entry is the maximum.
+          // Separate ranges by "to" keyword.
+          range: [
+             // small (size-0)
+            '0px    to 760px  =',
+             // medium (size-1, size-2)
+            '760px  to 980px  = ',
+            '980px  to 1270px = ',
+             // large (size-3, size-5)
+            '1270px to 1600px = ',
+            '1600px to 1940px = ',
+             // extra large (size-6)
+            '1940px to 2540px = ',
+            '2540px           = '
+          ]
+        };
+
+        function doc_resize(i, width)
+        {
+          d4p.setBodyClassfunction(i, width);
+        }
+
+
+        
+      </script>
+      <script type="text/javascript" src="toc-info.js"></script>
+      <script type="text/javascript" src="themes/sap-default/js/script.js"></script>
+      
+      		<!--[if lt IE 9]>
+      			<script>
+      			  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+      			    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+      			    "progress,section,time,video").split(',');
+      			  for (var i = 0; i < e.length; i++) {
+      			    document.createElement(e[i]);
+      			  }
+      			</script>
+      		<![endif]-->
+      
+      <script>
+      function addLoadEvent(func) {
+      var oldonload = window.onload;
+      if (typeof window.onload != 'function') {
+      window.onload = func;
+      } else {
+      window.onload = function() {
+      if (oldonload) {
+      oldonload();
+      }
+      func();
+      }
+      }
+      }
+      
+      addLoadEvent(function() { prettyPrint();
+      if ($('#local-navigation').length) {
+      $('#local-navigation').navigation();
+      }
+      
+      
+      });
+      
+      </script>
+      <script type="text/javascript" src="js/prettify.js"> </script>
+      <script id="search-processing" type="text/javascript" src="js/search-processing.js"> </script>
+      
+      
+      <script>function handleAreaClick(oArea) {window.parent.location.href = oArea.href;}</script><link type="text/css" rel="stylesheet" href="css/overrides.css"></head>
+   <body class="en-us sap-default centered navigation-default enumeration-disabled" style="font-family: &apos;72&apos;, Arial, Helvetica, sans-serif;">
+      <div id="d4h5-main-container" class="container_12" role="application">
+         <ul id="page-links" class="hidden">
+            <li><a id="skip-to-content" href="#d4h5-main-content">Skip to content</a></li>
+            <li><a id="skip-to-localnav" href="#local-navigation">Skip to navigation</a></li>
+            <li><a id="skip-to-footer" href="#footer-container">Skip to footer</a></li>
+         </ul>
+         
+         
+         <div id="d4h5-section-container" class="grid_12" style="padding-top: 0;">
+            
+            
+            
+            <div id="d4h5-main-content" class="grid_8 alpha omega" style="margin: 0 0.5em;">
+               <section>
+                  <div id="content-toolbar" class="toolbar hide-for-small"></div>
+                  <div class="page concept  - topic-topic concept-concept " id="loio82a0fcecc3cb427c91469bc537ebdddf">
+                     
+                     <h1 class="title topictitle1" hidden>Declarative API for Initial Components</h1>
+                     
+                     <div class="body conbody">
+                        <p class="shortdesc" hidden>The declarative API enables you to define the initially started component directly in
+                           		the HTML markup.
+                        </p>
+                        
+                        		
+                        <p class="p">With the declarative API it is possible to define the initially started component directly in
+                           			the HTML markup instead of the imperative way using JavaScript.
+                        </p>
+                        
+                        		
+                        <p class="p">To define the initial component in a declarative way, use the
+                           				<samp class="ph codeph">ComponentSupport</samp> module. This module reads the DOM and searches for
+                           			HTML elements containing a custom data attribute which is used to place the component at
+                           			the right position:
+                        </p>
+                        
+                        		<pre class="pre codeblock prettyprint lang-html">&lt;div data-sap-ui-component data-name=&quot;my.component&quot;&gt;&lt;/div&gt;
+&lt;div data-sap-ui-component data-name=&quot;my.component2&quot;&gt;&lt;/div&gt;</pre>
+                        
+                        		<p class="p">This feature is not active by default, but must be enabled inside the bootstrap:</p>
+                        
+                        		<pre class="pre codeblock prettyprint lang-html">&lt;script id=&quot;sap-ui-bootstrap&quot;
+    src=&quot;resources/sap-ui-core.js&quot;
+    data-sap-ui-async=&quot;true&quot;
+    data-sap-ui-theme=&quot;sap_belize&quot;
+ 
+    data-sap-ui-onInit=&quot;module:sap/ui/core/ComponentSupport&quot;&gt; &lt;!-- Enable declarative component support --&gt;
+&lt;/script&gt;</pre>
+                        
+                        		<p class="p">The <samp class="ph codeph">ComponentSupport</samp> module enforces asynchronous module loading of the
+                           			component with &quot;manifest first&quot;. This means, that the <samp class="ph codeph">manifest.json</samp>
+                           			file is loaded before evaluating the component to optimize loading behavior. For
+                           			details, see <a class="xref" href="../../#/topic/be0cf40f61184b358b5faedaec98b2da.html" title="The descriptor for applications, components, and libraries is inspired by the Web Application Manifest concept introduced by the W3C. The descriptor provides a central, machine-readable and easy-to-access location for storing metadata associated with an application, an application component, or a library." target="_top">Descriptor for Applications, Components, and Libraries</a>.
+                        </p>
+                        
+                        		
+                        <p class="p">In some cases, the component initialisation must wait until all pre-required modules have
+                           			been loaded. If this is the case, the <samp class="ph codeph">ComponentSupport</samp> module needs to
+                           			be executed later and you have to replace the <samp class="ph codeph">onInit</samp> module execution
+                           			in the bootstrap with a custom module:
+                        </p>
+                        
+                        		
+                        <div class="p"><span class="ph emphasis emphasis">index.html</span><pre class="pre codeblock prettyprint lang-html">&lt;script id=&quot;sap-ui-bootstrap&quot;
+    src=&quot;resources/sap-ui-core.js&quot;
+    data-sap-ui-async=&quot;true&quot;
+    data-sap-ui-theme=&quot;sap_belize&quot;
+ 
+    data-sap-ui-onInit=&quot;module:sap/ui/demo/bootstrap&quot;&gt; &lt;!-- Execute custom module on init --&gt;
+&lt;/script&gt;</pre>
+                           </div>
+                        
+                        		
+                        <p class="p">The custom module can load dependencies and execute code before activating the
+                           				<samp class="ph codeph">ComponentSupport</samp> module: 
+                        </p>
+                        
+                        		
+                        <div class="p"><span class="ph emphasis emphasis">sap/ui/demo/bootstrap.js</span><pre class="pre codeblock prettyprint lang-js">1   sap.ui.define([&quot;sap/ui/demo/MyModule&quot;], function(MyModule) {
+2
+3          // Execute code which need to be executed before component initialization
+4           MyModule.init().then(function() {
+5               // Executes the component initialisation
+6               sap.ui.require([&quot;sap/ui/core/ComponentSupport&quot;]);
+7           });
+8
+9   });</pre>
+                           </div>
+                        
+                        	
+                     </div>
+                     
+                  </div>
+                  
+               </section>
+               <div class="clear"></div>
+               
+            </div>
+            <div class="clearfix"></div>
+         </div>
+      </div>
+      <div class="clearfix"></div>
+      <div id="footer-container" class="grid_12">
+         <footer>
+            	
+            <div id="custom-footerSpacer"></div>
+            	
+            
+         </footer>
+         
+         
+      </div>
+   </body>
+</html>

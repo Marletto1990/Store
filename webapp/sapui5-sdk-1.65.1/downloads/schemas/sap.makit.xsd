@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="sap.makit" xmlns:n1="sap.makit" xmlns:n0="sap.ui.core">
+<xsd:import namespace="sap.ui.core"/>
+<xsd:element name="Axis" type="n1:_AxisType" substitutionGroup="n0:Element">
+<xsd:annotation>
+<xsd:documentation>Base element for the Axis object for the Chart.</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Category" type="n1:_CategoryType" substitutionGroup="n0:Element">
+<xsd:annotation>
+<xsd:documentation>Represents the Category data region of the Chart.</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CategoryAxis" type="n1:_CategoryAxisType" substitutionGroup="n1:Axis">
+<xsd:annotation>
+<xsd:documentation>Contains the properties of the Category's Axis.</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Chart" type="n1:_ChartType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>The Chart control.</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Column" type="n1:_ColumnType" substitutionGroup="n0:Element">
+<xsd:annotation>
+<xsd:documentation>The data column of the Chart's data table</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CombinationChart" type="n1:_CombinationChartType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>The CombinationChart control.</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Layer" type="n1:_LayerType" substitutionGroup="n0:Element">
+<xsd:annotation>
+<xsd:documentation>Layer represent a chart in the CombinationChart</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MakitLib" type="n1:_MakitLibType" substitutionGroup="n0:Element">
+<xsd:annotation>
+<xsd:documentation>Wrapper for MAKit Chart Library. Only to be used used internally.</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Row" type="n1:_RowType" substitutionGroup="n0:Element">
+<xsd:annotation>
+<xsd:documentation>The data row of the Chart's data table</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Series" type="n1:_SeriesType" substitutionGroup="n0:Element">
+<xsd:annotation>
+<xsd:documentation>Represents the Series data region of the Chart.</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Value" type="n1:_ValueType" substitutionGroup="n0:Element">
+<xsd:annotation>
+<xsd:documentation>Represents the Value data region of the Chart.</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ValueAxis" type="n1:_ValueAxisType" substitutionGroup="n1:Axis">
+<xsd:annotation>
+<xsd:documentation>Contains the properties of the Value's Axis.</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ValueBubble" type="n1:_ValueBubbleType" substitutionGroup="n0:Element">
+<xsd:annotation>
+<xsd:documentation>The properties of the Chart's Value Bubble.</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<!--type definition for UIElement 'sap.makit.Axis'-->
+<xsd:complexType name="_AxisType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ElementType">
+<xsd:attribute name="showLabel" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Indicates whether to show label of the Axis by the primary line</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showPrimaryLine" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Indicates whether to show the primary line of the Axis on the chart area</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showGrid" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Indicates whether to show grid of the Axis in the chart area</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="thickness" type="xsd:float">
+<xsd:annotation>
+<xsd:documentation>The line thickness of the primary line</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="color" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Color of the primary line. Accept the following format:
+standard name format: gray, red, black, etc
+hex format: #ff00ff
+rgb format: rgb(256, 0, 256)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.makit.Category'-->
+<xsd:complexType name="_CategoryType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ElementType">
+<xsd:attribute name="column" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Specify the name of the column to be mapped to the Category Axis's value.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="displayName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The text label representing this Category(on value bubble or table's header)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="format" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Number formatting for the value. Accepted values:
+number
+currency
+percent
+roundedN - where N represents number of decimal places e.g. rounded4</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.makit.CategoryAxis'-->
+<xsd:complexType name="_CategoryAxisType">
+<xsd:complexContent>
+<xsd:extension base="n1:_AxisType">
+<xsd:attribute name="sortOrder" type="n1:_SortOrderType">
+<xsd:annotation>
+<xsd:documentation>Sort order of the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="displayLastLabel" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Whether to always display the last label on the axis regardless of the automatic resize</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="displayAll" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Specify whether to display all the category values when there are multiple category data regions.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.makit.Chart'-->
+<xsd:complexType name="_ChartType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence>
+<xsd:element name="rows" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The data rows of the chart. User should bind these to their data source</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n1:Row"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="columns" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The data column map of the chart.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n1:Column"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="series" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Data region property of the chart's Series</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n1:Series"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="values" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Data region property of the chart's Values</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n1:Value"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="categoryRegions" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Data region property of the chart's Categories</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n1:Category"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="category" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Data region property of the chart's Category</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n1:Category"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="categoryAxis" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Category Axis property of the Chart. Accepts only an instance of CategoryAxis element.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n1:CategoryAxis"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="valueAxis" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Value Axis property of the Chart. Accept only an instance of ValueAxis element.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n1:ValueAxis"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="valueBubble" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Value Bubble property of the Chart. Accept only an instance of ValueBubble element.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n1:ValueBubble"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="width" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>The width of the Chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="height" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>The height of the Chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="type" type="n1:_ChartTypeType">
+<xsd:annotation>
+<xsd:documentation>Chart type</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showRangeSelector" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Specify whether the range selector should be visible.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showTableView" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Toggle to display table view</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="legendPosition" type="n1:_LegendPositionType">
+<xsd:annotation>
+<xsd:documentation>Legend position all chart types except Bar chart.
+Default position for Pie/Donut chart is Left. All other chart's default position is None. Note: the default legend position is set when the chart type is set first time, subsequent change to the chart type will keep using initial legend position unless it is changed explicitly by user.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="lineThickness" type="xsd:float">
+<xsd:annotation>
+<xsd:documentation>Specify the line thickness of the line graph. Only applies to Line chart type.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showTableValue" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Toggle to display the table value on a Bar chart. Only applies to Bar chart.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="maxSliceCount" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>Set the maximum number of slices in a Pie/Donut chart. If exceeding the specified value, the rest will be categorised into a single slice. Only applies to Pie/Donut.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="primaryColorPalette" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Allow a chart’s color palette to be modified without affecting the other charts' color palette. If not set, the chart will use the default color palette defined in the theme.
+Accept an array of color in string format or hex format. e.g.
+0xff0000
+"red"
+"rgb(255,0,0)"</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showTotalValue" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Specify whether to show the sum of the value for Waterfall/Waterfall Bar chart. Only applies to Waterfall/WaterfallBar chart.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="numberOfVisibleCategories" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>The number of categories that will be visible on the chart at any time. The minimum value is 2. If not set, the number of visible categories will be automatically adjusted depending on the screen size</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="rangeSelectorStartPosition" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>Specify the range selector start position, default value is 0.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="doubletap" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Double tap event on the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="tap" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Single tap event on the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="longpress" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Long press event on the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.makit.Column'-->
+<xsd:complexType name="_ColumnType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ElementType">
+<xsd:attribute name="name" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The name representing the Column</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="value" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The value mapped to this Column (User should map this using data binding)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="type" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The data type of the Column:
+number
+string
+datetime</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.makit.CombinationChart'-->
+<xsd:complexType name="_CombinationChartType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence>
+<xsd:element name="categoryRegions" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Data region property of the chart's Categories</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n1:Category"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="layers" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The collection of charts</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n1:Layer"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="categoryAxis" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Category Axis property of the Chart. Accepts only an instance of CategoryAxis element.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n1:CategoryAxis"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="primaryValueAxis" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Property of the Combination Chart's primary Value Axis. Accept only an instance of ValueAxis element.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n1:ValueAxis"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="secondaryValueAxis" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Property of the Combination Chart's secondary Value Axis. Accept only an instance of ValueAxis element.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n1:ValueAxis"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="valueBubble" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Value Bubble property of the Chart. Accept only an instance of ValueBubble element.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n1:ValueBubble"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="width" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>The width of the Chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="height" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>The height of the Chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showRangeSelector" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Specify whether the range selector should be visible.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="legendPosition" type="n1:_LegendPositionType">
+<xsd:annotation>
+<xsd:documentation>Legend position for Pie /Donut chart only.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="primaryColorPalette" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Allow a combination chart’s primary axis color palette to be modified without affecting other charts' color palette. If not set, the chart will use the default color palette defined in the theme.
+Accept an array of color in string format or hex format. e.g.
+0xff0000
+"red"
+"rgb(255,0,0)"</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="secondaryColorPalette" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Allow a combination chart’s secondary axis color palette to be modified without affecting other charts' color palette. If not set, the chart will use the default color palette defined in the theme.
+Accept an array of color in string format or hex format. e.g.
+0xff0000
+"red"
+"rgb(255,0,0)"</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showTableValue" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Toggle to display the table value on a Bar chart. Only applies to Bar chart.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="numberOfVisibleCategories" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>The number of categories that will be visible on the chart at any time. The minimum value is 2. If not set, the number of visible categories will be automatically adjusted depending on the screen size</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="rangeSelectorStartPosition" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>Specify the range selector start position, default value is 0.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="doubletap" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Double tap event on the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="tap" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Single tap event on the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="longpress" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Long press event on the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.makit.Layer'-->
+<xsd:complexType name="_LayerType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ElementType">
+<xsd:sequence>
+<xsd:element name="rows" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The data rows of the chart. User should bind these to their data source</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n1:Row"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="columns" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The data column map of the chart.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n1:Column"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="series" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Data region property of the chart's Series</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n1:Series"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="values" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Data region property of the chart's Values</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n1:Value"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="type" type="n1:_ChartTypeType">
+<xsd:annotation>
+<xsd:documentation>Chart type</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="lineThickness" type="xsd:float">
+<xsd:annotation>
+<xsd:documentation>Specify the line thickness of the line graph. Only applies to Line chart type.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="primaryColorPalette" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Allow a layer’s primary axis color palette to be modified without affecting other charts in the same screen. If not set, the chart will use the default color palette defined in the theme. This property will take precedence over other CombinationChart's color palette properties.
+Accept an array of color in string format or hex format. e.g.
+0xff0000
+"red"
+"rgb(255,0,0)"</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="drawOnSecondaryAxis" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Specifiy whether this layer should be drawn on the secondary axis.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.makit.MakitLib'-->
+<xsd:complexType name="_MakitLibType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ElementType"/>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.makit.Row'-->
+<xsd:complexType name="_RowType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ElementType">
+<xsd:sequence>
+<xsd:element name="cells" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Representing the cells of the row. User should not add individual cells. The cells will be added automatically via Column mapping.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n1:Column"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.makit.Series'-->
+<xsd:complexType name="_SeriesType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ElementType">
+<xsd:attribute name="column" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The name of the column that will be mapped to the chart's Series value</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="displayName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The displayed name of the Series</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="format" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Number formatting for the value. Accepted values:
+number
+currency
+percent
+roundedN - where N represents number of decimal places e.g. rounded4</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.makit.Value'-->
+<xsd:complexType name="_ValueType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ElementType">
+<xsd:attribute name="expression" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The user should map the column on this property. The expression allows more advanced column mapping. Instead of just specifying the column name (e.g. revenueValue), the user can use SAP expression language e.g. Assuming the user has a revenueValue column and an operatingCost column, the user can specify the following expression:
+"revenueValue - operatingCost"
+the resulting value displayed in the chart will be the arithmatic operation result on these two columns.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="displayName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The text label representing this Value (on value bubble or table's header)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="format" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Number formatting for the value. Accepted values:
+number
+currency
+percent
+roundedN - where N represents number of decimal places e.g. rounded4</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="locale" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Comma separated locales for specifiying values in different locale. The locale will be mapped in the same order as the series data.
+e.g. zh-CH, en-US, de-DE
+The first zh-CH will be applied to the value of the first series, en-US will be applied to the second series.
+Currently will only work with 'currency' format.
+Supported locales:
+en, zh, de, fr, es, ru, ja, pt and their more specific variations such as en-CA, es-AR, zh-HK, etc.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.makit.ValueAxis'-->
+<xsd:complexType name="_ValueAxisType">
+<xsd:complexContent>
+<xsd:extension base="n1:_AxisType">
+<xsd:attribute name="min" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Highest displayed value on the Value Axis (this value will be automatically adjusted to nearest major tick value depending on the value's range). Set to empty string to switch back to automatic calculation.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="max" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Highest displayed value on the Value Axis (this value will be automatically adjusted to nearest major tick value depending on the value's range)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.makit.ValueBubble'-->
+<xsd:complexType name="_ValueBubbleType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ElementType">
+<xsd:attribute name="showCategoryText" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Whether to display category's text on the Value Bubble</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showCategoryDisplayName" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Whether to display category's display name on the Value Bubble</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showValueDisplayName" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Whether to display value's display name on the Value Bubble</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showValueOnPieChart" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Whether to display value on Pie or Donut chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showLegendLabel" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Whether to display legend's label (Pie or Donut chart only)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showNullValue" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Whether to render null item on the Value Bubble</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="position" type="n1:_ValueBubblePositionType">
+<xsd:annotation>
+<xsd:documentation>The position of the Value Bubble (Pie or Donut chart only)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="style" type="n1:_ValueBubbleStyleType">
+<xsd:annotation>
+<xsd:documentation>Value Bubble positioning style (All the chart types except: Pie/Donut/HBar chart)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="visible" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Whether the Value Bubble is visible</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<xsd:simpleType name="_ChartTypeType">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="Column">
+<xsd:annotation>
+<xsd:documentation>Column chart</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Line">
+<xsd:annotation>
+<xsd:documentation>Line chart</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Bubble">
+<xsd:annotation>
+<xsd:documentation>Bubble chart</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Bar">
+<xsd:annotation>
+<xsd:documentation>Horizontal table bar chart</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Pie">
+<xsd:annotation>
+<xsd:documentation>Pie chart</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Donut">
+<xsd:annotation>
+<xsd:documentation>Donut chart</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="StackedColumn">
+<xsd:annotation>
+<xsd:documentation>Stacked column chart</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="HundredPercentStackedColumn">
+<xsd:annotation>
+<xsd:documentation>100% stacked column chart</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="WaterfallColumn">
+<xsd:annotation>
+<xsd:documentation>Waterfall Column chart</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="WaterfallBar">
+<xsd:annotation>
+<xsd:documentation>Waterfall Bar chart</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="_LegendPositionType">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="Top">
+<xsd:annotation>
+<xsd:documentation>Legend location is on the top of the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Left">
+<xsd:annotation>
+<xsd:documentation>Legend location is on the left of the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Bottom">
+<xsd:annotation>
+<xsd:documentation>Legend location is on the bottom of the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Right">
+<xsd:annotation>
+<xsd:documentation>Legend location is on the right of the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="None">
+<xsd:annotation>
+<xsd:documentation>Hide the legend</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="_SortOrderType">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="Ascending">
+<xsd:annotation>
+<xsd:documentation>Ascending sort</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Descending">
+<xsd:annotation>
+<xsd:documentation>Descending sort</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Partial">
+<xsd:annotation>
+<xsd:documentation>Partially sort</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="None">
+<xsd:annotation>
+<xsd:documentation>No sorting</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="_ValueBubblePositionType">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="Top">
+<xsd:annotation>
+<xsd:documentation>Value Bubble position set to above the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Side">
+<xsd:annotation>
+<xsd:documentation>Value Bubble position set to beside the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="_ValueBubbleStyleType">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="Top">
+<xsd:annotation>
+<xsd:documentation>The Value Bubble snaps above of the chart, the chart height will adjust accordingly.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Float">
+<xsd:annotation>
+<xsd:documentation>The Value Bubble floats on the touch point, chart's size will not change.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="FloatTop">
+<xsd:annotation>
+<xsd:documentation>The Value Bubble floats and snaps above of the chart, chart's size will not change.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:schema>

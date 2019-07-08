@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="sap.zen.crosstab" xmlns:n1="sap.zen.crosstab" xmlns:n0="sap.ui.core">
+<xsd:import namespace="sap.ui.core"/>
+<xsd:element name="Crosstab" type="n1:_CrosstabType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>Add your documentation for the new Crosstab</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="DataCell" type="n1:_DataCellType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>Add your documentation for the new DataCell</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="HeaderCell" type="n1:_HeaderCellType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>Add your documentation for the new HeaderCell</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<!--type definition for UIElement 'sap.zen.crosstab.Crosstab'-->
+<xsd:complexType name="_CrosstabType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:attribute name="width" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="height" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.zen.crosstab.DataCell'-->
+<xsd:complexType name="_DataCellType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:attribute name="text" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="area" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="row" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="col" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="tableRow" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="tableCol" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.zen.crosstab.HeaderCell'-->
+<xsd:complexType name="_HeaderCellType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:attribute name="rowSpan" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="colSpan" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="text" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="formatter" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="mergeKey" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="sort" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="sortAction" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="area" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="effectiveColSpan" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="effectiveRowSpan" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="row" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="col" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="level" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="drillState" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="hierarchyAction" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="hierarchyTooltip" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="htmlIE8RowSpan" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="sortTextIndex" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="tableRow" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="tableCol" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="alignment" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="memberId" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="parentMemberId" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="nodeAlignment" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation/>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+</xsd:schema>

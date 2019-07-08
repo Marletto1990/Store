@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Data binding sample application</title>
+
+    <script id="sap-ui-bootstrap"
+        type="text/javascript"
+        src="../../resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_goldreflection"
+        data-sap-ui-libs="sap.ui.commons"></script>
+
+  <script>
+    //create test data
+    var dataObject = { data : [{index:0, level: "Warning", description: "HAL: I'm sorry, Dave. I'm afraid I can't do that."},
+            {index:1, level: "Warning", description: "Windows Boot Manager has encountered a problem."},
+            {index:2, level: "Error", description: "Failwhale: Twitter is over capacity"},
+            {index:3, level: "Success", description: "Jun 25 12:20:47 pc1h kernel: lp0 on fire"},
+            {index:4, level: "Error", description: "Software failure. Press left mouse button to continue. Guru Meditation #00000004,#0000AACB."},
+            {index:5, level: "Error", description: "[root@localhost root]# Kernel Panic"},
+            {index:6, level: "Error", description: "That does not compute."},
+            {index:7, level: "Warning", description: "404 File not found. Stop messing with the URL."},
+            {index:8, level: "Success", description: "Blue Screen of Death."},
+            {index:9, level: "Error", description: "(ZX Spectrum) Nonsense in BASIC."},
+            {index:10, level: "Error", description: "Make: Don't know how to make love. Stop."},
+            {index:11, level: "Success", description: "No keyboard detected. Press F1 to resume."},
+            {index:12, level: "Error", description: "Stack overflow. I would recommend to stop stacking."},
+            {index:13, level: "Success", description: "errare humanum est"},
+            {index:14, level: "Warning", description: "IA Superstition always directs action in the absence of knowledge."}]
+		};
+	//create JSON model
+	var oModel = new sap.ui.model.json.JSONModel();
+	oModel.setData(dataObject);
+	sap.ui.getCore().setModel(oModel);
+
+	//create title for RowRepeater
+	var oTitle = new sap.ui.core.Title({
+		text : "Famous error messages",
+		icon : "http://www.sap.com/global/images/SAPLogo.gif",
+		tooltip : "Famous error messages"
+	});
+
+	//create the template control that will be repeated and will display the data
+	var oRowTemplate = new sap.ui.commons.Message("rowTemplate", {
+		text : "{description}",
+		type : "{level}"
+	});
+
+	//create the RowRepeater control
+    var oRowRepeater = new sap.ui.commons.RowRepeater("rowRepeater", {
+		design : "Standard",
+		numberOfRows : 5,
+		currentPage : 1,
+		title : oTitle,
+		// bind aggregation
+		rows : {path : "/data", template : oRowTemplate}
+	});
+
+	oRowRepeater.placeAt("layoutUIArea");
+ </script>
+
+</head>
+<body class="sapUiBody">
+	<h1>Data binding sample application</h1>
+    <div id="layoutUIArea"></div>
+</body>
+</html>

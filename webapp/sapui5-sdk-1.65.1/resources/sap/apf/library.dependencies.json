@@ -1,0 +1,2504 @@
+{
+  "modules" : [
+    {
+      "name" : "sap/apf/Component.js",
+      "size" : 2662,
+      "compressedSize" : 981,
+      "required" : ["jquery.sap.global.js", "sap/apf/api.js", "sap/ui/core/UIComponent.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/api.js",
+      "description" : "global jQuery, sap, OData",
+      "size" : 39973,
+      "compressedSize" : 9342,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/core/instance.js", "sap/apf/core/messageDefinition.js", "sap/apf/core/messageHandler.js", "sap/apf/core/utils/filterSimplify.js", "sap/apf/messageCallbackForStartup.js", "sap/apf/ui/instance.js", "sap/apf/ui/representations/RepresentationInterfaceProxy.js", "sap/apf/utils/externalContext.js", "sap/apf/utils/filter.js", "sap/apf/utils/filterIdHandler.js", "sap/apf/utils/navigationHandler.js", "sap/apf/utils/serializationMediator.js", "sap/apf/utils/startFilter.js", "sap/apf/utils/startFilterHandler.js", "sap/apf/utils/startParameter.js", "sap/apf/utils/utils.js", "sap/ui/thirdparty/datajs.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/base/Component-preload.js",
+      "size" : 278,
+      "compressedSize" : 197,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/base/Component.js",
+      "size" : 3920,
+      "compressedSize" : 1201,
+      "required" : ["jquery.sap.global.js", "sap/apf/api.js", "sap/ui/core/UIComponent.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/base/manifest.json",
+      "size" : 2129,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/cloudFoundry/ajaxHandler.js",
+      "size" : 2589,
+      "compressedSize" : 786,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/cloudFoundry/analysisPathProxy.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2018 SAP SE. All rights reserved",
+      "size" : 9696,
+      "compressedSize" : 3490,
+      "required" : ["sap/apf/cloudFoundry/utils.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/cloudFoundry/modelerProxy.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2018 SAP SE. All rights reserved",
+      "size" : 40272,
+      "compressedSize" : 14089,
+      "required" : ["sap/apf/cloudFoundry/utils.js", "sap/apf/utils/proxyTextHandlerForLocalTexts.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/cloudFoundry/runtimeProxy.js",
+      "description" : "global sap, jQuery",
+      "size" : 4862,
+      "compressedSize" : 1809,
+      "required" : ["sap/apf/cloudFoundry/utils.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/cloudFoundry/utils.js",
+      "description" : "global sap, jQuery",
+      "size" : 5088,
+      "compressedSize" : 1541,
+      "required" : ["sap/apf/core/messageObject.js", "sap/apf/utils/hashtable.js", "sap/apf/utils/parseTextPropertyFile.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/ajax.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2018 SAP AG. All rights reserved",
+      "size" : 3920,
+      "compressedSize" : 1523,
+      "required" : ["sap/apf/core/utils/checkForTimeout.js", "sap/ui/model/odata/ODataUtils.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/binding.js",
+      "description" : "global sap, jQuery",
+      "size" : 13592,
+      "compressedSize" : 5193,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/constants.js", "sap/apf/core/utils/filter.js", "sap/apf/core/utils/filterTerm.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/configurationFactory.js",
+      "size" : 31015,
+      "compressedSize" : 13862,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/binding.js", "sap/apf/core/constants.js", "sap/apf/core/hierarchicalStep.js", "sap/apf/core/representationTypes.js", "sap/apf/core/request.js", "sap/apf/core/step.js", "sap/apf/utils/hashtable.js", "sap/apf/utils/utils.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/constants.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 7479,
+      "compressedSize" : 2657,
+      "required" : ["sap/ui/model/FilterOperator.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/entityTypeMetadata.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 2221,
+      "compressedSize" : 694,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/hierarchicalStep.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 6953,
+      "compressedSize" : 2997,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/step.js", "sap/apf/core/utils/uriGenerator.js", "sap/ui/model/Sorter.js", "sap/ui/model/odata/v2/ODataModel.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/instance.js",
+      "description" : "global jQuery, sap, OData",
+      "size" : 31909,
+      "compressedSize" : 12280,
+      "required" : ["sap/apf/cloudFoundry/ajaxHandler.js", "sap/apf/cloudFoundry/analysisPathProxy.js", "sap/apf/core/ajax.js", "sap/apf/core/configurationFactory.js", "sap/apf/core/constants.js", "sap/apf/core/entityTypeMetadata.js", "sap/apf/core/messageHandler.js", "sap/apf/core/metadata.js", "sap/apf/core/metadataFacade.js", "sap/apf/core/metadataFactory.js", "sap/apf/core/metadataProperty.js", "sap/apf/core/odataRequest.js", "sap/apf/core/path.js", "sap/apf/core/persistence.js", "sap/apf/core/readRequest.js", "sap/apf/core/readRequestByRequiredFilter.js", "sap/apf/core/resourcePathHandler.js", "sap/apf/core/sessionHandler.js", "sap/apf/core/textResourceHandler.js", "sap/apf/core/utils/annotationHandler.js", "sap/apf/core/utils/checkForTimeout.js", "sap/apf/core/utils/fileExists.js", "sap/apf/core/utils/filter.js", "sap/apf/core/utils/uriGenerator.js", "sap/apf/utils/filter.js", "sap/apf/utils/hashtable.js", "sap/apf/utils/utils.js", "sap/ui/comp/smartfilterbar/ControlConfiguration.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/layeredRepositoryProxy.js",
+      "description" : "typedef appeaseESLint @property fl @property getLanguage @property applySettings @property expect @property Deferred @property when",
+      "size" : 41196,
+      "compressedSize" : 15736,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/constants.js", "sap/apf/utils/hashtable.js", "sap/apf/utils/parseTextPropertyFile.js", "sap/apf/utils/utils.js", "sap/ui/fl/LrepConnector.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/messageDefinition.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2018 SAP AG. All rights reserved",
+      "size" : 20915,
+      "compressedSize" : 17834,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/messageHandler.js",
+      "description" : "@class MessageHandler of APF",
+      "size" : 19803,
+      "compressedSize" : 6755,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/core/messageDefinition.js", "sap/apf/core/messageObject.js", "sap/apf/utils/hashtable.js", "sap/apf/utils/utils.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/messageObject.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2018 SAP AG. All rights reserved",
+      "size" : 6071,
+      "compressedSize" : 1270,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/metadata.js",
+      "description" : "globals jQuery",
+      "size" : 35577,
+      "compressedSize" : 12502,
+      "required" : ["sap/apf/utils/hashtable.js", "sap/apf/utils/utils.js", "sap/ui/model/odata/ODataUtils.js", "sap/ui/model/odata/v2/ODataModel.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/metadataFacade.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 6231,
+      "compressedSize" : 1786,
+      "required" : ["sap/apf/core/metadataProperty.js", "sap/apf/utils/utils.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/metadataFactory.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 5295,
+      "compressedSize" : 1898,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/metadataProperty.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 2910,
+      "compressedSize" : 785,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/odataProxy.js",
+      "description" : "global sap, jQuery, OData",
+      "size" : 20918,
+      "compressedSize" : 7583,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/constants.js", "sap/apf/utils/utils.js", "sap/ui/thirdparty/datajs.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/odataRequest.js",
+      "description" : "global OData",
+      "size" : 2455,
+      "compressedSize" : 987,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/utils/checkForTimeout.js", "sap/ui/model/odata/ODataUtils.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/path.js",
+      "description" : "!\r\n/*! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 18125,
+      "compressedSize" : 5127,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/persistence.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 18889,
+      "compressedSize" : 7958,
+      "required" : ["sap/apf/core/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/readRequest.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 3587,
+      "compressedSize" : 754,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/request.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/readRequestByRequiredFilter.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 5019,
+      "compressedSize" : 1056,
+      "required" : ["sap/apf/core/request.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/representationTypes.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 18695,
+      "compressedSize" : 12056,
+      "required" : ["sap/apf/core/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/request.js",
+      "description" : "global sap, jQuery, OData",
+      "size" : 11786,
+      "compressedSize" : 4435,
+      "required" : ["sap/apf/core/utils/filter.js", "sap/apf/core/utils/filterSimplify.js", "sap/apf/core/utils/filterTerm.js", "sap/apf/utils/utils.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/resourcePathHandler.js",
+      "size" : 21211,
+      "compressedSize" : 9930,
+      "required" : ["jquery.sap.global.js", "sap/apf/cloudFoundry/runtimeProxy.js", "sap/apf/core/constants.js", "sap/apf/core/layeredRepositoryProxy.js", "sap/apf/core/messageDefinition.js", "sap/apf/core/messageHandler.js", "sap/apf/core/odataProxy.js", "sap/apf/core/utils/filter.js", "sap/apf/utils/hashtable.js", "sap/apf/utils/startParameter.js", "sap/apf/utils/utils.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/sessionHandler.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 7171,
+      "compressedSize" : 2422,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/ajax.js", "sap/apf/core/constants.js", "sap/apf/utils/filter.js", "sap/ui/model/odata/ODataUtils.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/step.js",
+      "description" : "global sap, jQuery",
+      "size" : 20244,
+      "compressedSize" : 7035,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/constants.js", "sap/apf/core/metadataProperty.js", "sap/apf/core/utils/areRequestOptionsEqual.js", "sap/apf/core/utils/filter.js", "sap/apf/utils/executeFilterMapping.js", "sap/apf/utils/filter.js", "sap/apf/utils/utils.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/textResourceHandler.js",
+      "description" : "global jQuery, sap",
+      "size" : 6925,
+      "compressedSize" : 2471,
+      "required" : ["jquery.sap.global.js", "jquery.sap.resources.js", "sap/apf/utils/hashtable.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/utils/annotationHandler.js",
+      "size" : 5358,
+      "compressedSize" : 1516,
+      "required" : ["sap/ui/model/odata/ODataUtils.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/utils/areRequestOptionsEqual.js",
+      "size" : 2526,
+      "compressedSize" : 828,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/utils/checkForTimeout.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 1410,
+      "compressedSize" : 533,
+      "required" : ["sap/apf/core/messageObject.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/utils/fileExists.js",
+      "description" : "global jQuery, sap",
+      "size" : 2041,
+      "compressedSize" : 720,
+      "required" : ["sap/apf/core/utils/checkForTimeout.js", "sap/ui/model/odata/ODataUtils.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/utils/filter.js",
+      "description" : "internally used filter object",
+      "size" : 32208,
+      "compressedSize" : 12454,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/core/utils/filterTerm.js", "sap/apf/utils/utils.js", "sap/ui/model/Filter.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/utils/filterSimplify.js",
+      "description" : "global sap",
+      "size" : 20334,
+      "compressedSize" : 5111,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/core/messageHandler.js", "sap/apf/core/utils/filter.js", "sap/apf/core/utils/filterTerm.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/utils/filterTerm.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2015 SAP SE. All rights reserved",
+      "size" : 12596,
+      "compressedSize" : 5208,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/utils/utils.js", "sap/ui/model/Filter.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/core/utils/uriGenerator.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 11336,
+      "compressedSize" : 3483,
+      "required" : ["sap/apf/core/messageObject.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/demokit/configuration/demokit.js",
+      "description" : "global sap",
+      "size" : 124796,
+      "compressedSize" : 77151,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/demokit/configuration/demokitHierarchy.js",
+      "description" : "global sap",
+      "size" : 8393,
+      "compressedSize" : 5631,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/demokit/configuration/demokitSFB.js",
+      "description" : "global sap",
+      "size" : 116610,
+      "compressedSize" : 68408,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/demokit/mockserver.js",
+      "description" : "global sap, jQuery",
+      "size" : 31675,
+      "compressedSize" : 13605,
+      "required" : ["jquery.sap.storage.js", "sap/apf/utils/parseTextPropertyFile.js", "sap/apf/utils/utils.js", "sap/ui/core/util/MockServer.js", "ui5loader-autoconfig.js"],
+      "includes" : [],
+      "excludeFromAllInOne" : true
+    },
+    {
+      "name" : "sap/apf/demokit/runtime/i18n/app.properties",
+      "size" : 7484,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/demokit/runtime/i18n/app_de.properties",
+      "size" : 7466,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/demokit/runtime/i18n/app_en.properties",
+      "size" : 7484,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/library-h2-preload.js",
+      "size" : 39964,
+      "required" : ["jquery.sap.global.js", "jquery.sap.resources.js", "jquery.sap.storage.js", "sap/m/App.js", "sap/m/Bar.js", "sap/m/Button.js", "sap/m/CheckBox.js", "sap/m/Column.js", "sap/m/ColumnListItem.js", "sap/m/ComboBox.js", "sap/m/CustomListItem.js", "sap/m/Dialog.js", "sap/m/DialogType.js", "sap/m/FacetFilter.js", "sap/m/FacetFilterItem.js", "sap/m/FacetFilterList.js", "sap/m/FlexBox.js", "sap/m/FlexItemData.js", "sap/m/HBox.js", "sap/m/Input.js", "sap/m/Label.js", "sap/m/Link.js", "sap/m/List.js", "sap/m/ListMode.js", "sap/m/ListSeparators.js", "sap/m/ListType.js", "sap/m/MessageBox.js", "sap/m/MultiComboBox.js", "sap/m/MultiInput.js", "sap/m/NavContainer.js", "sap/m/ObjectHeader.js", "sap/m/OverflowToolbar.js", "sap/m/Page.js", "sap/m/Panel.js", "sap/m/PlacementType.js", "sap/m/Popover.js", "sap/m/RadioButton.js", "sap/m/RadioButtonGroup.js", "sap/m/ScrollContainer.js", "sap/m/SearchField.js", "sap/m/Select.js", "sap/m/SelectDialog.js", "sap/m/SplitApp.js", "sap/m/StandardListItem.js", "sap/m/Table.js", "sap/m/Text.js", "sap/m/ToggleButton.js", "sap/m/Toolbar.js", "sap/m/ToolbarSpacer.js", "sap/m/VBox.js", "sap/m/ViewSettingsDialog.js", "sap/m/library.js", "sap/m/routing/RouteMatchedHandler.js", "sap/suite/ui/commons/ChartContainer.js", "sap/suite/ui/commons/ChartContainerContent.js", "sap/suite/ui/commons/ChartContainerToolbarPlaceholder.js", "sap/suite/ui/commons/library.js", "sap/ui/commons/Tree.js", "sap/ui/commons/TreeNode.js", "sap/ui/commons/TreeRenderer.js", "sap/ui/comp/library.js", "sap/ui/comp/smartfilterbar/ControlConfiguration.js", "sap/ui/core/Core.js", "sap/ui/core/CustomData.js", "sap/ui/core/Fragment.js", "sap/ui/core/Icon.js", "sap/ui/core/InvisibleText.js", "sap/ui/core/Item.js", "sap/ui/core/ListItem.js", "sap/ui/core/Title.js", "sap/ui/core/UIComponent.js", "sap/ui/core/format/DateFormat.js", "sap/ui/core/format/NumberFormat.js", "sap/ui/core/library.js", "sap/ui/core/mvc/Controller.js", "sap/ui/core/mvc/ViewType.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/core/routing/HashChanger.js", "sap/ui/core/util/File.js", "sap/ui/core/util/MockServer.js", "sap/ui/export/EdmType.js", "sap/ui/export/Spreadsheet.js", "sap/ui/export/library.js", "sap/ui/fl/LrepConnector.js", "sap/ui/fl/library.js", "sap/ui/layout/Grid.js", "sap/ui/layout/GridData.js", "sap/ui/layout/HorizontalLayout.js", "sap/ui/layout/VerticalLayout.js", "sap/ui/layout/form/SimpleForm.js", "sap/ui/layout/library.js", "sap/ui/model/Filter.js", "sap/ui/model/FilterOperator.js", "sap/ui/model/Sorter.js", "sap/ui/model/json/JSONModel.js", "sap/ui/model/odata/CountMode.js", "sap/ui/model/odata/ODataUtils.js", "sap/ui/model/odata/type/Time.js", "sap/ui/model/odata/v2/ODataModel.js", "sap/ui/table/Column.js", "sap/ui/table/Table.js", "sap/ui/table/TreeTable.js", "sap/ui/table/library.js", "sap/ui/thirdparty/datajs.js", "sap/ui/unified/FileUploader.js", "sap/ui/unified/Menu.js", "sap/ui/unified/MenuItem.js", "sap/ushell/library.js", "sap/viz/library.js", "sap/viz/ui5/controls/VizFrame.js", "sap/viz/ui5/controls/common/feeds/FeedItem.js", "sap/viz/ui5/types/legend/Common.js", "ui5loader-autoconfig.js"],
+      "includes" : ["sap/apf/library.js", "sap/apf/manifest.json", "sap/apf/Component.js", "sap/apf/api.js", "sap/apf/base/Component-preload.js", "sap/apf/base/Component.js", "sap/apf/base/manifest.json", "sap/apf/cloudFoundry/ajaxHandler.js", "sap/apf/cloudFoundry/analysisPathProxy.js", "sap/apf/cloudFoundry/modelerProxy.js", "sap/apf/cloudFoundry/runtimeProxy.js", "sap/apf/cloudFoundry/utils.js", "sap/apf/core/ajax.js", "sap/apf/core/binding.js", "sap/apf/core/configurationFactory.js", "sap/apf/core/constants.js", "sap/apf/core/entityTypeMetadata.js", "sap/apf/core/hierarchicalStep.js", "sap/apf/core/instance.js", "sap/apf/core/layeredRepositoryProxy.js", "sap/apf/core/messageDefinition.js", "sap/apf/core/messageHandler.js", "sap/apf/core/messageObject.js", "sap/apf/core/metadata.js", "sap/apf/core/metadataFacade.js", "sap/apf/core/metadataFactory.js", "sap/apf/core/metadataProperty.js", "sap/apf/core/odataProxy.js", "sap/apf/core/odataRequest.js", "sap/apf/core/path.js", "sap/apf/core/persistence.js", "sap/apf/core/readRequest.js", "sap/apf/core/readRequestByRequiredFilter.js", "sap/apf/core/representationTypes.js", "sap/apf/core/request.js", "sap/apf/core/resourcePathHandler.js", "sap/apf/core/sessionHandler.js", "sap/apf/core/step.js", "sap/apf/core/textResourceHandler.js", "sap/apf/core/utils/annotationHandler.js", "sap/apf/core/utils/areRequestOptionsEqual.js", "sap/apf/core/utils/checkForTimeout.js", "sap/apf/core/utils/fileExists.js", "sap/apf/core/utils/filter.js", "sap/apf/core/utils/filterSimplify.js", "sap/apf/core/utils/filterTerm.js", "sap/apf/core/utils/uriGenerator.js", "sap/apf/demokit/configuration/demokit.js", "sap/apf/demokit/configuration/demokitHierarchy.js", "sap/apf/demokit/configuration/demokitSFB.js", "sap/apf/demokit/mockserver.js", "sap/apf/messageCallbackForStartup.js", "sap/apf/modeler/Component.js", "sap/apf/modeler/core/applicationHandler.js", "sap/apf/modeler/core/configurationEditor.js", "sap/apf/modeler/core/configurationHandler.js", "sap/apf/modeler/core/configurationObjects.js", "sap/apf/modeler/core/elementContainer.js", "sap/apf/modeler/core/facetFilter.js", "sap/apf/modeler/core/hierarchicalStep.js", "sap/apf/modeler/core/instance.js", "sap/apf/modeler/core/lazyLoader.js", "sap/apf/modeler/core/messageDefinition.js", "sap/apf/modeler/core/navigationTarget.js", "sap/apf/modeler/core/registryWrapper.js", "sap/apf/modeler/core/representation.js", "sap/apf/modeler/core/smartFilterBar.js", "sap/apf/modeler/core/step.js", "sap/apf/modeler/core/textHandler.js", "sap/apf/modeler/core/textPool.js", "sap/apf/modeler/manifest.json", "sap/apf/modeler/ui/controller/applicationList.controller.js", "sap/apf/modeler/ui/controller/catalogService.controller.js", "sap/apf/modeler/ui/controller/category.controller.js", "sap/apf/modeler/ui/controller/configuration.controller.js", "sap/apf/modeler/ui/controller/configurationList.controller.js", "sap/apf/modeler/ui/controller/cornerTexts.js", "sap/apf/modeler/ui/controller/editApplication.controller.js", "sap/apf/modeler/ui/controller/facetFilter.controller.js", "sap/apf/modeler/ui/controller/facetFilterFRR.controller.js", "sap/apf/modeler/ui/controller/facetFilterVHR.controller.js", "sap/apf/modeler/ui/controller/hierarchicalStepRequest.controller.js", "sap/apf/modeler/ui/controller/importDeliveredContent.controller.js", "sap/apf/modeler/ui/controller/importFiles.controller.js", "sap/apf/modeler/ui/controller/messageHandler.controller.js", "sap/apf/modeler/ui/controller/navTargetContextMapping.controller.js", "sap/apf/modeler/ui/controller/navigationTarget.controller.js", "sap/apf/modeler/ui/controller/navigationTargetParameter.controller.js", "sap/apf/modeler/ui/controller/newApplication.controller.js", "sap/apf/modeler/ui/controller/overwriteExistingConfiguration.js", "sap/apf/modeler/ui/controller/previewContent.controller.js", "sap/apf/modeler/ui/controller/propertyType.js", "sap/apf/modeler/ui/controller/propertyTypeHandler.controller.js", "sap/apf/modeler/ui/controller/representation.controller.js", "sap/apf/modeler/ui/controller/representationCornerTexts.controller.js", "sap/apf/modeler/ui/controller/representationDimension.controller.js", "sap/apf/modeler/ui/controller/representationHierarchyProperty.controller.js", "sap/apf/modeler/ui/controller/representationLegend.controller.js", "sap/apf/modeler/ui/controller/representationMeasure.controller.js", "sap/apf/modeler/ui/controller/representationProperty.controller.js", "sap/apf/modeler/ui/controller/representationSortPropertyType.controller.js", "sap/apf/modeler/ui/controller/requestOptions.js", "sap/apf/modeler/ui/controller/smartFilterBar.controller.js", "sap/apf/modeler/ui/controller/smartFilterBarRequest.controller.js", "sap/apf/modeler/ui/controller/sortPropertyType.js", "sap/apf/modeler/ui/controller/step.controller.js", "sap/apf/modeler/ui/controller/stepCornerTexts.controller.js", "sap/apf/modeler/ui/controller/stepFilterMapping.controller.js", "sap/apf/modeler/ui/controller/stepRequest.controller.js", "sap/apf/modeler/ui/controller/stepSortPropertyType.controller.js", "sap/apf/modeler/ui/controller/titleBreadCrumb.controller.js", "sap/apf/modeler/ui/controller/toolbar.controller.js", "sap/apf/modeler/ui/fragment/addMenu.fragment.xml", "sap/apf/modeler/ui/fragment/deleteConfirmationDialog.fragment.xml", "sap/apf/modeler/ui/fragment/dialogWithTwoButtons.fragment.xml", "sap/apf/modeler/ui/fragment/existingStepDialog.fragment.xml", "sap/apf/modeler/ui/fragment/exportConfiguration.fragment.xml", "sap/apf/modeler/ui/fragment/mandatoryDialog.fragment.xml", "sap/apf/modeler/ui/fragment/overwriteConfirmation.fragment.xml", "sap/apf/modeler/ui/fragment/textpoolCleanupConfirmationDialog.fragment.xml", "sap/apf/modeler/ui/fragment/unsavedDataConfirmationDialog.fragment.xml", "sap/apf/modeler/ui/utils/APFRouter.js", "sap/apf/modeler/ui/utils/APFTree.js", "sap/apf/modeler/ui/utils/constants.js", "sap/apf/modeler/ui/utils/displayOptionsValueBuilder.js", "sap/apf/modeler/ui/utils/helper.js", "sap/apf/modeler/ui/utils/labelForRepresentationTypes.js", "sap/apf/modeler/ui/utils/navigationHandler.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/optionsValueModelBuilder.js", "sap/apf/modeler/ui/utils/propertyTypeFactory.js", "sap/apf/modeler/ui/utils/propertyTypeOrchestration.js", "sap/apf/modeler/ui/utils/propertyTypeState.js", "sap/apf/modeler/ui/utils/representationBasicDataHandler.js", "sap/apf/modeler/ui/utils/representationHandler.js", "sap/apf/modeler/ui/utils/sortDataHandler.js", "sap/apf/modeler/ui/utils/staticValuesBuilder.js", "sap/apf/modeler/ui/utils/stepPropertyMetadataHandler.js", "sap/apf/modeler/ui/utils/textManipulator.js", "sap/apf/modeler/ui/utils/textPoolHelper.js", "sap/apf/modeler/ui/utils/treeTableDisplayOptionsValueBuilder.js", "sap/apf/modeler/ui/utils/viewValidator.js", "sap/apf/modeler/ui/view/application.view.xml", "sap/apf/modeler/ui/view/applicationList.view.xml", "sap/apf/modeler/ui/view/catalogService.view.xml", "sap/apf/modeler/ui/view/category.view.xml", "sap/apf/modeler/ui/view/configuration.view.xml", "sap/apf/modeler/ui/view/configurationList.view.xml", "sap/apf/modeler/ui/view/cornerTexts.view.xml", "sap/apf/modeler/ui/view/editApplication.view.xml", "sap/apf/modeler/ui/view/facetFilter.view.xml", "sap/apf/modeler/ui/view/importDeliveredContent.view.xml", "sap/apf/modeler/ui/view/importFiles.view.xml", "sap/apf/modeler/ui/view/messageHandler.view.xml", "sap/apf/modeler/ui/view/navigationTarget.view.xml", "sap/apf/modeler/ui/view/navigationTargetParameter.view.xml", "sap/apf/modeler/ui/view/newApplication.view.xml", "sap/apf/modeler/ui/view/previewContent.view.xml", "sap/apf/modeler/ui/view/propertyType.view.xml", "sap/apf/modeler/ui/view/propertyTypeHandler.view.xml", "sap/apf/modeler/ui/view/representation.view.xml", "sap/apf/modeler/ui/view/requestOptions.view.xml", "sap/apf/modeler/ui/view/smartFilterBar.view.xml", "sap/apf/modeler/ui/view/sortPropertyType.view.xml", "sap/apf/modeler/ui/view/step.view.xml", "sap/apf/modeler/ui/view/titleBreadCrumb.view.xml", "sap/apf/modeler/ui/view/toolbar.view.xml", "sap/apf/ui/controls/draggableCarousel/DraggableCarousel.js", "sap/apf/ui/instance.js", "sap/apf/ui/representations/BaseUI5ChartRepresentation.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/representations/RepresentationInterfaceProxy.js", "sap/apf/ui/representations/barChart.js", "sap/apf/ui/representations/bubbleChart.js", "sap/apf/ui/representations/columnChart.js", "sap/apf/ui/representations/combinationChart.js", "sap/apf/ui/representations/donutChart.js", "sap/apf/ui/representations/dualCombinationChart.js", "sap/apf/ui/representations/dualStackedCombinationChart.js", "sap/apf/ui/representations/heatmapChart.js", "sap/apf/ui/representations/lineChart.js", "sap/apf/ui/representations/lineChartWithTimeAxis.js", "sap/apf/ui/representations/lineChartWithTwoVerticalAxes.js", "sap/apf/ui/representations/percentageStackedBarChart.js", "sap/apf/ui/representations/percentageStackedColumnChart.js", "sap/apf/ui/representations/pieChart.js", "sap/apf/ui/representations/representationInterface.js", "sap/apf/ui/representations/scatterPlotChart.js", "sap/apf/ui/representations/stackedBarChart.js", "sap/apf/ui/representations/stackedColumnChart.js", "sap/apf/ui/representations/stackedCombinationChart.js", "sap/apf/ui/representations/table.js", "sap/apf/ui/representations/treeTable.js", "sap/apf/ui/representations/utils/chartDataSetHelper.js", "sap/apf/ui/representations/utils/displayOptionHandler.js", "sap/apf/ui/representations/utils/paginationDisplayOptionHandler.js", "sap/apf/ui/representations/utils/paginationHandler.js", "sap/apf/ui/representations/utils/representationFilterHandler.js", "sap/apf/ui/representations/utils/timeAxisDateConverter.js", "sap/apf/ui/representations/utils/vizFrameSelectionHandler.js", "sap/apf/ui/reuse/controller/analysisPath.controller.js", "sap/apf/ui/reuse/controller/carousel.controller.js", "sap/apf/ui/reuse/controller/deleteAnalysisPath.controller.js", "sap/apf/ui/reuse/controller/facetFilter.controller.js", "sap/apf/ui/reuse/controller/layout.controller.js", "sap/apf/ui/reuse/controller/messageHandler.controller.js", "sap/apf/ui/reuse/controller/navigationTarget.controller.js", "sap/apf/ui/reuse/controller/pathFilterDisplay.controller.js", "sap/apf/ui/reuse/controller/pathGallery.controller.js", "sap/apf/ui/reuse/controller/smartFilterBar.controller.js", "sap/apf/ui/reuse/controller/step.controller.js", "sap/apf/ui/reuse/controller/stepContainer.controller.js", "sap/apf/ui/reuse/controller/stepGallery.controller.js", "sap/apf/ui/reuse/controller/toolbar.controller.js", "sap/apf/ui/reuse/controller/viewSetting.controller.js", "sap/apf/ui/reuse/fragment/addStepCheckDialog.fragment.js", "sap/apf/ui/reuse/fragment/newMessageDialog.fragment.js", "sap/apf/ui/reuse/fragment/pathGallery.fragment.js", "sap/apf/ui/reuse/fragment/selectionDisplay.fragment.js", "sap/apf/ui/reuse/fragment/stepGallery.fragment.js", "sap/apf/ui/reuse/view/analysisPath.view.js", "sap/apf/ui/reuse/view/carousel.view.js", "sap/apf/ui/reuse/view/deleteAnalysisPath.view.js", "sap/apf/ui/reuse/view/facetFilter.view.js", "sap/apf/ui/reuse/view/layout.view.xml", "sap/apf/ui/reuse/view/messageHandler.view.js", "sap/apf/ui/reuse/view/navigationTarget.view.js", "sap/apf/ui/reuse/view/pathFilterDisplay.view.xml", "sap/apf/ui/reuse/view/pathGallery.view.js", "sap/apf/ui/reuse/view/smartFilterBar.view.js", "sap/apf/ui/reuse/view/step.view.js", "sap/apf/ui/reuse/view/stepContainer.view.js", "sap/apf/ui/reuse/view/stepGallery.view.js", "sap/apf/ui/reuse/view/toolbar.view.js", "sap/apf/ui/reuse/view/viewSetting.view.js", "sap/apf/ui/utils/constants.js", "sap/apf/ui/utils/dateTimeFormatter.js", "sap/apf/ui/utils/decimalFormatter.js", "sap/apf/ui/utils/determineColumnSettingsForSpreadSheetExport.js", "sap/apf/ui/utils/facetFilterListConverter.js", "sap/apf/ui/utils/facetFilterListHandler.js", "sap/apf/ui/utils/facetFilterValueFormatter.js", "sap/apf/ui/utils/formatter.js", "sap/apf/ui/utils/helper.js", "sap/apf/ui/utils/print.js", "sap/apf/ui/utils/printModel.js", "sap/apf/ui/utils/printView.js", "sap/apf/ui/utils/representationTypesHandler.js", "sap/apf/ui/utils/stringToDateFormatter.js", "sap/apf/ui/utils/timeFormatter.js", "sap/apf/utils/executeFilterMapping.js", "sap/apf/utils/externalContext.js", "sap/apf/utils/filter.js", "sap/apf/utils/filterIdHandler.js", "sap/apf/utils/hashtable.js", "sap/apf/utils/navigationHandler.js", "sap/apf/utils/parseTextPropertyFile.js", "sap/apf/utils/proxyTextHandlerForLocalTexts.js", "sap/apf/utils/sbAdapter.js", "sap/apf/utils/serializationMediator.js", "sap/apf/utils/startFilter.js", "sap/apf/utils/startFilterHandler.js", "sap/apf/utils/startParameter.js", "sap/apf/utils/utils.js"]
+    },
+    {
+      "name" : "sap/apf/library-preload.js",
+      "size" : 1145367,
+      "required" : ["jquery.sap.global.js", "jquery.sap.resources.js", "sap/m/App.js", "sap/m/Bar.js", "sap/m/Button.js", "sap/m/CheckBox.js", "sap/m/Column.js", "sap/m/ColumnListItem.js", "sap/m/ComboBox.js", "sap/m/CustomListItem.js", "sap/m/Dialog.js", "sap/m/DialogType.js", "sap/m/FacetFilter.js", "sap/m/FacetFilterItem.js", "sap/m/FacetFilterList.js", "sap/m/FlexBox.js", "sap/m/FlexItemData.js", "sap/m/HBox.js", "sap/m/Input.js", "sap/m/Label.js", "sap/m/Link.js", "sap/m/List.js", "sap/m/ListMode.js", "sap/m/ListSeparators.js", "sap/m/ListType.js", "sap/m/MessageBox.js", "sap/m/MultiComboBox.js", "sap/m/MultiInput.js", "sap/m/NavContainer.js", "sap/m/ObjectHeader.js", "sap/m/OverflowToolbar.js", "sap/m/Page.js", "sap/m/Panel.js", "sap/m/PlacementType.js", "sap/m/Popover.js", "sap/m/RadioButton.js", "sap/m/RadioButtonGroup.js", "sap/m/ScrollContainer.js", "sap/m/SearchField.js", "sap/m/Select.js", "sap/m/SelectDialog.js", "sap/m/SplitApp.js", "sap/m/StandardListItem.js", "sap/m/Table.js", "sap/m/Text.js", "sap/m/ToggleButton.js", "sap/m/Toolbar.js", "sap/m/ToolbarSpacer.js", "sap/m/VBox.js", "sap/m/ViewSettingsDialog.js", "sap/m/library.js", "sap/m/routing/RouteMatchedHandler.js", "sap/suite/ui/commons/ChartContainer.js", "sap/suite/ui/commons/ChartContainerContent.js", "sap/suite/ui/commons/ChartContainerToolbarPlaceholder.js", "sap/suite/ui/commons/library.js", "sap/ui/commons/Tree.js", "sap/ui/commons/TreeNode.js", "sap/ui/commons/TreeRenderer.js", "sap/ui/comp/library.js", "sap/ui/comp/smartfilterbar/ControlConfiguration.js", "sap/ui/core/Core.js", "sap/ui/core/CustomData.js", "sap/ui/core/Fragment.js", "sap/ui/core/Icon.js", "sap/ui/core/InvisibleText.js", "sap/ui/core/Item.js", "sap/ui/core/ListItem.js", "sap/ui/core/Title.js", "sap/ui/core/UIComponent.js", "sap/ui/core/format/DateFormat.js", "sap/ui/core/format/NumberFormat.js", "sap/ui/core/library.js", "sap/ui/core/mvc/Controller.js", "sap/ui/core/mvc/ViewType.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/core/routing/HashChanger.js", "sap/ui/core/util/File.js", "sap/ui/export/EdmType.js", "sap/ui/export/Spreadsheet.js", "sap/ui/export/library.js", "sap/ui/fl/LrepConnector.js", "sap/ui/fl/library.js", "sap/ui/layout/Grid.js", "sap/ui/layout/GridData.js", "sap/ui/layout/HorizontalLayout.js", "sap/ui/layout/VerticalLayout.js", "sap/ui/layout/form/SimpleForm.js", "sap/ui/layout/library.js", "sap/ui/model/Filter.js", "sap/ui/model/FilterOperator.js", "sap/ui/model/Sorter.js", "sap/ui/model/json/JSONModel.js", "sap/ui/model/odata/CountMode.js", "sap/ui/model/odata/ODataUtils.js", "sap/ui/model/odata/type/Time.js", "sap/ui/model/odata/v2/ODataModel.js", "sap/ui/table/Column.js", "sap/ui/table/Table.js", "sap/ui/table/TreeTable.js", "sap/ui/table/library.js", "sap/ui/thirdparty/datajs.js", "sap/ui/unified/FileUploader.js", "sap/ui/unified/Menu.js", "sap/ui/unified/MenuItem.js", "sap/ushell/library.js", "sap/viz/library.js", "sap/viz/ui5/controls/VizFrame.js", "sap/viz/ui5/controls/common/feeds/FeedItem.js", "sap/viz/ui5/types/legend/Common.js", "ui5loader-autoconfig.js"],
+      "includes" : ["sap/apf/Component.js", "sap/apf/api.js", "sap/apf/base/Component.js", "sap/apf/base/manifest.json", "sap/apf/cloudFoundry/ajaxHandler.js", "sap/apf/cloudFoundry/analysisPathProxy.js", "sap/apf/cloudFoundry/modelerProxy.js", "sap/apf/cloudFoundry/runtimeProxy.js", "sap/apf/cloudFoundry/utils.js", "sap/apf/core/ajax.js", "sap/apf/core/binding.js", "sap/apf/core/configurationFactory.js", "sap/apf/core/constants.js", "sap/apf/core/entityTypeMetadata.js", "sap/apf/core/hierarchicalStep.js", "sap/apf/core/instance.js", "sap/apf/core/layeredRepositoryProxy.js", "sap/apf/core/messageDefinition.js", "sap/apf/core/messageHandler.js", "sap/apf/core/messageObject.js", "sap/apf/core/metadata.js", "sap/apf/core/metadataFacade.js", "sap/apf/core/metadataFactory.js", "sap/apf/core/metadataProperty.js", "sap/apf/core/odataProxy.js", "sap/apf/core/odataRequest.js", "sap/apf/core/path.js", "sap/apf/core/persistence.js", "sap/apf/core/readRequest.js", "sap/apf/core/readRequestByRequiredFilter.js", "sap/apf/core/representationTypes.js", "sap/apf/core/request.js", "sap/apf/core/resourcePathHandler.js", "sap/apf/core/sessionHandler.js", "sap/apf/core/step.js", "sap/apf/core/textResourceHandler.js", "sap/apf/core/utils/annotationHandler.js", "sap/apf/core/utils/areRequestOptionsEqual.js", "sap/apf/core/utils/checkForTimeout.js", "sap/apf/core/utils/fileExists.js", "sap/apf/core/utils/filter.js", "sap/apf/core/utils/filterSimplify.js", "sap/apf/core/utils/filterTerm.js", "sap/apf/core/utils/uriGenerator.js", "sap/apf/demokit/configuration/demokit.js", "sap/apf/demokit/configuration/demokitHierarchy.js", "sap/apf/demokit/configuration/demokitSFB.js", "sap/apf/library.js", "sap/apf/manifest.json", "sap/apf/messageCallbackForStartup.js", "sap/apf/modeler/Component.js", "sap/apf/modeler/core/applicationHandler.js", "sap/apf/modeler/core/configurationEditor.js", "sap/apf/modeler/core/configurationHandler.js", "sap/apf/modeler/core/configurationObjects.js", "sap/apf/modeler/core/elementContainer.js", "sap/apf/modeler/core/facetFilter.js", "sap/apf/modeler/core/hierarchicalStep.js", "sap/apf/modeler/core/instance.js", "sap/apf/modeler/core/lazyLoader.js", "sap/apf/modeler/core/messageDefinition.js", "sap/apf/modeler/core/navigationTarget.js", "sap/apf/modeler/core/registryWrapper.js", "sap/apf/modeler/core/representation.js", "sap/apf/modeler/core/smartFilterBar.js", "sap/apf/modeler/core/step.js", "sap/apf/modeler/core/textHandler.js", "sap/apf/modeler/core/textPool.js", "sap/apf/modeler/manifest.json", "sap/apf/modeler/ui/controller/applicationList.controller.js", "sap/apf/modeler/ui/controller/catalogService.controller.js", "sap/apf/modeler/ui/controller/category.controller.js", "sap/apf/modeler/ui/controller/configuration.controller.js", "sap/apf/modeler/ui/controller/configurationList.controller.js", "sap/apf/modeler/ui/controller/cornerTexts.js", "sap/apf/modeler/ui/controller/editApplication.controller.js", "sap/apf/modeler/ui/controller/facetFilter.controller.js", "sap/apf/modeler/ui/controller/facetFilterFRR.controller.js", "sap/apf/modeler/ui/controller/facetFilterVHR.controller.js", "sap/apf/modeler/ui/controller/hierarchicalStepRequest.controller.js", "sap/apf/modeler/ui/controller/importDeliveredContent.controller.js", "sap/apf/modeler/ui/controller/importFiles.controller.js", "sap/apf/modeler/ui/controller/messageHandler.controller.js", "sap/apf/modeler/ui/controller/navTargetContextMapping.controller.js", "sap/apf/modeler/ui/controller/navigationTarget.controller.js", "sap/apf/modeler/ui/controller/navigationTargetParameter.controller.js", "sap/apf/modeler/ui/controller/newApplication.controller.js", "sap/apf/modeler/ui/controller/overwriteExistingConfiguration.js", "sap/apf/modeler/ui/controller/previewContent.controller.js", "sap/apf/modeler/ui/controller/propertyType.js", "sap/apf/modeler/ui/controller/propertyTypeHandler.controller.js", "sap/apf/modeler/ui/controller/representation.controller.js", "sap/apf/modeler/ui/controller/representationCornerTexts.controller.js", "sap/apf/modeler/ui/controller/representationDimension.controller.js", "sap/apf/modeler/ui/controller/representationHierarchyProperty.controller.js", "sap/apf/modeler/ui/controller/representationLegend.controller.js", "sap/apf/modeler/ui/controller/representationMeasure.controller.js", "sap/apf/modeler/ui/controller/representationProperty.controller.js", "sap/apf/modeler/ui/controller/representationSortPropertyType.controller.js", "sap/apf/modeler/ui/controller/requestOptions.js", "sap/apf/modeler/ui/controller/smartFilterBar.controller.js", "sap/apf/modeler/ui/controller/smartFilterBarRequest.controller.js", "sap/apf/modeler/ui/controller/sortPropertyType.js", "sap/apf/modeler/ui/controller/step.controller.js", "sap/apf/modeler/ui/controller/stepCornerTexts.controller.js", "sap/apf/modeler/ui/controller/stepFilterMapping.controller.js", "sap/apf/modeler/ui/controller/stepRequest.controller.js", "sap/apf/modeler/ui/controller/stepSortPropertyType.controller.js", "sap/apf/modeler/ui/controller/titleBreadCrumb.controller.js", "sap/apf/modeler/ui/controller/toolbar.controller.js", "sap/apf/modeler/ui/fragment/addMenu.fragment.xml", "sap/apf/modeler/ui/fragment/deleteConfirmationDialog.fragment.xml", "sap/apf/modeler/ui/fragment/dialogWithTwoButtons.fragment.xml", "sap/apf/modeler/ui/fragment/existingStepDialog.fragment.xml", "sap/apf/modeler/ui/fragment/exportConfiguration.fragment.xml", "sap/apf/modeler/ui/fragment/mandatoryDialog.fragment.xml", "sap/apf/modeler/ui/fragment/overwriteConfirmation.fragment.xml", "sap/apf/modeler/ui/fragment/textpoolCleanupConfirmationDialog.fragment.xml", "sap/apf/modeler/ui/fragment/unsavedDataConfirmationDialog.fragment.xml", "sap/apf/modeler/ui/utils/APFRouter.js", "sap/apf/modeler/ui/utils/APFTree.js", "sap/apf/modeler/ui/utils/constants.js", "sap/apf/modeler/ui/utils/displayOptionsValueBuilder.js", "sap/apf/modeler/ui/utils/helper.js", "sap/apf/modeler/ui/utils/labelForRepresentationTypes.js", "sap/apf/modeler/ui/utils/navigationHandler.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/optionsValueModelBuilder.js", "sap/apf/modeler/ui/utils/propertyTypeFactory.js", "sap/apf/modeler/ui/utils/propertyTypeOrchestration.js", "sap/apf/modeler/ui/utils/propertyTypeState.js", "sap/apf/modeler/ui/utils/representationBasicDataHandler.js", "sap/apf/modeler/ui/utils/representationHandler.js", "sap/apf/modeler/ui/utils/sortDataHandler.js", "sap/apf/modeler/ui/utils/staticValuesBuilder.js", "sap/apf/modeler/ui/utils/stepPropertyMetadataHandler.js", "sap/apf/modeler/ui/utils/textManipulator.js", "sap/apf/modeler/ui/utils/textPoolHelper.js", "sap/apf/modeler/ui/utils/treeTableDisplayOptionsValueBuilder.js", "sap/apf/modeler/ui/utils/viewValidator.js", "sap/apf/modeler/ui/view/application.view.xml", "sap/apf/modeler/ui/view/applicationList.view.xml", "sap/apf/modeler/ui/view/catalogService.view.xml", "sap/apf/modeler/ui/view/category.view.xml", "sap/apf/modeler/ui/view/configuration.view.xml", "sap/apf/modeler/ui/view/configurationList.view.xml", "sap/apf/modeler/ui/view/cornerTexts.view.xml", "sap/apf/modeler/ui/view/editApplication.view.xml", "sap/apf/modeler/ui/view/facetFilter.view.xml", "sap/apf/modeler/ui/view/importDeliveredContent.view.xml", "sap/apf/modeler/ui/view/importFiles.view.xml", "sap/apf/modeler/ui/view/messageHandler.view.xml", "sap/apf/modeler/ui/view/navigationTarget.view.xml", "sap/apf/modeler/ui/view/navigationTargetParameter.view.xml", "sap/apf/modeler/ui/view/newApplication.view.xml", "sap/apf/modeler/ui/view/previewContent.view.xml", "sap/apf/modeler/ui/view/propertyType.view.xml", "sap/apf/modeler/ui/view/propertyTypeHandler.view.xml", "sap/apf/modeler/ui/view/representation.view.xml", "sap/apf/modeler/ui/view/requestOptions.view.xml", "sap/apf/modeler/ui/view/smartFilterBar.view.xml", "sap/apf/modeler/ui/view/sortPropertyType.view.xml", "sap/apf/modeler/ui/view/step.view.xml", "sap/apf/modeler/ui/view/titleBreadCrumb.view.xml", "sap/apf/modeler/ui/view/toolbar.view.xml", "sap/apf/ui/controls/draggableCarousel/DraggableCarousel.js", "sap/apf/ui/instance.js", "sap/apf/ui/representations/BaseUI5ChartRepresentation.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/representations/RepresentationInterfaceProxy.js", "sap/apf/ui/representations/barChart.js", "sap/apf/ui/representations/bubbleChart.js", "sap/apf/ui/representations/columnChart.js", "sap/apf/ui/representations/combinationChart.js", "sap/apf/ui/representations/donutChart.js", "sap/apf/ui/representations/dualCombinationChart.js", "sap/apf/ui/representations/dualStackedCombinationChart.js", "sap/apf/ui/representations/heatmapChart.js", "sap/apf/ui/representations/lineChart.js", "sap/apf/ui/representations/lineChartWithTimeAxis.js", "sap/apf/ui/representations/lineChartWithTwoVerticalAxes.js", "sap/apf/ui/representations/percentageStackedBarChart.js", "sap/apf/ui/representations/percentageStackedColumnChart.js", "sap/apf/ui/representations/pieChart.js", "sap/apf/ui/representations/representationInterface.js", "sap/apf/ui/representations/scatterPlotChart.js", "sap/apf/ui/representations/stackedBarChart.js", "sap/apf/ui/representations/stackedColumnChart.js", "sap/apf/ui/representations/stackedCombinationChart.js", "sap/apf/ui/representations/table.js", "sap/apf/ui/representations/treeTable.js", "sap/apf/ui/representations/utils/chartDataSetHelper.js", "sap/apf/ui/representations/utils/displayOptionHandler.js", "sap/apf/ui/representations/utils/paginationDisplayOptionHandler.js", "sap/apf/ui/representations/utils/paginationHandler.js", "sap/apf/ui/representations/utils/representationFilterHandler.js", "sap/apf/ui/representations/utils/timeAxisDateConverter.js", "sap/apf/ui/representations/utils/vizFrameSelectionHandler.js", "sap/apf/ui/reuse/controller/analysisPath.controller.js", "sap/apf/ui/reuse/controller/carousel.controller.js", "sap/apf/ui/reuse/controller/deleteAnalysisPath.controller.js", "sap/apf/ui/reuse/controller/facetFilter.controller.js", "sap/apf/ui/reuse/controller/layout.controller.js", "sap/apf/ui/reuse/controller/messageHandler.controller.js", "sap/apf/ui/reuse/controller/navigationTarget.controller.js", "sap/apf/ui/reuse/controller/pathFilterDisplay.controller.js", "sap/apf/ui/reuse/controller/pathGallery.controller.js", "sap/apf/ui/reuse/controller/smartFilterBar.controller.js", "sap/apf/ui/reuse/controller/step.controller.js", "sap/apf/ui/reuse/controller/stepContainer.controller.js", "sap/apf/ui/reuse/controller/stepGallery.controller.js", "sap/apf/ui/reuse/controller/toolbar.controller.js", "sap/apf/ui/reuse/controller/viewSetting.controller.js", "sap/apf/ui/reuse/fragment/addStepCheckDialog.fragment.js", "sap/apf/ui/reuse/fragment/newMessageDialog.fragment.js", "sap/apf/ui/reuse/fragment/pathGallery.fragment.js", "sap/apf/ui/reuse/fragment/selectionDisplay.fragment.js", "sap/apf/ui/reuse/fragment/stepGallery.fragment.js", "sap/apf/ui/reuse/view/analysisPath.view.js", "sap/apf/ui/reuse/view/carousel.view.js", "sap/apf/ui/reuse/view/deleteAnalysisPath.view.js", "sap/apf/ui/reuse/view/facetFilter.view.js", "sap/apf/ui/reuse/view/layout.view.xml", "sap/apf/ui/reuse/view/messageHandler.view.js", "sap/apf/ui/reuse/view/navigationTarget.view.js", "sap/apf/ui/reuse/view/pathFilterDisplay.view.xml", "sap/apf/ui/reuse/view/pathGallery.view.js", "sap/apf/ui/reuse/view/smartFilterBar.view.js", "sap/apf/ui/reuse/view/step.view.js", "sap/apf/ui/reuse/view/stepContainer.view.js", "sap/apf/ui/reuse/view/stepGallery.view.js", "sap/apf/ui/reuse/view/toolbar.view.js", "sap/apf/ui/reuse/view/viewSetting.view.js", "sap/apf/ui/utils/constants.js", "sap/apf/ui/utils/dateTimeFormatter.js", "sap/apf/ui/utils/decimalFormatter.js", "sap/apf/ui/utils/determineColumnSettingsForSpreadSheetExport.js", "sap/apf/ui/utils/facetFilterListConverter.js", "sap/apf/ui/utils/facetFilterListHandler.js", "sap/apf/ui/utils/facetFilterValueFormatter.js", "sap/apf/ui/utils/formatter.js", "sap/apf/ui/utils/helper.js", "sap/apf/ui/utils/print.js", "sap/apf/ui/utils/printModel.js", "sap/apf/ui/utils/printView.js", "sap/apf/ui/utils/representationTypesHandler.js", "sap/apf/ui/utils/stringToDateFormatter.js", "sap/apf/ui/utils/timeFormatter.js", "sap/apf/utils/executeFilterMapping.js", "sap/apf/utils/externalContext.js", "sap/apf/utils/filter.js", "sap/apf/utils/filterIdHandler.js", "sap/apf/utils/hashtable.js", "sap/apf/utils/navigationHandler.js", "sap/apf/utils/parseTextPropertyFile.js", "sap/apf/utils/proxyTextHandlerForLocalTexts.js", "sap/apf/utils/sbAdapter.js", "sap/apf/utils/serializationMediator.js", "sap/apf/utils/startFilter.js", "sap/apf/utils/startFilterHandler.js", "sap/apf/utils/startParameter.js", "sap/apf/utils/utils.js"]
+    },
+    {
+      "name" : "sap/apf/library-preload.json",
+      "size" : 0,
+      "required" : ["jquery.sap.global.js", "jquery.sap.resources.js", "sap/m/App.js", "sap/m/Bar.js", "sap/m/Button.js", "sap/m/CheckBox.js", "sap/m/Column.js", "sap/m/ColumnListItem.js", "sap/m/ComboBox.js", "sap/m/CustomListItem.js", "sap/m/Dialog.js", "sap/m/DialogType.js", "sap/m/FacetFilter.js", "sap/m/FacetFilterItem.js", "sap/m/FacetFilterList.js", "sap/m/FlexBox.js", "sap/m/FlexItemData.js", "sap/m/HBox.js", "sap/m/Input.js", "sap/m/Label.js", "sap/m/Link.js", "sap/m/List.js", "sap/m/ListMode.js", "sap/m/ListSeparators.js", "sap/m/ListType.js", "sap/m/MessageBox.js", "sap/m/MultiComboBox.js", "sap/m/MultiInput.js", "sap/m/NavContainer.js", "sap/m/ObjectHeader.js", "sap/m/OverflowToolbar.js", "sap/m/Page.js", "sap/m/Panel.js", "sap/m/PlacementType.js", "sap/m/Popover.js", "sap/m/RadioButton.js", "sap/m/RadioButtonGroup.js", "sap/m/ScrollContainer.js", "sap/m/SearchField.js", "sap/m/Select.js", "sap/m/SelectDialog.js", "sap/m/SplitApp.js", "sap/m/StandardListItem.js", "sap/m/Table.js", "sap/m/Text.js", "sap/m/ToggleButton.js", "sap/m/Toolbar.js", "sap/m/ToolbarSpacer.js", "sap/m/VBox.js", "sap/m/ViewSettingsDialog.js", "sap/m/library-preload.json", "sap/m/library.js", "sap/m/routing/RouteMatchedHandler.js", "sap/suite/ui/commons/ChartContainer.js", "sap/suite/ui/commons/ChartContainerContent.js", "sap/suite/ui/commons/ChartContainerToolbarPlaceholder.js", "sap/suite/ui/commons/library-preload.json", "sap/suite/ui/commons/library.js", "sap/ui/commons/Tree.js", "sap/ui/commons/TreeNode.js", "sap/ui/commons/TreeRenderer.js", "sap/ui/comp/library-preload.json", "sap/ui/comp/library.js", "sap/ui/comp/smartfilterbar/ControlConfiguration.js", "sap/ui/core/Core.js", "sap/ui/core/CustomData.js", "sap/ui/core/Fragment.js", "sap/ui/core/Icon.js", "sap/ui/core/InvisibleText.js", "sap/ui/core/Item.js", "sap/ui/core/ListItem.js", "sap/ui/core/Title.js", "sap/ui/core/UIComponent.js", "sap/ui/core/format/DateFormat.js", "sap/ui/core/format/NumberFormat.js", "sap/ui/core/library-preload.json", "sap/ui/core/library.js", "sap/ui/core/mvc/Controller.js", "sap/ui/core/mvc/ViewType.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/core/routing/HashChanger.js", "sap/ui/core/util/File.js", "sap/ui/export/EdmType.js", "sap/ui/export/Spreadsheet.js", "sap/ui/export/library-preload.json", "sap/ui/export/library.js", "sap/ui/fl/LrepConnector.js", "sap/ui/fl/library-preload.json", "sap/ui/fl/library.js", "sap/ui/layout/Grid.js", "sap/ui/layout/GridData.js", "sap/ui/layout/HorizontalLayout.js", "sap/ui/layout/VerticalLayout.js", "sap/ui/layout/form/SimpleForm.js", "sap/ui/layout/library-preload.json", "sap/ui/layout/library.js", "sap/ui/model/Filter.js", "sap/ui/model/FilterOperator.js", "sap/ui/model/Sorter.js", "sap/ui/model/json/JSONModel.js", "sap/ui/model/odata/CountMode.js", "sap/ui/model/odata/ODataUtils.js", "sap/ui/model/odata/type/Time.js", "sap/ui/model/odata/v2/ODataModel.js", "sap/ui/table/Column.js", "sap/ui/table/Table.js", "sap/ui/table/TreeTable.js", "sap/ui/table/library-preload.json", "sap/ui/table/library.js", "sap/ui/thirdparty/datajs.js", "sap/ui/unified/FileUploader.js", "sap/ui/unified/Menu.js", "sap/ui/unified/MenuItem.js", "sap/ushell/library-preload.json", "sap/ushell/library.js", "sap/viz/library-preload.json", "sap/viz/library.js", "sap/viz/ui5/controls/VizFrame.js", "sap/viz/ui5/controls/common/feeds/FeedItem.js", "sap/viz/ui5/types/legend/Common.js", "ui5loader-autoconfig.js"],
+      "includes" : ["sap/apf/Component.js", "sap/apf/api.js", "sap/apf/base/Component.js", "sap/apf/base/manifest.json", "sap/apf/cloudFoundry/ajaxHandler.js", "sap/apf/cloudFoundry/analysisPathProxy.js", "sap/apf/cloudFoundry/modelerProxy.js", "sap/apf/cloudFoundry/runtimeProxy.js", "sap/apf/cloudFoundry/utils.js", "sap/apf/core/ajax.js", "sap/apf/core/binding.js", "sap/apf/core/configurationFactory.js", "sap/apf/core/constants.js", "sap/apf/core/entityTypeMetadata.js", "sap/apf/core/hierarchicalStep.js", "sap/apf/core/instance.js", "sap/apf/core/layeredRepositoryProxy.js", "sap/apf/core/messageDefinition.js", "sap/apf/core/messageHandler.js", "sap/apf/core/messageObject.js", "sap/apf/core/metadata.js", "sap/apf/core/metadataFacade.js", "sap/apf/core/metadataFactory.js", "sap/apf/core/metadataProperty.js", "sap/apf/core/odataProxy.js", "sap/apf/core/odataRequest.js", "sap/apf/core/path.js", "sap/apf/core/persistence.js", "sap/apf/core/readRequest.js", "sap/apf/core/readRequestByRequiredFilter.js", "sap/apf/core/representationTypes.js", "sap/apf/core/request.js", "sap/apf/core/resourcePathHandler.js", "sap/apf/core/sessionHandler.js", "sap/apf/core/step.js", "sap/apf/core/textResourceHandler.js", "sap/apf/core/utils/annotationHandler.js", "sap/apf/core/utils/areRequestOptionsEqual.js", "sap/apf/core/utils/checkForTimeout.js", "sap/apf/core/utils/fileExists.js", "sap/apf/core/utils/filter.js", "sap/apf/core/utils/filterSimplify.js", "sap/apf/core/utils/filterTerm.js", "sap/apf/core/utils/uriGenerator.js", "sap/apf/demokit/configuration/demokit.js", "sap/apf/demokit/configuration/demokitHierarchy.js", "sap/apf/demokit/configuration/demokitSFB.js", "sap/apf/library.js", "sap/apf/manifest.json", "sap/apf/messageCallbackForStartup.js", "sap/apf/modeler/Component.js", "sap/apf/modeler/core/applicationHandler.js", "sap/apf/modeler/core/configurationEditor.js", "sap/apf/modeler/core/configurationHandler.js", "sap/apf/modeler/core/configurationObjects.js", "sap/apf/modeler/core/elementContainer.js", "sap/apf/modeler/core/facetFilter.js", "sap/apf/modeler/core/hierarchicalStep.js", "sap/apf/modeler/core/instance.js", "sap/apf/modeler/core/lazyLoader.js", "sap/apf/modeler/core/messageDefinition.js", "sap/apf/modeler/core/navigationTarget.js", "sap/apf/modeler/core/registryWrapper.js", "sap/apf/modeler/core/representation.js", "sap/apf/modeler/core/smartFilterBar.js", "sap/apf/modeler/core/step.js", "sap/apf/modeler/core/textHandler.js", "sap/apf/modeler/core/textPool.js", "sap/apf/modeler/manifest.json", "sap/apf/modeler/ui/controller/applicationList.controller.js", "sap/apf/modeler/ui/controller/catalogService.controller.js", "sap/apf/modeler/ui/controller/category.controller.js", "sap/apf/modeler/ui/controller/configuration.controller.js", "sap/apf/modeler/ui/controller/configurationList.controller.js", "sap/apf/modeler/ui/controller/cornerTexts.js", "sap/apf/modeler/ui/controller/editApplication.controller.js", "sap/apf/modeler/ui/controller/facetFilter.controller.js", "sap/apf/modeler/ui/controller/facetFilterFRR.controller.js", "sap/apf/modeler/ui/controller/facetFilterVHR.controller.js", "sap/apf/modeler/ui/controller/hierarchicalStepRequest.controller.js", "sap/apf/modeler/ui/controller/importDeliveredContent.controller.js", "sap/apf/modeler/ui/controller/importFiles.controller.js", "sap/apf/modeler/ui/controller/messageHandler.controller.js", "sap/apf/modeler/ui/controller/navTargetContextMapping.controller.js", "sap/apf/modeler/ui/controller/navigationTarget.controller.js", "sap/apf/modeler/ui/controller/navigationTargetParameter.controller.js", "sap/apf/modeler/ui/controller/newApplication.controller.js", "sap/apf/modeler/ui/controller/overwriteExistingConfiguration.js", "sap/apf/modeler/ui/controller/previewContent.controller.js", "sap/apf/modeler/ui/controller/propertyType.js", "sap/apf/modeler/ui/controller/propertyTypeHandler.controller.js", "sap/apf/modeler/ui/controller/representation.controller.js", "sap/apf/modeler/ui/controller/representationCornerTexts.controller.js", "sap/apf/modeler/ui/controller/representationDimension.controller.js", "sap/apf/modeler/ui/controller/representationHierarchyProperty.controller.js", "sap/apf/modeler/ui/controller/representationLegend.controller.js", "sap/apf/modeler/ui/controller/representationMeasure.controller.js", "sap/apf/modeler/ui/controller/representationProperty.controller.js", "sap/apf/modeler/ui/controller/representationSortPropertyType.controller.js", "sap/apf/modeler/ui/controller/requestOptions.js", "sap/apf/modeler/ui/controller/smartFilterBar.controller.js", "sap/apf/modeler/ui/controller/smartFilterBarRequest.controller.js", "sap/apf/modeler/ui/controller/sortPropertyType.js", "sap/apf/modeler/ui/controller/step.controller.js", "sap/apf/modeler/ui/controller/stepCornerTexts.controller.js", "sap/apf/modeler/ui/controller/stepFilterMapping.controller.js", "sap/apf/modeler/ui/controller/stepRequest.controller.js", "sap/apf/modeler/ui/controller/stepSortPropertyType.controller.js", "sap/apf/modeler/ui/controller/titleBreadCrumb.controller.js", "sap/apf/modeler/ui/controller/toolbar.controller.js", "sap/apf/modeler/ui/fragment/addMenu.fragment.xml", "sap/apf/modeler/ui/fragment/deleteConfirmationDialog.fragment.xml", "sap/apf/modeler/ui/fragment/dialogWithTwoButtons.fragment.xml", "sap/apf/modeler/ui/fragment/existingStepDialog.fragment.xml", "sap/apf/modeler/ui/fragment/exportConfiguration.fragment.xml", "sap/apf/modeler/ui/fragment/mandatoryDialog.fragment.xml", "sap/apf/modeler/ui/fragment/overwriteConfirmation.fragment.xml", "sap/apf/modeler/ui/fragment/textpoolCleanupConfirmationDialog.fragment.xml", "sap/apf/modeler/ui/fragment/unsavedDataConfirmationDialog.fragment.xml", "sap/apf/modeler/ui/utils/APFRouter.js", "sap/apf/modeler/ui/utils/APFTree.js", "sap/apf/modeler/ui/utils/constants.js", "sap/apf/modeler/ui/utils/displayOptionsValueBuilder.js", "sap/apf/modeler/ui/utils/helper.js", "sap/apf/modeler/ui/utils/labelForRepresentationTypes.js", "sap/apf/modeler/ui/utils/navigationHandler.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/optionsValueModelBuilder.js", "sap/apf/modeler/ui/utils/propertyTypeFactory.js", "sap/apf/modeler/ui/utils/propertyTypeOrchestration.js", "sap/apf/modeler/ui/utils/propertyTypeState.js", "sap/apf/modeler/ui/utils/representationBasicDataHandler.js", "sap/apf/modeler/ui/utils/representationHandler.js", "sap/apf/modeler/ui/utils/sortDataHandler.js", "sap/apf/modeler/ui/utils/staticValuesBuilder.js", "sap/apf/modeler/ui/utils/stepPropertyMetadataHandler.js", "sap/apf/modeler/ui/utils/textManipulator.js", "sap/apf/modeler/ui/utils/textPoolHelper.js", "sap/apf/modeler/ui/utils/treeTableDisplayOptionsValueBuilder.js", "sap/apf/modeler/ui/utils/viewValidator.js", "sap/apf/modeler/ui/view/application.view.xml", "sap/apf/modeler/ui/view/applicationList.view.xml", "sap/apf/modeler/ui/view/catalogService.view.xml", "sap/apf/modeler/ui/view/category.view.xml", "sap/apf/modeler/ui/view/configuration.view.xml", "sap/apf/modeler/ui/view/configurationList.view.xml", "sap/apf/modeler/ui/view/cornerTexts.view.xml", "sap/apf/modeler/ui/view/editApplication.view.xml", "sap/apf/modeler/ui/view/facetFilter.view.xml", "sap/apf/modeler/ui/view/importDeliveredContent.view.xml", "sap/apf/modeler/ui/view/importFiles.view.xml", "sap/apf/modeler/ui/view/messageHandler.view.xml", "sap/apf/modeler/ui/view/navigationTarget.view.xml", "sap/apf/modeler/ui/view/navigationTargetParameter.view.xml", "sap/apf/modeler/ui/view/newApplication.view.xml", "sap/apf/modeler/ui/view/previewContent.view.xml", "sap/apf/modeler/ui/view/propertyType.view.xml", "sap/apf/modeler/ui/view/propertyTypeHandler.view.xml", "sap/apf/modeler/ui/view/representation.view.xml", "sap/apf/modeler/ui/view/requestOptions.view.xml", "sap/apf/modeler/ui/view/smartFilterBar.view.xml", "sap/apf/modeler/ui/view/sortPropertyType.view.xml", "sap/apf/modeler/ui/view/step.view.xml", "sap/apf/modeler/ui/view/titleBreadCrumb.view.xml", "sap/apf/modeler/ui/view/toolbar.view.xml", "sap/apf/ui/controls/draggableCarousel/DraggableCarousel.js", "sap/apf/ui/instance.js", "sap/apf/ui/representations/BaseUI5ChartRepresentation.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/representations/RepresentationInterfaceProxy.js", "sap/apf/ui/representations/barChart.js", "sap/apf/ui/representations/bubbleChart.js", "sap/apf/ui/representations/columnChart.js", "sap/apf/ui/representations/combinationChart.js", "sap/apf/ui/representations/donutChart.js", "sap/apf/ui/representations/dualCombinationChart.js", "sap/apf/ui/representations/dualStackedCombinationChart.js", "sap/apf/ui/representations/heatmapChart.js", "sap/apf/ui/representations/lineChart.js", "sap/apf/ui/representations/lineChartWithTimeAxis.js", "sap/apf/ui/representations/lineChartWithTwoVerticalAxes.js", "sap/apf/ui/representations/percentageStackedBarChart.js", "sap/apf/ui/representations/percentageStackedColumnChart.js", "sap/apf/ui/representations/pieChart.js", "sap/apf/ui/representations/representationInterface.js", "sap/apf/ui/representations/scatterPlotChart.js", "sap/apf/ui/representations/stackedBarChart.js", "sap/apf/ui/representations/stackedColumnChart.js", "sap/apf/ui/representations/stackedCombinationChart.js", "sap/apf/ui/representations/table.js", "sap/apf/ui/representations/treeTable.js", "sap/apf/ui/representations/utils/chartDataSetHelper.js", "sap/apf/ui/representations/utils/displayOptionHandler.js", "sap/apf/ui/representations/utils/paginationDisplayOptionHandler.js", "sap/apf/ui/representations/utils/paginationHandler.js", "sap/apf/ui/representations/utils/representationFilterHandler.js", "sap/apf/ui/representations/utils/timeAxisDateConverter.js", "sap/apf/ui/representations/utils/vizFrameSelectionHandler.js", "sap/apf/ui/reuse/controller/analysisPath.controller.js", "sap/apf/ui/reuse/controller/carousel.controller.js", "sap/apf/ui/reuse/controller/deleteAnalysisPath.controller.js", "sap/apf/ui/reuse/controller/facetFilter.controller.js", "sap/apf/ui/reuse/controller/layout.controller.js", "sap/apf/ui/reuse/controller/messageHandler.controller.js", "sap/apf/ui/reuse/controller/navigationTarget.controller.js", "sap/apf/ui/reuse/controller/pathFilterDisplay.controller.js", "sap/apf/ui/reuse/controller/pathGallery.controller.js", "sap/apf/ui/reuse/controller/smartFilterBar.controller.js", "sap/apf/ui/reuse/controller/step.controller.js", "sap/apf/ui/reuse/controller/stepContainer.controller.js", "sap/apf/ui/reuse/controller/stepGallery.controller.js", "sap/apf/ui/reuse/controller/toolbar.controller.js", "sap/apf/ui/reuse/controller/viewSetting.controller.js", "sap/apf/ui/reuse/fragment/addStepCheckDialog.fragment.js", "sap/apf/ui/reuse/fragment/newMessageDialog.fragment.js", "sap/apf/ui/reuse/fragment/pathGallery.fragment.js", "sap/apf/ui/reuse/fragment/selectionDisplay.fragment.js", "sap/apf/ui/reuse/fragment/stepGallery.fragment.js", "sap/apf/ui/reuse/view/analysisPath.view.js", "sap/apf/ui/reuse/view/carousel.view.js", "sap/apf/ui/reuse/view/deleteAnalysisPath.view.js", "sap/apf/ui/reuse/view/facetFilter.view.js", "sap/apf/ui/reuse/view/layout.view.xml", "sap/apf/ui/reuse/view/messageHandler.view.js", "sap/apf/ui/reuse/view/navigationTarget.view.js", "sap/apf/ui/reuse/view/pathFilterDisplay.view.xml", "sap/apf/ui/reuse/view/pathGallery.view.js", "sap/apf/ui/reuse/view/smartFilterBar.view.js", "sap/apf/ui/reuse/view/step.view.js", "sap/apf/ui/reuse/view/stepContainer.view.js", "sap/apf/ui/reuse/view/stepGallery.view.js", "sap/apf/ui/reuse/view/toolbar.view.js", "sap/apf/ui/reuse/view/viewSetting.view.js", "sap/apf/ui/utils/constants.js", "sap/apf/ui/utils/dateTimeFormatter.js", "sap/apf/ui/utils/decimalFormatter.js", "sap/apf/ui/utils/determineColumnSettingsForSpreadSheetExport.js", "sap/apf/ui/utils/facetFilterListConverter.js", "sap/apf/ui/utils/facetFilterListHandler.js", "sap/apf/ui/utils/facetFilterValueFormatter.js", "sap/apf/ui/utils/formatter.js", "sap/apf/ui/utils/helper.js", "sap/apf/ui/utils/print.js", "sap/apf/ui/utils/printModel.js", "sap/apf/ui/utils/printView.js", "sap/apf/ui/utils/representationTypesHandler.js", "sap/apf/ui/utils/stringToDateFormatter.js", "sap/apf/ui/utils/timeFormatter.js", "sap/apf/utils/executeFilterMapping.js", "sap/apf/utils/externalContext.js", "sap/apf/utils/filter.js", "sap/apf/utils/filterIdHandler.js", "sap/apf/utils/hashtable.js", "sap/apf/utils/navigationHandler.js", "sap/apf/utils/parseTextPropertyFile.js", "sap/apf/utils/proxyTextHandlerForLocalTexts.js", "sap/apf/utils/sbAdapter.js", "sap/apf/utils/serializationMediator.js", "sap/apf/utils/startFilter.js", "sap/apf/utils/startFilterHandler.js", "sap/apf/utils/startParameter.js", "sap/apf/utils/utils.js"]
+    },
+    {
+      "name" : "sap/apf/library.js",
+      "description" : "Initialization Code and shared classes of library sap.apf.",
+      "size" : 984,
+      "compressedSize" : 571,
+      "required" : ["sap/m/library.js", "sap/suite/ui/commons/library.js", "sap/ui/comp/library.js", "sap/ui/core/Core.js", "sap/ui/core/library.js", "sap/ui/export/library.js", "sap/ui/fl/library.js", "sap/ui/layout/library.js", "sap/ui/table/library.js", "sap/ushell/library.js", "sap/viz/library.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/manifest.json",
+      "size" : 1422,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/messageCallbackForStartup.js",
+      "size" : 2239,
+      "compressedSize" : 1143,
+      "required" : ["sap/apf/core/constants.js", "sap/m/MessageBox.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/Component.js",
+      "size" : 5811,
+      "compressedSize" : 3002,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/constants.js", "sap/apf/core/layeredRepositoryProxy.js", "sap/apf/modeler/core/instance.js", "sap/apf/modeler/ui/utils/APFRouter.js", "sap/apf/modeler/ui/utils/APFTree.js", "sap/apf/modeler/ui/utils/constants.js", "sap/m/routing/RouteMatchedHandler.js", "sap/ui/core/UIComponent.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/applicationHandler.js",
+      "description" : "global sap, jQuery",
+      "size" : 7213,
+      "compressedSize" : 2023,
+      "required" : ["jquery.sap.global.js", "sap/apf/utils/hashtable.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/configurationEditor.js",
+      "description" : "global sap, jQuery",
+      "size" : 53196,
+      "compressedSize" : 13294,
+      "required" : ["jquery.sap.global.js", "sap/apf/utils/utils.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/configurationHandler.js",
+      "description" : "global sap, jQuery",
+      "size" : 17022,
+      "compressedSize" : 4804,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/core/configurationEditor.js", "sap/apf/modeler/core/configurationObjects.js", "sap/apf/utils/hashtable.js", "sap/apf/utils/utils.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/configurationObjects.js",
+      "description" : "global sap, jQuery",
+      "size" : 49246,
+      "compressedSize" : 19233,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/elementContainer.js",
+      "description" : "global sap, jQuery",
+      "size" : 11527,
+      "compressedSize" : 3091,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/facetFilter.js",
+      "description" : "global sap, jQuery",
+      "size" : 19393,
+      "compressedSize" : 4967,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/hierarchicalStep.js",
+      "description" : "global sap, jQuery",
+      "size" : 5232,
+      "compressedSize" : 1577,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/core/step.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/instance.js",
+      "description" : "global sap, OData, jQuery",
+      "size" : 46771,
+      "compressedSize" : 19366,
+      "required" : ["jquery.sap.global.js", "sap/apf/cloudFoundry/ajaxHandler.js", "sap/apf/cloudFoundry/modelerProxy.js", "sap/apf/core/ajax.js", "sap/apf/core/configurationFactory.js", "sap/apf/core/constants.js", "sap/apf/core/entityTypeMetadata.js", "sap/apf/core/messageDefinition.js", "sap/apf/core/messageHandler.js", "sap/apf/core/metadata.js", "sap/apf/core/metadataFacade.js", "sap/apf/core/metadataFactory.js", "sap/apf/core/metadataProperty.js", "sap/apf/core/odataProxy.js", "sap/apf/core/odataRequest.js", "sap/apf/core/representationTypes.js", "sap/apf/core/sessionHandler.js", "sap/apf/core/utils/annotationHandler.js", "sap/apf/core/utils/fileExists.js", "sap/apf/core/utils/uriGenerator.js", "sap/apf/modeler/core/applicationHandler.js", "sap/apf/modeler/core/configurationEditor.js", "sap/apf/modeler/core/configurationHandler.js", "sap/apf/modeler/core/configurationObjects.js", "sap/apf/modeler/core/elementContainer.js", "sap/apf/modeler/core/facetFilter.js", "sap/apf/modeler/core/hierarchicalStep.js", "sap/apf/modeler/core/lazyLoader.js", "sap/apf/modeler/core/messageDefinition.js", "sap/apf/modeler/core/navigationTarget.js", "sap/apf/modeler/core/registryWrapper.js", "sap/apf/modeler/core/representation.js", "sap/apf/modeler/core/smartFilterBar.js", "sap/apf/modeler/core/step.js", "sap/apf/modeler/core/textHandler.js", "sap/apf/modeler/core/textPool.js", "sap/apf/utils/hashtable.js", "sap/apf/utils/parseTextPropertyFile.js", "sap/apf/utils/proxyTextHandlerForLocalTexts.js", "sap/apf/utils/startParameter.js", "sap/ui/thirdparty/datajs.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/lazyLoader.js",
+      "description" : "global sap, jQuery",
+      "size" : 5454,
+      "compressedSize" : 1492,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/messageDefinition.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 6128,
+      "compressedSize" : 5338,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/navigationTarget.js",
+      "description" : "global sap, jQuery",
+      "size" : 11056,
+      "compressedSize" : 2310,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/registryWrapper.js",
+      "description" : "global sap, jQuery",
+      "size" : 3312,
+      "compressedSize" : 741,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/representation.js",
+      "description" : "global sap, jQuery",
+      "size" : 26734,
+      "compressedSize" : 5561,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/smartFilterBar.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 1631,
+      "compressedSize" : 496,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/step.js",
+      "description" : "global sap, jQuery",
+      "size" : 35834,
+      "compressedSize" : 8567,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/textHandler.js",
+      "description" : "global sap, jQuery",
+      "size" : 1677,
+      "compressedSize" : 611,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/core/textPool.js",
+      "description" : "global sap, jQuery",
+      "size" : 12848,
+      "compressedSize" : 4717,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/utils/filter.js", "sap/apf/utils/hashtable.js", "sap/apf/utils/utils.js", "sap/ui/core/format/DateFormat.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/manifest.json",
+      "size" : 3643,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts.properties",
+      "size" : 16410,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_ar.properties",
+      "size" : 42712,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_bg.properties",
+      "size" : 56284,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_ca.properties",
+      "size" : 18544,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_cs.properties",
+      "size" : 19106,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_da.properties",
+      "size" : 16134,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_de.properties",
+      "size" : 17506,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_el.properties",
+      "size" : 56386,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_en.properties",
+      "size" : 15791,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_en_US_sappsd.properties",
+      "size" : 67301,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_en_US_saptrc.properties",
+      "size" : 21984,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_es.properties",
+      "size" : 18495,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_et.properties",
+      "size" : 16803,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_fi.properties",
+      "size" : 16981,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_fr.properties",
+      "size" : 19162,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_hi.properties",
+      "size" : 50747,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_hr.properties",
+      "size" : 16892,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_hu.properties",
+      "size" : 21281,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_it.properties",
+      "size" : 17476,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_iw.properties",
+      "size" : 38619,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_ja.properties",
+      "size" : 31438,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_kk.properties",
+      "size" : 52015,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_ko.properties",
+      "size" : 25852,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_lt.properties",
+      "size" : 18882,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_lv.properties",
+      "size" : 20049,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_ms.properties",
+      "size" : 15693,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_nl.properties",
+      "size" : 15275,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_no.properties",
+      "size" : 16092,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_pl.properties",
+      "size" : 18794,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_pt.properties",
+      "size" : 19116,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_ro.properties",
+      "size" : 18664,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_ru.properties",
+      "size" : 53895,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_sh.properties",
+      "size" : 16741,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_sk.properties",
+      "size" : 19309,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_sl.properties",
+      "size" : 16749,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_sv.properties",
+      "size" : 16582,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_th.properties",
+      "size" : 52929,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_tr.properties",
+      "size" : 19689,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_uk.properties",
+      "size" : 53456,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_vi.properties",
+      "size" : 28745,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_zh_CN.properties",
+      "size" : 20991,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/resources/i18n/texts_zh_TW.properties",
+      "size" : 20876,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/applicationList.controller.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2018 SAP SE. All rights reserved",
+      "size" : 17097,
+      "compressedSize" : 9952,
+      "required" : ["sap/apf/modeler/ui/utils/helper.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/optionsValueModelBuilder.js", "sap/m/Column.js", "sap/m/ColumnListItem.js", "sap/m/Input.js", "sap/m/Table.js", "sap/m/Text.js", "sap/ui/core/Icon.js", "sap/ui/core/mvc/Controller.js", "sap/ui/model/Filter.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/catalogService.controller.js",
+      "description" : "@class catalogService @name catalogService @description Catalog service provides the options for service to be selected from lists the oData service in select dialog The ViewData for this view needs the the following two parameters: getCalatogServiceUri()- api to fetch uri parentControl- control from which the view instantiated oTextReader the getText method from core api",
+      "size" : 3607,
+      "compressedSize" : 1596,
+      "required" : ["sap/apf/utils/utils.js", "sap/ui/core/mvc/Controller.js", "sap/ui/model/Filter.js", "sap/ui/model/FilterOperator.js", "sap/ui/model/odata/v2/ODataModel.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/category.controller.js",
+      "size" : 6393,
+      "compressedSize" : 2753,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/textPoolHelper.js", "sap/apf/modeler/ui/utils/viewValidator.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/configuration.controller.js",
+      "description" : "must be decomposed into two classes",
+      "size" : 11337,
+      "compressedSize" : 5873,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/utils/constants.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/textPoolHelper.js", "sap/apf/modeler/ui/utils/viewValidator.js", "sap/ui/core/mvc/Controller.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/configurationList.controller.js",
+      "size" : 123020,
+      "compressedSize" : 59483,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/utils/APFTree.js", "sap/apf/modeler/ui/utils/helper.js", "sap/apf/modeler/ui/utils/navigationHandler.js", "sap/apf/modeler/ui/utils/textPoolHelper.js", "sap/ui/core/util/File.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/cornerTexts.js",
+      "size" : 5004,
+      "compressedSize" : 2309,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/utils/textPoolHelper.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/editApplication.controller.js",
+      "description" : "@class editApplication @name newApplication @description Controls the dialog for editing an existing application. It is opened from the application list. The ViewData for this view needs the following parameters: parentControl \t- calling view - the application list coreApi \t       - core instance applicationData -id, description, semanticObject",
+      "size" : 4293,
+      "compressedSize" : 2497,
+      "required" : ["sap/apf/modeler/ui/utils/nullObjectChecker.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/facetFilter.controller.js",
+      "size" : 34668,
+      "compressedSize" : 16743,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/optionsValueModelBuilder.js", "sap/apf/modeler/ui/utils/textManipulator.js", "sap/apf/modeler/ui/utils/textPoolHelper.js", "sap/apf/modeler/ui/utils/viewValidator.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/facetFilterFRR.controller.js",
+      "description" : "global sap",
+      "size" : 5200,
+      "compressedSize" : 2623,
+      "required" : ["sap/apf/modeler/ui/controller/requestOptions.js", "sap/apf/modeler/ui/utils/textPoolHelper.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/facetFilterVHR.controller.js",
+      "size" : 8516,
+      "compressedSize" : 4798,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/controller/requestOptions.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/optionsValueModelBuilder.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/hierarchicalStepRequest.controller.js",
+      "size" : 9201,
+      "compressedSize" : 4755,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/controller/stepRequest.controller.js", "sap/apf/modeler/ui/utils/textManipulator.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/importDeliveredContent.controller.js",
+      "size" : 5610,
+      "compressedSize" : 3026,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/controller/overwriteExistingConfiguration.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/optionsValueModelBuilder.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/importFiles.controller.js",
+      "description" : "global sap",
+      "size" : 8734,
+      "compressedSize" : 4094,
+      "required" : ["sap/apf/modeler/ui/controller/overwriteExistingConfiguration.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/messageHandler.controller.js",
+      "size" : 4495,
+      "compressedSize" : 2231,
+      "required" : ["jquery.sap.global.js", "sap/m/MessageBox.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/navTargetContextMapping.controller.js",
+      "size" : 4259,
+      "compressedSize" : 2885,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/controller/requestOptions.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/navigationTarget.controller.js",
+      "size" : 21285,
+      "compressedSize" : 9927,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/optionsValueModelBuilder.js", "sap/apf/modeler/ui/utils/staticValuesBuilder.js", "sap/apf/modeler/ui/utils/textPoolHelper.js", "sap/apf/modeler/ui/utils/viewValidator.js", "sap/m/MessageBox.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/navigationTargetParameter.controller.js",
+      "size" : 5412,
+      "compressedSize" : 3307,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/newApplication.controller.js",
+      "description" : "@class newApplication @name newApplication @description Controls the dialog for creating a new application. It is opened from the application list. The ViewData for this view needs the following parameters: oParentControl \t   - table where list of applications are stored oCoreApi \t       - core instance",
+      "size" : 3672,
+      "compressedSize" : 2053,
+      "required" : ["sap/apf/modeler/ui/utils/nullObjectChecker.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/overwriteExistingConfiguration.js",
+      "size" : 4145,
+      "compressedSize" : 3029,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/ui/core/mvc/Controller.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/previewContent.controller.js",
+      "size" : 11523,
+      "compressedSize" : 5119,
+      "required" : ["jquery.sap.global.js", "sap/apf/ui/utils/constants.js", "sap/apf/utils/utils.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/propertyType.js",
+      "size" : 24122,
+      "compressedSize" : 9726,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/utils/constants.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/optionsValueModelBuilder.js", "sap/apf/modeler/ui/utils/textManipulator.js", "sap/apf/modeler/ui/utils/textPoolHelper.js", "sap/apf/utils/utils.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/propertyTypeHandler.controller.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 10876,
+      "compressedSize" : 4514,
+      "required" : ["sap/apf/modeler/ui/utils/constants.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/propertyTypeFactory.js", "sap/apf/modeler/ui/utils/propertyTypeOrchestration.js", "sap/apf/modeler/ui/utils/propertyTypeState.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/representation.controller.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 23141,
+      "compressedSize" : 9471,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/optionsValueModelBuilder.js", "sap/apf/modeler/ui/utils/representationBasicDataHandler.js", "sap/apf/modeler/ui/utils/representationHandler.js", "sap/apf/modeler/ui/utils/sortDataHandler.js", "sap/apf/modeler/ui/utils/stepPropertyMetadataHandler.js", "sap/apf/modeler/ui/utils/viewValidator.js", "sap/apf/ui/utils/constants.js", "sap/apf/ui/utils/representationTypesHandler.js", "sap/ui/core/mvc/Controller.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/representationCornerTexts.controller.js",
+      "size" : 4178,
+      "compressedSize" : 2047,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/controller/cornerTexts.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/representationDimension.controller.js",
+      "description" : "global sap",
+      "size" : 9951,
+      "compressedSize" : 5168,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/modeler/ui/controller/propertyType.js", "sap/apf/modeler/ui/utils/constants.js", "sap/apf/modeler/ui/utils/displayOptionsValueBuilder.js", "sap/apf/modeler/ui/utils/propertyTypeOrchestration.js", "sap/apf/modeler/ui/utils/textManipulator.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/representationHierarchyProperty.controller.js",
+      "size" : 5808,
+      "compressedSize" : 3068,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/constants.js", "sap/apf/modeler/ui/controller/propertyType.js", "sap/apf/modeler/ui/utils/textManipulator.js", "sap/apf/modeler/ui/utils/treeTableDisplayOptionsValueBuilder.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/representationLegend.controller.js",
+      "description" : "global sap",
+      "size" : 5047,
+      "compressedSize" : 2849,
+      "required" : ["sap/apf/modeler/ui/controller/representationDimension.controller.js", "sap/apf/modeler/ui/utils/textManipulator.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/representationMeasure.controller.js",
+      "description" : "global sap",
+      "size" : 7852,
+      "compressedSize" : 4364,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/modeler/ui/controller/propertyType.js", "sap/apf/modeler/ui/utils/displayOptionsValueBuilder.js", "sap/apf/modeler/ui/utils/textManipulator.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/representationProperty.controller.js",
+      "size" : 5087,
+      "compressedSize" : 2983,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/controller/propertyType.js", "sap/apf/modeler/ui/utils/textManipulator.js", "sap/apf/utils/utils.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/representationSortPropertyType.controller.js",
+      "size" : 4188,
+      "compressedSize" : 2663,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/controller/sortPropertyType.js", "sap/apf/modeler/ui/utils/textManipulator.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/requestOptions.js",
+      "description" : "@class requestOptions @name requestOptions @description General controller for VHR, FRR,navigation target,step request,step filter mapping The ViewData for this view needs the following parameters: getCalatogServiceUri()- api to fetch uri oConfigurationHandler - Handler for configuration oConfigurationEditor -  manages the facet filter object oTextReader - Method to getText oParentObject - Object from which the controller gets instantiated",
+      "size" : 22004,
+      "compressedSize" : 10629,
+      "required" : ["sap/apf/modeler/ui/utils/constants.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/optionsValueModelBuilder.js", "sap/apf/modeler/ui/utils/textManipulator.js", "sap/apf/modeler/ui/utils/textPoolHelper.js", "sap/apf/modeler/ui/utils/viewValidator.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/smartFilterBar.controller.js",
+      "size" : 3124,
+      "compressedSize" : 1160,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/smartFilterBarRequest.controller.js",
+      "size" : 3002,
+      "compressedSize" : 1597,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/controller/requestOptions.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/sortPropertyType.js",
+      "size" : 12003,
+      "compressedSize" : 5422,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/utils/constants.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/optionsValueModelBuilder.js", "sap/apf/modeler/ui/utils/staticValuesBuilder.js", "sap/apf/modeler/ui/utils/textManipulator.js", "sap/apf/utils/utils.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/step.controller.js",
+      "size" : 27533,
+      "compressedSize" : 13176,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/optionsValueModelBuilder.js", "sap/apf/modeler/ui/utils/sortDataHandler.js", "sap/apf/modeler/ui/utils/stepPropertyMetadataHandler.js", "sap/apf/modeler/ui/utils/textPoolHelper.js", "sap/apf/modeler/ui/utils/viewValidator.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/stepCornerTexts.controller.js",
+      "size" : 2514,
+      "compressedSize" : 1389,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/controller/cornerTexts.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/stepFilterMapping.controller.js",
+      "size" : 13928,
+      "compressedSize" : 8284,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/controller/requestOptions.js", "sap/apf/modeler/ui/utils/displayOptionsValueBuilder.js", "sap/apf/modeler/ui/utils/textPoolHelper.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/stepRequest.controller.js",
+      "size" : 16000,
+      "compressedSize" : 9389,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/controller/requestOptions.js", "sap/apf/modeler/ui/utils/displayOptionsValueBuilder.js", "sap/apf/modeler/ui/utils/textManipulator.js", "sap/apf/modeler/ui/utils/textPoolHelper.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/stepSortPropertyType.controller.js",
+      "size" : 3142,
+      "compressedSize" : 1919,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/controller/sortPropertyType.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/titleBreadCrumb.controller.js",
+      "size" : 553,
+      "compressedSize" : 277,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/controller/toolbar.controller.js",
+      "description" : "@class toolbar @memberOf sap.apf.modeler.ui.controller @name toolbar @description controller for view.toolbar",
+      "size" : 49313,
+      "compressedSize" : 24516,
+      "required" : ["sap/apf/modeler/ui/utils/constants.js", "sap/ui/core/mvc/Controller.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/fragment/addMenu.fragment.xml",
+      "size" : 918,
+      "required" : ["sap/ui/core/Fragment.js", "sap/ui/unified/Menu.js", "sap/ui/unified/MenuItem.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/fragment/deleteConfirmationDialog.fragment.xml",
+      "size" : 520,
+      "required" : ["sap/m/Button.js", "sap/m/Dialog.js", "sap/ui/core/Fragment.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/fragment/dialogWithTwoButtons.fragment.xml",
+      "size" : 618,
+      "required" : ["sap/m/Button.js", "sap/m/Dialog.js", "sap/m/Label.js", "sap/ui/core/Fragment.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/fragment/existingStepDialog.fragment.xml",
+      "size" : 469,
+      "required" : ["sap/m/SelectDialog.js", "sap/m/StandardListItem.js", "sap/ui/core/Fragment.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/fragment/exportConfiguration.fragment.xml",
+      "size" : 744,
+      "required" : ["sap/m/Button.js", "sap/m/Dialog.js", "sap/m/HBox.js", "sap/m/Link.js", "sap/m/VBox.js", "sap/ui/core/Fragment.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/fragment/mandatoryDialog.fragment.xml",
+      "size" : 746,
+      "required" : ["sap/m/Button.js", "sap/m/Dialog.js", "sap/ui/core/Fragment.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/fragment/overwriteConfirmation.fragment.xml",
+      "size" : 1357,
+      "required" : ["sap/m/Button.js", "sap/m/Dialog.js", "sap/m/HBox.js", "sap/m/Input.js", "sap/m/Label.js", "sap/m/RadioButton.js", "sap/m/RadioButtonGroup.js", "sap/m/Text.js", "sap/m/VBox.js", "sap/ui/core/Fragment.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/fragment/textpoolCleanupConfirmationDialog.fragment.xml",
+      "size" : 544,
+      "required" : ["sap/m/Button.js", "sap/m/Dialog.js", "sap/ui/core/Fragment.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/fragment/unsavedDataConfirmationDialog.fragment.xml",
+      "size" : 586,
+      "required" : ["sap/m/Button.js", "sap/m/Dialog.js", "sap/ui/core/Fragment.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/APFRouter.js",
+      "description" : "Router Helper Functions",
+      "size" : 5462,
+      "compressedSize" : 2415,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/APFTree.js",
+      "description" : "APF Custom Tree Control",
+      "size" : 29250,
+      "compressedSize" : 12166,
+      "required" : ["sap/apf/modeler/ui/utils/constants.js", "sap/ui/commons/Tree.js", "sap/ui/commons/TreeRenderer.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/constants.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 2767,
+      "compressedSize" : 2215,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/displayOptionsValueBuilder.js",
+      "size" : 2231,
+      "compressedSize" : 1602,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/utils/textManipulator.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/helper.js",
+      "description" : "global window",
+      "size" : 418,
+      "compressedSize" : 239,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/labelForRepresentationTypes.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 3637,
+      "compressedSize" : 2489,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/navigationHandler.js",
+      "description" : "Navigation Handler Class",
+      "size" : 10470,
+      "compressedSize" : 3691,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/nullObjectChecker.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 1556,
+      "compressedSize" : 942,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/optionsValueModelBuilder.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 2030,
+      "compressedSize" : 668,
+      "required" : ["sap/apf/modeler/ui/utils/nullObjectChecker.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/propertyTypeFactory.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2018 SAP SE. All rights reserved",
+      "size" : 2606,
+      "compressedSize" : 1627,
+      "required" : ["sap/apf/modeler/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/propertyTypeOrchestration.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2018 SAP SE. All rights reserved",
+      "size" : 17714,
+      "compressedSize" : 5946,
+      "required" : ["sap/apf/modeler/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/propertyTypeState.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 3181,
+      "compressedSize" : 2011,
+      "required" : ["sap/apf/modeler/ui/utils/nullObjectChecker.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/representationBasicDataHandler.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 9006,
+      "compressedSize" : 3479,
+      "required" : ["sap/apf/modeler/ui/utils/constants.js", "sap/apf/modeler/ui/utils/propertyTypeOrchestration.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/representationHandler.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 5688,
+      "compressedSize" : 2798,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/sortDataHandler.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 3683,
+      "compressedSize" : 1984,
+      "required" : ["sap/apf/modeler/ui/utils/constants.js", "sap/apf/modeler/ui/utils/propertyTypeOrchestration.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/staticValuesBuilder.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 1752,
+      "compressedSize" : 787,
+      "required" : ["sap/apf/modeler/ui/utils/nullObjectChecker.js", "sap/apf/modeler/ui/utils/textManipulator.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/stepPropertyMetadataHandler.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 4433,
+      "compressedSize" : 2060,
+      "required" : ["sap/apf/modeler/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/textManipulator.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 1478,
+      "compressedSize" : 401,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/textPoolHelper.js",
+      "description" : "@private @class Text Pool Helper @description Helps UI Controllers in handling Text Pool related operations (AutoFill, setText etc.). @param {sap.apf.modeler.core.TextPool} oTextPool - Text Pool instance used in the controller context. @name sap.apf.modeler.ui.utils.TextPoolHelper",
+      "size" : 3433,
+      "compressedSize" : 1852,
+      "required" : ["sap/apf/modeler/ui/utils/optionsValueModelBuilder.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/treeTableDisplayOptionsValueBuilder.js",
+      "size" : 1705,
+      "compressedSize" : 1285,
+      "required" : ["jquery.sap.global.js", "sap/apf/modeler/ui/utils/displayOptionsValueBuilder.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/utils/viewValidator.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 5953,
+      "compressedSize" : 2417,
+      "required" : ["sap/apf/modeler/ui/utils/nullObjectChecker.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/application.view.xml",
+      "size" : 184,
+      "required" : ["sap/m/Button.js", "sap/ui/core/mvc/XMLView.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/applicationList.view.xml",
+      "size" : 3563,
+      "required" : ["sap/apf/modeler/ui/controller/applicationList.controller.js", "sap/m/App.js", "sap/m/Button.js", "sap/m/Column.js", "sap/m/ColumnListItem.js", "sap/m/HBox.js", "sap/m/Label.js", "sap/m/Page.js", "sap/m/Panel.js", "sap/m/ScrollContainer.js", "sap/m/SearchField.js", "sap/m/Table.js", "sap/m/Text.js", "sap/m/Toolbar.js", "sap/m/ToolbarSpacer.js", "sap/m/VBox.js", "sap/ui/core/Icon.js", "sap/ui/core/InvisibleText.js", "sap/ui/core/mvc/XMLView.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/catalogService.view.xml",
+      "size" : 550,
+      "required" : ["sap/apf/modeler/ui/controller/catalogService.controller.js", "sap/m/SelectDialog.js", "sap/m/StandardListItem.js", "sap/ui/core/mvc/XMLView.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/category.view.xml",
+      "size" : 1348,
+      "required" : ["sap/apf/modeler/ui/controller/category.controller.js", "sap/m/Input.js", "sap/m/Label.js", "sap/m/ScrollContainer.js", "sap/m/VBox.js", "sap/ui/core/Item.js", "sap/ui/core/Title.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/layout/form/SimpleForm.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/configuration.view.xml",
+      "size" : 2600,
+      "required" : ["sap/apf/modeler/ui/controller/configuration.controller.js", "sap/m/Input.js", "sap/m/Label.js", "sap/m/RadioButton.js", "sap/m/RadioButtonGroup.js", "sap/m/ScrollContainer.js", "sap/m/VBox.js", "sap/ui/core/InvisibleText.js", "sap/ui/core/Title.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/layout/form/SimpleForm.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/configurationList.view.xml",
+      "size" : 2459,
+      "required" : ["sap/apf/modeler/ui/controller/configurationList.controller.js", "sap/apf/modeler/ui/utils/APFTree.js", "sap/m/Bar.js", "sap/m/Button.js", "sap/m/HBox.js", "sap/m/Label.js", "sap/m/Page.js", "sap/m/VBox.js", "sap/ui/commons/TreeNode.js", "sap/ui/core/InvisibleText.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/layout/Grid.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/cornerTexts.view.xml",
+      "size" : 3076,
+      "required" : ["sap/m/Input.js", "sap/ui/core/CustomData.js", "sap/ui/core/Icon.js", "sap/ui/core/Item.js", "sap/ui/core/Title.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/layout/GridData.js", "sap/ui/layout/form/SimpleForm.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/editApplication.view.xml",
+      "size" : 1129,
+      "required" : ["sap/apf/modeler/ui/controller/editApplication.controller.js", "sap/m/Button.js", "sap/m/Dialog.js", "sap/m/HBox.js", "sap/m/Input.js", "sap/m/Label.js", "sap/m/VBox.js", "sap/ui/core/mvc/XMLView.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/facetFilter.view.xml",
+      "size" : 5973,
+      "required" : ["sap/apf/modeler/ui/controller/facetFilter.controller.js", "sap/m/CheckBox.js", "sap/m/Input.js", "sap/m/Label.js", "sap/m/MultiInput.js", "sap/m/RadioButton.js", "sap/m/RadioButtonGroup.js", "sap/m/ScrollContainer.js", "sap/m/Select.js", "sap/m/VBox.js", "sap/ui/core/InvisibleText.js", "sap/ui/core/Item.js", "sap/ui/core/Title.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/layout/form/SimpleForm.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/importDeliveredContent.view.xml",
+      "size" : 1300,
+      "required" : ["sap/apf/modeler/ui/controller/importDeliveredContent.controller.js", "sap/m/Button.js", "sap/m/ComboBox.js", "sap/m/Dialog.js", "sap/m/HBox.js", "sap/m/Label.js", "sap/m/VBox.js", "sap/ui/core/ListItem.js", "sap/ui/core/mvc/XMLView.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/importFiles.view.xml",
+      "size" : 1620,
+      "required" : ["sap/apf/modeler/ui/controller/importFiles.controller.js", "sap/m/Button.js", "sap/m/Dialog.js", "sap/m/HBox.js", "sap/m/Label.js", "sap/m/VBox.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/unified/FileUploader.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/messageHandler.view.xml",
+      "size" : 140,
+      "required" : ["sap/apf/modeler/ui/controller/messageHandler.controller.js", "sap/ui/core/mvc/XMLView.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/navigationTarget.view.xml",
+      "size" : 3761,
+      "required" : ["sap/apf/modeler/ui/controller/navigationTarget.controller.js", "sap/m/Button.js", "sap/m/CheckBox.js", "sap/m/ComboBox.js", "sap/m/HBox.js", "sap/m/Input.js", "sap/m/Label.js", "sap/m/MultiComboBox.js", "sap/m/ScrollContainer.js", "sap/m/Select.js", "sap/m/VBox.js", "sap/ui/core/Item.js", "sap/ui/core/Title.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/layout/GridData.js", "sap/ui/layout/form/SimpleForm.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/navigationTargetParameter.view.xml",
+      "size" : 1632,
+      "required" : ["sap/m/HBox.js", "sap/m/Input.js", "sap/m/Label.js", "sap/ui/core/Icon.js", "sap/ui/core/InvisibleText.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/layout/GridData.js", "sap/ui/layout/form/SimpleForm.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/newApplication.view.xml",
+      "size" : 1259,
+      "required" : ["sap/apf/modeler/ui/controller/newApplication.controller.js", "sap/m/Button.js", "sap/m/Dialog.js", "sap/m/HBox.js", "sap/m/Input.js", "sap/m/Label.js", "sap/m/VBox.js", "sap/ui/core/mvc/XMLView.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/previewContent.view.xml",
+      "size" : 3594,
+      "required" : ["sap/apf/modeler/ui/controller/previewContent.controller.js", "sap/m/Button.js", "sap/m/Dialog.js", "sap/m/FlexBox.js", "sap/m/Text.js", "sap/m/VBox.js", "sap/ui/core/mvc/XMLView.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/propertyType.view.xml",
+      "size" : 2558,
+      "required" : ["sap/m/HBox.js", "sap/m/Input.js", "sap/m/Label.js", "sap/m/Select.js", "sap/ui/core/Icon.js", "sap/ui/core/InvisibleText.js", "sap/ui/core/Item.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/layout/GridData.js", "sap/ui/layout/form/SimpleForm.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/propertyTypeHandler.view.xml",
+      "size" : 252,
+      "required" : ["sap/apf/modeler/ui/controller/propertyTypeHandler.controller.js", "sap/m/VBox.js", "sap/ui/core/mvc/XMLView.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/representation.view.xml",
+      "size" : 3215,
+      "required" : ["sap/apf/modeler/ui/controller/representation.controller.js", "sap/m/Label.js", "sap/m/ScrollContainer.js", "sap/m/Select.js", "sap/m/VBox.js", "sap/ui/core/Item.js", "sap/ui/core/Title.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/layout/GridData.js", "sap/ui/layout/form/SimpleForm.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/requestOptions.view.xml",
+      "size" : 2711,
+      "required" : ["sap/m/Input.js", "sap/m/Label.js", "sap/m/MultiComboBox.js", "sap/m/Select.js", "sap/ui/core/Item.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/layout/form/SimpleForm.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/smartFilterBar.view.xml",
+      "size" : 497,
+      "required" : ["sap/apf/modeler/ui/controller/smartFilterBar.controller.js", "sap/m/ScrollContainer.js", "sap/m/VBox.js", "sap/ui/core/mvc/XMLView.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/sortPropertyType.view.xml",
+      "size" : 2205,
+      "required" : ["sap/m/HBox.js", "sap/m/Label.js", "sap/m/Select.js", "sap/ui/core/Icon.js", "sap/ui/core/InvisibleText.js", "sap/ui/core/Item.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/layout/GridData.js", "sap/ui/layout/form/SimpleForm.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/step.view.xml",
+      "size" : 5459,
+      "required" : ["sap/apf/modeler/ui/controller/step.controller.js", "sap/m/CheckBox.js", "sap/m/Input.js", "sap/m/Label.js", "sap/m/MultiComboBox.js", "sap/m/RadioButton.js", "sap/m/RadioButtonGroup.js", "sap/m/ScrollContainer.js", "sap/m/VBox.js", "sap/ui/core/InvisibleText.js", "sap/ui/core/Item.js", "sap/ui/core/Title.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/layout/form/SimpleForm.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/titleBreadCrumb.view.xml",
+      "size" : 677,
+      "required" : ["sap/apf/modeler/ui/controller/titleBreadCrumb.controller.js", "sap/m/Text.js", "sap/m/VBox.js", "sap/ui/core/mvc/XMLView.js", "sap/ui/layout/HorizontalLayout.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/modeler/ui/view/toolbar.view.xml",
+      "size" : 1559,
+      "required" : ["sap/apf/modeler/ui/controller/toolbar.controller.js", "sap/m/Button.js", "sap/m/FlexBox.js", "sap/m/FlexItemData.js", "sap/m/Toolbar.js", "sap/ui/core/mvc/XMLView.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi.properties",
+      "size" : 16533,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_ar.properties",
+      "size" : 46482,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_bg.properties",
+      "size" : 58615,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_ca.properties",
+      "size" : 19544,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_cs.properties",
+      "size" : 20137,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_da.properties",
+      "size" : 16482,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_de.properties",
+      "size" : 19071,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_el.properties",
+      "size" : 61505,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_en.properties",
+      "size" : 16162,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_en_US_sappsd.properties",
+      "size" : 65401,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_en_US_saptrc.properties",
+      "size" : 20785,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_es.properties",
+      "size" : 19437,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_et.properties",
+      "size" : 16609,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_fi.properties",
+      "size" : 18330,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_fr.properties",
+      "size" : 20217,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_hi.properties",
+      "size" : 53895,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_hr.properties",
+      "size" : 17420,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_hu.properties",
+      "size" : 22158,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_it.properties",
+      "size" : 18283,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_iw.properties",
+      "size" : 43125,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_ja.properties",
+      "size" : 33092,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_kk.properties",
+      "size" : 58171,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_ko.properties",
+      "size" : 28865,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_lt.properties",
+      "size" : 19381,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_lv.properties",
+      "size" : 20362,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_ms.properties",
+      "size" : 16017,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_nl.properties",
+      "size" : 16837,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_no.properties",
+      "size" : 16715,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_pl.properties",
+      "size" : 20437,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_pt.properties",
+      "size" : 20034,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_ro.properties",
+      "size" : 19211,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_ru.properties",
+      "size" : 59269,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_sh.properties",
+      "size" : 17049,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_sk.properties",
+      "size" : 20449,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_sl.properties",
+      "size" : 17513,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_sv.properties",
+      "size" : 17203,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_th.properties",
+      "size" : 59595,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_tr.properties",
+      "size" : 20614,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_uk.properties",
+      "size" : 57151,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_vi.properties",
+      "size" : 30081,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_zh_CN.properties",
+      "size" : 22132,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/resources/i18n/apfUi_zh_TW.properties",
+      "size" : 22263,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/controls/draggableCarousel/DraggableCarousel.js",
+      "description" : "global window, document",
+      "size" : 24775,
+      "compressedSize" : 15207,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/instance.js",
+      "description" : "@class Ui Component Instance @name sap.apf.ui.Instance @description Creation of new Ui Component Instance @param {object} oInject - Core Instance",
+      "size" : 19622,
+      "compressedSize" : 7957,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/ui/reuse/view/analysisPath.view.js", "sap/apf/ui/reuse/view/carousel.view.js", "sap/apf/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/BaseUI5ChartRepresentation.js",
+      "description" : "@class representation base class constructor. @param oParameters defines parameters required for chart such as Dimension/Measures, tooltip, axis information. @returns chart object",
+      "size" : 18082,
+      "compressedSize" : 9216,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/constants.js", "sap/apf/ui/representations/utils/chartDataSetHelper.js", "sap/apf/ui/representations/utils/representationFilterHandler.js", "sap/apf/ui/representations/utils/timeAxisDateConverter.js", "sap/apf/ui/representations/utils/vizFrameSelectionHandler.js", "sap/apf/ui/utils/formatter.js", "sap/apf/utils/utils.js", "sap/m/Text.js", "sap/ui/layout/HorizontalLayout.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js",
+      "size" : 22937,
+      "compressedSize" : 9268,
+      "required" : ["jquery.sap.global.js", "sap/apf/ui/representations/BaseUI5ChartRepresentation.js", "sap/apf/ui/representations/utils/vizFrameSelectionHandler.js", "sap/apf/ui/utils/constants.js", "sap/apf/ui/utils/representationTypesHandler.js", "sap/viz/ui5/controls/VizFrame.js", "sap/viz/ui5/controls/common/feeds/FeedItem.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/RepresentationInterfaceProxy.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 4264,
+      "compressedSize" : 871,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/barChart.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 2503,
+      "compressedSize" : 1129,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/bubbleChart.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 3827,
+      "compressedSize" : 1752,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/columnChart.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 2470,
+      "compressedSize" : 1138,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/combinationChart.js",
+      "size" : 1604,
+      "compressedSize" : 922,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/donutChart.js",
+      "size" : 1659,
+      "compressedSize" : 1048,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/dualCombinationChart.js",
+      "size" : 2144,
+      "compressedSize" : 1156,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/dualStackedCombinationChart.js",
+      "size" : 2216,
+      "compressedSize" : 1179,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/heatmapChart.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 3416,
+      "compressedSize" : 1486,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/lineChart.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 2446,
+      "compressedSize" : 1153,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/lineChartWithTimeAxis.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 4478,
+      "compressedSize" : 2172,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/lineChartWithTwoVerticalAxes.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 4858,
+      "compressedSize" : 2136,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/percentageStackedBarChart.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 4046,
+      "compressedSize" : 1501,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/percentageStackedColumnChart.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 3994,
+      "compressedSize" : 1531,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/pieChart.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 2261,
+      "compressedSize" : 1038,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/representationInterface.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 12554,
+      "compressedSize" : 1063,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/scatterPlotChart.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 3526,
+      "compressedSize" : 1617,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/stackedBarChart.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 3574,
+      "compressedSize" : 1418,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/stackedColumnChart.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 3550,
+      "compressedSize" : 1448,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/stackedCombinationChart.js",
+      "size" : 1669,
+      "compressedSize" : 945,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/constants.js", "sap/apf/ui/representations/BaseVizFrameChartRepresentation.js", "sap/apf/ui/utils/constants.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/table.js",
+      "description" : "SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 33440,
+      "compressedSize" : 16209,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/constants.js", "sap/apf/ui/representations/BaseUI5ChartRepresentation.js", "sap/apf/ui/representations/utils/paginationDisplayOptionHandler.js", "sap/apf/ui/representations/utils/paginationHandler.js", "sap/apf/ui/utils/determineColumnSettingsForSpreadSheetExport.js", "sap/apf/ui/utils/formatter.js", "sap/m/Button.js", "sap/m/Dialog.js", "sap/m/HBox.js", "sap/m/Label.js", "sap/m/ScrollContainer.js", "sap/m/Text.js", "sap/m/VBox.js", "sap/ui/core/CustomData.js", "sap/ui/core/Icon.js", "sap/ui/export/EdmType.js", "sap/ui/export/Spreadsheet.js", "sap/ui/layout/VerticalLayout.js", "sap/ui/model/Sorter.js", "sap/ui/model/json/JSONModel.js", "sap/ui/table/Column.js", "sap/ui/table/Table.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/treeTable.js",
+      "description" : "global jQuery, sap",
+      "size" : 17454,
+      "compressedSize" : 8529,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/constants.js", "sap/apf/modeler/ui/utils/constants.js", "sap/apf/ui/representations/BaseUI5ChartRepresentation.js", "sap/apf/ui/representations/utils/paginationDisplayOptionHandler.js", "sap/apf/ui/utils/formatter.js", "sap/ui/table/TreeTable.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/utils/chartDataSetHelper.js",
+      "description" : "global jQuery, sap",
+      "size" : 9674,
+      "compressedSize" : 4445,
+      "required" : ["jquery.sap.global.js", "sap/apf/ui/representations/utils/displayOptionHandler.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/utils/displayOptionHandler.js",
+      "description" : "global jQuery, sap",
+      "size" : 3714,
+      "compressedSize" : 1680,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/constants.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/utils/paginationDisplayOptionHandler.js",
+      "description" : "global jQuery, sap",
+      "size" : 3431,
+      "compressedSize" : 1546,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/metadataProperty.js", "sap/apf/ui/representations/utils/displayOptionHandler.js", "sap/apf/utils/utils.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/utils/paginationHandler.js",
+      "description" : "SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 5423,
+      "compressedSize" : 1984,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/utils/representationFilterHandler.js",
+      "description" : "global jQuery, sap",
+      "size" : 6768,
+      "compressedSize" : 3378,
+      "required" : ["jquery.sap.global.js", "sap/apf/core/metadataProperty.js", "sap/apf/ui/representations/utils/displayOptionHandler.js", "sap/apf/utils/utils.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/utils/timeAxisDateConverter.js",
+      "description" : "global jQuery, sap",
+      "size" : 1832,
+      "compressedSize" : 1413,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/representations/utils/vizFrameSelectionHandler.js",
+      "description" : "global jQuery, sap",
+      "size" : 4325,
+      "compressedSize" : 1416,
+      "required" : ["jquery.sap.global.js", "sap/apf/ui/representations/utils/chartDataSetHelper.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/controller/analysisPath.controller.js",
+      "description" : "@class analysisPath @memberOf sap.apf.ui.reuse.controller @name analysisPath @description controller for view.analysisPath",
+      "size" : 7003,
+      "compressedSize" : 2992,
+      "required" : ["sap/ui/core/mvc/Controller.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/controller/carousel.controller.js",
+      "size" : 10658,
+      "compressedSize" : 5890,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/controller/deleteAnalysisPath.controller.js",
+      "description" : "@class deleteAnalysisPath @name deleteAnalysisPath @memberOf sap.apf.ui.reuse.controller @description controller of view.deleteAnalysisPath",
+      "size" : 5436,
+      "compressedSize" : 2819,
+      "required" : ["sap/m/Button.js", "sap/m/Dialog.js", "sap/m/DialogType.js", "sap/m/Text.js", "sap/ui/core/mvc/Controller.js", "sap/ui/model/json/JSONModel.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/controller/facetFilter.controller.js",
+      "size" : 2317,
+      "compressedSize" : 1004,
+      "required" : ["jquery.sap.global.js", "sap/apf/ui/utils/facetFilterListConverter.js", "sap/apf/ui/utils/facetFilterListHandler.js", "sap/apf/ui/utils/facetFilterValueFormatter.js", "sap/m/FacetFilter.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/controller/layout.controller.js",
+      "size" : 10529,
+      "compressedSize" : 5812,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/controller/messageHandler.controller.js",
+      "size" : 7307,
+      "compressedSize" : 4039,
+      "required" : ["jquery.sap.global.js", "sap/m/MessageBox.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/controller/navigationTarget.controller.js",
+      "size" : 946,
+      "compressedSize" : 448,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/controller/pathFilterDisplay.controller.js",
+      "size" : 3499,
+      "compressedSize" : 2465,
+      "required" : ["sap/ui/core/mvc/Controller.js", "sap/ui/model/Filter.js", "sap/ui/model/FilterOperator.js", "sap/ui/model/json/JSONModel.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/controller/pathGallery.controller.js",
+      "size" : 4871,
+      "compressedSize" : 2682,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/controller/smartFilterBar.controller.js",
+      "description" : "@class smartFilterBar @memberOf sap.apf.ui.reuse.controller @name smartFilterBar @description controller for smartFilterBar view",
+      "size" : 4284,
+      "compressedSize" : 2147,
+      "required" : ["sap/ui/core/mvc/Controller.js", "sap/ui/model/odata/CountMode.js", "sap/ui/model/odata/ODataUtils.js", "sap/ui/model/odata/v2/ODataModel.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/controller/step.controller.js",
+      "size" : 4513,
+      "compressedSize" : 2435,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/controller/stepContainer.controller.js",
+      "description" : "global window",
+      "size" : 26261,
+      "compressedSize" : 12608,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/ui/utils/constants.js", "sap/apf/ui/utils/helper.js", "sap/m/Button.js", "sap/m/Label.js", "sap/m/Link.js", "sap/m/List.js", "sap/m/ListMode.js", "sap/m/ListSeparators.js", "sap/m/PlacementType.js", "sap/m/Popover.js", "sap/m/StandardListItem.js", "sap/m/ToggleButton.js", "sap/m/ToolbarSpacer.js", "sap/suite/ui/commons/ChartContainerContent.js", "sap/suite/ui/commons/ChartContainerToolbarPlaceholder.js", "sap/ui/core/CustomData.js", "sap/ui/core/Icon.js", "sap/ui/core/mvc/Controller.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/controller/stepGallery.controller.js",
+      "size" : 6884,
+      "compressedSize" : 3232,
+      "required" : ["jquery.sap.global.js", "sap/apf/ui/utils/helper.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/controller/toolbar.controller.js",
+      "description" : "@class toolbar @name toolbar @memberOf sap.apf.ui.reuse.controller @description controller for view.toolbar",
+      "size" : 22412,
+      "compressedSize" : 12704,
+      "required" : ["sap/apf/ui/utils/print.js", "sap/ui/core/mvc/Controller.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/controller/viewSetting.controller.js",
+      "size" : 3558,
+      "compressedSize" : 1482,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/fragment/addStepCheckDialog.fragment.js",
+      "size" : 2433,
+      "compressedSize" : 1444,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/fragment/newMessageDialog.fragment.js",
+      "size" : 1213,
+      "compressedSize" : 728,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/fragment/pathGallery.fragment.js",
+      "size" : 4534,
+      "compressedSize" : 2458,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/fragment/selectionDisplay.fragment.js",
+      "size" : 2319,
+      "compressedSize" : 1161,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/fragment/stepGallery.fragment.js",
+      "size" : 6713,
+      "compressedSize" : 3477,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/view/analysisPath.view.js",
+      "description" : "@class analysisPath @name analysisPath @memberOf sap.apf.ui.reuse.view @description Layout holds title of Analysis Path, saved path name, Toolbar and Carousel @returns  {AnalysisPath}",
+      "size" : 3416,
+      "compressedSize" : 1803,
+      "required" : ["sap/m/ObjectHeader.js", "sap/m/PlacementType.js", "sap/m/Popover.js", "sap/ui/core/mvc/ViewType.js", "sap/ui/layout/VerticalLayout.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/view/carousel.view.js",
+      "size" : 8012,
+      "compressedSize" : 5367,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/view/deleteAnalysisPath.view.js",
+      "size" : 1691,
+      "compressedSize" : 1155,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/view/facetFilter.view.js",
+      "size" : 840,
+      "compressedSize" : 550,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/view/layout.view.xml",
+      "size" : 1126,
+      "required" : ["sap/apf/ui/reuse/controller/layout.controller.js", "sap/m/Bar.js", "sap/m/Page.js", "sap/m/ScrollContainer.js", "sap/m/SplitApp.js", "sap/ui/core/mvc/XMLView.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/view/messageHandler.view.js",
+      "size" : 440,
+      "compressedSize" : 298,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/view/navigationTarget.view.js",
+      "size" : 4612,
+      "compressedSize" : 2137,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/view/pathFilterDisplay.view.xml",
+      "size" : 2407,
+      "required" : ["sap/apf/ui/reuse/controller/pathFilterDisplay.controller.js", "sap/m/Bar.js", "sap/m/Button.js", "sap/m/CustomListItem.js", "sap/m/Dialog.js", "sap/m/HBox.js", "sap/m/Label.js", "sap/m/List.js", "sap/m/NavContainer.js", "sap/m/Page.js", "sap/m/SearchField.js", "sap/m/StandardListItem.js", "sap/m/VBox.js", "sap/ui/core/Icon.js", "sap/ui/core/mvc/XMLView.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/view/pathGallery.view.js",
+      "size" : 388,
+      "compressedSize" : 326,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/view/smartFilterBar.view.js",
+      "size" : 1565,
+      "compressedSize" : 951,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/view/step.view.js",
+      "size" : 6038,
+      "compressedSize" : 4204,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/view/stepContainer.view.js",
+      "description" : "@class stepContainer @name stepContainer @memberOf sap.apf.ui.reuse.view @description Creates ChartContainer and add it into the layout  @returns {stepContainerLayout}",
+      "size" : 1549,
+      "compressedSize" : 892,
+      "required" : ["sap/m/OverflowToolbar.js", "sap/suite/ui/commons/ChartContainer.js", "sap/suite/ui/commons/ChartContainerToolbarPlaceholder.js", "sap/ui/layout/VerticalLayout.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/view/stepGallery.view.js",
+      "size" : 580,
+      "compressedSize" : 312,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/view/toolbar.view.js",
+      "description" : "@class toolbar @memberOf sap.apf.ui.reuse.view @name toolbar @description layout holds the Toolbar buttons: new , save, open, print",
+      "size" : 3516,
+      "compressedSize" : 2176,
+      "required" : ["sap/m/List.js", "sap/m/ListType.js", "sap/m/StandardListItem.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/reuse/view/viewSetting.view.js",
+      "size" : 1171,
+      "compressedSize" : 657,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/utils/constants.js",
+      "description" : "@class CONSTANTS @name CONSTANTS @memberOf sap.apf.ui.utils @description defines application constants for UI classes",
+      "size" : 3144,
+      "compressedSize" : 2280,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/utils/dateTimeFormatter.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2018 SAP SE. All rights reserved",
+      "size" : 1582,
+      "compressedSize" : 752,
+      "required" : ["sap/ui/core/format/DateFormat.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/utils/decimalFormatter.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2018 SAP SE. All rights reserved",
+      "size" : 1504,
+      "compressedSize" : 765,
+      "required" : ["sap/ui/core/format/NumberFormat.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/utils/determineColumnSettingsForSpreadSheetExport.js",
+      "size" : 2429,
+      "compressedSize" : 1118,
+      "required" : ["jquery.sap.global.js", "sap/ui/export/Spreadsheet.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/utils/facetFilterListConverter.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 2263,
+      "compressedSize" : 570,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/utils/facetFilterListHandler.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 9690,
+      "compressedSize" : 2745,
+      "required" : ["jquery.sap.global.js", "sap/apf/ui/utils/facetFilterListConverter.js", "sap/apf/ui/utils/facetFilterValueFormatter.js", "sap/m/FacetFilterItem.js", "sap/m/FacetFilterList.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/utils/facetFilterValueFormatter.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 3653,
+      "compressedSize" : 658,
+      "required" : ["jquery.sap.global.js", "sap/apf/ui/utils/formatter.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/utils/formatter.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2018 SAP SE. All rights reserved",
+      "size" : 6397,
+      "compressedSize" : 2409,
+      "required" : ["sap/apf/ui/utils/dateTimeFormatter.js", "sap/apf/ui/utils/decimalFormatter.js", "sap/apf/ui/utils/stringToDateFormatter.js", "sap/apf/ui/utils/timeFormatter.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/utils/helper.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP SE. All rights reserved",
+      "size" : 2921,
+      "compressedSize" : 862,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/utils/print.js",
+      "description" : "global window",
+      "size" : 6510,
+      "compressedSize" : 3119,
+      "required" : ["jquery.sap.global.js", "sap/apf/ui/utils/formatter.js", "sap/apf/ui/utils/printView.js", "sap/viz/ui5/types/legend/Common.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/utils/printModel.js",
+      "description" : "global window",
+      "size" : 10576,
+      "compressedSize" : 4272,
+      "required" : ["jquery.sap.global.js", "sap/apf/ui/utils/formatter.js", "sap/viz/ui5/types/legend/Common.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/utils/printView.js",
+      "size" : 4074,
+      "compressedSize" : 2261,
+      "required" : ["jquery.sap.global.js", "sap/apf/ui/utils/printModel.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/utils/representationTypesHandler.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 7096,
+      "compressedSize" : 3279,
+      "required" : ["sap/apf/core/representationTypes.js", "sap/apf/modeler/ui/utils/constants.js", "sap/apf/modeler/ui/utils/labelForRepresentationTypes.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/utils/stringToDateFormatter.js",
+      "size" : 5554,
+      "compressedSize" : 2543,
+      "required" : ["sap/apf/utils/utils.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/ui/utils/timeFormatter.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2018 SAP SE. All rights reserved",
+      "size" : 732,
+      "compressedSize" : 391,
+      "required" : ["sap/ui/model/odata/type/Time.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/utils/executeFilterMapping.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2018 SAP SE. All rights reserved",
+      "size" : 2008,
+      "compressedSize" : 525,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/core/utils/filter.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/utils/externalContext.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2015 SAP AG. All rights reserved",
+      "size" : 11572,
+      "compressedSize" : 4010,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/core/utils/filter.js", "sap/apf/core/utils/filterTerm.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/utils/filter.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 27122,
+      "compressedSize" : 6883,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/core/utils/filter.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/utils/filterIdHandler.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 8740,
+      "compressedSize" : 2615,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/utils/hashtable.js",
+      "description" : "global sap, jQuery",
+      "size" : 8489,
+      "compressedSize" : 2300,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/utils/navigationHandler.js",
+      "description" : "global sap, jQuery, window",
+      "size" : 13908,
+      "compressedSize" : 5267,
+      "required" : ["sap/apf/core/utils/filterSimplify.js", "sap/apf/utils/executeFilterMapping.js", "sap/apf/utils/utils.js", "sap/ui/core/routing/HashChanger.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/utils/parseTextPropertyFile.js",
+      "size" : 5689,
+      "compressedSize" : 2191,
+      "required" : ["sap/apf/core/constants.js", "sap/apf/utils/utils.js", "sap/ui/core/format/DateFormat.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/utils/proxyTextHandlerForLocalTexts.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2018 SAP SE. All rights reserved",
+      "size" : 4477,
+      "compressedSize" : 1170,
+      "required" : ["sap/apf/utils/hashtable.js", "sap/apf/utils/parseTextPropertyFile.js", "sap/apf/utils/utils.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/utils/sbAdapter.js",
+      "size" : 7112,
+      "compressedSize" : 2893,
+      "required" : ["sap/ui/fl/LrepConnector.js", "sap/ui/thirdparty/datajs.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/utils/serializationMediator.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 7138,
+      "compressedSize" : 2296,
+      "required" : ["sap/apf/core/constants.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/utils/startFilter.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 26089,
+      "compressedSize" : 8151,
+      "required" : ["sap/apf/core/utils/filter.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/utils/startFilterHandler.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 21631,
+      "compressedSize" : 6287,
+      "required" : ["sap/apf/core/utils/filter.js", "sap/apf/utils/filter.js", "sap/apf/utils/startFilter.js", "sap/apf/utils/utils.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/utils/startParameter.js",
+      "description" : "! SAP APF Analysis Path Framework  (c) Copyright 2012-2014 SAP AG. All rights reserved",
+      "size" : 7382,
+      "compressedSize" : 2398,
+      "required" : ["ui5loader-autoconfig.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/apf/utils/utils.js",
+      "description" : "Static helper functions",
+      "size" : 27093,
+      "compressedSize" : 10313,
+      "required" : ["sap/apf/utils/hashtable.js", "sap/m/ViewSettingsDialog.js", "sap/ui/core/format/DateFormat.js", "ui5loader-autoconfig.js"],
+      "includes" : []
+    }
+  ]
+}

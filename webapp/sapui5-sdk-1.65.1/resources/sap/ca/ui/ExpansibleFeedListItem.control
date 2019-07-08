@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+
+    <name>ExpansibleFeedListItem</name>
+    <documentation>Extends the FeedListItem to hide text when it is longer than maxLines. When text is hidden a See more
+        link is displayed, clicking on the link displays the entire text.
+    </documentation>
+
+    <baseType>sap.m/FeedListItem</baseType>
+    <deprecation since="1.24">This control has been made available in sap.m. Please use sap.m.FeedListItem instead! This control will not be supported anymore.</deprecation>
+    <properties>
+        <property group="Misc" name="maxLines" type="sap.ui.core/int" defaultValue="5">
+            <documentation>The maximum number of lines to display before adding the &quot;See more&quot; link.
+            </documentation>
+        </property>
+    </properties>
+</control>

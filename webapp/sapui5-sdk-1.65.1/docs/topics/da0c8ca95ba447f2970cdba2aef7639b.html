@@ -1,0 +1,321 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us" dir="ltr">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Create an SAPUI5 Application Project</title>
+      <link rel="icon" href="themes/sap-default/img/favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" href="themes/sap-default/img/favicon.ico">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="abstract" content="To create an SAPUI5 Application Project, you must have installed the SAPUI5 Application Development feature in your Eclipse installation.">
+      
+      <meta name="description" content="To create an SAPUI5 Application Project, you must have installed the SAPUI5 Application Development feature in your Eclipse installation.">
+      
+      <meta name="content category" content="development">
+      <script type="text/javascript">var d4p = {"relativePath":'',"dev":false,"debug":false,"draft":false,"nextTopicHref":"07d2bdc3ad0e4c62b14123e6f80dca56.html","previousTopicHref":"510d6eeed849447fbf497cfa5b640514.html"}</script>
+      <link rel="stylesheet" type="text/css" media="screen, projection" href="themes/sap-default/css/style.css">
+      <script type="text/javascript">
+      
+        d4p.cssGridPath = d4p.dev ? 'html5-themes/modules/960-Responsive-Grid/css/' : 'themes/dita-d4p-classic/css/';
+        var ADAPT_CONFIG = {
+          // Where is your CSS?
+          path: d4p.relativePath + d4p.cssGridPath,
+
+          // false = Only run once, when page first loads.
+          // true = Change on window resize and page tilt.
+          dynamic: true,
+
+          // Optional callback... myCallback(i, width)
+          callback: doc_resize,
+
+          // First range entry is the minimum.
+          // Last range entry is the maximum.
+          // Separate ranges by "to" keyword.
+          range: [
+             // small (size-0)
+            '0px    to 760px  =',
+             // medium (size-1, size-2)
+            '760px  to 980px  = ',
+            '980px  to 1270px = ',
+             // large (size-3, size-5)
+            '1270px to 1600px = ',
+            '1600px to 1940px = ',
+             // extra large (size-6)
+            '1940px to 2540px = ',
+            '2540px           = '
+          ]
+        };
+
+        function doc_resize(i, width)
+        {
+          d4p.setBodyClassfunction(i, width);
+        }
+
+
+        
+      </script>
+      <script type="text/javascript" src="toc-info.js"></script>
+      <script type="text/javascript" src="themes/sap-default/js/script.js"></script>
+      
+      		<!--[if lt IE 9]>
+      			<script>
+      			  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+      			    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+      			    "progress,section,time,video").split(',');
+      			  for (var i = 0; i < e.length; i++) {
+      			    document.createElement(e[i]);
+      			  }
+      			</script>
+      		<![endif]-->
+      
+      <script>
+      function addLoadEvent(func) {
+      var oldonload = window.onload;
+      if (typeof window.onload != 'function') {
+      window.onload = func;
+      } else {
+      window.onload = function() {
+      if (oldonload) {
+      oldonload();
+      }
+      func();
+      }
+      }
+      }
+      
+      addLoadEvent(function() { prettyPrint();
+      if ($('#local-navigation').length) {
+      $('#local-navigation').navigation();
+      }
+      
+      
+      });
+      
+      </script>
+      <script type="text/javascript" src="js/prettify.js"> </script>
+      <script id="search-processing" type="text/javascript" src="js/search-processing.js"> </script>
+      
+      
+      <script>function handleAreaClick(oArea) {window.parent.location.href = oArea.href;}</script><link type="text/css" rel="stylesheet" href="css/overrides.css"></head>
+   <body class="en-us sap-default centered navigation-default enumeration-disabled" style="font-family: &apos;72&apos;, Arial, Helvetica, sans-serif;">
+      <div id="d4h5-main-container" class="container_12" role="application">
+         <ul id="page-links" class="hidden">
+            <li><a id="skip-to-content" href="#d4h5-main-content">Skip to content</a></li>
+            <li><a id="skip-to-localnav" href="#local-navigation">Skip to navigation</a></li>
+            <li><a id="skip-to-footer" href="#footer-container">Skip to footer</a></li>
+         </ul>
+         
+         
+         <div id="d4h5-section-container" class="grid_12" style="padding-top: 0;">
+            
+            
+            
+            <div id="d4h5-main-content" class="grid_8 alpha omega" style="margin: 0 0.5em;">
+               <section>
+                  <div id="content-toolbar" class="toolbar hide-for-small"></div>
+                  <div class="page task  - topic-topic task-task " id="loioda0c8ca95ba447f2970cdba2aef7639b">
+                     
+                     <h1 class="title topictitle1" hidden>Create an <span class="ph pname">SAPUI5</span> Application Project
+                     </h1>
+                     
+                     <div class="body taskbody">
+                        <p class="shortdesc" hidden>To create an <span class="ph pname">SAPUI5</span> Application Project, you must have installed the <span class="ph pname">SAPUI5</span> Application Development feature in your Eclipse installation.
+                        </p>
+                        
+                        		
+                        <section class="section procedure"><span id="steps" class="anchor"></span><div class="ol steps tasklabel">
+                              <h2 class="sectiontitle tasklabel">Procedure</h2>
+                           </div>
+                           <ol class="ol steps">
+                              <li class="li step stepexpand" id="loioda0c8ca95ba447f2970cdba2aef7639b__step_N10020_N1001D_N10011_N10001">
+                                 				<span class="ph cmd">Start the <span class="ph uicontrol">New SAPUI5 Application Project</span> wizard in the Eclipse by choosing <span class="ph menucascade"><img src="themes/sap-default/img/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"><span class="ph uicontrol">File</span>&#xA0;<img src="themes/sap-default/img/navstep.gif" alt="Next navigation step" title="Next navigation step">&#xA0;<span class="ph uicontrol">New</span>&#xA0;<img src="themes/sap-default/img/navstep.gif" alt="Next navigation step" title="Next navigation step">&#xA0;<span class="ph uicontrol">Other...</span>&#xA0;<img src="themes/sap-default/img/navstep.gif" alt="Next navigation step" title="Next navigation step">&#xA0;<span class="ph uicontrol">SAPUI5 Application Development</span>&#xA0;<img src="themes/sap-default/img/navstep.gif" alt="Next navigation step" title="Next navigation step">&#xA0;<span class="ph uicontrol">Application Project</span>&#xA0;<img src="themes/sap-default/img/navstep.gif" alt="Next navigation step" title="Next navigation step">&#xA0;<span class="ph uicontrol">Next</span><img src="themes/sap-default/img/navend.gif" alt="End of the navigation path" title="End of the navigation path"></span>.</span>
+                                 				
+                                 <div class="itemgroup info"><img class="inline  " id="loioda0c8ca95ba447f2970cdba2aef7639b__image_lrj_fjb_p5" src="loiodda9cf864b654825abd5b8006a8b86db_LowRes.png"></div>
+                                 			
+                              </li>
+                              
+                              <li class="li step stepexpand" id="loioda0c8ca95ba447f2970cdba2aef7639b__step_N10045_N1001D_N10011_N10001">
+                                 				<span class="ph cmd">Enter the following project-related data:</span>
+                                 				
+                                 <ul class="ul choices" id="loioda0c8ca95ba447f2970cdba2aef7639b__choices_jmk_2vy_1j">
+                                    					
+                                    <li class="li choice">Enter a project name (mandatory).</li>
+                                    
+                                    					
+                                    <li class="li choice">Enter a location (optional, prefilled from the current workspace).</li>
+                                    
+                                    					
+                                    <li class="li choice">Select a library: &apos;sap.m&apos; (mobile target device) or &apos;sap.ui.commons&apos; (desktop target device).</li>
+                                    
+                                    					
+                                    <li class="li choice">Select <span class="ph uicontrol">Create an Initial View</span>.
+                                       <p class="p">Views can also be added later using the <span class="ph uicontrol">SAPUI5 Application
+                                             								View</span> wizard.
+                                       </p>
+                                       
+                                    </li>
+                                    
+                                    					
+                                    <li class="li choice">Choose <span class="ph uicontrol">Next</span>.
+                                    </li>
+                                    
+                                    				
+                                 </ul>
+                                 
+                                 				
+                                 <div class="itemgroup info"><img class="inline  " id="loioda0c8ca95ba447f2970cdba2aef7639b__image_uyv_cjb_p5" src="loio7a6020d8ccf64b63be1ab9c7e7db1f92_LowRes.png"></div>
+                                 			
+                              </li>
+                              
+                              <li class="li step stepexpand" id="loioda0c8ca95ba447f2970cdba2aef7639b__step_N10067_N1001D_N10011_N10001">
+                                 				<span class="ph cmd">Enter the following view-related data: </span>
+                                 				
+                                 <ul class="ul choices" id="loioda0c8ca95ba447f2970cdba2aef7639b__choices_g1g_rvy_1j">
+                                    					
+                                    <li class="li choice">Choose the folder in which the view shall be created.</li>
+                                    
+                                    					
+                                    <li class="li choice">Enter a unique name for your view.</li>
+                                    
+                                    					
+                                    <li class="li choice">Choose the <span class="ph uicontrol">Development Paradigm</span> (we recommend XML). 
+                                    </li>
+                                    
+                                    				
+                                 </ul>
+                                 
+                                 				
+                                 <div class="itemgroup info"><img class="inline  " id="loioda0c8ca95ba447f2970cdba2aef7639b__image_wm1_chg_2k" src="loio8aa6a7f052f04640926892fa96313ae3_LowRes.png" alt="Create a New View Wizard" title="Create a New View Wizard"></div>
+                                 			
+                              </li>
+                              
+                              <li class="li step stepexpand">
+                                 				<span class="ph cmd">Choose <span class="ph uicontrol">Finish</span>.</span>
+                                 			
+                              </li>
+                              
+                           </ol>
+                           
+                        </section>
+                        		
+                        <div class="section result" id="loioda0c8ca95ba447f2970cdba2aef7639b__result_N10097_N10011_N10001"><span id="results" class="anchor"></span><div class="tasklabel">
+                              <h2 class="sectiontitle tasklabel">Results</h2>
+                           </div>
+                           			
+                           <p class="p">After you finish the wizard, the system performs the following steps:</p>
+                           
+                           			
+                           <ul class="ul" id="loioda0c8ca95ba447f2970cdba2aef7639b__ul_bpg_lwy_1j">
+                              				
+                              <li class="li">A new dynamic Web project is created. All relevant files are created in the <span class="ph filepath">WebContent</span> folder. 
+                              </li>
+                              
+                              				
+                              <li class="li">A prefilled <span class="ph filepath">index.html</span> is created, which contains the <samp class="ph codeph">sap.ui.commons</samp> lib and the
+                                 						<samp class="ph codeph">sap_belize</samp> theme in the bootstrap in case of a desktop target device, or the <samp class="ph codeph">sap.m</samp> lib and
+                                 						<samp class="ph codeph">sap_mvi</samp> theme in case of mobile target device. This depends on the choice you made in Step 2.
+                              </li>
+                              
+                              				
+                              <li class="li"> In <span class="ph filepath">WEB-INF</span> folder, a <samp class="ph codeph">web.xml</samp> file is created, which contains settings for resource handling and the use
+                                 					of <samp class="ph codeph">SimpleProxyServlet</samp>.
+                              </li>
+                              
+                              				
+                              <li class="li">The installed <span class="ph pname">SAPUI5</span> UI lib plugins are automatically added to the Java build path
+                                 					and to the deployment assembly.
+                              </li>
+                              
+                              				
+                              <li class="li">The<span class="ph pname">SAPUI5</span> class path container (if available) is automatically added to the JavaScript include
+                                 					path. 
+                              </li>
+                              
+                              				
+                              <li class="li">The <samp class="ph codeph">index.html</samp> page is opened in the standard editor.
+                              </li>
+                              
+                              				
+                              <li class="li">Inside the JavaScript block of <samp class="ph codeph">index.html</samp>, code completion is available,
+                                 					see <a class="xref" href="../../#/topic/85ce1edb55dd4de3beac5b6d24d36d8a.html" title="Code completion provides a context-sensitive input help while you&apos;re coding." target="_top">JavaScript Code
+                                    						Completion</a>.
+                              </li>
+                              
+                              				
+                              <li class="li">The J2EE perspective is automatically loaded.</li>
+                              
+                              				
+                              <li class="li">If you have selected the <span class="ph uicontrol">Create an Initial View</span> option on the first page of the <span class="ph uicontrol">SAPUI5 Application
+                                    						Project</span> wizard, a view and a view controller are created, and the coding to call the view is added to the
+                                 						<samp class="ph codeph">index.html</samp> file. 
+                              </li>
+                              
+                              			
+                           </ul>
+                           
+                           		
+                        </div>
+                        		
+                        <div class="section postreq" id="loioda0c8ca95ba447f2970cdba2aef7639b__postreq_N10142_N10011_N10001">
+                           <div class="tasklabel">
+                              <h2 class="sectiontitle tasklabel">Next Steps</h2>
+                           </div>
+                           			
+                           <p class="p"><a class="xref" href="../../#/topic/07d2bdc3ad0e4c62b14123e6f80dca56.html" title="In your SAPUI5 application project, the first step to build your application is to add a control to your view and implement a method to react on user interaction. In this case you create a button and implement a function to react when the user presses it." target="_top">Add a Control to Your View</a></p>
+                           
+                           			
+                           <p class="p"><a class="xref" href="../../#/topic/10c6b87c3728417f95a428cb7decb64c.html" title="All functions that are not directly related to the user interface should be handled in the controller to ensure clear separation between UI and data. In this case you add a method to handle the event, which is attached to a button." target="_top">Implement a Method in the Controller</a></p>
+                           
+                           			
+                           <p class="p"><a class="xref" href="../../#/topic/727bc3f650e24af7932d4fc9a6695a16.html" title="An SAPUI5 application view can only be created for an SAPUI5 application project that has been created with the SAPUI5 Application Wizard and not for other kinds of projects." target="_top">Create an Additional View</a></p>
+                           
+                           			
+                           <p class="p"><a class="xref" href="../../#/topic/5da1208e40364ff59ce12fb50a067c45.html" title="To integrate a new view, you can either add it to index.html or nest it into another view." target="_top">Integrate a New View</a></p>
+                           
+                           		
+                        </div>
+                        	
+                     </div>
+                     
+                     <div class="related-links"> 
+                        
+                        <div class="relinfo">
+                           <div class="relinfotitle ">Related Information</div>
+                           
+                           <div><a class="link" href="../../#/topic/85ce1edb55dd4de3beac5b6d24d36d8a.html" title="Code completion provides a context-sensitive input help while you&apos;re coding." target="_top">JavaScript Code Completion</a></div>
+                           
+                           <div><a class="link" href="../../#/topic/fcf5e9b5068f4e008779e520e546604b.html" title="You can add SAPUI5 control-specific templates for JavaScript code. Such templates are available, for example, in JavaScript views of SAPUI5 application tools development." target="_top">Use JavaScript and XML Templates</a></div>
+                           
+                           <div><a class="link" href="../../#/topic/b43514f9e7a94650a7affddd9056fb35.html" title="SAPUI5 snippets are templates and examples on how to use the SAPUI5 runtime and controls." target="_top">SAPUI5 Snippets</a></div>
+                           
+                           <div><a class="link" href="../../#/topic/8d80e84366a84bbbada83163ea700eb4.html" title="You can use Quick Fixes to display the API documentation of an SAPUI5 control in the Demo Kit." target="_top">Linking your Eclipse Editor to the Demo Kit</a></div>
+                           
+                        </div>
+                        
+                     </div>
+                     
+                  </div>
+                  
+               </section>
+               <div class="clear"></div>
+               
+            </div>
+            <div class="clearfix"></div>
+         </div>
+      </div>
+      <div class="clearfix"></div>
+      <div id="footer-container" class="grid_12">
+         <footer>
+            	
+            <div id="custom-footerSpacer"></div>
+            	
+            
+         </footer>
+         
+         
+      </div>
+   </body>
+</html>

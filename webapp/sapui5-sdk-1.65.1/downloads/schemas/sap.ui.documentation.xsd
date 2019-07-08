@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="sap.ui.documentation" xmlns:n4="sap.ui.documentation" xmlns:n2="sap.ui.unified" xmlns:n3="sap.m" xmlns:n0="sap.ui.core" xmlns:n1="sap.ui.layout">
+<xsd:import namespace="sap.ui.unified"/>
+<xsd:import namespace="sap.m"/>
+<xsd:import namespace="sap.ui.core"/>
+<xsd:import namespace="sap.ui.layout"/>
+</xsd:schema>

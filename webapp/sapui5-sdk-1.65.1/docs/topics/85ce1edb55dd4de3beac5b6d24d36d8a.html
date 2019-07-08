@@ -1,0 +1,248 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us" dir="ltr">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JavaScript Code Completion</title>
+      <link rel="icon" href="themes/sap-default/img/favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" href="themes/sap-default/img/favicon.ico">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="abstract" content="Code completion provides a context-sensitive input help while you&apos;re coding.">
+      
+      <meta name="description" content="Code completion provides a context-sensitive input help while you&apos;re coding.">
+      
+      <meta name="content category" content="development">
+      <script type="text/javascript">var d4p = {"relativePath":'',"dev":false,"debug":false,"draft":false,"nextTopicHref":"8d80e84366a84bbbada83163ea700eb4.html","previousTopicHref":"5da1208e40364ff59ce12fb50a067c45.html"}</script>
+      <link rel="stylesheet" type="text/css" media="screen, projection" href="themes/sap-default/css/style.css">
+      <script type="text/javascript">
+      
+        d4p.cssGridPath = d4p.dev ? 'html5-themes/modules/960-Responsive-Grid/css/' : 'themes/dita-d4p-classic/css/';
+        var ADAPT_CONFIG = {
+          // Where is your CSS?
+          path: d4p.relativePath + d4p.cssGridPath,
+
+          // false = Only run once, when page first loads.
+          // true = Change on window resize and page tilt.
+          dynamic: true,
+
+          // Optional callback... myCallback(i, width)
+          callback: doc_resize,
+
+          // First range entry is the minimum.
+          // Last range entry is the maximum.
+          // Separate ranges by "to" keyword.
+          range: [
+             // small (size-0)
+            '0px    to 760px  =',
+             // medium (size-1, size-2)
+            '760px  to 980px  = ',
+            '980px  to 1270px = ',
+             // large (size-3, size-5)
+            '1270px to 1600px = ',
+            '1600px to 1940px = ',
+             // extra large (size-6)
+            '1940px to 2540px = ',
+            '2540px           = '
+          ]
+        };
+
+        function doc_resize(i, width)
+        {
+          d4p.setBodyClassfunction(i, width);
+        }
+
+
+        
+      </script>
+      <script type="text/javascript" src="toc-info.js"></script>
+      <script type="text/javascript" src="themes/sap-default/js/script.js"></script>
+      
+      		<!--[if lt IE 9]>
+      			<script>
+      			  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+      			    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+      			    "progress,section,time,video").split(',');
+      			  for (var i = 0; i < e.length; i++) {
+      			    document.createElement(e[i]);
+      			  }
+      			</script>
+      		<![endif]-->
+      
+      <script>
+      function addLoadEvent(func) {
+      var oldonload = window.onload;
+      if (typeof window.onload != 'function') {
+      window.onload = func;
+      } else {
+      window.onload = function() {
+      if (oldonload) {
+      oldonload();
+      }
+      func();
+      }
+      }
+      }
+      
+      addLoadEvent(function() { prettyPrint();
+      if ($('#local-navigation').length) {
+      $('#local-navigation').navigation();
+      }
+      
+      
+      });
+      
+      </script>
+      <script type="text/javascript" src="js/prettify.js"> </script>
+      <script id="search-processing" type="text/javascript" src="js/search-processing.js"> </script>
+      
+      
+      <script>function handleAreaClick(oArea) {window.parent.location.href = oArea.href;}</script><link type="text/css" rel="stylesheet" href="css/overrides.css"></head>
+   <body class="en-us sap-default centered navigation-default enumeration-disabled" style="font-family: &apos;72&apos;, Arial, Helvetica, sans-serif;">
+      <div id="d4h5-main-container" class="container_12" role="application">
+         <ul id="page-links" class="hidden">
+            <li><a id="skip-to-content" href="#d4h5-main-content">Skip to content</a></li>
+            <li><a id="skip-to-localnav" href="#local-navigation">Skip to navigation</a></li>
+            <li><a id="skip-to-footer" href="#footer-container">Skip to footer</a></li>
+         </ul>
+         
+         
+         <div id="d4h5-section-container" class="grid_12" style="padding-top: 0;">
+            
+            
+            
+            <div id="d4h5-main-content" class="grid_8 alpha omega" style="margin: 0 0.5em;">
+               <section>
+                  <div id="content-toolbar" class="toolbar hide-for-small"></div>
+                  <div class="page concept  - topic-topic concept-concept " id="loio85ce1edb55dd4de3beac5b6d24d36d8a">
+                     
+                     <h1 class="title topictitle1" hidden>JavaScript Code Completion</h1>
+                     
+                     <div class="body conbody">
+                        <p class="shortdesc" hidden>Code completion provides a context-sensitive input help while you&apos;re coding.</p>
+                        
+                        		
+                        <div class="section" id="loio85ce1edb55dd4de3beac5b6d24d36d8a__section_N10020_N10011_N10001">
+                           <section class="section" type="Automatic Code Completion for SAPUI5 Application Projects">
+                              <h2 class="section_title" style="font-size: 1.15em;">Automatic Code Completion for SAPUI5 Application Projects</h2>
+                              <p class="p">The Eclipse JavaScript Development Tools (JSDT) provide an editor which parses scripts and offers
+                                 				a code completion functionality.
+                              </p>
+                              
+                              			
+                              <p class="p"><img class="inline  " id="loio85ce1edb55dd4de3beac5b6d24d36d8a__image_kxk_hjm_3j" src="loio293b3db8ea0f43b5aa248defa33103d4_LowRes.png" alt="SAPUI5 ApplTools Code Completion" title="SAPUI5 ApplTools Code Completion"></p>
+                              
+                           </section>
+                        </div>
+                        		
+                        <div class="section" id="loio85ce1edb55dd4de3beac5b6d24d36d8a__section_N10035_N10012_N10001">
+                           <section class="section" type="Code Completion for SAPUI5 Views">
+                              <h2 class="section_title" style="font-size: 1.15em;">Code Completion for SAPUI5 Views</h2>
+                              			
+                              			
+                              <p class="p">For JavaScript views, code completion is available.</p>
+                              
+                              			
+                              <p class="p"><img class="inline  " id="loio85ce1edb55dd4de3beac5b6d24d36d8a__image_ow3_rfk_hj" src="loio414d5c3d106041ceb56bf3c63fd34c2f_LowRes.png" alt="SAPUI5 ApplTools MVC and Code Completion" title="SAPUI5 ApplTools MVC and Code Completion"></p>
+                              
+                              		
+                           </section>
+                        </div>
+                        		
+                        <div class="section" id="loio85ce1edb55dd4de3beac5b6d24d36d8a__section_N10030_N10011_N10001">
+                           <section class="section" type="Enabling Code Completion for Other Projects">
+                              <h2 class="section_title" style="font-size: 1.15em;">Enabling Code Completion for Other Projects</h2>
+                              <p class="p">If you are not working with a <span class="ph pname">SAPUI5</span> application project, you can perform the following preparing steps to
+                                 				add the required <span class="ph pname">SAPUI5</span> core libraries to the JavaScript include path.
+                                 				
+                              </p>
+                              
+                              <p class="p">To set the JavaScript facet, proceed as follows:</p>
+                              
+                              <ol class="ol" id="loio85ce1edb55dd4de3beac5b6d24d36d8a__ol_qjv_qjm_3j">
+                                 				
+                                 <li class="li">Open <span class="ph menucascade"><img src="themes/sap-default/img/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"><span class="ph uicontrol">Project</span>&#xA0;<img src="themes/sap-default/img/navstep.gif" alt="Next navigation step" title="Next navigation step">&#xA0;<span class="ph uicontrol">Properties</span><img src="themes/sap-default/img/navend.gif" alt="End of the navigation path" title="End of the navigation path"></span>.
+                                 </li>
+                                 
+                                 				
+                                 <li class="li">Select <span class="ph uicontrol">Project Facets</span>.
+                                 </li>
+                                 
+                                 				
+                                 <li class="li">If you do not see the list of all possible facets, click the link: <span class="ph uicontrol">Convert to facet form</span> and wait a second
+                                    					to see all available facets.
+                                 </li>
+                                 
+                                 				
+                                 <li class="li">Mark <span class="ph uicontrol">JavaScript</span> facet on the same view.
+                                 </li>
+                                 
+                                 				
+                                 <li class="li">Choose <span class="ph uicontrol">Apply and Close</span>.
+                                 </li>
+                                 
+                                 			
+                              </ol>
+                              
+                              <p class="p">Your project now has the JavaScript facet. Now you can add the <span class="ph pname">SAPUI5</span>
+                                 				core libraries. Proceed as follows:
+                              </p>
+                              
+                              <ul class="ul" id="loio85ce1edb55dd4de3beac5b6d24d36d8a__ul_a44_jjm_3j">
+                                 				
+                                 <li class="li">Open <span class="ph menucascade"><img src="themes/sap-default/img/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"><span class="ph uicontrol">Project</span>&#xA0;<img src="themes/sap-default/img/navstep.gif" alt="Next navigation step" title="Next navigation step">&#xA0;<span class="ph uicontrol">Properties</span><img src="themes/sap-default/img/navend.gif" alt="End of the navigation path" title="End of the navigation path"></span>.
+                                 </li>
+                                 
+                                 				
+                                 <li class="li">Choose <span class="ph menucascade"><img src="themes/sap-default/img/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"><span class="ph uicontrol">JavaScript</span>&#xA0;<img src="themes/sap-default/img/navstep.gif" alt="Next navigation step" title="Next navigation step">&#xA0;<span class="ph uicontrol">Include Path</span><img src="themes/sap-default/img/navend.gif" alt="End of the navigation path" title="End of the navigation path"></span>.
+                                 </li>
+                                 
+                                 				
+                                 <li class="li">Select <span class="ph uicontrol">Add JavaScript Library&#x2026;</span>.
+                                 </li>
+                                 
+                                 				
+                                 <li class="li">Select <span class="ph uicontrol">SAPUI5</span>.
+                                 </li>
+                                 
+                                 				
+                                 <li class="li">Choose <span class="ph uicontrol">Finish</span>.
+                                 </li>
+                                 
+                                 				
+                                 <li class="li">Choose <span class="ph uicontrol">Apply and Close</span>.
+                                 </li>
+                                 
+                                 			
+                              </ul>
+                              
+                              <p class="p">You should now be able to see the following JavaScript resources in your project:</p>
+                              <img class="inline  " id="loio85ce1edb55dd4de3beac5b6d24d36d8a__image_nkf_zjm_3j" src="loio6754a6c68d8d407c896fc392cb77b6bf_LowRes.png" alt="SAPUI5 ApplTools Code Completion Libraries" title="SAPUI5 ApplTools Code Completion Libraries"></section>
+                        </div>
+                        	
+                     </div>
+                     
+                  </div>
+                  
+               </section>
+               <div class="clear"></div>
+               
+            </div>
+            <div class="clearfix"></div>
+         </div>
+      </div>
+      <div class="clearfix"></div>
+      <div id="footer-container" class="grid_12">
+         <footer>
+            	
+            <div id="custom-footerSpacer"></div>
+            	
+            
+         </footer>
+         
+         
+      </div>
+   </body>
+</html>

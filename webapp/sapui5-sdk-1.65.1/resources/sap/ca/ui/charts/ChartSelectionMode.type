@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<simple-type xmlns="http://www.sap.com/sap.ui.library.xsd" >
+
+    <name>charts/ChartSelectionMode</name>
+
+    <author></author>
+    <documentation>Determines the selection mode of a Chart.</documentation>
+    <enumeration>
+        <value name="None">
+            <documentation>The chart will not allow any selection</documentation>
+        </value>
+        <value name="Single">
+            <documentation>The chart will only allow single selection</documentation>
+        </value>
+        <value name="Multiple">
+            <documentation>The chart will allow multi selection.</documentation>
+        </value>
+    </enumeration>
+
+</simple-type>

@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+
+	<name>HierarchyItem</name>
+
+	<documentation>Item that represent a line of the Hierarchy control. The emphasized property should apply to the item
+		that we want to represent in his hierarchy. Optionals item will be hidden if the option is true on the Hierarchy
+		control.
+	</documentation>
+
+	<deprecation since="1.24">This control is deprecated as per central UX requirements.
+		This control will not be supported anymore.
+	</deprecation>
+
+	<baseType>sap.ui.core/Control</baseType>
+	<properties>
+		<property group="Appearance" name="icon" type="sap.ui.core/URI">
+			<documentation>Icon for the item</documentation>
+		</property>
+		<property group="Data" name="levelType" type="sap.ui.core/string">
+			<documentation>Level type</documentation>
+		</property>
+		<property group="Data" name="title" type="sap.ui.core/string">
+			<documentation>Title</documentation>
+		</property>
+		<property group="Data" name="identifier" type="sap.ui.core/string">
+			<documentation>Identifier text</documentation>
+		</property>
+		<property group="Data" name="link" type="sap.ui.core/string">
+			<documentation>Text of the link</documentation>
+		</property>
+		<property group="Data" name="emphasized" type="sap.ui.core/boolean" defaultValue="false">
+			<documentation>Does the item looks emphasized</documentation>
+		</property>
+		<property group="Data" name="optional" type="sap.ui.core/boolean" defaultValue="false">
+			<documentation>Is the item optional, so we hide it if option is set on the Hierarchy control</documentation>
+		</property>
+	</properties>
+	<events>
+		<event name="linkPress">
+			<documentation>Event when a link is pressed</documentation>
+		</event>
+	</events>
+
+	<aggregations>
+		<aggregation name="_iconControl" cardinality="0..1" type="sap.ui.core/Icon" visibility="hidden">
+			<documentation>Icon control</documentation>
+		</aggregation>
+		<aggregation name="_levelTypeLabel" cardinality="0..1" type="sap.m/Label" visibility="hidden">
+			<documentation>Label for levelType</documentation>
+		</aggregation>
+		<aggregation name="_identifierLabel" cardinality="0..1" type="sap.m/Label" visibility="hidden">
+			<documentation>Label for identifier</documentation>
+		</aggregation>
+		<aggregation name="_titleLabel" cardinality="0..1" type="sap.m/Label" visibility="hidden">
+			<documentation>Label for title</documentation>
+		</aggregation>
+		<aggregation name="_linkControl" cardinality="0..1" type="sap.m/Link" visibility="hidden">
+			<documentation>Link control</documentation>
+		</aggregation>
+	</aggregations>
+</control>

@@ -1,0 +1,9 @@
+{
+"version":3,
+"file":"sap/ca/scfld/md/library-h2-preload.js",
+"sourceroot":".",
+"sources":["manifest.json","library-dbg.js"],
+"names":[],
+"mappings":";;;;;;;;yCCcA,8CACA,uCAWA,0CACA,oCACA,wCAGA,8BACC,IAAK,CAAE,kBACP,YAAa,CAAE,oCACf,MAAO,GACP,WAAY,GACZ,SAAU,GACV,SAAU,GACV,aAAc,KACd,QAAS,QACV;;;;;;;;;;;;;;;;;;;;;;;;;;",
+"x_com_sap_openui5_sections":[110,669,829,1231]
+}

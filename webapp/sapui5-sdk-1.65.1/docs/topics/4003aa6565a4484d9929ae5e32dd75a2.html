@@ -1,0 +1,218 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us" dir="ltr">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Synchronization of SAPUI5 Apps Created with SAPUI5 Tools for Eclipse</title>
+      <link rel="icon" href="themes/sap-default/img/favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" href="themes/sap-default/img/favicon.ico">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="abstract" content="We recommend that you create SAPUI5 application projects with SAPUI5 tools for Eclipse only for simple use cases. However, for complex use cases we recommend that you use SAP Web IDE.">
+      
+      <meta name="description" content="We recommend that you create SAPUI5 application projects with SAPUI5 tools for Eclipse only for simple use cases. However, for complex use cases we recommend that you use SAP Web IDE.">
+      
+      <meta name="content category" content="development">
+      <script type="text/javascript">var d4p = {"relativePath":'',"dev":false,"debug":false,"draft":false,"nextTopicHref":"c94f13fd242f40beb64e08fc62c494e7.html","previousTopicHref":"3e3bccbb902d4672adfc24f883adf9de.html"}</script>
+      <link rel="stylesheet" type="text/css" media="screen, projection" href="themes/sap-default/css/style.css">
+      <script type="text/javascript">
+      
+        d4p.cssGridPath = d4p.dev ? 'html5-themes/modules/960-Responsive-Grid/css/' : 'themes/dita-d4p-classic/css/';
+        var ADAPT_CONFIG = {
+          // Where is your CSS?
+          path: d4p.relativePath + d4p.cssGridPath,
+
+          // false = Only run once, when page first loads.
+          // true = Change on window resize and page tilt.
+          dynamic: true,
+
+          // Optional callback... myCallback(i, width)
+          callback: doc_resize,
+
+          // First range entry is the minimum.
+          // Last range entry is the maximum.
+          // Separate ranges by "to" keyword.
+          range: [
+             // small (size-0)
+            '0px    to 760px  =',
+             // medium (size-1, size-2)
+            '760px  to 980px  = ',
+            '980px  to 1270px = ',
+             // large (size-3, size-5)
+            '1270px to 1600px = ',
+            '1600px to 1940px = ',
+             // extra large (size-6)
+            '1940px to 2540px = ',
+            '2540px           = '
+          ]
+        };
+
+        function doc_resize(i, width)
+        {
+          d4p.setBodyClassfunction(i, width);
+        }
+
+
+        
+      </script>
+      <script type="text/javascript" src="toc-info.js"></script>
+      <script type="text/javascript" src="themes/sap-default/js/script.js"></script>
+      
+      		<!--[if lt IE 9]>
+      			<script>
+      			  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+      			    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+      			    "progress,section,time,video").split(',');
+      			  for (var i = 0; i < e.length; i++) {
+      			    document.createElement(e[i]);
+      			  }
+      			</script>
+      		<![endif]-->
+      
+      <script>
+      function addLoadEvent(func) {
+      var oldonload = window.onload;
+      if (typeof window.onload != 'function') {
+      window.onload = func;
+      } else {
+      window.onload = function() {
+      if (oldonload) {
+      oldonload();
+      }
+      func();
+      }
+      }
+      }
+      
+      addLoadEvent(function() { prettyPrint();
+      if ($('#local-navigation').length) {
+      $('#local-navigation').navigation();
+      }
+      
+      
+      });
+      
+      </script>
+      <script type="text/javascript" src="js/prettify.js"> </script>
+      <script id="search-processing" type="text/javascript" src="js/search-processing.js"> </script>
+      
+      
+      <script>function handleAreaClick(oArea) {window.parent.location.href = oArea.href;}</script><link type="text/css" rel="stylesheet" href="css/overrides.css"></head>
+   <body class="en-us sap-default centered navigation-default enumeration-disabled" style="font-family: &apos;72&apos;, Arial, Helvetica, sans-serif;">
+      <div id="d4h5-main-container" class="container_12" role="application">
+         <ul id="page-links" class="hidden">
+            <li><a id="skip-to-content" href="#d4h5-main-content">Skip to content</a></li>
+            <li><a id="skip-to-localnav" href="#local-navigation">Skip to navigation</a></li>
+            <li><a id="skip-to-footer" href="#footer-container">Skip to footer</a></li>
+         </ul>
+         
+         
+         <div id="d4h5-section-container" class="grid_12" style="padding-top: 0;">
+            
+            
+            
+            <div id="d4h5-main-content" class="grid_8 alpha omega" style="margin: 0 0.5em;">
+               <section>
+                  <div id="content-toolbar" class="toolbar hide-for-small"></div>
+                  <div class="page concept  - topic-topic concept-concept " id="loio4003aa6565a4484d9929ae5e32dd75a2">
+                     
+                     <h1 class="title topictitle1" hidden>Synchronization of <span class="ph pname">SAPUI5</span> Apps
+                        		Created with <span class="ph pname">SAPUI5</span> Tools for
+                        		Eclipse
+                     </h1>
+                     
+                     <div class="body conbody">
+                        <p class="shortdesc" hidden>We recommend that you create <span class="ph pname">SAPUI5</span> application projects with
+                           			<span class="ph pname">SAPUI5</span> tools for Eclipse only
+                           		for simple use cases. However, for complex use cases we recommend that you use SAP Web
+                           		IDE.
+                        </p>
+                        
+                        		
+                        <p class="p"><span class="ph pname">SAPUI5</span> application projects
+                           			created with <span class="ph pname">SAPUI5</span> tools for
+                           			Eclipse address the following special use case:
+                        </p>
+                        
+                        		
+                        <ul class="ul" id="loio4003aa6565a4484d9929ae5e32dd75a2__ul_u4d_54b_bt">
+                           			
+                           <li class="li">Create an <span class="ph pname">SAPUI5</span>
+                              				application project in Eclipse
+                           </li>
+                           
+                           			
+                           <li class="li">Develop and execute the app locally in Eclipse</li>
+                           
+                           			
+                           <li class="li">Submit the app to the <span class="ph pname">SAPUI5</span> ABAP repository
+                           </li>
+                           
+                           			
+                           <li class="li">Execute the app in the ABAP back end (for example, with transaction
+                              					<samp class="ph codeph">SE80</samp>), or alternatively from Eclipse with the <span class="ph uicontrol">Run on
+                                 					Server</span> function
+                           </li>
+                           
+                           		
+                        </ul>
+                        
+                        		
+                        <p class="p">Some further special functionality is available to allow this use case, like a proxy for
+                           			avoiding cross domain issues when running an app locally and using back-end services on
+                           			an ABAP system. There is also a special logic built into the runtime handler on the ABAP
+                           			side addressing the project structure of a dynamic web project
+                           				(<samp class="ph codeph">WebContent</samp> folder or <samp class="ph codeph">web.xml</samp>).
+                        </p>
+                        
+                        		
+                        <p class="p">After creating an <span class="ph pname">SAPUI5</span>
+                           			application project with the wizard in the <span class="ph pname">SAPUI5</span> tools for Eclipse and
+                           			submitting it to the ABAP back end, it can be run from a web browser calling the
+                           			underlying ABAP system (in transaction <samp class="ph codeph">SE80</samp>, from the context menu for
+                           			the HTML page of the BSP application in question).
+                        </p>
+                        
+                        		
+                        <p class="p"><span class="ph">For more information about <span class="ph pname">SAP Web IDE</span>,
+                              see the documentation for <span class="ph pname">SAP Web IDE</span> on
+                              the SAP Help Portal at <a class="xref" href="https://help.sap.com/viewer/p/SAP_Web_IDE" target="_blank" alt="https://help.sap.com/viewer/p/SAP_Web_IDE" title="https://help.sap.com/viewer/p/SAP_Web_IDE">https://help.sap.com/viewer/p/SAP_Web_IDE</a>.</span></p>
+                        
+                        	
+                     </div>
+                     
+                     <div class="related-links"> 
+                        
+                        <div class="relinfo">
+                           <div class="relinfotitle ">Related Information</div>
+                           
+                           <div><a class="link" href="../../#/topic/3e3bccbb902d4672adfc24f883adf9de.html" title="The SAPUI5 repository team provider enables you to share, submit, and retrieve content of single SAPUI5 repositories with the respective projects in Eclipse." target="_top">SAPUI5 Tools for Eclipse</a></div>
+                           
+                        </div>
+                        
+                     </div>
+                     
+                  </div>
+                  
+               </section>
+               <div class="clear"></div>
+               
+            </div>
+            <div class="clearfix"></div>
+         </div>
+      </div>
+      <div class="clearfix"></div>
+      <div id="footer-container" class="grid_12">
+         <footer>
+            	
+            <div id="custom-footerSpacer"></div>
+            	
+            
+         </footer>
+         
+         
+      </div>
+   </body>
+</html>

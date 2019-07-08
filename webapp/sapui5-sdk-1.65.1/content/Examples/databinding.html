@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Data binding sample application</title>
+
+    <script id="sap-ui-bootstrap"
+        type="text/javascript"
+        src="../../resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_goldreflection"
+        data-sap-ui-libs="sap.ui.commons"></script>
+
+    <script>
+        // JSON sample data
+        var data = {
+            firstName: "John", 
+            lastName: "Doe", 
+            birthday: {day:01,month:05,year:1982}, 
+            address:[{city:"Heidelberg"}], 
+            enabled: true
+        };
+        // create JSON model instance
+        var oModel = new sap.ui.model.json.JSONModel();
+        // set the data for the model
+        oModel.setData(data);
+        // set the model to the core
+        sap.ui.getCore().setModel(oModel);
+        
+        // create your controls        
+		var oLayout = new sap.ui.commons.layout.MatrixLayout();
+		var oTextView = new sap.ui.commons.TextView("textView", {
+			// bind text property of textview to firstName property in the model
+			text: "{/firstName}",
+			tooltip: "First Name",
+			semanticColor: sap.ui.commons.TextViewColor.Positive,
+			design: sap.ui.commons.TextViewDesign.H1
+		});
+        var oTxt = new sap.ui.commons.TextField("txtField", {
+			// bind text property of textfield to firstName property in the model
+			value: "{/firstName}"
+		});
+		// bind enabled property against enabled property in the model
+		oTxt.bindProperty("enabled", "/enabled");
+        var oChkBx = new sap.ui.commons.CheckBox("box", {
+			// bind checked property against enabled property in the model
+			checked: "{/enabled}", 
+			change: handleCheckBoxChange
+		});
+		var oBtn = new sap.ui.commons.Button({
+			id: "btn", 
+			text: "Trigger Change",
+			press: update
+		});
+		oLayout.createRow(oTextView).createRow(oTxt).createRow(oChkBx).createRow(oBtn);
+        oLayout.placeAt("layoutUIArea");
+
+		function handleCheckBoxChange(oEvent){
+            var bEnabled = oEvent.getParameter("checked");
+            // modify the enabled property value in the model to reflect changes
+            oModel.setData({enabled: bEnabled}, true);
+        };
+
+		function update(){
+			oModel.setData({firstName: sap.ui.getCore().byId("txtField").getValue()}, true);
+    	};
+
+    </script>
+
+</head>
+<body class="sapUiBody">
+	<h1>Data binding sample application</h1>
+    <div id="layoutUIArea"></div>
+</body>
+</html>

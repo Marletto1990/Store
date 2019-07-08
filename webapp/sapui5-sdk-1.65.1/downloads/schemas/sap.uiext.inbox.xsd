@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="sap.uiext.inbox" xmlns:n2="sap.ui.unified" xmlns:n4="sap.ui.ux3" xmlns:n0="sap.ui.core" xmlns:n5="sap.uiext.inbox" xmlns:n1="sap.ui.layout" xmlns:n3="sap.ui.commons">
+<xsd:import namespace="sap.ui.unified"/>
+<xsd:import namespace="sap.ui.ux3"/>
+<xsd:import namespace="sap.ui.core"/>
+<xsd:import namespace="sap.ui.layout"/>
+<xsd:import namespace="sap.ui.commons"/>
+<xsd:element name="Inbox" type="n5:_InboxType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>A comprehensive UI design approach with graphical and functional elements for search tasks, filter tasks, and take actions on the tasks 
+("Inbox Pattern").</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="InboxLaunchPad" type="n5:_InboxLaunchPadType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>InboxLaunchPad Documentation to be updated later</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="InboxSplitApp" type="n5:_InboxSplitAppType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>Inbox Split App</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="SubstitutionRulesManager" type="n5:_SubstitutionRulesManagerType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>The SubstitutionRulesManager</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="InboxAddAttachmentTile" type="n5:_InboxAddAttachmentTileType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>InboxAddAttachmentTile</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="InboxAttachmentTile" type="n5:_InboxAttachmentTileType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>InboxAttachmentTile</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="InboxAttachmentsTileContainer" type="n5:_InboxAttachmentsTileContainerType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>InboxAttachmentsTileContainer</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="InboxBusyIndicator" type="n5:_InboxBusyIndicatorType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>InboxBusyIndicator</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="InboxComment" type="n5:_InboxCommentType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>fsgg</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="InboxTaskComments" type="n5:_InboxTaskCommentsType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>InboxTaskComments</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="InboxTaskTitleControl" type="n5:_InboxTaskTitleControlType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>InboxTaskTitleControl</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="InboxUploadAttachmentTile" type="n5:_InboxUploadAttachmentTileType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>InboxUploadAttachmentTile</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<!--type definition for UIElement 'sap.uiext.inbox.Inbox'-->
+<xsd:complexType name="_InboxType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:attribute name="taskExecutionURLThemeValue" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>set the theme URL parameter string to be appended to the task Execution URL. In case of a function callback set for Task Execution PopUp, this string will not be appended.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="handleBindings" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>set this as true for oData Model. If set as false, the user will need to handle task Actions, search and Task Execution URL population. See function call back methods.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="openCompletedTasks" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>set this to true to enable opening of completed tasks.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="oDataRequestCompleted" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>If handleBindings property is set to true , the control assumes an oData model is set and handles the complete logic within. In this case once the oData request is complete, this event is fired with additional parameters.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="refresh" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>this event is fires to handle refresh Action, when the handleBindings property is set to false.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="taskAction" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>this event is fires to handle task Actions - Claim, Release, when the handleBindings property is set to false.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="taskSelectionChange" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>This event is fired when table row selection is changed in the list view of Inbox control</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.uiext.inbox.InboxLaunchPad'-->
+<xsd:complexType name="_InboxLaunchPadType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence/>
+<xsd:attribute name="title" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The title text appearing in Inbox LaunchPad header bar.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="logoSrc" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Path (src) to the logo icon to be displayed in the Inbox LaunchPad header.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showLogoutButton" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Property to indicate whether the Logoff button in the header should be displayed or not. Default value is true.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showUserName" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Property to indicate whether loggod on User's Name in the header should be displayed or not. Default value is true.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="userName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>User name to be shown in the header.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="tileSelected" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Fires an event when a tile is selected in Inbox LaunchPad.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="logout" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Fired when the user clicks the "Log-off" button.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.uiext.inbox.InboxSplitApp'-->
+<xsd:complexType name="_InboxSplitAppType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence>
+<xsd:element name="splitAppl" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>This is the splitApp that is created inside the control</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="null:SplitApp"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="showMasterPageNavBtn" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Show/Hide the Navigation Button for the Master Page</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="tcmServiceURL" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>TCM service URL</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="filters" type="">
+<xsd:annotation>
+<xsd:documentation>Filters to be applied on the data shown in the MasterPage</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="tcmConfiguration" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>TCM Configuration object for control initialization.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="navButtonPressed" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Navigation Button of the Master Page is pressed, if visible.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.uiext.inbox.SubstitutionRulesManager'-->
+<xsd:complexType name="_SubstitutionRulesManagerType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType"/>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.uiext.inbox.composite.InboxAddAttachmentTile'-->
+<xsd:complexType name="_InboxAddAttachmentTileType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType"/>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.uiext.inbox.composite.InboxAttachmentTile'-->
+<xsd:complexType name="_InboxAttachmentTileType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:attribute name="fileName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Name of the attachment </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="fileSize" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>size of the attachment</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="fileDescription" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>description of the attachment</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="fileTypeIcon" type="n0:_URIType">
+<xsd:annotation>
+<xsd:documentation>Icon URI of the file type</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="creationDate" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>creation date of the attachment</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="downloadUrl" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>URL for attachment title link to download the attachment.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="createdBy" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>name of the user who has uploaded attachment</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showDeleteButton" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>boolean value to indicate whether to show delete button </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="deleteAttachment" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>fire this event to delete the attachment </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.uiext.inbox.composite.InboxAttachmentsTileContainer'-->
+<xsd:complexType name="_InboxAttachmentsTileContainerType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence>
+<xsd:element name="attachments" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>aggregation for attachments tile </xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n5:InboxAttachmentTile"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="uploadUrl" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>URL to upload the selected file</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="fileName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>name of the selected file for uploading</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="fileType" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>type of the selected file for uploading</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="isFileSelected" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>boolean property to indicate if user has selected a file to upload</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="enteredDescription" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>description string entered by user while uploading a file</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showAddTile" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>boolean value to indicate whether to show Add Attachment tile</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="uploadButtonPress" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>event is fired to add all the header parameters just before uploading a file</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="uploadSuccess" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>event is fired when uploading a file is completed successfully</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="uploadFailed" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>event is fired when uploading a file has failed</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.uiext.inbox.composite.InboxBusyIndicator'-->
+<xsd:complexType name="_InboxBusyIndicatorType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType"/>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.uiext.inbox.composite.InboxComment'-->
+<xsd:complexType name="_InboxCommentType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:attribute name="sender" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Sender of the comment chunk</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="timestamp" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Format is ISO 8601 YYYY-MM-DDThh:mm:ss.sZ, Z meaning the time is in UTC time zone</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="thumbnailSrc" type="n0:_URIType">
+<xsd:annotation>
+<xsd:documentation>URL to the thumbnail image.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="text" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The FeedChunk text</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="createdBy" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Unique username of the user responsible for adding comment</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="sapOrigin" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Represent system origin in case of multi origin scenario</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.uiext.inbox.composite.InboxTaskComments'-->
+<xsd:complexType name="_InboxTaskCommentsType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence>
+<xsd:element name="comments" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>URL to the thumbnail image.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n5:InboxComment"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="feederSender" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Sender for the comment feeder</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="feederThumbnailSrc" type="n0:_URIType">
+<xsd:annotation>
+<xsd:documentation>URL to the thumbnail image for the comment feeder.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showFeeder" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Boolean value for visibilty of comment feeder</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showHeader" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Boolean value for visibility of header</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="commentSubmit" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Event is raised when submit on the feeder is pressed.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.uiext.inbox.composite.InboxTaskTitleControl'-->
+<xsd:complexType name="_InboxTaskTitleControlType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence>
+<xsd:element name="titleLink" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Internal aggregation to hold the inner Task Title Link</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n0:Control"/>
+<xsd:element ref="n0:Fragment"/>
+<xsd:any processContents="lax" namespace="http://www.w3.org/1999/xhtml"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="taskTitle" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The Task Title of the Task</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="categoryIconURI" type="n0:_URIType">
+<xsd:annotation>
+<xsd:documentation>Category icon</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="hasAttachments" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>has Attachments</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="hasComments" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>has Comments</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.uiext.inbox.composite.InboxUploadAttachmentTile'-->
+<xsd:complexType name="_InboxUploadAttachmentTileType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:attribute name="fileName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>name of the selected file</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="fileTypeIcon" type="n0:_URIType">
+<xsd:annotation>
+<xsd:documentation>icon URI of the selected file type</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="uploadSelectedFile" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>event is fired when upload for selected file is requested</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+</xsd:schema>

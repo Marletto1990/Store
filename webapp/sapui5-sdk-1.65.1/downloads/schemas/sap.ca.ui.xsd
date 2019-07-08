@@ -1,0 +1,2200 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="sap.ca.ui" xmlns:n3="sap.ca.ui" xmlns:n1="sap.ui.unified" xmlns:n0="sap.ui.core" xmlns:n2="sap.m">
+<xsd:import namespace="sap.ui.unified"/>
+<xsd:import namespace="sap.ui.core"/>
+<xsd:import namespace="sap.m"/>
+<xsd:element name="AddPicture" type="n3:_AddPictureType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>Enables users to add pictures into a form. Contains PictureItem controls that describe the media.
+	 It is designed to be used simultaneously with the PictureViewer control</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CustomerContext" type="n3:_CustomerContextType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>This control allows you to open a dialog containing a list of customers for users to pick.
+    The chosen selected customer is persisted using sap.ushell services that shall be fully configured outside of this control.
+
+    The dialog can be open following two modes:
+        "select" : exiting without choosing a customer is firing the customerSelected event with a null customer before closing the dialog
+        "change" : exiting without choosing a customer is simply closing the dialog
+
+    When opening the dialog in "select" mode, if a customer has been persisted in a previous session, it will be retrieved and the dialog won't open at all.
+    </xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CustomerControlListItem" type="n3:_CustomerControlListItemType" substitutionGroup="n2:CustomListItem">
+<xsd:annotation>
+<xsd:documentation>Extends the ObjectListItem to display a line in the customer context control.</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="DatePicker" type="n3:_DatePickerType" substitutionGroup="n2:InputBase">
+<xsd:annotation>
+<xsd:documentation>Allows end users to interact with dates.
+        Entries can directly be written in, or selected from a calendar pad.
+    </xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ExpansibleFeedListItem" type="n3:_ExpansibleFeedListItemType" substitutionGroup="n2:FeedListItem">
+<xsd:annotation>
+<xsd:documentation>Extends the FeedListItem to hide text when it is longer than maxLines. When text is hidden a See more
+        link is displayed, clicking on the link displays the entire text.
+    </xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="FileUpload" type="n3:_FileUploadType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>Allows you to display a list of uploaded files. You can also upload a new one, rename or delete them</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="GrowingTileContainer" type="n3:_GrowingTileContainerType" substitutionGroup="n2:ScrollContainer">
+<xsd:annotation>
+<xsd:documentation>A Tile container for the Overview tile with growing capabilities</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="HierarchicalSelectDialog" type="n3:_HierarchicalSelectDialogType" substitutionGroup="n2:Dialog">
+<xsd:annotation>
+<xsd:documentation>Select an item in a dialog from a hierarchical list</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="HierarchicalSelectDialogItem" type="n3:_HierarchicalSelectDialogItemType" substitutionGroup="n0:Item">
+<xsd:annotation>
+<xsd:documentation>
+		Kind of item required by the sap.ca.ui.HierarchicalSelectDialog control.
+		An item is actually one page of the Dialog.
+	</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Hierarchy" type="n3:_HierarchyType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>Display the Hierarchy of an item. Useful to indicates where an object stand in a chain of
+        hierarchical data. The emphasized item shows the one item to display. Optional item can be hidden using the
+        hideOptionalLevels property. Hidden items will stay accessible with an expand button.
+    </xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="HierarchyItem" type="n3:_HierarchyItemType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>Item that represent a line of the Hierarchy control. The emphasized property should apply to the item
+		that we want to represent in his hierarchy. Optionals item will be hidden if the option is true on the Hierarchy
+		control.
+	</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="InPlaceEdit" type="n3:_InPlaceEditType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>
+	    This control is used to switch between readonly and edit modes. A typical use case would be to change the value of a Label.
+	</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Notes" type="n3:_NotesType" substitutionGroup="n2:List">
+<xsd:annotation>
+<xsd:documentation>This control is a List with the ability to render an additional control on top of it to add new
+        notes. The developer is responsible to give the correct template to use to display notes (recommended are either
+        the FeedListItem or the ExpansibleFeedListItem). The developer is also responsible to implement the code to send
+        the notes to the backend system, by responding to the addNote event.
+    </xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="OverflowContainer" type="n3:_OverflowContainerType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>
+        The OverflowContainer allows the content of a control to be partially displayed before being fully expanded.
+        It will cut its content to a fixed height that can be defined. It is fully suitable within an IconTabBar.
+    </xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="OverviewTile" type="n3:_OverviewTileType" substitutionGroup="n2:Tile">
+<xsd:annotation>
+<xsd:documentation>Display aTile that presents an overview of a customer</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="PictureItem" type="n3:_PictureItemType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>A picture / photo Item for AddPicture and PictureViewer Controls</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="PictureTile" type="n3:_PictureTileType" substitutionGroup="n2:CustomTile">
+<xsd:annotation>
+<xsd:documentation>Tile control embedding an image and allowing custom sizing</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="PictureTileContainer" type="n3:_PictureTileContainerType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>A container that arranges same-size tiles nicely on carousel pages</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="PictureViewer" type="n3:_PictureViewerType" substitutionGroup="n2:TileContainer">
+<xsd:annotation>
+<xsd:documentation>Picture viewer control relying on the TileContainer control</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="PictureViewerItem" type="n3:_PictureViewerItemType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>Picture viewer control relying on the TileContainer control</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ZoomableScrollContainer" type="n3:_ZoomableScrollContainerType" substitutionGroup="n2:ScrollContainer">
+<xsd:annotation>
+<xsd:documentation>Based on a ScrollContainer, it allows you to pinch and zoom on mobile devices</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="BarListItem" type="n3:_BarListItemType" substitutionGroup="n2:ListItemBase">
+<xsd:annotation>
+<xsd:documentation>The display list item consists of a label and a value.</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="BubbleChart" type="n3:_BubbleChartType" substitutionGroup="n3:Chart">
+<xsd:annotation>
+<xsd:documentation>
+        Bubble chart.
+	</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Chart" type="n3:_ChartType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>Chart implementation on top of sap.viz that takes care of common functionality.
+        - Embedding in a scroll container
+        - Common color palette
+        - Minimum bar / dot / blip ... size
+        - Integration with ChartToolbar and ChartPopover
+    </xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ChartToolBar" type="n3:_ChartToolBarType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>ToolBar used for displaying one chart amongst several and provide additional features:
+    - 2 select boxes for selecting dimensions
+    - fullscreen toggle
+    - personalization icon
+    - showLegend toggle</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ClusterListItem" type="n3:_ClusterListItemType" substitutionGroup="n2:ListItemBase">
+<xsd:annotation>
+<xsd:documentation>The cluster list item consists of a title and items.</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CombinedChart" type="n3:_CombinedChartType" substitutionGroup="n3:Chart">
+<xsd:annotation>
+<xsd:documentation>Allows you to create a chart using vertical bars and lines to represent the data</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="HorizontalBarChart" type="n3:_HorizontalBarChartType" substitutionGroup="n3:Chart">
+<xsd:annotation>
+<xsd:documentation>Allows you to create a chart using horizontal bars to represent the data</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="LineChart" type="n3:_LineChartType" substitutionGroup="n3:Chart">
+<xsd:annotation>
+<xsd:documentation>Line Chart for the Fiori Project</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="StackedHorizontalBarChart" type="n3:_StackedHorizontalBarChartType" substitutionGroup="n3:Chart">
+<xsd:annotation>
+<xsd:documentation>Stacked Horizontal Bar Chart wrapper around the viz StackedBarChart / MultipleStackedBarChart.
+        To be used in conjunction with the chart toolbar.</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="StackedVerticalColumnChart" type="n3:_StackedVerticalColumnChartType" substitutionGroup="n3:Chart">
+<xsd:annotation>
+<xsd:documentation>Stacked Vertical Column Chart wrapper around the viz StackedColumnChart / MultipleStackedColumnChart.
+	To be used in conjunction with the chart toolbar.</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="VerticalBarChart" type="n3:_VerticalBarChartType" substitutionGroup="n3:Chart">
+<xsd:annotation>
+<xsd:documentation>Allows you to create a chart using vertical bars to represent the data</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<!--type definition for UIElement 'sap.ca.ui.AddPicture'-->
+<xsd:complexType name="_AddPictureType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence>
+<xsd:element name="pictures" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The list of pictures</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n3:PictureItem"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="buttonPageType" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The page container type in which the button is embedded : Tab or Form</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="editable" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Defines whether the button should appear or not.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="maxPictureNumber" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>Defines the maximum number of pictures you can add. Default is set to 10</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="uploadUrl" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Url of server we wish to upload to, only used as a fallback when FileReader is not supported by the browser</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="width" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>The width of the control.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="text" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The text of the button.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="pictureAlign" type="n0:_TextAlignType">
+<xsd:annotation>
+<xsd:documentation>The text of the button.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="itemSize" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>Defines thumbnail size (height / width) in Pixels</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="compression" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Defines whether or not you want to maximize the compression. Possible values : "Low" (thumbnail size) or "High" (screen size)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="show" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Indicates that the user wishes to view the picture</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="pictureAdded" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Indicates that the image upload failed, only used as a fallback when FileReader is not supported by the browser</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="maxPictureLimitReached" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Indicates that the limit number of pictures has been reached</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="imageUploadFailed" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Indicates that the image upload failed, only used as a fallback when FileReader is not supported by the browser</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="fileNotSupported" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Image upload failed, only supports image format files</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.CustomerContext'-->
+<xsd:complexType name="_CustomerContextType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:attribute name="personalizationPageName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Name of your app that shall be unique.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showSalesArea" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Display or not the customers sales area as well as its name and id.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="path" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Model path to the customer collection to be displayed</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="customerIDProperty" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Property name of the customer ID</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="customerNameProperty" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Property name of the customer name</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="salesOrganizationNameProperty" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Property name of the sales organization name</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="distributionChannelNameProperty" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Property name of the distribution channel name</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="divisionNameProperty" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Property name of the division name</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="dialogTitle" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Overrides the default Dialog title</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="customerSelected" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Fired when a customer is selected in the list. The fired customer can be empty in case the user press the cancel button while the Customer Context has been open using select()</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.CustomerControlListItem'-->
+<xsd:complexType name="_CustomerControlListItemType">
+<xsd:complexContent>
+<xsd:extension base="n2:_CustomListItemType">
+<xsd:attribute name="showSalesArea" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Display or not the customers sales area as well as its name and id.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="customerID" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The ID of the customer</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="customerName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The name of the customer</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="salesOrganizationName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The sales organization name</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="distributionChannelName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The distribution channel name</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="divisionName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The division name</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.DatePicker'-->
+<xsd:complexType name="_DatePickerType">
+<xsd:complexContent>
+<xsd:extension base="n2:_InputBaseType">
+<xsd:attribute name="firstDayOffset" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>This property is used to offset the first day of the week (0 = sunday). Returns int, default
+                0
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="dateValue" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>This is a date string formatted as per the format for the control. If there is no valid input
+                for the control, this value will be null.
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.ExpansibleFeedListItem'-->
+<xsd:complexType name="_ExpansibleFeedListItemType">
+<xsd:complexContent>
+<xsd:extension base="n2:_FeedListItemType">
+<xsd:attribute name="maxLines" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>The maximum number of lines to display before adding the "See more" link.
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.FileUpload'-->
+<xsd:complexType name="_FileUploadType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence>
+<xsd:element name="uploadProgressLabel" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Aggregation that displays the current number of items that are being uploaded</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n2:Label"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="attachmentNumberLabel" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Aggregation that shows the number of files currently uploaded</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n2:Label"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="toolBar" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Aggregation that contains the buttons for adding</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n2:Toolbar"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="uploadUrl" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Url of server we wish to upload to</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="fileName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Relative path in model, pointing to property that stores the name of  a file.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="size" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Relative path in model, pointing to property that stores the size of  a file.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="url" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Relative path in model, pointing to property that stores the url at which the file is stored.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="uploadedDate" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Relative path in model, pointing to property that stores the date at which a file was uploaded.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="contributor" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Relative path in model, pointing to property that stores the name of  the person who uploaded the file.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="fileExtension" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Relative path in model, pointing to property that stores the uploaded files extension. Note: either fileExtension or mimeType may be used, but mimeType is preferable.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="mimeType" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Relative path in model, pointing to property that stores the file's mimeType. Note: either fileExtension or mimeType may be used, but mimeType is preferable.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="items" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The base path in the model for the control.  Avoid trailing forward slashes in value, as per default value.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="uploadEnabled" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>This property enables &amp; disables the ability to upload a file</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="fileId" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>An identifier property name that is used to uniquely reference the file on the server. </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="xsrfToken" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The XSRF token the control should use when making the upload request. If it is not set, the control will not use a security token. </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="useMultipart" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Indicates if the control should send multipart/form data request when uploading </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="acceptRequestHeader" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The Accept request header the control should use when sending the upload request </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="encodeUrl" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Url of server that will base64 encode the file</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="renameEnabled" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Indicates whether rename functionality should be enabled</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="deleteEnabled" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Indicates whether delete functionality should be enabled</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="multipleSelectionEnabled" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Indicates whether the user is allowed to select multiple file at once from his desktop</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showNoData" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Show the label "No data" when the control doesn't have files</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="sequentialUploadsEnabled" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Indicates whether file uploads should occur sequentially or in parallel. The default is in parallel.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showAttachmentsLabel" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Show the Attachments count label </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="useEditControls" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Show the edit user controls to rename and delete files (same as deleteEnabled and renameEnabled)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showAttachmentsLabelInEditMode" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Show the Attachments label in edit mode</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="editMode" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Property to allow toggling between edit and view screens.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="deleteFile" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Fired when a file deletion event occurs typically by clicking a the delete icon. The file descriptor json for the file to be deleted is passed in the event data</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="renameFile" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Fired when a file is renamed. The file descripter json for the file to be renamed is passed in the event data and also a property, newFilename, that contains the new filename.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="uploadFile" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Fired when a file is uploaded and the response comes back from service.  The service response for the file to be added to the list is passed in the event data and the consumer must format it in the correct json structure and pass it back to the control using commitUploadFile method. </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="fileUploadFailed" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Fired when a file fails to upload. The error code and response data is passed in this event. The consumer should handle the error by showing the appropriate message.  </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="beforeUploadFile" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Fired just before the control is about to make a file upload request. The data passed is the file object selected by the user. You may handle this event to attach custom headers for example if your service implementation requires it. </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="saveClicked" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Fired when the save button is clicked. The consumer should handle the event and save all the file renames to backend. </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="cancelClicked" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Fired when the cancel button is clicked. The consumer may handle the event if required. </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.GrowingTileContainer'-->
+<xsd:complexType name="_GrowingTileContainerType">
+<xsd:complexContent>
+<xsd:extension base="n2:_ScrollContainerType">
+<xsd:attribute name="growing" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>growing enablement</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="growingThreshold" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>growing Threshold</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="growingScrollToLoad" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>load when scrolling</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.HierarchicalSelectDialog'-->
+<xsd:complexType name="_HierarchicalSelectDialogType">
+<xsd:complexContent>
+<xsd:extension base="n2:_DialogType">
+<xsd:sequence>
+<!--default aggregation 'items'-->
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n3:HierarchicalSelectDialogItem"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+<xsd:element name="items" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Type checker, only HierarchicalSelectDialogItem are allowed. Please do NOT use the "content" aggregation of the dialog</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n3:HierarchicalSelectDialogItem"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="select" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Thrown when user selects an item</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="cancel" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Thrown when user clicks cancel</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.HierarchicalSelectDialogItem'-->
+<xsd:complexType name="_HierarchicalSelectDialogItemType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ItemType">
+<xsd:sequence>
+<xsd:element name="listItemTemplate" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Used as a template for each list item of the page</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n2:ListItemBase"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="title" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Dialog title for this item</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="entityName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Property used for the binding</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.Hierarchy'-->
+<xsd:complexType name="_HierarchyType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence>
+<xsd:element name="items" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The array of HierarchyItem ordered and starting from the root hierarchy</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n3:HierarchyItem"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="hideOptionalLevels" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Hide the levels marked optional. An expand button will appear</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.HierarchyItem'-->
+<xsd:complexType name="_HierarchyItemType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence/>
+<xsd:attribute name="icon" type="n0:_URIType">
+<xsd:annotation>
+<xsd:documentation>Icon for the item</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="levelType" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Level type</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="title" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Title</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="identifier" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Identifier text</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="link" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Text of the link</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="emphasized" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Does the item looks emphasized</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="optional" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Is the item optional, so we hide it if option is set on the Hierarchy control</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="linkPress" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Event when a link is pressed</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.InPlaceEdit'-->
+<xsd:complexType name="_InPlaceEditType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence>
+<xsd:element name="content" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Content control of the InPlaceEdit.
+    The following control is allowed: sap.m.Input, sap.m.Link</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n0:Control"/>
+<xsd:element ref="n0:Fragment"/>
+<xsd:any processContents="lax" namespace="http://www.w3.org/1999/xhtml"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="valueState" type="n0:_ValueStateType">
+<xsd:annotation>
+<xsd:documentation>Visualizes warnings or errors related to the InPlaceEdit. Possible values: Warning, Error, Success.
+                If the content control has a own valueState property this will be used.
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="undoEnabled" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>If undo is enabled after changing the text an undo button appears.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="change" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Event is fired when the text in the field has changed AND the focus leaves the InPlaceEdit or the Enter key is pressed.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.Notes'-->
+<xsd:complexType name="_NotesType">
+<xsd:complexContent>
+<xsd:extension base="n2:_ListType">
+<xsd:attribute name="showNoteInput" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>If set to true, this control will render an additional control to create new notes.
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="textMaxLength" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>max text input length</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="placeholder" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Placeholder text shown when no value available . Default value is "Add note".
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="addNote" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>press event for button
+
+                (oControlEvent) Event is fired when the user clicks on the control.
+
+                fnListenerFunction or [fnListenerFunction, oListenerObject] or [oData, fnListenerFunction,
+                oListenerObject]
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.OverflowContainer'-->
+<xsd:complexType name="_OverflowContainerType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence>
+<xsd:element name="content" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Controls to be embedded.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n0:Control"/>
+<xsd:element ref="n0:Fragment"/>
+<xsd:any processContents="lax" namespace="http://www.w3.org/1999/xhtml"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="overflowHeight" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>
+                The height of the container when not expanded. It should be determined by the application.
+                The default value is set to 200px.
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="expanded" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>This property allows to fully expand the container</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.OverviewTile'-->
+<xsd:complexType name="_OverviewTileType">
+<xsd:complexContent>
+<xsd:extension base="n2:_TileType">
+<xsd:attribute name="title" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>This property is used to set the title of the tile</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="icon" type="n0:_URIType">
+<xsd:annotation>
+<xsd:documentation>This property is used to set the image of the tile</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="contact" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>This property is used to set the contact of the tile</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="address" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>This property is used to set the address field in the form of the tile</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="opportunities" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>This property is used to set the opportunities field in the form of the tile</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="rating" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>This property is used to set the rating field in the form of the tile</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="lastContact" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>This property is used to set the last contact field in the form of the tile</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="nextContact" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>This property is used to set the next contact field in the form of the tile</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="revenue" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>This property is used to set the revenue to date field in the form of the tile
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="width" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>This property is used to set the width of the control</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="contactActive" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>This property is used to enable an event to be thrown when clicking on the contact's name
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="contactPress" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>This event is fired when the end user clicks on the contact link.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.PictureItem'-->
+<xsd:complexType name="_PictureItemType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:attribute name="status" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The status of the picture / photo : Added, Deleted, Read</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="source" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The content of the picture. Either the uri or base64 content.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="name" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The original name of the picture.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="width" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>The width of the picture.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="height" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>The height of the picture.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="loaded" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Fired when the Image is really loaded</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.PictureTile'-->
+<xsd:complexType name="_PictureTileType">
+<xsd:complexContent>
+<xsd:extension base="n2:_CustomTileType">
+<xsd:attribute name="height" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>height (in pixels) of the picture viewer control.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="width" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>width (in pixels) of the picture viewer control.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="tileContent" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Reference to one PictureViewerItem coming from the PictureViewer.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="pictureDelete" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Fired when the user deletes a picture</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.PictureTileContainer'-->
+<xsd:complexType name="_PictureTileContainerType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence>
+<!--default aggregation 'tiles'-->
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n0:Control"/>
+<xsd:element ref="n0:Fragment"/>
+<xsd:any processContents="lax" namespace="http://www.w3.org/1999/xhtml"/>
+</xsd:choice>
+<xsd:element name="tiles" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The tiles to be displayed by the tile container</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n0:Control"/>
+<xsd:element ref="n0:Fragment"/>
+<xsd:any processContents="lax" namespace="http://www.w3.org/1999/xhtml"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="width" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>The width of the container in pixel</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="height" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>The height of the container in pixel</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="editable" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Whether the tile container is editable and you can move or delete or add tiles.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="allowAdd" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Determines whether the user is allowed to add tiles in edit mode (editable = true)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="tileMove" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Fired if a tile was moved </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="tileDelete" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Fired if a tile is deleted during edit mode.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="tileAdd" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Fired if a Tile is added</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.PictureViewer'-->
+<xsd:complexType name="_PictureViewerType">
+<xsd:complexContent>
+<xsd:extension base="n2:_TileContainerType">
+<xsd:sequence>
+<!--default aggregation 'items'-->
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n3:PictureViewerItem"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+<xsd:element name="items" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Aggregation of PictureViewerItem that contains either a picture URI or the actual Image
+                control.
+            </xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n3:PictureViewerItem"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="tileScaling" type="xsd:float">
+<xsd:annotation>
+<xsd:documentation>Percentage of the space occupied by the image in the picture viewer control. Please note that
+                if the factor is too close to 1, the navigation arrows usually displayed in desktop mode will not be
+                available
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="removable" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Defines whether or not you can remove a picture
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="pictureDeleted" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Thrown when user delete an image</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.PictureViewerItem'-->
+<xsd:complexType name="_PictureViewerItemType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence>
+<xsd:element name="image" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Pass in an existing Image control to be used inside the PictureViewer</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n2:Image"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="src" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Image source url.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.ZoomableScrollContainer'-->
+<xsd:complexType name="_ZoomableScrollContainerType">
+<xsd:complexContent>
+<xsd:extension base="n2:_ScrollContainerType">
+<xsd:attribute name="zoomable" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Activate or not the zooming functionality. If FALSE, it acts exactly as a basic
+                ScrollContainer.
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="initialScale" type="xsd:float">
+<xsd:annotation>
+<xsd:documentation>Initial scaling factor</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="minScale" type="xsd:float">
+<xsd:annotation>
+<xsd:documentation>Lowest scaling factor allowed</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="maxScale" type="xsd:float">
+<xsd:annotation>
+<xsd:documentation>Highest scaling factor allowed</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.charts.BarListItem'-->
+<xsd:complexType name="_BarListItemType">
+<xsd:complexContent>
+<xsd:extension base="n2:_ListItemBaseType">
+<xsd:attribute name="axis" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>List item label</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="group" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>List item label</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="value" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>List item value</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.charts.BubbleChart'-->
+<xsd:complexType name="_BubbleChartType">
+<xsd:complexContent>
+<xsd:extension base="n3:_ChartType">
+<xsd:sequence>
+<xsd:element name="content" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Deprecated aggregation, do not use. Left for compatibility purposes.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n0:Control"/>
+<xsd:element ref="n0:Fragment"/>
+<xsd:any processContents="lax" namespace="http://www.w3.org/1999/xhtml"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="dataLabelFormat" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Defines the formater string for the dataLabel value to be displayed on the bubble </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showTitle" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Flag to display the title for the chart, default is set to false</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showXAxisLabel" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Flag to set the visibility of x-axis label, default is set to true.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="xAxisFixedRange" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Flag to define x-axis scale range. </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="xAxisMinValue" type="xsd:float">
+<xsd:annotation>
+<xsd:documentation>Define the minimum value for x-axis scale</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="xAxisMaxValue" type="xsd:float">
+<xsd:annotation>
+<xsd:documentation>Define the max value for x-axis scale</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showYAxisLabel" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Flag to set the visibility of y-axis label, default is set to true.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="yAxisFixedRange" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Flag to define y-axis scale range. </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="yAxisMinValue" type="xsd:float">
+<xsd:annotation>
+<xsd:documentation>Define the minimum value for y-axis scale</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="yAxisMaxValue" type="xsd:float">
+<xsd:annotation>
+<xsd:documentation>Define the max value for y-axis scale</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="minimumLabelSize" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>The minimum size of the bubble before a label gets displayed</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showSizeLegend" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Show / Hide the visibility the size legend of the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="xAxisTitle" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Set x-axis title</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="yAxisTitle" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Set y-axis title</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showCustomLabels" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Flag to show custom data labels</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="labelProperty" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Set the binding property values for the labels as array eg.  ['property1','property2']. Only 2 labels are supported.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="xAxisFormatFunction" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Set the formatter function for the x-axis.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="xAxisFormatString" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Set the format string for x-axis</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="yAxisFormatFunction" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Set the formatter function for the y-axis.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="yAxisFormatString" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Set the format string for y-axis</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="axisTooltipFormatString" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Flag to set the formatting of the tooltip on x-axis</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="axisFormatFunction" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Set the formatter function for the axis labels or tooltips</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.charts.Chart'-->
+<xsd:complexType name="_ChartType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence/>
+<xsd:attribute name="width" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>Target width for the charting area</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="height" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>Target height for the charting area</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="dataset" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Viz Dataset that will hold the data to be displayed.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="chartType" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Type of viz chart that will be displayed.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="minShapeSize" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>Minimum shape size for touch enabled actions, default and minimum to 48px !</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="label" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>User friendly name for the current chart type</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="title" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Title of the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="icon" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Icon of the Chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="secondAxisVisible" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Flag to show the second axis. Default is true</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showLegend" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Hide / Show the legend of the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="selectionMode" type="n3:_ChartSelectionModeType">
+<xsd:annotation>
+<xsd:documentation>Define the selection mode for the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showHoverBackground" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Hide / Show the hover background</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showTooltip" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Hide / Show the CVOM tooltip</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showPopover" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Hide / Show the sap.ca popover that gives information about what is available</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showDataLabel" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Flag to display data values on the bar, default is set to true</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="yAxisLabelFormatter" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Formatter for Y Axis Label</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="yAxis2LabelFormatter" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Formatter for Y Axis 2 Label</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="xAxisLabelFormatter" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Formatter for X Axis Label</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="xAxis2LabelFormatter" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Formatter for X Axis 2 Label</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="plotAreaAxisTooltipFormatter" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Formatter for plotArea Axis Tooltip in bubble charts</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="tooltipFormatter" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Formatter for toolTip</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="dataLabelFormatter" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Formatter for Data Label</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="popoverFormatter" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Formatter for popover</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="popoverGroupFormatter" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Formatter for group label in the popover</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="chartSemanticColorFormatter" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Function that will be called when the chart is rendered in order to let the
+                application decide which color should be use for each bar.
+                The method should take the following parameter as input :
+                - The data context of the current datashape
+                And as output :
+                - One of sap.ca.ui.charts.ChartSemanticColor type
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="internalVizChart" type="n0:_ControlType">
+<xsd:annotation>
+<xsd:documentation>Retrieve the internal viz chart to allow some operation on it.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="chartPopOver" type="n0:_ControlType">
+<xsd:annotation>
+<xsd:documentation>Retrieve the chart popover instance to allow some operation on it.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="popoverSubHeader" type="n0:_ControlType">
+<xsd:annotation>
+<xsd:documentation>custom subHeader for popover</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="popoverFooter" type="n0:_ControlType">
+<xsd:annotation>
+<xsd:documentation>custom footer for popover</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="advancedChartSettings" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>You can specify here any advanced viz chart settings that have not been exposed as a chart
+                property.
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="stackedChartWidthEnhancer" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>You can use it if stacked bar width are to big. Disabled by default</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="noData" type="n0:_ControlType">
+<xsd:annotation>
+<xsd:documentation>Control tree to display when there is no data available</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="selectDataPoint" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Event is fired when the data point is selected/unselected on the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="popoverBeforeOpen" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Event is fired before the popover is opened</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="popoverAfterOpen" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Event is fired after the popover is opened</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.charts.ChartToolBar'-->
+<xsd:complexType name="_ChartToolBarType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence>
+<xsd:element name="charts" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The charts to display. Theses charts are sap.ui.core/Control that implements the following properties:
+            - showLegend: boolean
+            - icon: string (expected a string such as "sap-icon://line-chart")
+
+            If the inserted control is an sap.m.Table, the icon is automatically set to "sap-icon://table-chart"
+            </xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n0:Control"/>
+<xsd:element ref="n0:Fragment"/>
+<xsd:any processContents="lax" namespace="http://www.w3.org/1999/xhtml"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="toolBar" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The composite sap.m.Bar used for rendering select boxes and icons.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n2:Bar"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="showPersonalization" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Display or not the personalization icon into the ChartToolBar</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showFullScreen" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Display or not the full screen icon into the ChartToolBar</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="fullScreen" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Display the chart and the toolbar in full screen or normal mode</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showLegend" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Display or not the legend on the contained charts.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="chartTitle" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The string to display instead of the select boxes if there are no dimensions to display</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="firstDimensionPath" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Model path to the dimensions to display into the first select box</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="firstDimensionKeyPath" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Model path to the first select box items key</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="firstDimensionTextPath" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Model path to the first select box items displayed text</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="secondDimensionPath" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Model path to the dimensions to display into the second select box</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="secondDimensionKeyPath" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Model path to the second select box items key</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="secondDimensionTextPath" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Model path to the displayed select box items displayed text</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="selectedChart" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The ui5 control displayed</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="firstDimensionSelect" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The sap.m.Select inserted into the toolBar for handling the firstDimension selection</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="secondDimensionSelect" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The sap.m.Select inserted into the toolBar for handling the secondDimension selection</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="personalizationPressed" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Event fired when a user clicks on the personalization icon</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="firstDimensionKeySelected" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Event fired when a user selects an item from the first select box.
+                This event is providing the item selectedKey as parameter</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="secondDimensionKeySelected" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Event fired when a user selects an item from the second select box.
+                This event is providing the item selectedKey as parameter</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.charts.ClusterListItem'-->
+<xsd:complexType name="_ClusterListItemType">
+<xsd:complexContent>
+<xsd:extension base="n2:_ListItemBaseType">
+<xsd:attribute name="title" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Title</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="items" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Items</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.charts.CombinedChart'-->
+<xsd:complexType name="_CombinedChartType">
+<xsd:complexContent>
+<xsd:extension base="n3:_ChartType">
+<xsd:sequence>
+<xsd:element name="scrollArea" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>scroll area that contains the graph plot</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n2:ScrollContainer"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="data" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Data of the Chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="primaryAxis" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Shapes for the internal viz chart primary axis</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="secondAxis" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Shapes for the internal viz chart second axis</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.charts.HorizontalBarChart'-->
+<xsd:complexType name="_HorizontalBarChartType">
+<xsd:complexContent>
+<xsd:extension base="n3:_ChartType">
+<xsd:sequence>
+<xsd:element name="scroll" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The scroll container</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n2:ScrollContainer"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="horizontalBarChart" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The internal chart</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="null:Bar"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="verticalArea" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The vertical area within the scroll container</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n2:VBox"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="data" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The data to be used by the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="container" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The DOM ID where the chart will be added. Deprecated</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="barHeight" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>Minimum shape size for touch enabled actions, default and minimum to 48px !</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.charts.LineChart'-->
+<xsd:complexType name="_LineChartType">
+<xsd:complexContent>
+<xsd:extension base="n3:_ChartType">
+<xsd:sequence>
+<xsd:element name="vertical" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The vertical layout</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n2:VBox"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="chartTitle" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The title to display on the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="dataLabelFormat" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The data format string to use to display the data labels on the graph, this is an array of arrays of Format String following the 'sap.viz.ui5.Line' documentation
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="minTouchSize" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The minimum size (width for a line chart) that a point has to be, so as to be able to touch on a mobile device, only applies if the chart width is not set
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="minTouchWidth" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The minimum size (width for a line chart) that a point has to be, so as to be able to touch on a mobile device, only applies if the chart width is not set
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showLabel" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Show the data label value on the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showScrollContext" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Show the chart scroll context, (the preview of the whole chart as a small image when scrolling)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="chartDataset" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Allow the Dataset for the chart to be set, includes the dimensions, and measures, any data binding is removed, this will disable the chart scroll context view,
+                use the dataset settings if you want the
+                scroll context to work
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="datasetSettings" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Allow the Dataset for the chart to be set by providing the settings for the dataset creation, (internally two datasets are created, one for the main chart and
+                one
+                for the scroll context)
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="chartDatasetSettings" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Allow the Dataset for the chart to be set by providing the settings for the dataset creation, (internally two datasets are created, one for the main chart and
+                one for the scroll context)
+            </xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="dataPath" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Allow the data path for binding the model to the dimensions and measures to be set</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="data" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Allow the chart data to be set, that is the measure and dimension values</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="chartBusinessData" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Allow the chart data to be set, that is the measure and dimension values</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="useDelayedResize" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Use a delayed resize event to cause the chart to render when navigated to after resize when in the background</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="onDetailsSelected" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Event fired when the details button is pressed on the selected Datapoint Popover</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.charts.StackedHorizontalBarChart'-->
+<xsd:complexType name="_StackedHorizontalBarChartType">
+<xsd:complexContent>
+<xsd:extension base="n3:_ChartType">
+<xsd:sequence>
+<xsd:element name="content" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Deprecated aggregation. Left for compatibility purposes.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n0:Control"/>
+<xsd:element ref="n0:Fragment"/>
+<xsd:any processContents="lax" namespace="http://www.w3.org/1999/xhtml"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="type" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Mapped to charType property.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="minTouchSize" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>Mapped to minShapeSize property.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="dataLabelFormat" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Defines the formater string for the dataLabel value to be diaplyed on the bubble e.g [ [##]]</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.charts.StackedVerticalColumnChart'-->
+<xsd:complexType name="_StackedVerticalColumnChartType">
+<xsd:complexContent>
+<xsd:extension base="n3:_ChartType">
+<xsd:sequence>
+<xsd:element name="content" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Deprecated aggregation. Left for compatibility purposes.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n0:Control"/>
+<xsd:element ref="n0:Fragment"/>
+<xsd:any processContents="lax" namespace="http://www.w3.org/1999/xhtml"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="type" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Mapped to charType property.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="minTouchSize" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>Mapped to minShapeSize property.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="dataLabelFormat" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Does not do anything anymore</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.ca.ui.charts.VerticalBarChart'-->
+<xsd:complexType name="_VerticalBarChartType">
+<xsd:complexContent>
+<xsd:extension base="n3:_ChartType">
+<xsd:sequence>
+<xsd:element name="content" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>Deprecated aggregation. Left for compatibility purposes.</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n0:Control"/>
+<xsd:element ref="n0:Fragment"/>
+<xsd:any processContents="lax" namespace="http://www.w3.org/1999/xhtml"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="scroll" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The scroll container</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n2:ScrollContainer"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="verticalBarChart" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The chart</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="null:Column"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="verticalArea" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The vertical layout</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n2:VBox"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="data" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The data to be used by the chart</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="container" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The DOM ID where the chart will be added. Deprecated</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="barWidth" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>Minimum shape size for touch enabled actions, default and minimum to 48px !</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<xsd:simpleType name="_ChartColorType">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="sapUiChart1">
+<xsd:annotation>
+<xsd:documentation>Sap Ui Chart 1</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="sapUiChart2">
+<xsd:annotation>
+<xsd:documentation>Sap Ui Chart 2</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="sapUiChart3">
+<xsd:annotation>
+<xsd:documentation>Sap Ui Chart 3</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="sapUiChart4">
+<xsd:annotation>
+<xsd:documentation>Sap Ui Chart 4</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="sapUiChart5">
+<xsd:annotation>
+<xsd:documentation>Sap Ui Chart 5</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="sapUiChart6">
+<xsd:annotation>
+<xsd:documentation>Sap Ui Chart 6</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="sapUiChart7">
+<xsd:annotation>
+<xsd:documentation>Sap Ui Chart 7</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="sapUiChart8">
+<xsd:annotation>
+<xsd:documentation>Sap Ui Chart 8</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="sapUiChart9">
+<xsd:annotation>
+<xsd:documentation>Sap Ui Chart 9</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="sapUiChart10">
+<xsd:annotation>
+<xsd:documentation>Sap Ui Chart 10</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="sapUiChart11">
+<xsd:annotation>
+<xsd:documentation>Sap Ui Chart 11</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="_ChartSelectionModeType">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="None">
+<xsd:annotation>
+<xsd:documentation>The chart will not allow any selection</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Single">
+<xsd:annotation>
+<xsd:documentation>The chart will only allow single selection</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Multiple">
+<xsd:annotation>
+<xsd:documentation>The chart will allow multi selection.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="_ChartSemanticColorType">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="NeutralDark">
+<xsd:annotation>
+<xsd:documentation>Darker Neutral color</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Neutral">
+<xsd:annotation>
+<xsd:documentation>Neutral colro</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="NeutralLight">
+<xsd:annotation>
+<xsd:documentation>Lighter Neutral color</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="GoodDark">
+<xsd:annotation>
+<xsd:documentation>Darker Good color</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Good">
+<xsd:annotation>
+<xsd:documentation>Good colro</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="GoodLight">
+<xsd:annotation>
+<xsd:documentation>Lighter Good color</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="CriticalDark">
+<xsd:annotation>
+<xsd:documentation>Darker Critical color</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Critical">
+<xsd:annotation>
+<xsd:documentation>Critical colro</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="CriticalLight">
+<xsd:annotation>
+<xsd:documentation>Lighter Critical color</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="BadDark">
+<xsd:annotation>
+<xsd:documentation>Darker Bad color</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Bad">
+<xsd:annotation>
+<xsd:documentation>Bad colro</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="BadLight">
+<xsd:annotation>
+<xsd:documentation>Lighter Bad color</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:schema>

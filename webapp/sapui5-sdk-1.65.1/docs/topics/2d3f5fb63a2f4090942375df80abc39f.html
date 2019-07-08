@@ -1,0 +1,317 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us" dir="ltr">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Use a SimpleProxyServlet for Testing to Avoid Cross-domain Requests</title>
+      <link rel="icon" href="themes/sap-default/img/favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" href="themes/sap-default/img/favicon.ico">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="abstract" content="If you are testing locally in your Java Eclipse environment and you want to access an OData service in the ABAP system, a proxy is needed to ensure the same-origin policy. In an SAPUI5 application project you can use a SimpleProxyServlet for local testing.">
+      
+      <meta name="description" content="If you are testing locally in your Java Eclipse environment and you want to access an OData service in the ABAP system, a proxy is needed to ensure the same-origin policy. In an SAPUI5 application project you can use a SimpleProxyServlet for local testing.">
+      
+      <meta name="content category" content="development">
+      <script type="text/javascript">var d4p = {"relativePath":'',"dev":false,"debug":false,"draft":false,"nextTopicHref":"ee8726adfdb34d748ed199f0275472f8.html","previousTopicHref":"05a9c69666074a2f831816534c32db9e.html"}</script>
+      <link rel="stylesheet" type="text/css" media="screen, projection" href="themes/sap-default/css/style.css">
+      <script type="text/javascript">
+      
+        d4p.cssGridPath = d4p.dev ? 'html5-themes/modules/960-Responsive-Grid/css/' : 'themes/dita-d4p-classic/css/';
+        var ADAPT_CONFIG = {
+          // Where is your CSS?
+          path: d4p.relativePath + d4p.cssGridPath,
+
+          // false = Only run once, when page first loads.
+          // true = Change on window resize and page tilt.
+          dynamic: true,
+
+          // Optional callback... myCallback(i, width)
+          callback: doc_resize,
+
+          // First range entry is the minimum.
+          // Last range entry is the maximum.
+          // Separate ranges by "to" keyword.
+          range: [
+             // small (size-0)
+            '0px    to 760px  =',
+             // medium (size-1, size-2)
+            '760px  to 980px  = ',
+            '980px  to 1270px = ',
+             // large (size-3, size-5)
+            '1270px to 1600px = ',
+            '1600px to 1940px = ',
+             // extra large (size-6)
+            '1940px to 2540px = ',
+            '2540px           = '
+          ]
+        };
+
+        function doc_resize(i, width)
+        {
+          d4p.setBodyClassfunction(i, width);
+        }
+
+
+        
+      </script>
+      <script type="text/javascript" src="toc-info.js"></script>
+      <script type="text/javascript" src="themes/sap-default/js/script.js"></script>
+      
+      		<!--[if lt IE 9]>
+      			<script>
+      			  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+      			    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+      			    "progress,section,time,video").split(',');
+      			  for (var i = 0; i < e.length; i++) {
+      			    document.createElement(e[i]);
+      			  }
+      			</script>
+      		<![endif]-->
+      
+      <script>
+      function addLoadEvent(func) {
+      var oldonload = window.onload;
+      if (typeof window.onload != 'function') {
+      window.onload = func;
+      } else {
+      window.onload = function() {
+      if (oldonload) {
+      oldonload();
+      }
+      func();
+      }
+      }
+      }
+      
+      addLoadEvent(function() { prettyPrint();
+      if ($('#local-navigation').length) {
+      $('#local-navigation').navigation();
+      }
+      
+      
+      });
+      
+      </script>
+      <script type="text/javascript" src="js/prettify.js"> </script>
+      <script id="search-processing" type="text/javascript" src="js/search-processing.js"> </script>
+      
+      
+      <script>function handleAreaClick(oArea) {window.parent.location.href = oArea.href;}</script><link type="text/css" rel="stylesheet" href="css/overrides.css"></head>
+   <body class="en-us sap-default centered navigation-default enumeration-disabled" style="font-family: &apos;72&apos;, Arial, Helvetica, sans-serif;">
+      <div id="d4h5-main-container" class="container_12" role="application">
+         <ul id="page-links" class="hidden">
+            <li><a id="skip-to-content" href="#d4h5-main-content">Skip to content</a></li>
+            <li><a id="skip-to-localnav" href="#local-navigation">Skip to navigation</a></li>
+            <li><a id="skip-to-footer" href="#footer-container">Skip to footer</a></li>
+         </ul>
+         
+         
+         <div id="d4h5-section-container" class="grid_12" style="padding-top: 0;">
+            
+            
+            
+            <div id="d4h5-main-content" class="grid_8 alpha omega" style="margin: 0 0.5em;">
+               <section>
+                  <div id="content-toolbar" class="toolbar hide-for-small"></div>
+                  <div class="page concept  - topic-topic concept-concept " id="loio2d3f5fb63a2f4090942375df80abc39f">
+                     
+                     <h1 class="title topictitle1" hidden>Use a SimpleProxyServlet for Testing to Avoid Cross-domain Requests</h1>
+                     
+                     <div class="body conbody">
+                        <p class="shortdesc" hidden>If you are testing locally in your Java Eclipse environment and you want to access an OData service in the ABAP system, a
+                           proxy is needed
+                           		to ensure the same-origin policy. In an <span class="ph pname">SAPUI5</span> application project you can use a
+                           		SimpleProxyServlet for local testing.
+                        </p>
+                        
+                        		
+                        <div class="p">
+                           			
+                           <aside class="note caution insertion" id="loio2d3f5fb63a2f4090942375df80abc39f__note_N10017_N10015_N10012_N10001"><span class="title">Caution</span> 
+                              				
+                              <p class="p">Be aware that due to security reasons the <samp class="ph codeph">SimpleProxyServlet</samp> is restricted to local testing purposes only. It can
+                                 					only be used for local host scenarios (accessing Gateway services to avoid cross-domain issues) and will not work when
+                                 deployed on
+                                 					an application server. For productive use, refer to a mature proxy servlet.
+                              </p>
+                              
+                              			
+                           </aside>
+                           
+                           			
+                           <aside class="note note insertion" id="loio2d3f5fb63a2f4090942375df80abc39f__note_N10024_N10015_N10012_N10001"><span class="title">Note</span> If you have issues with accessing HTTPS systems via the <samp class="ph codeph">ResourceServlet</samp> or
+                              				the <samp class="ph codeph">SimpleProxyServlet</samp> it may be necessary to import the root certificate into the Java keystore. 
+                           </aside>
+                           
+                           		
+                        </div>
+                        
+                        		
+                        <p class="p">Ideally, all OData service URLs should be in one file to make the exchange easier - either in the <samp class="ph codeph">index.html</samp>, or in one separate
+                           			.js file that needs to be included. The application is responsible for exchanging the URLs before checking in and after
+                           checking out to
+                           			the <span class="ph pname">SAPUI5</span> Repository. You can also use the helper function
+                           				<samp class="ph codeph">getServiceUrl</samp>, for which the application is responsible as well. See the following example:
+                        </p>
+                        
+                        		<pre class="pre codeblock prettyprint lang-java">&lt;script&gt;
+//var serviceUrl = &quot;/mypath/myservice&quot;;       //url when running on the ABAP system
+//var serviceUrl = &quot;proxy/mypath/myservice&quot;;  //url when running locally in Eclipse
+var serviceUrl = getServiceUrl(&quot;/mypath/myservice&quot;);
+function getServiceUrl(sServiceUrl) {
+  //for local testing prefix with proxy
+  //if you and your team use a special host name or IP like 127.0.0.1 for localhost please adapt the if statement below 
+  if (window.location.hostname == &quot;localhost&quot;) {
+      return &quot;proxy&quot; + sServiceUrl;
+  } else {
+      return sServiceUrl;
+  }
+}
+&lt;/script&gt;</pre>
+                        
+                        		<p class="p">As parameter for the <samp class="ph codeph">getServiceUrl</samp> helper method, use the URL of the
+                           			OData service document without {protocol}://{host name}:{port number}, for example:
+                           				<em class="ph i">/mypath/myservice</em>.
+                        </p>
+                        
+                        		
+                        <aside class="note note insertion" id="loio2d3f5fb63a2f4090942375df80abc39f__note_N1003E_N10011_N10001"><span class="title">Note</span> Place the script tag before the script that calls the view
+                           				(<samp class="ph codeph">sap.ui.view</samp>).
+                        </aside>
+                        
+                        		
+                        <div class="section" id="loio2d3f5fb63a2f4090942375df80abc39f__section_4107381EFDEE47F39063E52AE8E35FEA">
+                           <section class="section" type="Intranet Servers">
+                              <h2 class="section_title" style="font-size: 1.15em;">Intranet Servers</h2>
+                              			
+                              			
+                              <p class="p">The <samp class="ph codeph">SimpleProxyServlet</samp> allows proxy requests to an arbitrary server in the
+                                 				intranet. 
+                              </p>
+                              
+                              			
+                              <p class="p">The proxy URL that is used in the coding looks like this: <em class="ph i">proxy/&lt;service
+                                    					url&gt;</em>. 
+                              </p>
+                              
+                              			
+                              <p class="p">Open the <samp class="ph codeph">web.xml</samp> file located in the <samp class="ph codeph">&lt;WebContent folder name&gt;/WEB-INF</samp> folder, and configure the
+                                 				parameter <samp class="ph codeph">com.sap.ui5.proxy.REMOTE_LOCATION</samp> of the <samp class="ph codeph">SimpleProxyServlet</samp> where the placeholders
+                                 					<samp class="ph codeph">{protocol}</samp>, <samp class="ph codeph">{host name}</samp>, and <samp class="ph codeph">{port number}</samp> have to be exchanged by the real
+                                 				protocol, host name and port number: 
+                              </p>
+                              
+                              			<pre class="pre codeblock prettyprint lang-xml">  &lt;servlet&gt;
+    &lt;servlet-name&gt;SimpleProxyServlet&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;com.sap.ui5.proxy.SimpleProxyServlet&lt;/servlet-class&gt;
+  &lt;/servlet&gt;
+
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;SimpleProxyServlet&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/proxy/*&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+
+  &lt;context-param&gt;
+    &lt;param-name&gt;com.sap.ui5.proxy.REMOTE_LOCATION&lt;/param-name&gt;
+    &lt;param-value&gt;{protocol}://{host name}:{port number}&lt;/param-value&gt;
+  &lt;/context-param&gt;</pre>
+                              
+                              		</section>
+                        </div>
+                        		
+                        <div class="section" id="loio2d3f5fb63a2f4090942375df80abc39f__section_B34F4B95794A49D7A12871CC22A6C29B">
+                           <section class="section" type="Internet Servers">
+                              <h2 class="section_title" style="font-size: 1.15em;">Internet Servers</h2>
+                              			
+                              			
+                              <p class="p">The <samp class="ph codeph">SimpleProxyServlet</samp> can be configured for proxy requests to internet
+                                 				servers in the same way as for intranet servers. Additional proxy settings may be
+                                 				necessary. 
+                              </p>
+                              
+                              			
+                              <p class="p">As the <samp class="ph codeph">SimpleProxyServlet</samp> automatically uses the proxy settings from your Eclipse, this can be configured in Eclipse under <span class="ph menucascade"><img src="themes/sap-default/img/navstart.gif" alt="Start of the navigation path" title="Start of the navigation path"><span class="ph uicontrol">Window</span>&#xA0;<img src="themes/sap-default/img/navstep.gif" alt="Next navigation step" title="Next navigation step">&#xA0;<span class="ph uicontrol">Preferences</span>&#xA0;<img src="themes/sap-default/img/navstep.gif" alt="Next navigation step" title="Next navigation step">&#xA0;<span class="ph uicontrol">General</span>&#xA0;<img src="themes/sap-default/img/navstep.gif" alt="Next navigation step" title="Next navigation step">&#xA0;<span class="ph uicontrol">Network Connections</span><img src="themes/sap-default/img/navend.gif" alt="End of the navigation path" title="End of the navigation path"></span>. Here you can specify the proxy entries and the proxy bypass. 
+                              </p>
+                              
+                              			
+                              <p class="p">For example, set <em class="ph i">Active Provider</em> to Manual, <em class="ph i">Schema</em>=HTTP, <em class="ph i">Host</em>=proxy,
+                                 					<em class="ph i">Port</em>=8080 under proxy entries and localhost, *.mycompany.corp as
+                                 					<em class="ph i">Host</em> under proxy bypass. 
+                              </p>
+                              
+                              		
+                           </section>
+                        </div>
+                        		
+                        <div class="section" id="loio2d3f5fb63a2f4090942375df80abc39f__section_1490F589E7374BD294D004B6D51C6A59">
+                           <section class="section" type="Simple Proxy Servlet - Restriction Regarding DELETE Requests">
+                              <h2 class="section_title" style="font-size: 1.15em;">Simple Proxy Servlet - Restriction Regarding DELETE Requests</h2>
+                              			
+                              			
+                              <p class="p">The simple proxy servlet currently does not support the sending of <samp class="ph codeph">HTTP DELETE</samp> requests with content. This is due to
+                                 				restrictions of the Java SE functionality that is used. If an <samp class="ph codeph">HTTP DELETE</samp> request with content is sent, an HTTP 500
+                                 				result status is returned with the description: &quot;The HttpUrlConnection used by the SimpleProxyServlet doesn&apos;t allow to
+                                 send content
+                                 				with the HTTP method DELETE. Due to spec having content for DELETE methods is possible but the default implementation
+                                 of the
+                                 				HttpUrlConnection doesn&apos;t allow this!&quot; 
+                              </p>
+                              
+                              			
+                              <p class="p">For practical purposes, this restriction should have only minor effects for the following reasons: </p>
+                              
+                              			
+                              <ul class="ul" id="loio2d3f5fb63a2f4090942375df80abc39f__ul_o5g_lf2_bj">
+                                 				
+                                 <li class="li">
+                                    					
+                                    <p class="p">When applying a REST-like programming style, an <samp class="ph codeph">HTTP DELETE</samp> request would use the URL to transmit which objects should be
+                                       						deleted, but not the content. 
+                                    </p>
+                                    
+                                    				
+                                 </li>
+                                 
+                                 				
+                                 <li class="li">
+                                    					
+                                    <p class="p">When building your own protocol that uses the content of the HTTP request, you would typically use <samp class="ph codeph">HTTP POST</samp>. 
+                                    </p>
+                                    
+                                    				
+                                 </li>
+                                 
+                                 			
+                              </ul>
+                              
+                              		
+                           </section>
+                        </div>
+                        	
+                     </div>
+                     
+                  </div>
+                  
+               </section>
+               <div class="clear"></div>
+               
+            </div>
+            <div class="clearfix"></div>
+         </div>
+      </div>
+      <div class="clearfix"></div>
+      <div id="footer-container" class="grid_12">
+         <footer>
+            	
+            <div id="custom-footerSpacer"></div>
+            	
+            
+         </footer>
+         
+         
+      </div>
+   </body>
+</html>

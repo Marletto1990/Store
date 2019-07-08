@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="sap.me" xmlns:n1="sap.me" xmlns:n0="sap.ui.core">
+<xsd:import namespace="sap.ui.core"/>
+<xsd:element name="Calendar" type="n1:_CalendarType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>This is the Calendar control</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CalendarLegend" type="n1:_CalendarLegendType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>Legend for the calendar control</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="OverlapCalendar" type="n1:_OverlapCalendarType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>A calendar that allows to display events in a grid and show the overlapped events</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="OverlapCalendarEvent" type="n1:_OverlapCalendarEventType" substitutionGroup="n0:Element">
+<xsd:annotation>
+<xsd:documentation>Represent the data of an event for the overlap calendar</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ProgressIndicator" type="n1:_ProgressIndicatorType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>Shows the progress of a process in a graphical way. The indicator can be displayed with or without numerical values.
+The filling can be displayed in color only, or additionally with the percentage rate. The indicator status can be interactive.</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="TabContainer" type="n1:_TabContainerType" substitutionGroup="n0:Control">
+<xsd:annotation>
+<xsd:documentation>The TabContainer allow to stack 1 to 4 contents in a
+view with corresponding icons</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<!--type definition for UIElement 'sap.me.Calendar'-->
+<xsd:complexType name="_CalendarType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:attribute name="hideNavControls" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>hides the area of navigation controls</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="hideMonthTitles" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>hides the area of month titles</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="monthsPerRow" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>months to display in a row. This sets the width of the whole control in order to contain the desired number of months per row</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="dayWidth" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>the width of a day</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="dayHeight" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>the height of a day</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="weeksPerRow" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>weeks to display in a row</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="singleRow" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>boolean that sets the view to week mode or month mode</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="monthsToDisplay" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>number of months in a row.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="currentDate" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>the center date where the month/week will be built around</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="enableMultiselection" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>to enable multiselection feature</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="firstDayOffset" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>to offset the first day of the week (0 = sunday)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="disabledWeekDays" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Array of weekDays (as integers where 0=Sunday, 1=Monday etc) to be disabled. Interaction will be disabled for these week days.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="disabledDates" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Array of specific dates (strings or Date objects) that will be disabled/non interactive</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="swipeToNavigate" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>When enabled, swipe gestures will navigate and not select</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="design" type="n1:_CalendarDesignType">
+<xsd:annotation>
+<xsd:documentation>Indicates the design of the calendar (mainly colors)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="selectionMode" type="n1:_CalendarSelectionModeType">
+<xsd:annotation>
+<xsd:documentation>Indicates the design of the calendar (mainly colors)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="width" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>The width of the calendar</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="days" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Array of day names, default value is sap.m.getLocaleData().getDays("abbreviated")
+Check sap.ui.core.LocaleData documentation for more info.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="months" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Array of month names, default value is sap.m.getLocaleData().getMonths("abbreviated")
+Check sap.ui.core.LocaleData documentation for more info.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="tapOnDate" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>event fired when a date is tapped</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="changeCurrentDate" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>event fired when tap to next or previous button and currentDate is updated</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="changeRange" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>when the range of selected dates changes</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.me.CalendarLegend'-->
+<xsd:complexType name="_CalendarLegendType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence/>
+<xsd:attribute name="legendForType00" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>legend for type 00</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="legendForType01" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>legend for type 01</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="legendForType04" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>legend for type 04</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="legendForType06" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>legend for type 06</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="legendForType07" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>legend for type 07</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="legendForToday" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>legend for today</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="legendForSelected" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>legend for selected</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="legendForSelected00" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>legend for selected 00</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="legendForNormal" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>legend for normal</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="expandable" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Indicates if the legend can be collapsed and expanded</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="expanded" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Indicates if the legend is expanded or not</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="width" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>Indicates the whole component width</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="legendWidth" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>Indicates the legend items width</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="design" type="n1:_CalendarDesignType">
+<xsd:annotation>
+<xsd:documentation>design name for the legend</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.me.OverlapCalendar'-->
+<xsd:complexType name="_OverlapCalendarType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence>
+<xsd:element name="calendarEvents" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The list of events to display in the calendar grid</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0" maxOccurs="unbounded">
+<xsd:element ref="n1:OverlapCalendarEvent"/>
+<xsd:element ref="n0:Fragment"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="startDate" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The first date to display for the calendar</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="weeksPerRow" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>Number of weeks</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="firstDayOffset" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>Indicate how to offset the first day in regards to a Sunday (by default)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showOverlapIndicator" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Do we want to display the overlap indicator</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="swipeToNavigate" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Use swipe gesture to navigate</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="width" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>The width of the calendar</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="endOfData" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Indicates that we have reach the last week with data</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="changeDate" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Triggered when the displayed dates change</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.me.OverlapCalendarEvent'-->
+<xsd:complexType name="_OverlapCalendarEventType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ElementType">
+<xsd:attribute name="startDay" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The first day of the event</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="endDay" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Last day of the event</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="relevant" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Indicates if this elements is relevant to be consider in the overlap</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="type" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Type of the event. Display in the second label (no overlap)</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="typeName" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The CSS class to use</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="halfDay" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Is this half a day</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="row" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>Id of the row on which to place this event</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="name" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Name of the row</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.me.ProgressIndicator'-->
+<xsd:complexType name="_ProgressIndicatorType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:attribute name="enabled" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Switches enabled state of the control. Disabled fields have different colors, and cannot be focused.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="barColor" type="n0:_BarColorType">
+<xsd:annotation>
+<xsd:documentation>The color of the bar. Enumeration sap.ui.core.BarColor provides CRITICAL (yellow), NEGATIVE (red), POSITIVE (green), NEUTRAL (blue) (default value).</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="displayValue" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>The text value to be displayed in the bar.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="percentValue" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>The numerical value for the displayed length of the progress bar.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="showValue" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Specifies whether the current value shall be rendered inside the bar.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="width" type="n0:_CSSSizeType">
+<xsd:annotation>
+<xsd:documentation>The width of the control.</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<!--type definition for UIElement 'sap.me.TabContainer'-->
+<xsd:complexType name="_TabContainerType">
+<xsd:complexContent>
+<xsd:extension base="n0:_ControlType">
+<xsd:sequence>
+<xsd:element name="contentInfo" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The info tab</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n0:Control"/>
+<xsd:element ref="n0:Fragment"/>
+<xsd:any processContents="lax" namespace="http://www.w3.org/1999/xhtml"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="contentAttachments" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The attachments tab</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n0:Control"/>
+<xsd:element ref="n0:Fragment"/>
+<xsd:any processContents="lax" namespace="http://www.w3.org/1999/xhtml"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="contentNotes" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The notes tab</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n0:Control"/>
+<xsd:element ref="n0:Fragment"/>
+<xsd:any processContents="lax" namespace="http://www.w3.org/1999/xhtml"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="contentPeople" minOccurs="0">
+<xsd:annotation>
+<xsd:documentation>The people tab</xsd:documentation>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:choice minOccurs="0">
+<xsd:element ref="n0:Control"/>
+<xsd:element ref="n0:Fragment"/>
+<xsd:any processContents="lax" namespace="http://www.w3.org/1999/xhtml"/>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+<xsd:attribute name="selectedTab" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>Return the index of the selected tab</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="badgeInfo" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>The number to display in the badge for the info tab</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="badgeNotes" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>The number to display in the badge for the notes tab</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="badgeAttachments" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>The number to display in the badge for the attachments tab</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="badgePeople" type="xsd:int">
+<xsd:annotation>
+<xsd:documentation>The number to display in the badge for the people tab</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="expandable" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Indicates if the tab can be collapsed and expanded</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="expanded" type="xsd:boolean">
+<xsd:annotation>
+<xsd:documentation>Indicates if the actual tab is expanded or not</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="select" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Indicates that the selected tab has changed</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="expand" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Indicates that the tab will expand</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+<xsd:attribute name="collapse" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation>Indicates that the tab will collapse</xsd:documentation>
+</xsd:annotation>
+</xsd:attribute>
+</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+<xsd:simpleType name="_CalendarDesignType">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="Action">
+<xsd:annotation>
+<xsd:documentation>Colors match calendar design for Action</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Approval">
+<xsd:annotation>
+<xsd:documentation>Colors match calendar design for Approval</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="_CalendarEventTypeType">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="Type00">
+<xsd:annotation>
+<xsd:documentation>Type 00 (non-working day (e.g. weekend))</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Type01">
+<xsd:annotation>
+<xsd:documentation>Type 01 (nonattendance / submitted day)</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Type04">
+<xsd:annotation>
+<xsd:documentation>Type 04 (open request / manager action needed)</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Type06">
+<xsd:annotation>
+<xsd:documentation>Type 06 (public holiday)</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Type07">
+<xsd:annotation>
+<xsd:documentation>Type 07 (deletion requested / your action needed)</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="Type10">
+<xsd:annotation>
+<xsd:documentation>Type 10 (workday)</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="_CalendarSelectionModeType">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="SINGLE">
+<xsd:annotation>
+<xsd:documentation>Can only select one date</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="MULTIPLE">
+<xsd:annotation>
+<xsd:documentation>Can select multiple dates and ranges</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="RANGE">
+<xsd:annotation>
+<xsd:documentation>Can select a range of dates</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:schema>
