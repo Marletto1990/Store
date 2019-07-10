@@ -43,6 +43,11 @@ sap.ui.define([
 							oReq.Cart = this.getView().getModel("myModel").getProperty("/Cart");
 							oReq.Requisition = this.getView().getModel("myModel").getProperty("/Requisition");	
 							oStore.put("SteelStore order", oReq);
+
+							let request = new XMLHttpRequest();
+							//request.open(method, url, async, login, pass);
+							request.open("GET",)
+
 							
 							MessageToast.show("Заявка отправлена. Мы свяжемся с Вами в ближайшее время");
 

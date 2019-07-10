@@ -44,8 +44,7 @@
                 "settings": { "bundleName": "mainpath.i18n.i18n" }
             },
             "myModel": {
-              "type": "sap.ui.model.json.JSONModel",
-              "uri": "/modules/mainmodule/models/goods.json"
+              "type": "sap.ui.model.json.JSONModel"
             }
         },
 
