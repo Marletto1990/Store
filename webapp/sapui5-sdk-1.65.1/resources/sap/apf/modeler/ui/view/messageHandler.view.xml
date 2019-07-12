@@ -1,3 +1,0 @@
-<mvc:View controllerName="sap.apf.modeler.ui.controller.messageHandler"
-	xmlns:mvc="sap.ui.core.mvc" class="sapUiSizeCompact">
-</mvc:View>

@@ -1,10 +1,12 @@
 var express = require('express');
-var cors = require('cors')
 var path = require('path');
 var fs = require('fs');
 //--
 var proxy = require('express-http-proxy');
 var app = express();
+var bodyParser = require('body-parser');
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 var allowCrossDomain = function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -53,7 +55,13 @@ app.get("/", function (req, res) {
 app.get("/getModelData", function(request, response){
   var filePath = __dirname + '/serverData.json';
   var sReq = fs.readFileSync(filePath,"utf8");
-  console.log(sReq);
+  //console.log(sReq);
   response.send(sReq);
  
+})
+
+app.post("/sendNewOrder", function (request, responce){
+  var body = request.body
+  responce.send(body);
+  console.dir(body);
 })

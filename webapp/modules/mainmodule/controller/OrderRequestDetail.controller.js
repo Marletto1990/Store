@@ -38,16 +38,17 @@ sap.ui.define([
 							var sReqNumber = this.getView().getModel("myModel").getProperty("/Requisition/0/req");
 							if (sReqNumber =="Новая заявка"){this.getView().getModel("myModel").setProperty("/Requisition/0/req", ("Заявка №"+reqGen));}
 							
-							var oStore = jQuery.sap.storage(jQuery.sap.storage.Type.local);
-							var oReq = {};
-							oReq.Cart = this.getView().getModel("myModel").getProperty("/Cart");
-							oReq.Requisition = this.getView().getModel("myModel").getProperty("/Requisition");	
-							oStore.put("SteelStore order", oReq);
+							// var oStore = jQuery.sap.storage(jQuery.sap.storage.Type.local);
+							 var oReq = {};
+							 oReq.Cart = this.getView().getModel("myModel").getProperty("/Cart");
+							 oReq.Requisition = this.getView().getModel("myModel").getProperty("/Requisition");	
+							// oStore.put("SteelStore order", oReq);
 
-							let request = new XMLHttpRequest();
-							//request.open(method, url, async, login, pass);
-							request.open("GET",)
-
+							var request = new XMLHttpRequest();
+							request.open("POST", "/sendNewOrder");
+							request.setRequestHeader('Content-Type', 'application/json');
+							//console.dir(oReq);
+							request.send(JSON.stringify(oReq));
 							
 							MessageToast.show("Заявка отправлена. Мы свяжемся с Вами в ближайшее время");
 
@@ -61,6 +62,17 @@ sap.ui.define([
 		},
 		changeInputQuantity: function(oEvent){
 			this.callCount();
+		},
+		onInputNameChange: function(oEvent){
+			var n = oEvent.getSource().getValue().length;
+			if (n>2){
+				oEvent.getSource().setValueState("Success");
+				console.log("Больше 2-х символов");
+			} else oEvent.getSource().setValueState("Warning");
+			console.log("Меньше 2-х символов");
+		},
+		onInputPhoneChange: function(oEvent){
+
 		}
 	});
 });

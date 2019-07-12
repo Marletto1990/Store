@@ -39,13 +39,19 @@
 									icon="sap-icon://meeting-room"
 									emphasized="true" />
 								<Label text="Контактное лицо" />
-								<Input value="{myModel>/Requisition/0/name}" />
-								<Label text="Телефон контактного лица" />
+								<Input 
+									value="{myModel>/Requisition/0/name}" 
+									required = "true" 
+									valueState = "Warning" 
+									valueStateText = "Введите данные"
+									liveChange = "onInputNameChange"/>
+								<Label text="Телефон контактного лица" required = "true"/>
 								<MaskInput 
 									mask="9-999-999-99-99" 
 									placeholderSymbol="_" 
 									placeholder="пример: 8-900-555-00-00" 
-									value="{myModel>/Requisition/0/phoneNumber}"/>
+									value="{myModel>/Requisition/0/phoneNumber}"
+									liveChange = "onInputPhoneChange"/>
 								<Label text="Улица и номер дома / строения" />
 								<Input value="{myModel>/Requisition/0/street}">
 								</Input>
