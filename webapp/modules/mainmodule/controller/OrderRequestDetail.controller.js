@@ -68,11 +68,15 @@ sap.ui.define([
 			if (n>2){
 				oEvent.getSource().setValueState("Success");
 				console.log("Больше 2-х символов");
-			} else oEvent.getSource().setValueState("Warning");
-			console.log("Меньше 2-х символов");
+			} else {oEvent.getSource().setValueState("Warning");
+			console.log("Меньше 2-х символов")};
 		},
 		onInputPhoneChange: function(oEvent){
-
+			var value = oEvent.getSource().getValue();
+			var n = oEvent.getSource().getValue().length;
+			if (n>0&&(value.search(/_/i)==-1)){
+				oEvent.getSource().setValueState("Success");
+			} else {oEvent.getSource().setValueState("Warning")};
 		}
 	});
 });

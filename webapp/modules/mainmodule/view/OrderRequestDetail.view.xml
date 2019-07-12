@@ -40,18 +40,18 @@
 									emphasized="true" />
 								<Label text="Контактное лицо" />
 								<Input 
+									type="Text"
 									value="{myModel>/Requisition/0/name}" 
-									required = "true" 
-									valueState = "Warning" 
+									required = "true"  
 									valueStateText = "Введите данные"
-									liveChange = "onInputNameChange"/>
+									change = "onInputNameChange"/>
 								<Label text="Телефон контактного лица" required = "true"/>
 								<MaskInput 
 									mask="9-999-999-99-99" 
 									placeholderSymbol="_" 
 									placeholder="пример: 8-900-555-00-00" 
 									value="{myModel>/Requisition/0/phoneNumber}"
-									liveChange = "onInputPhoneChange"/>
+									change = "onInputPhoneChange"/>
 								<Label text="Улица и номер дома / строения" />
 								<Input value="{myModel>/Requisition/0/street}">
 								</Input>
