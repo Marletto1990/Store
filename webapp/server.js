@@ -6,6 +6,12 @@ var fs = require('fs');
 var proxy = require('express-http-proxy');
 var app = express();
 
+const MongoClient    = require('mongodb').MongoClient;
+const objectId = require("mongodb").ObjectID;
+const jsonParser = express.json();
+const mongoClient = new MongoClient("mongodb://localhost:27017/", { useNewUrlParser: true });
+let dbClient;
+
 var allowCrossDomain = function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   // 'Access-Control-Allow-Origin: *'
