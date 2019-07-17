@@ -1,6 +1,6 @@
 {
   "name": "store",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,10 @@
     "grunt-openui5": "^0.13.0"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.17.1",
-    "express-http-proxy": "^1.5.1"
+    "express-http-proxy": "^1.5.1",
+    "mongodb": "^3.2.7",
+    "react-dev-utils": "^9.0.1"
   }
 }

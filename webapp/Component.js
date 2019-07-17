@@ -34,9 +34,8 @@ sap.ui.define([
 							try {
 								var sReqJSON = request.responseText;
 								var oResModel = JSON.parse(sReqJSON);
-								console.log(typeof oResModel);
 							} catch (err) {
-								alert("Некорректный ответ " + err.message);
+								alert("Некорректный ответ: " + err.message);
 							}
 							fModelDataSet(oResModel);
 						}

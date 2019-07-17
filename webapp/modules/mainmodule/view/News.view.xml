@@ -42,6 +42,10 @@
 					</GenericTile>
 				</Panel>
 			</content>
-			<Button text="Test" press = "onNewsButtonPress"/>
+			
+			<footer>		
+				<Toolbar>
+				</Toolbar>
+			</footer>
 		</Page>
 </mvc:View>

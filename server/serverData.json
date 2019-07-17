@@ -78,6 +78,22 @@
             "route": "contacts",
             "show_nav_button": false,
             "master_option": false
+        },
+        {
+            "title": "Админ",
+            "route": "_adminCreateNew",
+            "show_nav_button": false,
+            "master_option": false
+        }
+    ],
+    "AdminMenu":[
+        {
+            "title": "Создать новый товар",
+            "route": "_adminCreateNew"
+        },
+        {
+            "title": "Просмотр базы данных",
+            "route":"_admin"
         }
     ],
     "ArticlePath": "Articles/1",
@@ -90,7 +106,7 @@
             "cat_num": 1,
             "name": "DefensiveConstructions",
             "type": [{
-                    "name": "BlackMetallGuardrail",
+                    "name": "BlackMetallGuardrail2",
                     "title": "Отбойники из черного металла",
                     "type_num": 11
                 },

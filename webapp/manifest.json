@@ -108,6 +108,14 @@
               "pattern": "order_request",
               "name":    "order_request",
               "target":  ["_orderRequestMaster", "_orderRequestDetail"]
+            },
+            {
+              "pattern": "adminCreateNew",
+              "name":    "_adminCreateNew",
+              "target":  ["_adminMaster", "_adminDetailCreateNew"]
+            },
+            {
+              "pattern": "adminTable"
             }
           ],
 
@@ -194,6 +202,18 @@
               "viewName": "OrderRequestDetail",
               "controlAggregation": "detailPages",
               "transition": "slide" 
+            },
+            "_adminDetailCreateNew":{
+              "viewId":   "adminDetailCreateNew",
+              "viewName": "AdminDetailCreateNew",
+              "controlAggregation": "detailPages",
+              "transition": "show" 
+            },
+            "_adminMaster":{
+              "viewId":   "adminMaster",
+              "viewName": "AdminMaster",
+              "controlAggregation": "masterPages",
+              "transition": "show" 
             }
         }
     }

@@ -1,0 +1,26 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:f="sap.ui.layout.form" 
+	xmlns:l="sap.ui.layout"
+	controllerName="mainpath.controller.AdminMaster"
+	xmlns="sap.m">
+	<Page 
+		id="sConsctToOrder" 
+		title="Администратор" 
+		class="sapUiStdPage" 
+		showNavButton="false"
+		navButtonText="Back" 
+		navButtonPress="onPressDetailBack">
+		<content>
+			<List items = "{myModel>/AdminMenu}" id="typeList">
+				<items>
+					<StandardListItem 
+						title="{myModel>title}" 
+						type="Navigation" 
+						press="onAdminMasterPress"/>
+				</items>
+			</List>
+		</content>
+	</Page> 
+</mvc:View>

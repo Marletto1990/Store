@@ -79,6 +79,12 @@
             "route": "contacts",
             "show_nav_button": false,
             "master_option": false
+        },
+        {
+            "title": "Админ",
+            "route": "contacts",
+            "show_nav_button": false,
+            "master_option": false
         }
     ],
     "ArticlePath":"Articles/1",
