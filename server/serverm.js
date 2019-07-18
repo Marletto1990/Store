@@ -58,6 +58,12 @@ app.use("/manifest.json", function (request, response) {
   response.sendFile(sPathPrefix+sEndUrl);
 });
 
+app.use(/^.+\/mainmodule\/.+/, function (request, response) {
+  var sPathPrefix = String(__dirname).replace("server","webapp");
+  var sEndUrl = request.originalUrl;
+  response.sendFile(sPathPrefix+sEndUrl);
+});
+
 app.get("/getModelData", function(request, response){
   var filePath = __dirname + '/serverData.json';
   var sReq = fs.readFileSync(filePath,"utf8");
@@ -79,6 +85,6 @@ app.use(/^\/resources\/.+/, function (request, response) {
 });
 
 app.get("/", function (req, res) {
-  console.log("ALL");
+
   res.sendFile(path.join(__dirname, '../webapp/index.html'))
 });
