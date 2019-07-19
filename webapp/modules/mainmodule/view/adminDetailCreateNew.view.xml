@@ -10,19 +10,17 @@
 	xmlns:qInput = "app.modules.mainmodule.control">
 	<Page 
 		id="AdminCreateNew" 
-		title="Администратор" 
+		title="Новый товар" 
 		class="sapUiStdPage" 
 		showNavButton="false"
 		navButtonText="Back" 
 		navButtonPress="onPressDetailBack">
 		<content>
 			<VBox class="sapUiSmallMargin">
-				<Label text="При создании нового товара выбирайте название, максимально лаконично описывающее его характеристики. " />
-				<Label text="Обратите внимание на то, что артикул созданного товара сгенерируется автоматически относительно выбранной категории и подкатегории"/>
-				<f:SimpleForm id="SimpleFormChange480_12120"
+				<f:SimpleForm 
 					editable="true"
 					layout="ResponsiveGridLayout"
-					title="Новый товар"
+					title="Выберите название, категорию и тип товара"
 					labelSpanXL="12"
 					labelSpanL="12"
 					labelSpanM="12"
@@ -32,49 +30,24 @@
 					emptySpanL="0"
 					emptySpanM="0"
 					emptySpanS="0"
-					columnsXL="2"
-					columnsL="2"
+					columnsXL="1"
+					columnsL="1"
 					columnsM="1"
 					singleContainerFullSize="false" >
+					<Toolbar>
+						<content>
+							<text
+								text = "При создании нового товара выбирайте название, максимально лаконично описывающее его характеристики. Обратите внимание на то, что артикул созданного товара сгенерируется автоматически относительно выбранной категории и типа. "
+								 width = "100%"/>
+						</content>
+					</Toolbar>
 					<f:content>
-						<core:Title 
-							text="Введите основные параметры товара" 
-							icon="sap-icon://add-equipment"
-							emphasized="true" />
-						
-						<Label text="Название" />
-						<Input 
-							type="Text"
-							placeholder="пример: Изделие №2" 
-							required = "true"  
-							valueStateText = "Введите данные"/>
-						<Label text="Материал" required = "false"/>
-						<Label text="ПАРАМETРЫ" />
-						<Input value="1000">
-							<layoutData>
-								<l:GridData span="XL4 L4 M3 S3" />
-							</layoutData>
-						</Input>
-						<Input value="1000">
-						</Input>
-						<Input value="1000">
-							<layoutData>
-								<l:GridData span="XL4 L4 M3 S3" />
-							</layoutData>
-						</Input>
-						<Label text="ПАРАМ N" />
-						<MaskInput mask="999999999999" value="{myModel>/Requisition/0/INN}">
-							<layoutData>
-								<l:GridData span="XL3 L3 M4 S4" />
-							</layoutData>
-						</MaskInput>
-						<Input value="" />
 						<Label text="Категория / Подкатегория" />
 						<Select id="categorySelect" >
 							<items>
-								<core:Item text="Защитные конструкции" key="Moscow"/>
-								<core:Item text="Каркасные конструкции" key="Saint-Petersburg"/>
-								<core:Item text="Мебель из нержавеющей стали" key="Nizhny Novgorod"/>
+								<core:Item text="Защитные конструкции" key="1"/>
+								<core:Item text="Каркасные конструкции" key="2"/>
+								<core:Item text="Мебель из нержавеющей стали" key="3"/>
 							</items>
 						</Select>
 						<Select id="typeSelect" >
@@ -86,6 +59,96 @@
 								<core:Item text="Защита пожарных шкафов" key="5"/>
 							</items>
 						</Select>
+						<Select 
+								id="materialSelect"
+								items="{path:'myModel>/Material', templateShareable:false}"
+								forceSelection="true"
+								change = "changeMaterial">
+								<core:Item   key="{myModel>q}" text="{myModel>name}" />
+						</Select>
+						<Label text="Название" />
+						<Input 
+							type="Text"
+							placeholder="пример: Стойка сквозная из нержавеющей стали 'Стандарт'" 
+							required = "true"  
+							valueStateText = "Введите данные"/>
+					</f:content>
+				</f:SimpleForm>
+				<f:SimpleForm
+					title = "Введите характеристики для описания товара"
+					editable="true"
+					layout="ResponsiveGridLayout"
+					labelSpanXL="12"
+					labelSpanL="12"
+					labelSpanM="12"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="0"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="1"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false" >
+						<Toolbar>
+							<content>
+							<ToolbarSpacer />
+							<text
+								text = "Создайте описание товара. Вводите характеристики, которые будут отображаться в карточке товара. Поле 'единицы измерения' необязательно к заполнению. Например: Свойство - Ширина, Значение - 1000, Единицы измерения - мм"
+								 width = "100%"/>
+							</content>
+						</Toolbar>
+						<f:content>
+							<Table 
+							headerText = "Описание"
+							items=""
+							alternateRowColors="true">
+							<headerToolbar>
+								<OverflowToolbar>
+									<content>
+										<Button id="AddNewProperty"
+											text="Добавить характеристику"
+											press="onFire"
+											type="Emphasized"/>
+									</content>
+								</OverflowToolbar>
+							</headerToolbar>
+							<columns 
+								hAlign ="End">
+								<Column
+									width="5em">
+									<Label text="Свойство" />
+								</Column>
+								<Column
+									width="3em">
+									<Label text="Значение" />
+								</Column>
+								<Column
+									width="3em">
+									<Label text="Единицы измерения" />
+								</Column>
+								<Column
+									width="1em">
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem vAlign="Middle">
+									<cells>
+										<Input/>
+									</cells>
+									<cells>
+										<Input/>
+									</cells>
+									<cells>
+										<Input/>
+									</cells>
+									<cells>
+										<Button icon = "sap-icon://decline"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
 					</f:content>
 				</f:SimpleForm>
 			</VBox>

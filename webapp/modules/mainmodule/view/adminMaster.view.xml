@@ -9,9 +9,9 @@
 		id="sConsctToOrder" 
 		title="Администратор" 
 		class="sapUiStdPage" 
-		showNavButton="false"
+		showNavButton="true"
 		navButtonText="Back" 
-		navButtonPress="onPressDetailBack">
+		navButtonPress="goToStart">
 		<content>
 			<List items = "{myModel>/AdminMenu}" id="typeList">
 				<items>
