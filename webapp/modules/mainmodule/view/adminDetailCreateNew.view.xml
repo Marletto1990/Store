@@ -7,7 +7,7 @@
 	xmlns:core="sap.ui.core"
 	xmlns="sap.m"
 	xmlns:tnt="sap.tnt"
-	xmlns:qInput = "app.modules.mainmodule.control">
+	xmlns:MY = "app.modules.mainmodule.control">
 	<Page 
 		id="AdminCreateNew" 
 		title="Новый товар" 
@@ -99,58 +99,57 @@
 								 width = "100%"/>
 							</content>
 						</Toolbar>
-						<f:content>
-							<Table 
-							headerText = "Описание"
-							items=""
-							alternateRowColors="true">
-							<headerToolbar>
-								<OverflowToolbar>
-									<content>
-										<Button id="AddNewProperty"
-											text="Добавить характеристику"
-											press="onFire"
-											type="Emphasized"/>
-									</content>
-								</OverflowToolbar>
-							</headerToolbar>
-							<columns 
-								hAlign ="End">
-								<Column
-									width="5em">
-									<Label text="Свойство" />
-								</Column>
-								<Column
-									width="3em">
-									<Label text="Значение" />
-								</Column>
-								<Column
-									width="3em">
-									<Label text="Единицы измерения" />
-								</Column>
-								<Column
-									width="1em">
-								</Column>
-							</columns>
-							<items>
-								<ColumnListItem vAlign="Middle">
-									<cells>
-										<Input/>
-									</cells>
-									<cells>
-										<Input/>
-									</cells>
-									<cells>
-										<Input/>
-									</cells>
-									<cells>
-										<Button icon = "sap-icon://decline"/>
-									</cells>
-								</ColumnListItem>
-							</items>
-						</Table>
-					</f:content>
 				</f:SimpleForm>
+				<Table 
+					headerText = "Описание"
+					items=""
+					alternateRowColors="true">
+					<headerToolbar>
+						<OverflowToolbar>
+							<content>
+								<Button id="AddNewProperty"
+									text="Добавить характеристику"
+									press="onFire"
+									type="Emphasized"/>
+							</content>
+						</OverflowToolbar>
+					</headerToolbar>
+					<columns 
+						hAlign ="End">
+						<Column
+							width="3em">
+							<Label text="Свойство" />
+						</Column>
+						<Column
+							width="3em">
+							<Label text="Значение" />
+						</Column>
+						<Column
+							width="3em">
+							<Label text="Единицы измерения" />
+						</Column>
+						<Column
+							width="1em">
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem vAlign="Middle">
+							<cells>
+								<Input/>
+							</cells>
+							<cells>
+								<Input/>
+							</cells>
+							<cells>
+								<Input/>
+							</cells>
+							<cells>
+								<Button icon = "sap-icon://decline"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+				<MY:TileCreated text="123" height="200px" width="100px"/>
 			</VBox>
 		</content>
 	</Page> 

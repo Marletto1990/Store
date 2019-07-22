@@ -52,7 +52,8 @@ sap.ui.define([
                     new Input({
                         value: that.getValue(),
                         liveChange: this._onInputChange.bind(this)
-                    }), new Button({
+                    }), 
+                    new Button({
                         text: "",
                         icon: "sap-icon://less",
                         press: this._onButtonMinusPress
