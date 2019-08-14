@@ -102,7 +102,7 @@
 				</f:SimpleForm>
 				<Table 
 					headerText = "Описание"
-					items=""
+					
 					alternateRowColors="true">
 					<headerToolbar>
 						<OverflowToolbar>
@@ -149,7 +149,7 @@
 						</ColumnListItem>
 					</items>
 				</Table>
-				<MY:TileCreated text="123" height="200px" width="100px"/>
+				<MY:TileCreated text="Текст есть" height="200px" width="100px"/>
 			</VBox>
 		</content>
 	</Page> 

@@ -54,7 +54,7 @@ sap.ui.define([
                 }
             }
         },
-        init: function (){
+        onBeforeRendering: function (){
             var that = this;
             this.setAggregation("_VBox", new VBox({
                 height: that.getProperty("height"),
@@ -70,14 +70,14 @@ sap.ui.define([
             }))
         },
         onAfterRendering: function(){
-            debugger
+            //debugger
         },
         _onTileCreatedPress: function (oEvent) {
             console.log("TileCreated");
 
         },
         renderer: function (oRM, oControl) {
-            oRM.write("<div");
+            oRM.write("<div class='tileGreated'");
             oRM.writeControlData(oControl);
             oRM.writeClasses();
             oRM.write(">");
